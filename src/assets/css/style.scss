@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('./fontawesome-all.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+html {
+    font-family: 'Poppins', sans-serif;
+}
+
+button {
+    @apply rounded-full border-2 px-8 py-3 text-sm font-bold;
+    @apply bg-green-500 text-white border-green-500;
+    transition: all 0.4s ease-in-out;
+
+    &:hover {
+        @apply bg-white text-green-500;
+    }
+}
+
+button[variant="secondary"] {
+    @apply bg-white text-green-500 border-green-500;
+
+    &:hover {
+        @apply bg-green-500 text-white;
+    }
+}
