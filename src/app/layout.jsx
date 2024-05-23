@@ -17,7 +17,7 @@ const RootLayout = ({ children }) => {
     <html lang="he" suppressHydrationWarning>
       <body className="h-screen flex flex-col">
         <Header />
-        {/* <main className="h-full">{children}</main> */}
+        <main className="h-full">{children}</main>
         {/* <Footer /> */}
       </body>
     </html>

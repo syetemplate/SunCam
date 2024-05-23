@@ -1,3 +1,5 @@
+import content from '@/content';
+
 export default {
     header: {
         menu: {
@@ -8,7 +10,12 @@ export default {
         cta: 'ORDER NOW',
     },
     pages: {
-
+        home: {
+            hero: {
+                cta: 'PURCHASE',
+                ctaSecondary: 'CONTACT US',
+            },
+        },
     },
     footer: {
 
