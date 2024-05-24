@@ -12,10 +12,17 @@ export const metadata = {
   },
 };
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1.0,
+  maximumScale: 1.0,
+  userScalable: 'no',
+};
+
 const RootLayout = ({ children }) => {
   return (
     <html lang="he" suppressHydrationWarning>
-      <body className="h-screen flex flex-col">
+      <body className="h-screen inline">
         <Header />
         <main className="h-full">{children}</main>
         {/* <Footer /> */}

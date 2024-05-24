@@ -2,8 +2,11 @@
 
 import React from 'react';
 import { usePathname } from 'next/navigation';
+import { throttle } from 'lodash';
 import logo from '@/assets/media/logo.png';
 import labels from '@/labels';
+
+const stickyHeaderClassName = 'animated fadeInDown sticky top-0 left-0 w-full z-50 bg-white shadow-[0px_10px_15px_rgba(25,25,25,0.075)] rounded-none p-0 border-b-0';
 
 const menu = [
     { label: labels.header.menu.home, href: '/' },
@@ -13,14 +16,45 @@ const menu = [
 
 const Header = () => {
     const [isCollapsed, setIsCollapsed] = React.useState(true);
+    const headerRef = React.useRef(null);
     const pathname = usePathname();
 
     const toggleCollapse = () => {
         setIsCollapsed(!isCollapsed);
     };
 
+    const toggleStickyAnimation = () => {
+        if (!headerRef.current) {
+            return;
+        }
+        if (window.scrollY === 0 && toggleStickyAnimation.isSticky) {
+            headerRef.current.classList.remove(...stickyHeaderClassName.split(' '));
+            headerRef.current.classList.add('transition-all', 'duration-600', 'ease-in-out', 'lg:py-4');
+            toggleStickyAnimation.isSticky = false;
+            return;
+        }
+        if (window.scrollY >= 250 && !toggleStickyAnimation.isSticky) {
+            setIsCollapsed(true);
+            headerRef.current.classList.add(...stickyHeaderClassName.split(' '));
+            headerRef.current.classList.remove('lg:py-4');
+            toggleStickyAnimation.isSticky = true;
+            return;
+        }
+    };
+
+    const initStickyAnimation = () => {
+        const throttledToggleStickyAnimation = throttle(toggleStickyAnimation, 100);
+        window.addEventListener('scroll', throttledToggleStickyAnimation);
+
+        return () => {
+            window.removeEventListener('scroll', throttledToggleStickyAnimation);
+        };
+    };
+
+    React.useEffect(initStickyAnimation, []);
+
     return (
-        <header className="text-gray-600 body-font lg:px-28 lg:py-4 sm:border-b sm:border-green-200 sm:border-opacity-50">
+        <header className="bg-white text-gray-600 body-font lg:px-28 lg:py-4 border-b border-green-200 border-opacity-50" ref={headerRef}>
             <div className="container mx-auto flex flex-wrap p-5 flex-row items-center justify-between">
                 <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
                     <img src={logo.src} alt="logo" />
@@ -68,9 +102,9 @@ const Header = () => {
                 </div>
                 <div
                     id="navbar"
-                    className={`${isCollapsed ? 'max-h-0' : 'max-h-screen'} md:max-h-screen overflow-hidden w-full md:w-auto md:flex-grow`}
+                    className={`${isCollapsed ? 'max-h-0' : 'max-h-screen mt-2 p-2 shadow-[0px_10px_15px_rgba(25,25,25,0.1)] md:mt-0 md:p-0 md:shadow-none'} transition-all duration-300 ease-in-out md:max-h-screen overflow-hidden w-full md:w-auto md:flex-grow`}
                 >
-                    <nav className="flex flex-col md:flex-row items-center text-base justify-end py-4 md:py-0">
+                    <nav className="flex flex-col md:flex-row text-base justify-end py-4 md:py-0">
                         {menu.map(({ label, href }) => (
                             <a
                                 key={href}
