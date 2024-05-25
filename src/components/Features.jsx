@@ -31,9 +31,9 @@ const Features = () => {
                         alt="img"
                         className="mx-auto mb-5 animated"
                     />
-                    <h5 className="text-blue-950 text-lg font-semibold mb-3">{content.features[0].title}</h5>
+                    <h5 className="text-blue-950 text-lg font-semibold mb-3">{content.features.list[0].title}</h5>
                     <p className="text-sm leading-relaxed text-zinc-500 font-medium">
-                        {content.features[0].description}
+                        {content.features.list[0].description}
                     </p>
                 </div>
                 <div
@@ -46,9 +46,9 @@ const Features = () => {
                         alt="img"
                         className="mx-auto mb-5 animated"
                     />
-                    <h5 className="text-blue-950 text-lg font-semibold mb-3">{content.features[1].title}</h5>
+                    <h5 className="text-blue-950 text-lg font-semibold mb-3">{content.features.list[1].title}</h5>
                     <p className="text-sm leading-relaxed text-zinc-500 font-medium">
-                        {content.features[1].description}
+                        {content.features.list[1].description}
                     </p>
                 </div>
                 <div
@@ -61,9 +61,9 @@ const Features = () => {
                         alt="img"
                         className="mx-auto mb-5 animated"
                     />
-                    <h5 className="text-blue-950 text-lg font-semibold mb-3">{content.features[2].title}</h5>
+                    <h5 className="text-blue-950 text-lg font-semibold mb-3">{content.features.list[2].title}</h5>
                     <p className="text-sm leading-relaxed text-zinc-500 font-medium">
-                        {content.features[2].description}
+                        {content.features.list[2].description}
                     </p>
                 </div>
                 <div
@@ -76,9 +76,9 @@ const Features = () => {
                         alt="img"
                         className="mx-auto mb-5 animated"
                     />
-                    <h5 className="text-blue-950 text-lg font-semibold mb-3">{content.features[3].title}</h5>
+                    <h5 className="text-blue-950 text-lg font-semibold mb-3">{content.features.list[3].title}</h5>
                     <p className="text-sm leading-relaxed text-zinc-500 font-medium">
-                        {content.features[3].description}
+                        {content.features.list[3].description}
                     </p>
                 </div>
             </div>
