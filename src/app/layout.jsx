@@ -5,8 +5,8 @@ import '@/assets/css/style.scss';
 import content from '@/content';
 
 export const metadata = {
-  title: content.name,
-  description: content.niche,
+  title: content.meta.title,
+  description: content.meta.description,
   icons: {
     icon: favicon.src,
   },

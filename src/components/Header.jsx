@@ -4,14 +4,14 @@ import React from 'react';
 import { usePathname } from 'next/navigation';
 import { throttle } from 'lodash';
 import logo from '@/assets/media/logo.png';
-import labels from '@/labels';
+import content from '@/content';
 
 const stickyHeaderClassName = 'animated fadeInDown sticky top-0 left-0 w-full z-50 bg-white shadow-[0px_10px_15px_rgba(25,25,25,0.075)] rounded-none p-0 border-b-0';
 
 const menu = [
-    { label: labels.header.menu.home, href: '/' },
-    { label: labels.header.menu.products, href: '/products' },
-    { label: labels.header.menu.blog, href: '/blog' },
+    { label: content.header.menu.home, href: '/' },
+    { label: content.header.menu.products, href: '/products' },
+    { label: content.header.menu.blog, href: '/blog' },
 ];
 
 const Header = () => {
@@ -121,7 +121,7 @@ const Header = () => {
                         <i className="fas fa-shopping-basket px-4 text-green-500"></i>
                     </div>
                     <div className="hidden md:block border-l border-gray-300 ml-4 mr-4 h-6"></div>
-                    <button className="hidden md:block">{labels.header.cta}</button>
+                    <button className="hidden md:block">{content.header.cta}</button>
                 </div>
             </div>
         </header>

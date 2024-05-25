@@ -1,7 +1,23 @@
 export default {
+    meta: {
+        title: 'MiniDrone',
+        description: 'Drone with camera for kids',
+    },
+    header: {
+        menu: {
+            home: 'Home',
+            products: 'Products',
+            blog: 'Blog',
+        },
+        cta: 'ORDER NOW',
+    },
+    hero: {
+        title: 'Drone with camera for kids',
+        description: 'We provide the best drone with camera for kids. Our drone is easy to use and safe for kids. Order now and get a discount!',
+        cta: 'PURCHASE',
+        cta2: 'CONTACT US',
+    },
     name: 'MiniDrone',
-    niche: 'Drone with camera for kids',
-    description: 'We provide the best drone with camera for kids. Our drone is easy to use and safe for kids. Order now and get a discount!',
     features: {
         list: [
             {
