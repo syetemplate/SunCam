@@ -22,4 +22,34 @@ export default {
             },
         ],
     },
+    benefits: {
+        title: 'Why Use MiniDrone',
+        subtitle: 'MiniDrone is the best drone with camera for kids. Here are some benefits of using our product, according to our customers.',
+        list: [
+            {
+                title: 'Easy to Use',
+                description: 'Lorem ipsufm dolor site amet mortllis MiniDrone regio amet mollis'
+            },
+            {
+                title: 'Safe for Kids',
+                description: 'Lorem ipsufm dolor site amet mortllis MiniDrone regio amet mollis'
+            },
+            {
+                title: 'High-Quality Camera',
+                description: 'Lorem ipsufm dolor site amet mortllis MiniDrone regio amet mollis'
+            },
+            {
+                title: 'Long Flight Time',
+                description: 'Lorem ipsufm dolor site amet mortllis MiniDrone regio amet mollis'
+            },
+            {
+                title: 'Portable',
+                description: 'Lorem ipsufm dolor site amet mortllis MiniDrone regio amet mollis'
+            },
+            {
+                title: 'Affordable',
+                description: 'Lorem ipsufm dolor site amet mortllis MiniDrone regio amet mollis'
+            },
+        ],
+    },
 };
