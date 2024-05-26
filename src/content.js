@@ -73,4 +73,22 @@ export default {
         cta: 'ORDER NOW',
         youtubeVideoId: 'iWKu6WNFf9M',
     },
+    gallery: {
+        title: 'Product Gallery',
+        categories: ['MiniDrone Basic', 'MiniDrone Pro', 'MiniDrone Pro Plus'],
+        images: [
+            { title: 'Lorem ipsum', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', categories: ['MiniDrone Basic'], width: 450, height: 500, fileName: 'gallery-1.png' },
+            { title: 'Lorem ipsum', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', categories: ['MiniDrone Basic'], width: 450, height: 600, fileName: 'gallery-2.png' },
+            { title: 'Lorem ipsum', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', categories: ['MiniDrone Basic'], width: 450, height: 400, fileName: 'gallery-3.png' },
+            { title: 'Lorem ipsum', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', categories: ['MiniDrone Pro'], width: 450, height: 500, fileName: 'gallery-4.png' },
+            { title: 'Lorem ipsum', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', categories: ['MiniDrone Pro'], width: 450, height: 600, fileName: 'gallery-5.png' },
+            { title: 'Lorem ipsum', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', categories: ['MiniDrone Pro'], width: 450, height: 400, fileName: 'gallery-6.png' },
+            { title: 'Lorem ipsum', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', categories: ['MiniDrone Pro'], width: 400, height: 460, fileName: 'gallery-7.png' },
+            { title: 'Lorem ipsum', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', categories: ['MiniDrone Pro'], width: 450, height: 420, fileName: 'gallery-8.png' },
+            { title: 'Lorem ipsum', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', categories: ['MiniDrone Pro'], width: 400, height: 550, fileName: 'gallery-9.png' },
+            { title: 'Lorem ipsum', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', categories: ['MiniDrone Pro Plus'], width: 400, height: 460, fileName: 'gallery-10.png' },
+            { title: 'Lorem ipsum', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', categories: ['MiniDrone Pro Plus'], width: 450, height: 420, fileName: 'gallery-11.png' },
+            { title: 'Lorem ipsum', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', categories: ['MiniDrone Pro Plus'], width: 400, height: 550, fileName: 'gallery-12.png' },
+        ],
+    },
 };

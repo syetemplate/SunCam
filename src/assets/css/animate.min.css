@@ -1,19 +1,5 @@
 @charset "UTF-8";
 
-
-/*!
-Animate.css - http://daneden.me/animate
-Licensed under the MIT license
-
-Copyright (c) 2013 Daniel Eden
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-*/
-
 .animated {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -21,27 +7,67 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   animation-fill-mode: both;
 }
 
-.animated.hinge {
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
+.animated.duration-100 {
+  -webkit-animation-duration: 100ms;
+  animation-duration: 100ms;
 }
 
-.animated.duration-1s {
+.animated.duration-200 {
+  -webkit-animation-duration: 200ms;
+  animation-duration: 200ms;
+}
+
+.animated.duration-300 {
+  -webkit-animation-duration: 300ms;
+  animation-duration: 300ms;
+}
+
+.animated.duration-400 {
+  -webkit-animation-duration: 400ms;
+  animation-duration: 400ms;
+}
+
+.animated.duration-500 {
+  -webkit-animation-duration: 500ms;
+  animation-duration: 500ms;
+}
+
+.animated.duration-600 {
+  -webkit-animation-duration: 600ms;
+  animation-duration: 600ms;
+}
+
+.animated.duration-700 {
+  -webkit-animation-duration: 700ms;
+  animation-duration: 700ms;
+}
+
+.animated.duration-800 {
+  -webkit-animation-duration: 800ms;
+  animation-duration: 800ms;
+}
+
+.animated.duration-900 {
+  -webkit-animation-duration: 900ms;
+  animation-duration: 900ms;
+}
+
+.animated.duration-1000 {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
 }
 
-.animated.duration-2s {
+.animated.duration-2000 {
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
 }
 
-.animated.duration-3s {
+.animated.duration-3000 {
   -webkit-animation-duration: 3s;
   animation-duration: 3s;
 }
 
-.animated.duration-4s {
+.animated.duration-4000 {
   -webkit-animation-duration: 4s;
   animation-duration: 4s;
 }
@@ -49,6 +75,11 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 .animated.infinite {
   -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
+}
+
+.animated.hinge {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
 }
 
 @-webkit-keyframes bounce {
@@ -136,7 +167,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   animation-name: flash;
 }
 
-/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
 
 @-webkit-keyframes pulse {
   0% {
@@ -383,7 +413,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   animation-name: tada;
 }
 
-/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
 
 @-webkit-keyframes wobble {
   0% {
@@ -2744,8 +2773,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   animation-name: hinge;
 }
 
-/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
-
 @-webkit-keyframes rollIn {
   0% {
     opacity: 0;
@@ -2781,7 +2808,6 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
   animation-name: rollIn;
 }
 
-/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
 
 @-webkit-keyframes rollOut {
   0% {
