@@ -12,18 +12,18 @@ html {
 
 button {
     @apply rounded-full border-2 px-8 py-3 text-sm font-bold;
-    @apply bg-green-500 text-white border-green-500;
+    @apply bg-limegreen text-white border-limegreen;
     transition: all 0.4s ease-in-out;
 
     &:hover {
-        @apply bg-white text-green-500;
+        @apply bg-white text-limegreen;
     }
 }
 
 button[variant="secondary"] {
-    @apply bg-white text-green-500 border-green-500;
+    @apply bg-white text-limegreen border-limegreen;
 
     &:hover {
-        @apply bg-green-500 text-white;
+        @apply bg-limegreen text-white;
     }
 }

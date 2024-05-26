@@ -109,7 +109,7 @@ const Header = () => {
                             <a
                                 key={href}
                                 href={href}
-                                className={`${pathname === href ? 'text-green-500' : 'text-gray-800'} font-semibold relative mx-5 py-2 capitalize`}
+                                className={`${pathname === href ? 'text-limegreen' : 'text-gray-800'} font-semibold relative mx-5 py-2 capitalize`}
                             >
                                 {label}
                             </a>
@@ -118,7 +118,7 @@ const Header = () => {
                 </div>
                 <div className="hidden md:flex md:ml-auto items-center">
                     <div className="hidden md:block">
-                        <i className="fas fa-shopping-basket px-4 text-green-500"></i>
+                        <i className="fas fa-shopping-basket px-4 text-limegreen"></i>
                     </div>
                     <div className="hidden md:block border-l border-gray-300 ml-4 mr-4 h-6"></div>
                     <button className="hidden md:block">{content.header.cta}</button>

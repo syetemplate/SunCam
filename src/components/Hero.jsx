@@ -10,13 +10,13 @@ const Hero = () => {
                 <div className="lg:w-1/2 lg:pr-8">
                     <div className="slider-content text-center lg:text-left">
                         <h2 className="text-blue-950 text-4xl lg:text-5xl xl:text-6xl leading-tight font-bold capitalize mb-4 mt-16 lg:mt-0 wow fadeInUp animated" data-wow-delay="0.2s" style={{ visibility: 'visible', animationDelay: '0.2s', animationName: 'fadeInUp' }}>
-                            {titlePart1}{titlePart2 && ` ${titlePart2}`}{titlePart3 && <span className="lg:text-green-500">{` ${titlePart3}`}</span>}{` ${titleRest.join(' ') || ''}`}
+                            {titlePart1}{titlePart2 && ` ${titlePart2}`}{titlePart3 && <span className="lg:text-limegreen">{` ${titlePart3}`}</span>}{` ${titleRest.join(' ') || ''}`}
                         </h2>
                         <p className="text-zinc-500 font-medium mb-8 wow fadeInUp animated" data-wow-delay="0.4s" style={{ visibility: 'visible', animationDelay: '0.4s', animationName: 'fadeInUp' }}>
                             {content.hero.description}
                         </p>
                         <div className="slider-btn lg:flex">
-                            <button className="bg-green-500 text-white py-3 px-6 rounded-full lg:mr-4 wow fadeInLeft animated" data-wow-delay="0.6s" style={{ visibility: 'visible', animationDelay: '0.6s', animationName: 'fadeInLeft' }}>
+                            <button className="bg-limegreen text-white py-3 px-6 rounded-full lg:mr-4 wow fadeInLeft animated" data-wow-delay="0.6s" style={{ visibility: 'visible', animationDelay: '0.6s', animationName: 'fadeInLeft' }}>
                                 {content.hero.cta}
                             </button>
                             <button variant="secondary" className="bg-white text-gray-700 py-3 px-6 rounded-full hidden lg:block wow fadeInRight animated" data-wow-delay="0.6s" style={{ visibility: 'visible', animationDelay: '0.6s', animationName: 'fadeInRight' }}>

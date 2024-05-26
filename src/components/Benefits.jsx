@@ -11,15 +11,15 @@ import content from '@/content';
 const addHoverAnimation = e => {
     e.currentTarget.querySelector('h5').classList.remove('duration-500');
     e.currentTarget.querySelector('img').classList.remove('duration-500');
-    e.currentTarget.querySelector('h5').classList.add('text-green-500', 'duration-300');
-    e.currentTarget.querySelector('img').classList.add('border-green-500', 'duration-300');
+    e.currentTarget.querySelector('h5').classList.add('text-limegreen', 'duration-300');
+    e.currentTarget.querySelector('img').classList.add('border-limegreen', 'duration-300');
 };
 
 const removeHoverAnimation = e => {
     e.currentTarget.querySelector('h5').classList.add('duration-500');
     e.currentTarget.querySelector('img').classList.add('duration-500');
-    e.currentTarget.querySelector('h5').classList.remove('text-green-500', 'duration-300');
-    e.currentTarget.querySelector('img').classList.remove('border-green-500', 'duration-300');
+    e.currentTarget.querySelector('h5').classList.remove('text-limegreen', 'duration-300');
+    e.currentTarget.querySelector('img').classList.remove('border-limegreen', 'duration-300');
 };
 
 const Benefits = () => {
@@ -30,7 +30,7 @@ const Benefits = () => {
                     <div className="text-center mb-14">
                         <h2 className="text-blue-950 text-4xl font-bold">{content.benefits.title}</h2>
                         <div className="relative h-0.5 w-44 bg-gray-300 mx-auto mt-6 mb-8 rounded-[50%]">
-                            <div className="absolute -top-[3px] h-2 w-2 bg-green-500 rounded-full animated hinge-4 infinite moveLeftRight"></div>
+                            <div className="absolute -top-[3px] h-2 w-2 bg-limegreen rounded-full animated duration-2s infinite moveLeftRight"></div>
                         </div>
                         <p className="text-zinc-500 text-sm font-medium leading-loose">{content.benefits.subtitle}</p>
                     </div>
