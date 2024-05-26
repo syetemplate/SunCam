@@ -17,7 +17,6 @@ export default {
         cta: 'PURCHASE',
         cta2: 'CONTACT US',
     },
-    name: 'MiniDrone',
     features: {
         list: [
             {
@@ -67,5 +66,11 @@ export default {
                 description: 'Lorem ipsufm dolor site amet mortllis MiniDrone regio amet mollis'
             },
         ],
+    },
+    video: {
+        title: 'Awesome drone for kids with 4K camera and long flight time',
+        description: 'Take a look at our drone in action. The video showcases the MiniDrone’s features and capabilities.',
+        cta: 'ORDER NOW',
+        youtubeVideoId: 'iWKu6WNFf9M',
     },
 };

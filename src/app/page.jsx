@@ -1,6 +1,7 @@
 import Hero from '@/components/Hero';
 import Features from '@/components/Features';
 import Benefits from '@/components/Benefits';
+import Video from '@/components/Video';
 
 const HomePage = () => {
   return (
@@ -8,6 +9,7 @@ const HomePage = () => {
       <Hero />
       <Features />
       <Benefits />
+      <Video />
     </>
   );
 };
