@@ -3,6 +3,7 @@ import Features from '@/components/Features';
 import Benefits from '@/components/Benefits';
 import Video from '@/components/Video';
 import Gallery from '@/components/Gallery';
+import Footer from '@/components/Footer';
 
 const HomePage = () => {
   return (
@@ -12,6 +13,7 @@ const HomePage = () => {
       <Benefits />
       <Video />
       <Gallery />
+      <Footer />
     </>
   );
 };
