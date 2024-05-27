@@ -1,89 +1,101 @@
+'use client';
+
 import React from 'react';
-import cardImg from '@/assets/media/card_img.png';
-import logoImg from '@/assets/media/w_logo.png';
-import recentPost1Img from '@/assets/media/f_rc_img01.jpg';
-import recentPost2Img from '@/assets/media/f_rc_img02.jpg';
-import footerBg from '@/assets/bg/footer_bg.jpg';
+import dynamic from 'next/dynamic';
+import footerBgImage from '@/assets/bg/footer.jpg';
+import logoLite from '@/assets/media/logo-lite.png';
+import paymentMethodsImage from '@/assets/media/payment-methods.png';
+import content from '@/content';
 
 const Footer = () => {
     return (
-        <footer id="contact">
-            <div className="footer-wrap pt-190 pb-40" style={{ backgroundImage: `url(${footerBg.src})` }}>
-                <div className="container">
-                    <div className="row">
-                        <div className="col-xl-3 col-lg-4 col-md-6">
+        <footer>
+            <div className="footer-wrap pt-190 pb-40" style={{ backgroundImage: `url(${footerBgImage.src})` }}>
+                <div className="container mx-auto sm:px-4">
+                    <div className="flex flex-wrap ">
+                        <div className="xl:w-1/4 pr-4 pl-4 lg:w-1/3 pr-4 pl-4 md:w-1/2 pr-4 pl-4">
                             <div className="footer-widget mb-50">
                                 <div className="footer-logo mb-35">
-                                    <a href="index.html"><img src={logoImg.src} alt="Logo" /></a>
+                                    <a href="index.html"><img src={logoLite.src} alt="logo" /></a>
                                 </div>
                                 <div className="footer-text">
-                                    <p>Orem Ipsum is simply dumm text the printing and types indstr sum has been the industry</p>
+                                    <p>{content.footer.text}</p>
                                 </div>
                                 <div className="footer-social">
                                     <ul>
-                                        <li><a href="#"><i className="fab fa-facebook-f"></i></a></li>
-                                        <li><a href="#"><i className="fab fa-twitter"></i></a></li>
-                                        <li><a href="#"><i className="fab fa-pinterest-p"></i></a></li>
-                                        <li><a href="#"><i className="fab fa-linkedin-in"></i></a></li>
+                                        {content.footer.social.map((social, index) => (
+                                            <li key={index}>
+                                                <a href={social.href}>
+                                                    <i className={social.icon}></i>
+                                                </a>
+                                            </li>
+                                        ))}
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                        <div className="col-xl-3 col-lg-4 col-md-6">
+                        <div className="xl:w-1/4 pr-4 pl-4 lg:w-1/3 pr-4 pl-4 md:w-1/2 pr-4 pl-4">
                             <div className="footer-widget mb-50">
                                 <div className="fw-title mb-30">
                                     <h5>recent posts</h5>
                                 </div>
                                 <div className="f-rc-post">
                                     <ul>
-                                        <li>
-                                            <div className="f-rc-thumb">
-                                                <a href="#"><img src={recentPost1Img.src} alt="Recent Post 1" /></a>
-                                            </div>
-                                            <div className="f-rc-content">
-                                                <span>19 Jun, 2019</span>
-                                                <h5><a href="#">which the syste built and actually</a></h5>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div className="f-rc-thumb">
-                                                <a href="#"><img src={recentPost2Img.src} alt="Recent Post 2" /></a>
-                                            </div>
-                                            <div className="f-rc-content">
-                                                <span>19 Jun, 2019</span>
-                                                <h5><a href="#">which the syste built and actually</a></h5>
-                                            </div>
-                                        </li>
+                                        {content.footer.recentPosts.list.map((recentPost, index) => {
+                                            const Image = dynamic(() => import(`@/assets/media/${recentPost.imageName}`).then(module => {
+                                                const Component = () => <img src={module.default.src} alt={recentPost.title} />;
+                                                Component.displayName = `Image-${recentPost.imageName}`;
+                                                return Component;
+                                            }), {
+                                                loading: () => <img src="https://placehold.co/80x80" alt="recent post" />
+                                            });
+                                            return (
+                                                <li key={index}>
+                                                    <div className="f-rc-thumb">
+                                                        <a href={recentPost.href}><Image /></a>
+                                                    </div>
+                                                    <div className="f-rc-content">
+                                                        <span>{recentPost.date}</span>
+                                                        <h5><a href={recentPost.href}>{recentPost.description}</a></h5>
+                                                    </div>
+                                                </li>
+                                            );
+                                        })}
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                        <div className="col-xl-3 col-lg-4 col-md-6">
+                        <div className="xl:w-1/4 pr-4 pl-4 lg:w-1/3 pr-4 pl-4 md:w-1/2 pr-4 pl-4">
                             <div className="footer-widget mb-50">
                                 <div className="fw-title mb-30">
-                                    <h5>useful links</h5>
+                                    <h5>{content.footer.usefulLinks.title}</h5>
                                 </div>
                                 <div className="fw-link">
                                     <ul>
-                                        <li><a href="#"><i className="fas fa-caret-right"></i> About us</a></li>
-                                        <li><a href="#"><i className="fas fa-caret-right"></i> Delivery Information</a></li>
-                                        <li><a href="#"><i className="fas fa-caret-right"></i> Terms & Conditions</a></li>
-                                        <li><a href="#"><i className="fas fa-caret-right"></i> Privacy Policy</a></li>
-                                        <li><a href="#"><i className="fas fa-caret-right"></i> Refund Policy</a></li>
+                                        {content.footer.usefulLinks.list.map((link, index) => (
+                                            <li key={index}>
+                                                <a href={link.href}>
+                                                    <i className="fas fa-caret-right" />
+                                                    {` ${link.title}`}
+                                                </a>
+                                            </li>
+                                        ))}
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                        <div className="col-xl-3 col-lg-4 col-md-6">
+                        <div className="xl:w-1/4 pr-4 pl-4 lg:w-1/3 pr-4 pl-4 md:w-1/2 pr-4 pl-4">
                             <div className="footer-widget mb-50">
                                 <div className="fw-title mb-30">
-                                    <h5>Send Your Message</h5>
+                                    <h5>{content.footer.contact.title}</h5>
                                 </div>
                                 <div className="footer-form">
                                     <form action="#">
-                                        <input type="email" placeholder="Your E-mail" />
-                                        <textarea name="message" id="message" placeholder="Your Message"></textarea>
-                                        <button className="btn">Submit</button>
+                                        <input type="email" placeholder={content.footer.contact.emailPlaceholder} />
+                                        <textarea name="message" placeholder={content.footer.contact.messagePlaceholder}></textarea>
+                                        <button className="inline-block align-middle text-center select-none border font-bold whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline">
+                                            {content.footer.contact.submit}
+                                        </button>
                                     </form>
                                 </div>
                             </div>
@@ -92,16 +104,16 @@ const Footer = () => {
                 </div>
             </div>
             <div className="copyright-wrap">
-                <div className="container">
-                    <div className="row align-items-center">
-                        <div className="col-lg-6 col-md-7">
+                <div className="container mx-auto sm:px-4">
+                    <div className="flex flex-wrap  items-center">
+                        <div className="lg:w-1/2 pr-4 pl-4 md:w-3/5 pr-4 pl-4">
                             <div className="copyright-text">
-                                <p>Copyright© <span>Suppke </span> | All Rights Reserved</p>
+                                <p>{content.footer.copyright}</p>
                             </div>
                         </div>
-                        <div className="col-lg-6 col-md-5">
-                            <div className="f-payment-method text-center text-md-right">
-                                <img src={cardImg.src} alt="Payment Methods" />
+                        <div className="lg:w-1/2 pr-4 pl-4 md:w-2/5 pr-4 pl-4">
+                            <div className="f-payment-method text-center md:text-right">
+                                <img src={paymentMethodsImage.src} alt="payment methods" />
                             </div>
                         </div>
                     </div>
@@ -109,6 +121,6 @@ const Footer = () => {
             </div>
         </footer>
     );
-}
+};
 
 export default Footer;

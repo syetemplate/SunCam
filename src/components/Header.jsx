@@ -3,7 +3,7 @@
 import React from 'react';
 import { usePathname } from 'next/navigation';
 import { throttle } from 'lodash';
-import logo from '@/assets/media/logo.png';
+import logoDark from '@/assets/media/logo-dark.png';
 import content from '@/content';
 
 const stickyHeaderClassName = 'animated fadeInDown sticky top-0 left-0 w-full z-50 bg-white shadow-[0px_10px_15px_rgba(25,25,25,0.075)] rounded-none p-0 border-b-0';
@@ -57,7 +57,7 @@ const Header = () => {
         <header className="bg-white text-gray-600 body-font lg:px-28 lg:py-4 border-b border-green-200 border-opacity-50" ref={headerRef}>
             <div className="container mx-auto flex flex-wrap p-5 flex-row items-center justify-between">
                 <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
-                    <img src={logo.src} alt="logo" />
+                    <img src={logoDark.src} alt="logo" />
                 </a>
                 <div className="md:hidden">
                     <button

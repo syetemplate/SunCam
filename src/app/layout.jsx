@@ -1,5 +1,5 @@
 import Header from '@/components/Header';
-import Footer from '@/components/Footer'
+import Footer from '@/components/Footer';
 import favicon from '@/assets/media/favicon.ico';
 import '@/assets/css/style.scss';
 import content from '@/content';
@@ -25,7 +25,7 @@ const RootLayout = ({ children }) => {
       <body className="h-screen inline">
         <Header />
         <main className="h-full">{children}</main>
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );

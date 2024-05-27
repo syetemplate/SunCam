@@ -3,7 +3,6 @@ import Features from '@/components/Features';
 import Benefits from '@/components/Benefits';
 import Video from '@/components/Video';
 import Gallery from '@/components/Gallery';
-import Footer from '@/components/Footer';
 import ContactUs from '@/components/ContactUs';
 
 const HomePage = () => {
@@ -15,7 +14,6 @@ const HomePage = () => {
       <Video />
       <Gallery />
       <ContactUs />
-      <Footer />
     </>
   );
 };

@@ -81,9 +81,9 @@ const Gallery = () => {
                                     return;
                                 }
 
-                                const Image = dynamic(() => import(`@/assets/media/${image.fileName}`).then(module => {
+                                const Image = dynamic(() => import(`@/assets/media/${image.imageName}`).then(module => {
                                     const Component = () => <img src={module.default.src} {...generateImageProps(image)} />;
-                                    Component.displayName = `Image-${image.fileName}`;
+                                    Component.displayName = `Image-${image.imageName}`;
                                     return Component;
                                 }), {
                                     loading: () => <img src={`https://placehold.co/${image.width}x${image.height}`} {...generateImageProps()} />
@@ -120,9 +120,9 @@ const Gallery = () => {
                                     return;
                                 }
 
-                                const Image = dynamic(() => import(`@/assets/media/${image.fileName}`).then(module => {
+                                const Image = dynamic(() => import(`@/assets/media/${image.imageName}`).then(module => {
                                     const Component = () => <img src={module.default.src} {...generateImageProps(image)} />;
-                                    Component.displayName = `Image-${image.fileName}`;
+                                    Component.displayName = `Image-${image.imageName}`;
                                     return Component;
                                 }), {
                                     loading: () => <img src={`https://placehold.co/${image.width}x${image.height}`} {...generateImageProps()} />
@@ -159,9 +159,9 @@ const Gallery = () => {
                                     return;
                                 }
 
-                                const Image = dynamic(() => import(`@/assets/media/${image.fileName}`).then(module => {
+                                const Image = dynamic(() => import(`@/assets/media/${image.imageName}`).then(module => {
                                     const Component = () => <img src={module.default.src} {...generateImageProps(image)} />;
-                                    Component.displayName = `Image-${image.fileName}`;
+                                    Component.displayName = `Image-${image.imageName}`;
                                     return Component;
                                 }), {
                                     loading: () => <img src={`https://placehold.co/${image.width}x${image.height}`} {...generateImageProps()} />
