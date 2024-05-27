@@ -4,6 +4,7 @@ import Benefits from '@/components/Benefits';
 import Video from '@/components/Video';
 import Gallery from '@/components/Gallery';
 import Footer from '@/components/Footer';
+import ContactUs from '@/components/ContactUs';
 
 const HomePage = () => {
   return (
@@ -13,6 +14,7 @@ const HomePage = () => {
       <Benefits />
       <Video />
       <Gallery />
+      <ContactUs />
       <Footer />
     </>
   );

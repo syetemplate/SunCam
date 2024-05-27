@@ -2027,7 +2027,7 @@ blockquote::before {
 	padding: 40px 50px;
 	background-position: center;
 	background-size: cover;
-	margin-bottom: -90px;
+	margin-bottom: -120px;
 }
 .home-yellow .newsletter-wrap {
 	border: 8px solid #f99a00;
