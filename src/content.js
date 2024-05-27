@@ -91,6 +91,12 @@ export default {
             { title: 'Lorem ipsum', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', categories: ['MiniDrone Pro Plus'], width: 400, height: 550, imageName: 'gallery-12.png' },
         ],
     },
+    newsletter: {
+        title: 'Newsletter Sign Up',
+        description: 'Notifications our best deals...',
+        emailPlaceholder: 'Enter your email...',
+        submit: 'Subscribe',
+    },
     footer: {
         text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         social: [

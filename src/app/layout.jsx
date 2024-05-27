@@ -1,4 +1,5 @@
 import Header from '@/components/Header';
+import Main from '@/components/Main';
 import Footer from '@/components/Footer';
 import favicon from '@/assets/media/favicon.ico';
 import '@/assets/css/style.scss';
@@ -24,7 +25,7 @@ const RootLayout = ({ children }) => {
     <html lang="he" suppressHydrationWarning>
       <body className="h-screen inline">
         <Header />
-        <main className="h-full">{children}</main>
+        <Main>{children}</Main>
         <Footer />
       </body>
     </html>

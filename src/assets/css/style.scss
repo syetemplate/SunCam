@@ -26,17 +26,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,400i,500,500i,600,600i,700,800,900&display=swap');
-@import url('./animate.min.css');
-@import url('./fontawesome-all.min.css');
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-@import url('./magnific-popup.css');
-@import url('./slick.css');
-@import url('./flaticon.css');
-@import url('./aos.css');
-@import url('./default.css');
-@import url('./responsive.css');
-
 body {
 	font-family: 'Poppins', sans-serif;
 	font-weight: 500;
@@ -2387,7 +2376,6 @@ blockquote::before {
 	border: none;
 	background: #edecec;
 	font-size: 14px;
-	width: 465px;
 }
 
 .newsletter-form form input::placeholder {
@@ -2671,3 +2659,13 @@ button[variant="secondary"] {
 	}
 
 }
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,400i,500,500i,600,600i,700,800,900&display=swap');
+@import './animate.min.scss';
+@import './fontawesome-all.min.scss';
+@import './magnific-popup.scss';
+@import './slick.scss';
+@import './flaticon.scss';
+@import './aos.scss';
+@import './default.scss';
+@import './responsive.scss';

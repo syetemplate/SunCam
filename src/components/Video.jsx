@@ -16,7 +16,11 @@ const Video = () => {
     };
 
     return (
-        <section className="px-4 py-32 bg-cover bg-center" style={{ backgroundImage: `url(${videoBgImage.src})` }}>
+        <section
+            id="video"
+            className="px-4 py-32 bg-cover bg-center"
+            style={{ backgroundImage: `url(${videoBgImage.src})` }}
+        >
             <div className="container mx-auto sm:w-10/12 lg:w-7/12">
                 <div className="flex flex-col items-center justify-center">
                     <div className="relative mb-12">

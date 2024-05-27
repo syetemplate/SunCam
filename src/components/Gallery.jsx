@@ -49,7 +49,7 @@ const Gallery = () => {
     };
 
     return (
-        <section className="px-4 pt-28 pb-24">
+        <section id="gallery" className="px-4 pt-28 pb-24">
             <div className="container mx-auto">
                 <div className="text-center mb-12">
                     <h2 className="text-blue-950 text-4xl font-bold">{content.gallery.title}</h2>

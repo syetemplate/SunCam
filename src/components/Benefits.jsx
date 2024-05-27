@@ -24,7 +24,7 @@ const removeHoverAnimation = e => {
 
 const Benefits = () => {
     return (
-        <section className="px-4 py-24">
+        <section id="benefits" className="px-4 py-24">
             <div className="container mx-auto">
                 <div className="w-full md:w-10/12 lg:w-8/12 xl:w-6/12 mx-auto">
                     <div className="text-center mb-14">
