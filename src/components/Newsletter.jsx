@@ -1,6 +1,4 @@
-import React from 'react';
-
-const NewsletterSection = () => {
+const Newsletter = () => {
     return (
         <section className="newsletter-area bg-cover bg-center shadow-md py-10" style={{ backgroundImage: "url('/path-to-your-bg-image.jpg')" }}>
             <div className="container mx-auto">
@@ -29,4 +27,4 @@ const NewsletterSection = () => {
     );
 };
 
-export default NewsletterSection;
+export default Newsletter;

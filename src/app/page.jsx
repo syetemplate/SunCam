@@ -3,7 +3,7 @@ import Features from '@/components/Features';
 import Benefits from '@/components/Benefits';
 import Video from '@/components/Video';
 import Gallery from '@/components/Gallery';
-import ContactUs from '@/components/ContactUs';
+import Newsletter from '@/components/Newsletter';
 
 const HomePage = () => {
   return (
@@ -13,7 +13,7 @@ const HomePage = () => {
       <Benefits />
       <Video />
       <Gallery />
-      <ContactUs />
+      <Newsletter />
     </>
   );
 };
