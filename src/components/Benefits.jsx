@@ -30,7 +30,7 @@ const Benefits = () => {
                     <div className="text-center mb-14">
                         <h2 className="text-blue-950 text-4xl font-bold">{content.benefits.title}</h2>
                         <div className="relative h-0.5 w-44 bg-gray-300 mx-auto mt-6 mb-8 rounded-[50%]">
-                            <div className="absolute -top-[3px] h-2 w-2 bg-limegreen rounded-full animated duration-2s infinite moveLeftRight"></div>
+                            <div className="absolute -top-[3px] h-2 w-2 bg-limegreen rounded-full animated duration-4000 infinite moveLeftRight"></div>
                         </div>
                         <p className="text-zinc-500 text-sm font-medium leading-loose">{content.benefits.subtitle}</p>
                     </div>

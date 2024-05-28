@@ -22,15 +22,22 @@ const removeFadeInLeftAnimation = e => {
 };
 
 const generateImageProps = image => ({
-    ...(image ? {
-        alt: image.categories.join(', '),
-        width: image.width,
-        height: image.height,
-        className: 'object-contain w-full p-1',
-    } : {
-        className: 'w-full p-1 zoomIn animated duration-300'
-    }),
+    alt: image.categories.join(', '),
+    width: image.width,
+    height: image.height,
+    className: 'object-contain w-full p-1',
 });
+
+const dynamicImages = content.gallery.images.map(image => ({
+    imageName: image.imageName,
+    component: dynamic(() => import(`@/assets/media/${image.imageName}`).then(module => {
+        const Component = () => <img src={module.default.src} {...generateImageProps(image)} />;
+        Component.displayName = `Image-${image.imageName}`;
+        return Component;
+    }), {
+        loading: () => <img width={image.width} height={image.height} className="w-full p-1" />,
+    }),
+}));
 
 const Gallery = () => {
     const [selectedCategory, setSelectedCategory] = React.useState(content.gallery.categories[Math.floor(content.gallery.categories.length / 2)]);
@@ -54,7 +61,7 @@ const Gallery = () => {
                 <div className="text-center mb-12">
                     <h2 className="text-blue-950 text-4xl font-bold">{content.gallery.title}</h2>
                     <div className="relative h-0.5 w-44 bg-gray-300 mx-auto mt-6 mb-8 rounded-[50%]">
-                        <div className="absolute -top-[3px] h-2 w-2 bg-limegreen rounded-full animated duration-2s infinite moveLeftRight"></div>
+                        <div className="absolute -top-[3px] h-2 w-2 bg-limegreen rounded-full animated duration-4000 infinite moveLeftRight"></div>
                     </div>
                 </div>
                 <div className="text-center mb-12">
@@ -80,15 +87,7 @@ const Gallery = () => {
                                 if (i % 3 !== 0) {
                                     return;
                                 }
-
-                                const Image = dynamic(() => import(`@/assets/media/${image.imageName}`).then(module => {
-                                    const Component = () => <img src={module.default.src} {...generateImageProps(image)} />;
-                                    Component.displayName = `Image-${image.imageName}`;
-                                    return Component;
-                                }), {
-                                    loading: () => <img src={`https://placehold.co/${image.width}x${image.height}`} {...generateImageProps()} />
-                                });
-
+                                const Image = dynamicImages.find(({ imageName }) => (imageName === image.imageName)).component;
                                 return (
                                     <div key={i} className={image.categories.join(' ')}>
                                         <div
@@ -119,15 +118,7 @@ const Gallery = () => {
                                 if (i % 3 !== 1) {
                                     return;
                                 }
-
-                                const Image = dynamic(() => import(`@/assets/media/${image.imageName}`).then(module => {
-                                    const Component = () => <img src={module.default.src} {...generateImageProps(image)} />;
-                                    Component.displayName = `Image-${image.imageName}`;
-                                    return Component;
-                                }), {
-                                    loading: () => <img src={`https://placehold.co/${image.width}x${image.height}`} {...generateImageProps()} />
-                                });
-
+                                const Image = dynamicImages.find(({ imageName }) => (imageName === image.imageName)).component;
                                 return (
                                     <div key={i} className={image.categories.join(' ')}>
                                         <div
@@ -158,15 +149,7 @@ const Gallery = () => {
                                 if (i % 3 !== 2) {
                                     return;
                                 }
-
-                                const Image = dynamic(() => import(`@/assets/media/${image.imageName}`).then(module => {
-                                    const Component = () => <img src={module.default.src} {...generateImageProps(image)} />;
-                                    Component.displayName = `Image-${image.imageName}`;
-                                    return Component;
-                                }), {
-                                    loading: () => <img src={`https://placehold.co/${image.width}x${image.height}`} {...generateImageProps()} />
-                                });
-
+                                const Image = dynamicImages.find(({ imageName }) => (imageName === image.imageName)).component;
                                 return (
                                     <div key={i} className={image.categories.join(' ')}>
                                         <div
@@ -193,7 +176,7 @@ const Gallery = () => {
                     </div>
                 </div>
             </div>
-            {selectedImage && (console.log(selectedImage) || (
+            {selectedImage && (
                 <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
                     <div className="relative h-4/6 max-w-4xl">
                         <button
@@ -209,7 +192,7 @@ const Gallery = () => {
                         />
                     </div>
                 </div>
-            ))}
+            )}
         </section>
     );
 };

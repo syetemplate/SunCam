@@ -109,7 +109,7 @@ const Header = () => {
                             <a
                                 key={href}
                                 href={href}
-                                className={`${pathname === href ? 'text-limegreen' : 'text-gray-800'} font-semibold relative mx-5 py-2 capitalize`}
+                                className={`${pathname === href ? 'text-limegreen' : 'text-gray-800'} hover:text-limegreen font-semibold relative mx-5 py-2 capitalize`}
                             >
                                 {label}
                             </a>

@@ -25,7 +25,7 @@ const Video = () => {
                 <div className="flex flex-col items-center justify-center">
                     <div className="relative mb-12">
                         <div className="absolute inset-0 flex items-center justify-center">
-                            <div className="absolute top-[50%] left-[50%] w-[8rem] h-[8rem] bg-white opacity-20 rounded-full animated hoop infinite duration-2s"></div>
+                            <div className="absolute top-[50%] left-[50%] w-[8rem] h-[8rem] bg-white opacity-20 rounded-full animated hoop infinite duration-4000"></div>
                         </div>
                         <button
                             onClick={handleVideoClick}
@@ -37,7 +37,7 @@ const Video = () => {
                     <div className="text-center">
                         <h2 className="text-4xl font-bold text-white">{content.video.title}</h2>
                         <p className="text-sm font-medium text-gray-300 leading-6 mt-6 mb-8">{content.video.description}</p>
-                        <a href="/product">
+                        <a href="/products">
                             <button className="hover:bg-transparent">{content.video.cta}</button>
                         </a>
                     </div>

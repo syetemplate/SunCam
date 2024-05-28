@@ -2384,7 +2384,6 @@ blockquote::before {
 
 .newsletter-form form button {
 	font-size: 17px;
-	font-style: italic;
 	font-weight: 700;
 	text-transform: capitalize;
 	padding: 19px 30px;
@@ -2524,8 +2523,9 @@ blockquote::before {
 .copyright-text p {
 	color: #969696;
 	margin-bottom: 0;
-	font-size: 16px;
+	font-size: 12px;
 	font-weight: 400;
+	white-space: nowrap;
 }
 
 .copyright-text p span {
