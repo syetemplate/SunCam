@@ -1,10 +1,10 @@
-const ProductsPage = () => {
+const PrivacyPolicyPage = () => {
     return (
       <div style={{ minHeight: 'calc(100vh - 769px)' }}>
-        Products
+        Privacy Policy
       </div>
     );
   };
   
-  export default ProductsPage;
+  export default PrivacyPolicyPage;
   

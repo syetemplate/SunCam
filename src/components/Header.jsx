@@ -8,12 +8,6 @@ import content from '@/content';
 
 const stickyHeaderClassName = 'animated fadeInDown sticky top-0 left-0 w-full z-50 bg-white shadow-[0px_10px_15px_rgba(25,25,25,0.075)] rounded-none p-0 border-b-0';
 
-const menu = [
-    { label: content.header.menu.home, href: '/' },
-    { label: content.header.menu.products, href: '/products' },
-    { label: content.header.menu.blog, href: '/blog' },
-];
-
 const Header = () => {
     const [isCollapsed, setIsCollapsed] = React.useState(true);
     const headerRef = React.useRef(null);
@@ -105,7 +99,7 @@ const Header = () => {
                     className={`${isCollapsed ? 'max-h-0' : 'max-h-screen mt-2 p-2 shadow-[0px_10px_15px_rgba(25,25,25,0.1)] md:mt-0 md:p-0 md:shadow-none'} transition-all duration-300 ease-in-out md:max-h-screen overflow-hidden w-full md:w-auto md:flex-grow`}
                 >
                     <nav className="flex flex-col md:flex-row text-base justify-end py-4 md:py-0">
-                        {menu.map(({ label, href }) => (
+                        {content.header.menu.map(({ label, href }) => (
                             <a
                                 key={href}
                                 href={href}

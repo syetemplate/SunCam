@@ -4,11 +4,11 @@ export default {
         description: 'Drone with camera for kids',
     },
     header: {
-        menu: {
-            home: 'Home',
-            products: 'Products',
-            blog: 'Blog',
-        },
+        menu: [
+            { label: 'Home', href: '/' },
+            { label: 'Products', href: '/products' },
+            { label: 'Blog', href: '/blog' },
+        ],
         cta: 'ORDER NOW',
     },
     hero: {
@@ -115,8 +115,8 @@ export default {
             title: 'Useful Links',
             list: [
                 { title: 'Products', href: '/products' },
+                { title: 'Blog', href: '/blog' },
                 { title: 'About Us', href: '/about-us' },
-                { title: 'Terms & Conditions', href: '/terms-and-conditions' },
                 { title: 'Privacy Policy', href: '/privacy-policy' },
             ],
         },

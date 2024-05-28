@@ -1,10 +1,10 @@
-const ProductsPage = () => {
+const AboutUsPage = () => {
     return (
       <div style={{ minHeight: 'calc(100vh - 769px)' }}>
-        Products
+        About Us
       </div>
     );
   };
   
-  export default ProductsPage;
+  export default AboutUsPage;
   
