@@ -24,7 +24,7 @@ const removeHoverAnimation = e => {
 
 const Benefits = () => {
     return (
-        <section id="benefits" className="px-4 py-24">
+        <section id="benefits" className="px-4 2xl:px-28 py-28">
             <div className="container mx-auto">
                 <div className="w-full md:w-10/12 lg:w-8/12 xl:w-6/12 mx-auto">
                     <div className="text-center mb-14">
@@ -38,7 +38,7 @@ const Benefits = () => {
                 <div className="w-full lg:w-11/12 xl:w-full mx-auto flex flex-wrap items-center justify-center">
                     <div className="w-full xl:w-1/3 md:w-1/2">
                         <div
-                            className="flex flex-col justify-end md:flex-row items-center mb-10 md:pr-2 lg:pr-10"
+                            className="flex flex-col justify-end md:flex-row items-center mb-10 md:pr-2 lg:pr-14"
                             onMouseEnter={addHoverAnimation}
                             onMouseLeave={removeHoverAnimation}
                         >
@@ -55,7 +55,7 @@ const Benefits = () => {
                             </div>
                         </div>
                         <div
-                            className="flex flex-col justify-end md:flex-row items-center mb-10 md:pr-2 lg:pr-10"
+                            className="flex flex-col justify-end md:flex-row items-center mb-10 md:pr-2 lg:pr-14"
                             onMouseEnter={addHoverAnimation}
                             onMouseLeave={removeHoverAnimation}
                         >
@@ -72,7 +72,7 @@ const Benefits = () => {
                             </div>
                         </div>
                         <div
-                            className="flex flex-col justify-end md:flex-row items-center mb-10 md:pr-2 lg:pr-10"
+                            className="flex flex-col justify-end md:flex-row items-center mb-10 md:pr-2 lg:pr-14"
                             onMouseEnter={addHoverAnimation}
                             onMouseLeave={removeHoverAnimation}
                         >
@@ -90,7 +90,7 @@ const Benefits = () => {
                         </div>
                     </div>
                     <div className="hidden lg:w-1/3 xl:block">
-                        <div className="relative">
+                        <div className="relative d-benefits-img">
                             <img src={benefitsImage.src} alt="" className="mx-auto" />
                         </div>
                     </div>

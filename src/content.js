@@ -44,27 +44,27 @@ export default {
         list: [
             {
                 title: 'Easy to Use',
-                description: 'Lorem ipsufm dolor site amet mortllis MiniDrone regio amet mollis'
+                description: 'Lorem ipsufm dolor site amet mortllis Suppke regio amet mollis',
             },
             {
                 title: 'Safe for Kids',
-                description: 'Lorem ipsufm dolor site amet mortllis MiniDrone regio amet mollis'
+                description: 'Lorem ipsufm dolor site amet mortllis Suppke regio amet mollis',
             },
             {
                 title: 'High-Quality Camera',
-                description: 'Lorem ipsufm dolor site amet mortllis MiniDrone regio amet mollis'
+                description: 'Lorem ipsufm dolor site amet mortllis Suppke regio amet mollis',
             },
             {
                 title: 'Long Flight Time',
-                description: 'Lorem ipsufm dolor site amet mortllis MiniDrone regio amet mollis'
+                description: 'Lorem ipsufm dolor site amet mortllis Suppke regio amet mollis',
             },
             {
                 title: 'Portable',
-                description: 'Lorem ipsufm dolor site amet mortllis MiniDrone regio amet mollis'
+                description: 'Lorem ipsufm dolor site amet mortllis Suppke regio amet mollis',
             },
             {
                 title: 'Affordable',
-                description: 'Lorem ipsufm dolor site amet mortllis MiniDrone regio amet mollis'
+                description: 'Lorem ipsufm dolor site amet mortllis Suppke regio amet mollis',
             },
         ],
     },

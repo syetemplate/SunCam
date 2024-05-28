@@ -2,8 +2,8 @@ import content from '@/content';
 
 const Newsletter = () => {
     return (
-        <section id="newsletter">
-            <div className="container mx-auto px-4">
+        <section id="newsletter" className="px-4 2xl:px-28">
+            <div className="container mx-auto">
                 <div className="flex flex-wrap">
                     <div className="w-full">
                         <div className="newsletter-wrap">

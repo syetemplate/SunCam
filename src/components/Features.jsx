@@ -14,7 +14,7 @@ const Features = () => {
     return (
         <section
             id="features"
-            className="container bg-cover bg-center px-4 py-20 lg:px-28 min-w-full shadow-[0px_2px_12px_7px_rgba(82,33,162,0.05)]"
+            className="container bg-cover bg-center px-4 py-20 2xl:px-28 min-w-full shadow-[0px_2px_12px_7px_rgba(82,33,162,0.05)]"
             style={{
                 backgroundImage: `url(${featuresBgImage.src})`,
                 backgroundPosition: "center",

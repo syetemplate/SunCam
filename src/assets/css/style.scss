@@ -4,7 +4,7 @@
 2. Header
 3. Slider
 4. Features
-5. Services
+5. benefits
 6. Video
 7. Gallery
 8. Fact
@@ -363,10 +363,10 @@ label {
 .header-action ul li a,
 .main-menu .navbar-nav li.nav-item.active a.nav-link,
 .slider-content h2 span,
-.single-delivery-services:hover .ds-content h5,
+.single-delivery-benefits:hover .ds-content h5,
 .fact-bg .section-title h2 span,
 .doctor-info h6,
-.single-delivery-services:hover .ds-icon i,
+.single-delivery-benefits:hover .ds-icon i,
 .fact-content h5,
 .faq-wrapper .card-header h5 a,
 .faq-wrapper .card-header h5 a::after,
@@ -406,10 +406,10 @@ label {
 .home-yellow .header-action ul li a,
 .home-yellow .main-menu .navbar-nav li.nav-item.active a.nav-link,
 .home-yellow .slider-content h2 span,
-.home-yellow .single-delivery-services:hover .ds-content h5,
+.home-yellow .single-delivery-benefits:hover .ds-content h5,
 .home-yellow .fact-bg .section-title h2 span,
 .home-yellow .doctor-info h6,
-.home-yellow .single-delivery-services:hover .ds-icon i,
+.home-yellow .single-delivery-benefits:hover .ds-icon i,
 .home-yellow .fact-content h5,
 .home-yellow .faq-wrapper .card-header h5 a,
 .home-yellow .faq-wrapper .card-header h5 a::after,
@@ -749,7 +749,7 @@ label {
 	transform: rotateY(360deg);
 }
 
-/* 5. Services */
+/* 5. benefits */
 .section-title h2 {
 	font-size: 36px;
 	margin-bottom: 0;
@@ -812,18 +812,18 @@ label {
 	line-height: 28px;
 }
 
-.single-delivery-services {
+.single-delivery-benefits {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	align-items: center;
 }
 
-.single-delivery-services.pr-40 .ds-icon {
+.single-delivery-benefits.pr-40 .ds-icon {
 	margin-left: 17px;
 }
 
-.single-delivery-services .ds-icon i {
+.single-delivery-benefits .ds-icon i {
 	display: block;
 	width: 80px;
 	height: 80px;
@@ -836,11 +836,11 @@ label {
 	transition: .3s linear;
 }
 
-.single-delivery-services:hover .ds-icon i {
+.single-delivery-benefits:hover .ds-icon i {
 	border: 2px dashed #2acb35;
 }
 
-.home-yellow .single-delivery-services:hover .ds-icon i {
+.home-yellow .single-delivery-benefits:hover .ds-icon i {
 	border: 2px dashed #f99a00;
 }
 
@@ -857,16 +857,16 @@ label {
 	margin-bottom: 0;
 }
 
-.single-delivery-services.pl-40 .ds-icon {
+.single-delivery-benefits.pl-40 .ds-icon {
 	margin-right: 17px;
 }
 
-.d-services-img {
+.d-benefits-img {
 	text-align: center;
 	position: relative;
 }
 
-.d-services-img::before {
+.d-benefits-img::before {
 	content: "";
 	position: absolute;
 	background-image: url(../media/ellips-shape.png);
@@ -878,10 +878,10 @@ label {
 	z-index: -1;
 }
 
-.d-services-img::after {
+.d-benefits-img::after {
 	content: "";
 	position: absolute;
-	background-image: url(../media/services-shape-green.png);
+	background-image: url(../media/benefits-shape-green.png);
 	width: 709px;
 	height: 585px;
 	background-repeat: no-repeat;
@@ -890,38 +890,36 @@ label {
 	z-index: -1;
 }
 
-.home-yellow .d-services-img::after {
-	background-image: url(../media/services-shape-yellow.png);
+.home-yellow .d-benefits-img::after {
+	background-image: url(../media/benefits-shape-yellow.png);
 }
 
-.services-style-two .single-delivery-services {
+.benefits-style-two .single-delivery-benefits {
 	background: #fff;
 	padding: 35px 30px;
 	margin-bottom: 30px;
 	box-shadow: 0 3px 15px rgba(25, 25, 25, 0.1);
 }
 
-.services-style-two .single-delivery-services.pr-40 .ds-icon {
+.benefits-style-two .single-delivery-benefits.pr-40 .ds-icon {
 	margin-left: 20px;
 }
 
-.services-style-two .single-delivery-services.pl-40 .ds-icon {
+.benefits-style-two .single-delivery-benefits.pl-40 .ds-icon {
 	margin-right: 20px;
 }
 
-.single-delivery-services:last-child {
+.single-delivery-benefits:last-child {
 	margin-bottom: 0;
 }
 
 /* 6. Video */
 .video-bg {
-	background-image: url(../bg/video.jpg);
 	overflow: hidden;
 	background-position: center;
 	background-size: cover;
 	position: relative;
 	z-index: 1;
-	padding: 120px 0;
 }
 
 .video-bg::before {
@@ -2341,10 +2339,10 @@ blockquote::before {
 	background: #fff;
 	background-image: url(../bg/newsletter.jpg);
 	border: 8px solid #2acb35;
-	padding: 40px 50px;
+	padding: 40px 40px 20px 40px;
 	background-position: center;
 	background-size: cover;
-	margin-bottom: -120px;
+	margin-bottom: -100px;
 }
 
 .home-yellow .newsletter-wrap {
@@ -2360,7 +2358,6 @@ blockquote::before {
 .newsletter-content h4 {
 	font-size: 30px;
 	font-weight: 700;
-	margin-bottom: 10px;
 }
 
 .newsletter-content span {
@@ -2385,18 +2382,13 @@ blockquote::before {
 .newsletter-form form button {
 	font-size: 17px;
 	font-weight: 700;
+	font-style: italic;
 	text-transform: capitalize;
 	padding: 19px 30px;
 	border-radius: 0;
 }
 
 /* 17. Footer */
-.footer-wrap {
-	background-position: center;
-	background-size: cover;
-	background-image: url("../bg/footer.jpg");
-}
-
 .footer-text p {
 	color: #969696;
 	margin-bottom: 25px;

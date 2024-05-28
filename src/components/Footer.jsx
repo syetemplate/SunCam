@@ -10,8 +10,8 @@ import content from '@/content';
 const Footer = () => {
     return (
         <footer>
-            <div className="footer-wrap pt-190 pb-40" style={{ backgroundImage: `url(${footerBgImage.src})` }}>
-                <div className="container mx-auto px-4">
+            <div className="footer-wrap pt-190 pb-40 2xl:px-28 background-cover background-center" style={{ backgroundImage: `url(${footerBgImage.src})` }}>
+                <div className="container mx-auto">
                     <div className="flex flex-wrap ">
                         <div className="xl:w-1/4 pr-4 pl-4 lg:w-1/3 pr-4 pl-4 md:w-1/2 pr-4 pl-4">
                             <div className="footer-widget mb-50">
@@ -104,7 +104,7 @@ const Footer = () => {
                 </div>
             </div>
             <div className="copyright-wrap">
-                <div className="container mx-auto px-4">
+                <div className="container mx-auto">
                     <div className="flex flex-wrap items-center">
                         <div className="lg:w-1/2 pr-4 pl-4 md:w-3/5 pr-4 pl-4">
                             <div className="copyright-text">

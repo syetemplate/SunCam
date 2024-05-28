@@ -5,7 +5,7 @@ const Hero = () => {
     const [titlePart1, titlePart2, titlePart3, ...titleRest] = content.hero.title.split(' ');
 
     return (
-        <section id="hero" className="lg:px-28 py-20">
+        <section id="hero" className="2xl:px-28 py-20">
             <div className="container mx-auto flex flex-col-reverse lg:flex-row items-center justify-between px-4">
                 <div className="lg:w-1/2 lg:pr-8">
                     <div className="slider-content text-center lg:text-left">

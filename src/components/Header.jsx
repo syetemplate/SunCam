@@ -48,8 +48,8 @@ const Header = () => {
     React.useEffect(initStickyAnimation, []);
 
     return (
-        <header className="bg-white text-gray-600 body-font lg:px-28 lg:py-4 border-b border-green-200 border-opacity-50" ref={headerRef}>
-            <div className="container mx-auto flex flex-wrap p-5 flex-row items-center justify-between">
+        <header className="bg-white text-gray-600 body-font 2xl:px-28 lg:py-4 border-b border-green-200 border-opacity-50" ref={headerRef}>
+            <div className="container mx-auto flex flex-wrap px-4 pt-[24px] pb-[8px] xl:p-5 flex-row items-center justify-between">
                 <a href="/" className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
                     <img src={logoDark.src} alt="logo" />
                 </a>
