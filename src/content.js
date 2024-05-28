@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
     meta: {
         title: 'MiniDrone',
@@ -127,5 +128,34 @@ export default {
             submit: 'SUBMIT',
         },
         copyright: '© 2024 MiniDrone | All Rights Reserved',
+    },
+    blog: {
+        meta: {
+            title: 'Blog & Tips Suppke',
+            description: 'There are many variations of passages of Lorem Ipsum that available, but the majority have fered alteration in some form, by injected humour.',
+        },
+        posts: [
+            {
+                date: '19. august. 2019',
+                title: 'Bla Bla Supplement Report Market Expected',
+                description: 'Orem Ipsum is simply dummy text the printing and types industry. Orem Ipsum is simpl text the printing and types industry.',
+                href: 'blog-details.html',
+                imageName: 'blog_img01.jpg',
+            },
+            {
+                date: '19. august. 2019',
+                title: 'Supplementing Your Diet Towards Life',
+                description: 'Orem Ipsum is simply dummy text the printing and types industry. Orem Ipsum is simpl text the printing and types industry.',
+                href: 'blog-details.html',
+                imageName: 'blog_img01.jpg',
+            },
+            {
+                date: '19. august. 2019',
+                title: 'Homeopathic consultation Acupunc Expected',
+                description: 'Orem Ipsum is simply dummy text the printing and types industry. Orem Ipsum is simpl text the printing and types industry.',
+                href: 'blog-details.html',
+                imageName: 'blog_img01.jpg',
+            },
+        ],
     },
 };
