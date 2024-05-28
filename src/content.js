@@ -158,4 +158,33 @@ export default {
             },
         ],
     },
+    privacyPolicy: {
+        title: 'Privacy Policy',
+        sections: [
+            {
+                title: 'Introduction',
+                content: 'We value your privacy and are committed to protecting your personal information. This Privacy Policy explains how we collect, use, and disclose your information.',
+            },
+            {
+                title: 'Information We Collect',
+                content: 'We collect information you provide to us directly, such as when you create an account, make a purchase, or communicate with us. We also collect information automatically through your use of our services, such as your IP address and browsing behavior.',
+            },
+            {
+                title: 'How We Use Your Information',
+                content: 'We use your information to provide and improve our services, process transactions, communicate with you, and for other purposes described in this Privacy Policy.',
+            },
+            {
+                title: 'Sharing Your Information',
+                content: 'We may share your information with third parties to provide our services, comply with legal obligations, and for other purposes described in this Privacy Policy.',
+            },
+            {
+                title: 'Your Choices',
+                content: 'You have choices regarding your information, including how we use and share it. You can update your account information and communication preferences, and you may have the right to access, correct, or delete your personal information.',
+            },
+            {
+                title: 'Contact Us',
+                content: 'If you have any questions about this Privacy Policy, please contact us at privacy@minidrone.com.',
+            },
+        ],
+    },
 };
