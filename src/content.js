@@ -140,22 +140,148 @@ export default {
                 date: '19. august. 2019',
                 title: 'Bla Bla Supplement Report Market Expected',
                 description: 'Orem Ipsum is simply dummy text the printing and types industry. Orem Ipsum is simpl text the printing and types industry.',
-                href: 'blog-details.html',
+                href: '/blog/bla-bla-supplement-report-market-expected1',
                 imageName: 'blog_img01.jpg',
+                content: [
+                    {
+                        type: 'paragraph',
+                        text: 'Express dolor sit amet, consectetur adipiscing elit. Cras sollicitudin, tellus vitae condimem egestliberos dolor auctor tellus, eu consectetur neque elit quis nunc. Cras elementum pretiumi Nullam justo efficitur, trist ligula pellentesque ipsum. Quisque thsr augue ipsum, vehicula tellus maximus. Was popularised in the 1960s withs the release of Letraset sheets containing Lorem Ipsum passags, and more recently with desktop publishing software like Aldus PageMaker including versions.'
+                    },
+                    {
+                        type: 'paragraph',
+                        text: 'Rxpress dolor sit amet, consectetur adipiscing elit. Cras sollicitudin, tellus vitae condimem egestlibers dolosr auctor tellus, eu consectetur neque elit quis nunc. Cras elementum pretiumi Nullam justo efficitur, trist ligula pellentesque ipsum. Quisque thsr augue ipsum, vehicula tellus maximus.'
+                    },
+                    {
+                        type: 'blockquote',
+                        text: 'Elementum pretiumi Nullam justo efficitur trist ligula pellentesqe ipsum quisque augue psum vehicula tellus tellus vitae condimem maximus.'
+                    },
+                    {
+                        type: 'paragraph',
+                        text: 'Vehicula dolor amet consectetur adipiscing elit. Cras sollicitudin, tellus vitae condimem egestliberos dolor auctor tellus, eu consectetur neque elit quis nunc. Cras elementum pretiumi Nullam justo efficitur, trist ligula pellentesque ipsum. Quisque thsr augue ipsum, vehicula tellus maximus.'
+                    },
+                    {
+                        type: 'image',
+                        src: 'img/blog/blog_details_img01.jpg',
+                        alt: 'Blog Detail 1'
+                    },
+                    {
+                        type: 'image',
+                        src: 'img/blog/blog_details_img01.jpg',
+                        alt: 'Blog Detail 2'
+                    },
+                    {
+                        type: 'paragraph',
+                        text: 'Express dolor sit amet, consectetur adipiscing elit. Cras sollicitudin, tellus vitae condimem egestliberos dolor auctor tellus, eu consectetur neque elit quis nunc. Cras elementum pretiumi Nullam justo efficitur, trist ligula pellentesque ipsum. Quisque thsr augue ipsum, vehicula tellus maximus. Was popularised in the 1960s withs the release of Letraset sheets containing Lorem Ipsum passags, and more recently with desktop publishing software like Aldus PageMaker including versions.'
+                    },
+                    {
+                        type: 'paragraph',
+                        text: 'Vehicula dolor amet consectetur adipiscing elit. Cras sollicitudin, tellus vitae condimem egestliberos dolor auctor tellus, eu consectetur neque elit quis nunc. Cras elementum pretiumi Nullam justo efficitur, trist ligula pellentesque ipsum. Quisque thsr augue ipsum, vehicula tellus maximus.'
+                    }
+                ],
+                tags: ['Warehouse', 'Ocean', 'Freight', 'Railway'],
+                share: [
+                    { icon: 'fab fa-facebook-f', href: '#' },
+                    { icon: 'fab fa-twitter', href: '#' },
+                    { icon: 'fab fa-pinterest-p', href: '#' }
+                ]
             },
             {
                 date: '19. august. 2019',
                 title: 'Supplementing Your Diet Towards Life',
                 description: 'Orem Ipsum is simply dummy text the printing and types industry. Orem Ipsum is simpl text the printing and types industry.',
-                href: 'blog-details.html',
+                href: '/blog/supplement-report-market-expected',
                 imageName: 'blog_img01.jpg',
+                content: [
+                    {
+                        type: 'paragraph',
+                        text: 'Express dolor sit amet, consectetur adipiscing elit. Cras sollicitudin, tellus vitae condimem egestliberos dolor auctor tellus, eu consectetur neque elit quis nunc. Cras elementum pretiumi Nullam justo efficitur, trist ligula pellentesque ipsum. Quisque thsr augue ipsum, vehicula tellus maximus. Was popularised in the 1960s withs the release of Letraset sheets containing Lorem Ipsum passags, and more recently with desktop publishing software like Aldus PageMaker including versions.'
+                    },
+                    {
+                        type: 'paragraph',
+                        text: 'Rxpress dolor sit amet, consectetur adipiscing elit. Cras sollicitudin, tellus vitae condimem egestlibers dolosr auctor tellus, eu consectetur neque elit quis nunc. Cras elementum pretiumi Nullam justo efficitur, trist ligula pellentesque ipsum. Quisque thsr augue ipsum, vehicula tellus maximus.'
+                    },
+                    {
+                        type: 'blockquote',
+                        text: 'Elementum pretiumi Nullam justo efficitur trist ligula pellentesqe ipsum quisque augue psum vehicula tellus tellus vitae condimem maximus.'
+                    },
+                    {
+                        type: 'paragraph',
+                        text: 'Vehicula dolor amet consectetur adipiscing elit. Cras sollicitudin, tellus vitae condimem egestliberos dolor auctor tellus, eu consectetur neque elit quis nunc. Cras elementum pretiumi Nullam justo efficitur, trist ligula pellentesque ipsum. Quisque thsr augue ipsum, vehicula tellus maximus.'
+                    },
+                    {
+                        type: 'image',
+                        src: 'img/blog/blog_details_img01.jpg',
+                        alt: 'Blog Detail 1'
+                    },
+                    {
+                        type: 'image',
+                        src: 'img/blog/blog_details_img01.jpg',
+                        alt: 'Blog Detail 2'
+                    },
+                    {
+                        type: 'paragraph',
+                        text: 'Express dolor sit amet, consectetur adipiscing elit. Cras sollicitudin, tellus vitae condimem egestliberos dolor auctor tellus, eu consectetur neque elit quis nunc. Cras elementum pretiumi Nullam justo efficitur, trist ligula pellentesque ipsum. Quisque thsr augue ipsum, vehicula tellus maximus. Was popularised in the 1960s withs the release of Letraset sheets containing Lorem Ipsum passags, and more recently with desktop publishing software like Aldus PageMaker including versions.'
+                    },
+                    {
+                        type: 'paragraph',
+                        text: 'Vehicula dolor amet consectetur adipiscing elit. Cras sollicitudin, tellus vitae condimem egestliberos dolor auctor tellus, eu consectetur neque elit quis nunc. Cras elementum pretiumi Nullam justo efficitur, trist ligula pellentesque ipsum. Quisque thsr augue ipsum, vehicula tellus maximus.'
+                    }
+                ],
+                tags: ['Warehouse', 'Ocean', 'Freight', 'Railway'],
+                share: [
+                    { icon: 'fab fa-facebook-f', href: '#' },
+                    { icon: 'fab fa-twitter', href: '#' },
+                    { icon: 'fab fa-pinterest-p', href: '#' }
+                ]
             },
             {
                 date: '19. august. 2019',
                 title: 'Homeopathic consultation Acupunc Expected',
                 description: 'Orem Ipsum is simply dummy text the printing and types industry. Orem Ipsum is simpl text the printing and types industry.',
-                href: 'blog-details.html',
+                href: '/blog/supplement-report-market-expected2',
                 imageName: 'blog_img01.jpg',
+                content: [
+                    {
+                        type: 'paragraph',
+                        text: 'Express dolor sit amet, consectetur adipiscing elit. Cras sollicitudin, tellus vitae condimem egestliberos dolor auctor tellus, eu consectetur neque elit quis nunc. Cras elementum pretiumi Nullam justo efficitur, trist ligula pellentesque ipsum. Quisque thsr augue ipsum, vehicula tellus maximus. Was popularised in the 1960s withs the release of Letraset sheets containing Lorem Ipsum passags, and more recently with desktop publishing software like Aldus PageMaker including versions.'
+                    },
+                    {
+                        type: 'paragraph',
+                        text: 'Rxpress dolor sit amet, consectetur adipiscing elit. Cras sollicitudin, tellus vitae condimem egestlibers dolosr auctor tellus, eu consectetur neque elit quis nunc. Cras elementum pretiumi Nullam justo efficitur, trist ligula pellentesque ipsum. Quisque thsr augue ipsum, vehicula tellus maximus.'
+                    },
+                    {
+                        type: 'blockquote',
+                        text: 'Elementum pretiumi Nullam justo efficitur trist ligula pellentesqe ipsum quisque augue psum vehicula tellus tellus vitae condimem maximus.'
+                    },
+                    {
+                        type: 'paragraph',
+                        text: 'Vehicula dolor amet consectetur adipiscing elit. Cras sollicitudin, tellus vitae condimem egestliberos dolor auctor tellus, eu consectetur neque elit quis nunc. Cras elementum pretiumi Nullam justo efficitur, trist ligula pellentesque ipsum. Quisque thsr augue ipsum, vehicula tellus maximus.'
+                    },
+                    {
+                        type: 'image',
+                        src: 'img/blog/blog_details_img01.jpg',
+                        alt: 'Blog Detail 1'
+                    },
+                    {
+                        type: 'image',
+                        src: 'img/blog/blog_details_img01.jpg',
+                        alt: 'Blog Detail 2'
+                    },
+                    {
+                        type: 'paragraph',
+                        text: 'Express dolor sit amet, consectetur adipiscing elit. Cras sollicitudin, tellus vitae condimem egestliberos dolor auctor tellus, eu consectetur neque elit quis nunc. Cras elementum pretiumi Nullam justo efficitur, trist ligula pellentesque ipsum. Quisque thsr augue ipsum, vehicula tellus maximus. Was popularised in the 1960s withs the release of Letraset sheets containing Lorem Ipsum passags, and more recently with desktop publishing software like Aldus PageMaker including versions.'
+                    },
+                    {
+                        type: 'paragraph',
+                        text: 'Vehicula dolor amet consectetur adipiscing elit. Cras sollicitudin, tellus vitae condimem egestliberos dolor auctor tellus, eu consectetur neque elit quis nunc. Cras elementum pretiumi Nullam justo efficitur, trist ligula pellentesque ipsum. Quisque thsr augue ipsum, vehicula tellus maximus.'
+                    }
+                ],
+                tags: ['Warehouse', 'Ocean', 'Freight', 'Railway'],
+                share: [
+                    { icon: 'fab fa-facebook-f', href: '#' },
+                    { icon: 'fab fa-twitter', href: '#' },
+                    { icon: 'fab fa-pinterest-p', href: '#' }
+                ]
             },
         ],
     },
@@ -241,4 +367,85 @@ export default {
             },
         ],
     },
+    blogPost: {
+        breadcrumb: {
+            title: 'Blog single post',
+            links: [
+                { label: 'Home', href: 'index.html' },
+                { label: 'Blog Details', href: '#', active: true },
+            ],
+        },
+        blog: {
+            date: 'February 22, 2019',
+            title: 'Ocean Shipping Lines Word Relationship',
+            content: [
+                {
+                    type: 'paragraph',
+                    text: 'Express dolor sit amet, consectetur adipiscing elit. Cras sollicitudin, tellus vitae condimem egestliberos dolor auctor tellus, eu consectetur neque elit quis nunc. Cras elementum pretiumi Nullam justo efficitur, trist ligula pellentesque ipsum. Quisque thsr augue ipsum, vehicula tellus maximus. Was popularised in the 1960s withs the release of Letraset sheets containing Lorem Ipsum passags, and more recently with desktop publishing software like Aldus PageMaker including versions.'
+                },
+                {
+                    type: 'paragraph',
+                    text: 'Rxpress dolor sit amet, consectetur adipiscing elit. Cras sollicitudin, tellus vitae condimem egestlibers dolosr auctor tellus, eu consectetur neque elit quis nunc. Cras elementum pretiumi Nullam justo efficitur, trist ligula pellentesque ipsum. Quisque thsr augue ipsum, vehicula tellus maximus.'
+                },
+                {
+                    type: 'blockquote',
+                    text: 'Elementum pretiumi Nullam justo efficitur trist ligula pellentesqe ipsum quisque augue psum vehicula tellus tellus vitae condimem maximus.'
+                },
+                {
+                    type: 'paragraph',
+                    text: 'Vehicula dolor amet consectetur adipiscing elit. Cras sollicitudin, tellus vitae condimem egestliberos dolor auctor tellus, eu consectetur neque elit quis nunc. Cras elementum pretiumi Nullam justo efficitur, trist ligula pellentesque ipsum. Quisque thsr augue ipsum, vehicula tellus maximus.'
+                },
+                {
+                    type: 'image',
+                    src: 'img/blog/blog_details_img01.jpg',
+                    alt: 'Blog Detail 1'
+                },
+                {
+                    type: 'image',
+                    src: 'img/blog/blog_details_img01.jpg',
+                    alt: 'Blog Detail 2'
+                },
+                {
+                    type: 'paragraph',
+                    text: 'Express dolor sit amet, consectetur adipiscing elit. Cras sollicitudin, tellus vitae condimem egestliberos dolor auctor tellus, eu consectetur neque elit quis nunc. Cras elementum pretiumi Nullam justo efficitur, trist ligula pellentesque ipsum. Quisque thsr augue ipsum, vehicula tellus maximus. Was popularised in the 1960s withs the release of Letraset sheets containing Lorem Ipsum passags, and more recently with desktop publishing software like Aldus PageMaker including versions.'
+                },
+                {
+                    type: 'paragraph',
+                    text: 'Vehicula dolor amet consectetur adipiscing elit. Cras sollicitudin, tellus vitae condimem egestliberos dolor auctor tellus, eu consectetur neque elit quis nunc. Cras elementum pretiumi Nullam justo efficitur, trist ligula pellentesque ipsum. Quisque thsr augue ipsum, vehicula tellus maximus.'
+                }
+            ],
+            tags: ['Warehouse', 'Ocean', 'Freight', 'Railway'],
+            share: [
+                { icon: 'fab fa-facebook-f', href: '#' },
+                { icon: 'fab fa-twitter', href: '#' },
+                { icon: 'fab fa-pinterest-p', href: '#' }
+            ]
+        },
+        sidebar: {
+            recentPosts: {
+                title: 'Recent Posts',
+                posts: [
+                    {
+                        imgSrc: 'img/blog/rc_post_thumb01.jpg',
+                        title: 'Express Manegment Effective',
+                        date: 'November 22, 2019'
+                    },
+                    {
+                        imgSrc: 'img/blog/rc_post_thumb01.jpg',
+                        title: 'Customer Logisties Process Overall',
+                        date: 'November 22, 2019'
+                    },
+                    {
+                        imgSrc: 'img/blog/rc_post_thumb01.jpg',
+                        title: 'Supply is warehouse Effective',
+                        date: 'November 22, 2019'
+                    }
+                ]
+            },
+            tags: {
+                title: 'Tags Posts',
+                tags: ['Air Freight', 'Railway', 'News', 'Warehouse', 'Was', 'Logistic', 'Requirement', 'Process']
+            }
+        }
+    }
 };
