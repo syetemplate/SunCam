@@ -178,7 +178,7 @@ const Gallery = () => {
             </div>
             {selectedImage && (
                 <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
-                    <div className="relative h-4/6 max-w-4xl">
+                    <div className="relative max-w-4xl">
                         <button
                             onClick={() => setSelectedImage(null)}
                             className="absolute p-4 -top-[52px] -right-[16px] bg-transparent hover:bg-transparent border-transparent text-white text-2xl flex items-center justify-center animated fadeIn"
