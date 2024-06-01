@@ -48,7 +48,7 @@ const BlogPostPage = () => {
         className="breadcrumb-bg flex items-center"
         style={{ backgroundImage: `url(${blogBgImage.src})` }}
       >
-        <div style={{ position: 'absolute', width: '100%', height: '100%', backgroundColor: 'rgba(0, 0, 0, 0.5)', zIndex: 1 }}></div>
+        <div style={{ position: 'absolute', width: '100%', height: '100%', backgroundColor: 'rgba(0, 0, 0, 0.5)', zIndex: 1 }}/>
         <div className="container mx-auto sm:px-4" style={{ position: 'relative', zIndex: 2 }}>
           <div className="flex flex-wrap justify-center">
             <div className="md:w-4/5 pr-4 pl-4">
@@ -74,7 +74,7 @@ const BlogPostPage = () => {
       {/* breadcrumb-area-end */}
 
       {/* blog-area */}
-      <section className="pt-120 pb-120">
+      <section className="pt-60 pb-60">
         <div className="container mx-auto sm:px-4">
           <div className="flex flex-wrap">
             <div className="lg:w-2/3 pr-4 pl-4">
