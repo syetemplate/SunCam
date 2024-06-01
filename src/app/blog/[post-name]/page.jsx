@@ -43,7 +43,7 @@ const BlogPost = () => {
   const recentPosts = content.blog.posts.filter(post => post.href !== currentPost.href).slice(-numOfRecentPosts);
 
   return (
-    <main>
+    <>
       {/* breadcrumb-area */}
       <section
         className="breadcrumb-bg flex items-center"
@@ -195,7 +195,7 @@ const BlogPost = () => {
         </div>
       </section>
       {/* blog-area-end */}
-    </main>
+    </>
   );
 };
 
