@@ -21,17 +21,10 @@ const removeFadeInLeftAnimation = e => {
     });
 };
 
-const generateImageProps = image => ({
-    alt: image.categories.join(', '),
-    width: image.width,
-    height: image.height,
-    className: 'object-contain w-full p-1',
-});
-
 const dynamicImages = content.gallery.images.map(image => ({
     imageName: image.imageName,
     component: dynamic(() => import(`@/assets/media/${image.imageName}`).then(module => {
-        const Component = () => <img src={module.default.src} {...generateImageProps(image)} />;
+        const Component = () => <img src={module.default.src} alt={image.alt} width={image.width} height={image.height} className="object-contain w-full p-1" />;
         Component.displayName = `Image-${image.imageName}`;
         return Component;
     }), {

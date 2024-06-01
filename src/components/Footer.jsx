@@ -7,7 +7,11 @@ import logoLite from '@/assets/media/logo-lite.png';
 import paymentMethodsImage from '@/assets/media/payment-methods.png';
 import content from '@/content';
 
+const numOfRecentPosts = 3;
+
 const Footer = () => {
+    const recentPosts = content.blog.posts.slice(-numOfRecentPosts);
+
     return (
         <footer>
             <div className="footer-wrap pt-190 pb-40 2xl:px-28 background-cover background-center" style={{ backgroundImage: `url(${footerBgImage.src})` }}>
@@ -41,7 +45,7 @@ const Footer = () => {
                                 </div>
                                 <div className="f-rc-post">
                                     <ul>
-                                        {content.footer.recentPosts.list.map((recentPost, index) => {
+                                        {recentPosts.map((recentPost, index) => {
                                             const Image = dynamic(() => import(`@/assets/media/${recentPost.imageName}`).then(module => {
                                                 const Component = () => <img src={module.default.src} alt={recentPost.title} width="80" height="80" className="object-contain" />;
                                                 Component.displayName = `Image-${recentPost.imageName}`;
@@ -56,7 +60,7 @@ const Footer = () => {
                                                     </div>
                                                     <div className="f-rc-content">
                                                         <span>{recentPost.date}</span>
-                                                        <h5><a href={recentPost.href}>{recentPost.description}</a></h5>
+                                                        <h5><a href={recentPost.href}>{recentPost.title}</a></h5>
                                                     </div>
                                                 </li>
                                             );
