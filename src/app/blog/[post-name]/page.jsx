@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import dynamic from 'next/dynamic';
 import { useParams, usePathname } from 'next/navigation';
 import blogBgImage from '@/assets/bg/blog.jpg';
@@ -19,7 +18,7 @@ const dynamicImages = content.blog.posts.map(post => ({
   }),
 }));
 
-const BlogPost = () => {
+const BlogPostPage = () => {
   const { 'post-name': postName } = useParams();
   const pathname = usePathname();
 
@@ -199,4 +198,4 @@ const BlogPost = () => {
   );
 };
 
-export default BlogPost;
+export default BlogPostPage;
