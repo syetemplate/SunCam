@@ -583,7 +583,6 @@ label {
 }
 
 .breadcrumb-bg {
-	background-image: url(../bg/video.jpg);
 	min-height: 498px;
 	position: relative;
 	background-size: cover;
@@ -1848,22 +1847,11 @@ label {
 	height: 30px;
 	width: 30px;
 	line-height: 30px;
-	background: #385594;
 	text-align: center;
 	font-size: 12px;
 	border-radius: 50%;
 	color: #fff;
 	margin-left: 5px;
-}
-
-.blog-list-meta ul li.blog-post-share a:nth-child(2),
-.post-avatar-social a:nth-child(2) {
-	background: #4eabee;
-}
-
-.blog-list-meta ul li.blog-post-share a:last-child,
-.post-avatar-social a:last-child {
-	background: #cb2027;
 }
 
 .widget {

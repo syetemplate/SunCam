@@ -3,6 +3,7 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 import { useParams, usePathname } from 'next/navigation';
+import blogBgImage from '@/assets/bg/blog.jpg';
 import content from '@/content';
 
 const numOfRecentPosts = 3;
@@ -28,13 +29,13 @@ const BlogPost = () => {
   }
 
   const FeatureImage = dynamic(() => import(`@/assets/media/${currentPost.imageName}`).then(module => {
-    const Component = () => <img src={module.default.src} alt={currentPost.title}className="object-contain w-full p-1" />;
+    const Component = () => <img src={module.default.src} alt={currentPost.title} className="object-contain w-full p-1" />;
     Component.displayName = `Image-${currentPost.imageName}`;
     return Component;
   }), {
     loading: () => <img className="w-full p-1" />,
   });
-  
+
   const breadcrumbLinks = pathname.split('/')
     .map(part => content.header.menu.find(({ href }) => href === `/${part}`))
     .filter(Boolean);
@@ -44,7 +45,10 @@ const BlogPost = () => {
   return (
     <main>
       {/* breadcrumb-area */}
-      <section className="breadcrumb-bg flex items-center">
+      <section
+        className="breadcrumb-bg flex items-center"
+        style={{ backgroundImage: `url(${blogBgImage.src})` }}
+      >
         <div style={{ position: 'absolute', width: '100%', height: '100%', backgroundColor: 'rgba(0, 0, 0, 0.5)', zIndex: 1 }}></div>
         <div className="container mx-auto sm:px-4" style={{ position: 'relative', zIndex: 2 }}>
           <div className="flex flex-wrap justify-center">
@@ -77,7 +81,7 @@ const BlogPost = () => {
             <div className="lg:w-2/3 pr-4 pl-4">
               <div className="single-blog-list">
                 <div className="blog-list-thumb mb-35">
-                  <FeatureImage/>
+                  <FeatureImage />
                 </div>
                 <div className="blog-list-content blog-details-content">
                   <div className="blog-details-date mb-10">
@@ -116,9 +120,27 @@ const BlogPost = () => {
                         </div>
                       </li>
                       <li className="blog-post-share">
-                        {currentPost.share.map((social, index) => (
-                          <a href={social.href} key={index}><i className={social.icon}></i></a>
-                        ))}
+                        <a
+                          href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`}
+                          target="_blank"
+                          className="bg-blue-700"
+                        >
+                          <i className="fab fa-facebook-f" />
+                        </a>
+                        <a
+                          href={`https://www.x.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`}
+                          target="_blank"
+                          className="bg-black"
+                        >
+                          <i className="fa-solid fa-x" />
+                        </a>
+                        <a
+                          href={`https://www.pinterest.com/pin/create/button/?url=${encodeURIComponent(window.location.href)}`}
+                          target="_blank"
+                          className="bg-red-600"
+                        >
+                          <i className="fab fa-pinterest-p" />
+                        </a>
                       </li>
                     </ul>
                   </div>

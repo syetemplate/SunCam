@@ -170,11 +170,6 @@ export default {
                     }
                 ],
                 tags: ['Warehouse', 'Ocean', 'Freight', 'Railway'],
-                share: [
-                    { icon: 'fab fa-facebook-f', href: '#' },
-                    { icon: 'fab fa-twitter', href: '#' },
-                    { icon: 'fab fa-pinterest-p', href: '#' }
-                ]
             },
             {
                 date: '27 May, 2024',
@@ -219,11 +214,6 @@ export default {
                     }
                 ],
                 tags: ['Warehouse', 'Ocean', 'Freight', 'Railway'],
-                share: [
-                    { icon: 'fab fa-facebook-f', href: '#' },
-                    { icon: 'fab fa-twitter', href: '#' },
-                    { icon: 'fab fa-pinterest-p', href: '#' }
-                ]
             },
             {
                 date: '27 May, 2024',
@@ -250,12 +240,12 @@ export default {
                     },
                     {
                         type: 'image',
-                        imageName: 'blog-7.jpg',
+                        imageName: 'blog-8.jpg',
                         alt: 'Lorem ipsum',
                     },
                     {
                         type: 'image',
-                        imageName: 'blog-8.jpg',
+                        imageName: 'blog-9.jpg',
                         alt: 'Lorem ipsum',
                     },
                     {
@@ -268,11 +258,6 @@ export default {
                     }
                 ],
                 tags: ['Warehouse', 'Ocean', 'Freight', 'Railway'],
-                share: [
-                    { icon: 'fab fa-facebook-f', href: '#' },
-                    { icon: 'fab fa-twitter', href: '#' },
-                    { icon: 'fab fa-pinterest-p', href: '#' }
-                ]
             },
         ],
         readMore: 'Read More',
