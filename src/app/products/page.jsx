@@ -1,10 +1,15 @@
+import Product from '@/components/Product';
+import Benefits from '@/components/Benefits';
+import Newsletter from '@/components/Newsletter';
+
 const ProductsPage = () => {
-    return (
-      <div style={{ minHeight: 'calc(100vh - 769px)' }}>
-        Products
-      </div>
-    );
-  };
-  
-  export default ProductsPage;
-  
+  return (
+    <>
+      <Product />
+      <Benefits />
+      <Newsletter />
+    </>
+  );
+};
+
+export default ProductsPage;

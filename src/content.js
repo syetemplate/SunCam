@@ -76,21 +76,6 @@ export default {
     },
     gallery: {
         title: 'Product Gallery',
-        categories: ['MiniDrone Basic', 'MiniDrone Pro', 'MiniDrone Pro Plus'],
-        images: [
-            { title: 'Lorem ipsum', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', categories: ['MiniDrone Basic'], width: 450, height: 500, imageName: 'gallery-1.png' },
-            { title: 'Lorem ipsum', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', categories: ['MiniDrone Basic'], width: 450, height: 600, imageName: 'gallery-2.png' },
-            { title: 'Lorem ipsum', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', categories: ['MiniDrone Basic'], width: 450, height: 400, imageName: 'gallery-3.png' },
-            { title: 'Lorem ipsum', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', categories: ['MiniDrone Pro'], width: 450, height: 500, imageName: 'gallery-4.png' },
-            { title: 'Lorem ipsum', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', categories: ['MiniDrone Pro'], width: 450, height: 600, imageName: 'gallery-5.png' },
-            { title: 'Lorem ipsum', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', categories: ['MiniDrone Pro'], width: 450, height: 400, imageName: 'gallery-6.png' },
-            { title: 'Lorem ipsum', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', categories: ['MiniDrone Pro'], width: 400, height: 460, imageName: 'gallery-7.png' },
-            { title: 'Lorem ipsum', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', categories: ['MiniDrone Pro'], width: 450, height: 420, imageName: 'gallery-8.png' },
-            { title: 'Lorem ipsum', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', categories: ['MiniDrone Pro'], width: 400, height: 550, imageName: 'gallery-9.png' },
-            { title: 'Lorem ipsum', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', categories: ['MiniDrone Pro Plus'], width: 400, height: 460, imageName: 'gallery-10.png' },
-            { title: 'Lorem ipsum', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', categories: ['MiniDrone Pro Plus'], width: 450, height: 420, imageName: 'gallery-11.png' },
-            { title: 'Lorem ipsum', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', categories: ['MiniDrone Pro Plus'], width: 400, height: 550, imageName: 'gallery-12.png' },
-        ],
     },
     newsletter: {
         title: 'Newsletter Sign Up',
@@ -347,5 +332,126 @@ export default {
                 content: 'These Terms will be governed by and interpreted in accordance with the laws of the State of [State], and you submit to the non-exclusive jurisdiction of the state and federal courts located in [State] for the resolution of any disputes.',
             },
         ],
+    },
+    products: {
+        title: 'Order MiniDrone',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        categories: [
+            {
+                name: 'MiniDrone Basic',
+                price: '€120.00',
+                customerReviewsLabel: 'Customer Reviews',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+                productInfo: {
+                    title: 'Product Info',
+                    list: [
+                        { title: 'Weight', description: '249 grams' },
+                        { title: 'Flight Time', description: '29 minutes' },
+                        { title: 'Camera', description: '4K/30fps video' },
+                        { title: 'Safety', description: 'GPS return home' },
+                    ]
+                },
+                description: {
+                    title: 'Description',
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                },
+                additionalInfo: {
+                    title: 'Additional Information',
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                },
+                reviews: {
+                    title: 'Reviews',
+                    list: [
+                        { name: 'John Doe', date: '27 May, 2024', rating: 5, text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', avatarImageName: 'rewview-1-avatar.jpg' },
+                        { name: 'Michael Elliott', date: '27 May, 2024', rating: 4, text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', avatarImageName: 'rewview-2-avatar.jpg' },
+                        { name: 'Linda Smith', date: '27 May, 2024', rating: 5, text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', avatarImageName: 'rewview-3-avatar.jpg' },
+                        { name: 'Nancy Thompson', date: '27 May, 2024', rating: 4, text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', avatarImageName: 'rewview-4-avatar.jpg' },
+                    ],
+                },
+                images: [
+                    { imageName: 'gallery-1.png', width: 450, height: 500, title: 'Lorem ipsum', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+                    { imageName: 'gallery-2.png', width: 450, height: 600, title: 'Lorem ipsum', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+                    { imageName: 'gallery-3.png', width: 450, height: 400, title: 'Lorem ipsum', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+                ],
+            },
+            {
+                name: 'MiniDrone Pro',
+                price: '€150.00',
+                customerReviewsLabel: 'Customer Reviews',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+                productInfo: {
+                    title: 'Product Info',
+                    list: [
+                        { title: 'Weight', description: '249 grams' },
+                        { title: 'Flight Time', description: '29 minutes' },
+                        { title: 'Camera', description: '4K/30fps video' },
+                        { title: 'Safety', description: 'GPS return home' },
+                    ]
+                },
+                description: {
+                    title: 'Description',
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                },
+                additionalInfo: {
+                    title: 'Additional Information',
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                },
+                reviews: {
+                    title: 'Reviews',
+                    list: [
+                        { name: 'John Doe', date: '27 May, 2024', rating: 5, text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', avatarImageName: 'rewview-1-avatar.jpg' },
+                        { name: 'Michael Elliott', date: '27 May, 2024', rating: 4, text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', avatarImageName: 'rewview-2-avatar.jpg' },
+                        { name: 'Linda Smith', date: '27 May, 2024', rating: 5, text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', avatarImageName: 'rewview-3-avatar.jpg' },
+                        { name: 'Nancy Thompson', date: '27 May, 2024', rating: 4, text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', avatarImageName: 'rewview-4-avatar.jpg' },
+                    ],
+                },
+                images: [
+                    { imageName: 'gallery-4.png', width: 450, height: 500, title: 'Lorem ipsum', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+                    { imageName: 'gallery-5.png', width: 450, height: 600, title: 'Lorem ipsum', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+                    { imageName: 'gallery-6.png', width: 450, height: 400, title: 'Lorem ipsum', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+                    { imageName: 'gallery-7.png', width: 400, height: 460, title: 'Lorem ipsum', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+                    { imageName: 'gallery-8.png', width: 450, height: 420, title: 'Lorem ipsum', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+                    { imageName: 'gallery-9.png', width: 400, height: 550, title: 'Lorem ipsum', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+                ],
+            },
+            {
+                name: 'MiniDrone Pro Plus',
+                price: '€200.00',
+                customerReviewsLabel: 'Customer Reviews',
+                text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+                productInfo: {
+                    title: 'Product Info',
+                    list: [
+                        { title: 'Weight', description: '249 grams' },
+                        { title: 'Flight Time', description: '29 minutes' },
+                        { title: 'Camera', description: '4K/30fps video' },
+                        { title: 'Safety', description: 'GPS return home' },
+                    ]
+                },
+                description: {
+                    title: 'Description',
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                },
+                additionalInfo: {
+                    title: 'Additional Information',
+                    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
+                },
+                reviews: {
+                    title: 'Reviews',
+                    list: [
+                        { name: 'John Doe', date: '27 May, 2024', rating: 5, text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', avatarImageName: 'rewview-1-avatar.jpg' },
+                        { name: 'Michael Elliott', date: '27 May, 2024', rating: 4, text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', avatarImageName: 'rewview-2-avatar.jpg' },
+                        { name: 'Linda Smith', date: '27 May, 2024', rating: 5, text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', avatarImageName: 'rewview-3-avatar.jpg' },
+                        { name: 'Nancy Thompson', date: '27 May, 2024', rating: 4, text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', avatarImageName: 'rewview-4-avatar.jpg' },
+                    ],
+                },
+                images: [
+                    { imageName: 'gallery-10.png', width: 400, height: 460, title: 'Lorem ipsum', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+                    { imageName: 'gallery-11.png', width: 450, height: 420, title: 'Lorem ipsum', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+                    { imageName: 'gallery-12.png', width: 400, height: 550, title: 'Lorem ipsum', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.' },
+                ],
+            },
+        ],
+        ctaLabel: 'ADD TO CART',
     },
 };

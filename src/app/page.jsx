@@ -11,10 +11,10 @@ const HomePage = () => {
     <>
       <Hero />
       <Features />
-      <Benefits />
-      <Video />
       <Gallery />
-      <Blog />
+      <Benefits />
+      {/* <Video /> */}
+      {/* <Blog /> */}
       <Newsletter />
     </>
   );
