@@ -124,7 +124,7 @@ const Product = ({ product }) => {
     };
 
     return (
-        <section id="product" className="perched-area px-4 2xl:px-28 pt-4 pb-4">
+        <section id="product" className="px-4 2xl:px-28 pt-4 pb-4">
             <div className="container mx-auto">
                 <div className="block lg:flex lg:flex-wrap">
                     <div className="xl:w-3/5 pr-4 pl-4 lg:w-1/2 pr-4 pl-4">
