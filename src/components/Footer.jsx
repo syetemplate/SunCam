@@ -93,7 +93,7 @@ const Footer = () => {
                                 <div className="fw-title mb-30">
                                     <h5>{content.footer.contact.title}</h5>
                                 </div>
-                                <div className="footer-form">
+                                <div className="footer-form" id="contact">
                                     <form action="#">
                                         <input type="email" placeholder={content.footer.contact.emailPlaceholder} />
                                         <textarea name="message" placeholder={content.footer.contact.messagePlaceholder}></textarea>

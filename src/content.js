@@ -15,8 +15,14 @@ export default {
     hero: {
         title: 'Drone with camera for kids',
         description: 'We provide the best drone with camera for kids. Our drone is easy to use and safe for kids. Order now and get a discount!',
-        cta: 'PURCHASE',
-        cta2: 'CONTACT US',
+        cta: {
+            text: 'PURCHASE',
+            href: '/products',
+        },
+        cta2: {
+            text: 'CONTACT US',
+            href: '#contact',
+        },
     },
     features: {
         list: [

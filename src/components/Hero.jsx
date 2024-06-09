@@ -17,10 +17,10 @@ const Hero = () => {
                         </p>
                         <div className="slider-btn lg:flex">
                             <button className="bg-limegreen text-white py-3 px-6 rounded-full lg:mr-4 wow fadeInLeft animated" data-wow-delay="0.6s" style={{ visibility: 'visible', animationDelay: '0.6s', animationName: 'fadeInLeft' }}>
-                                {content.hero.cta}
+                                <a href={content.hero.cta.href}>{content.hero.cta.text}</a>
                             </button>
                             <button variant="secondary" className="bg-white text-gray-700 py-3 px-6 rounded-full hidden lg:block wow fadeInRight animated" data-wow-delay="0.6s" style={{ visibility: 'visible', animationDelay: '0.6s', animationName: 'fadeInRight' }}>
-                                {content.hero.cta2}
+                                <a href={content.hero.cta2.href}>{content.hero.cta2.text}</a>
                             </button>
                         </div>
                     </div>
