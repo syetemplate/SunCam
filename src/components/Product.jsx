@@ -2,6 +2,7 @@
 
 import React from 'react';
 import dynamic from 'next/dynamic';
+import { throttle } from 'lodash';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick-theme.css';
 import { ImageViewer } from '@/components/Gallery';
@@ -102,21 +103,30 @@ const Product = ({ product }) => {
         }
     };
 
-    const updateSlidesToShow = React.useCallback(() => {
+    const updateSlidesToShow = () => {
         if (!sliderContainerRef.current) {
             return 1;
         }
         const availableWidth = sliderContainerRef.current.clientWidth;
-        const maxSlides = Math.floor(availableWidth / smallImageWidth);
-        setSlidesToShow(Math.min(maxSlides, categorySmallImages.length));
-    }, []);
+        setSlidesToShow(Math.floor(availableWidth / smallImageWidth));
+    };
 
-    React.useLayoutEffect(updateSlidesToShow, [updateSlidesToShow]);
+    const initNumOfSlides = () => {
+        const throttledUpdateSlidesToShow = throttle(updateSlidesToShow, 100);
+        window.addEventListener('resize', throttledUpdateSlidesToShow);
+        updateSlidesToShow();
+
+        return () => {
+            window.removeEventListener('resize', throttledUpdateSlidesToShow);
+        };
+    };
+
+    React.useLayoutEffect(initNumOfSlides, []);
 
     const smallImagesSettings = {
         arrows: true,
         dots: false,
-        infinite: true,
+        infinite: (categorySmallImages.length > slidesToShow),
         speed: 500,
         slidesToShow,
         slidesToScroll: 1,
@@ -124,7 +134,7 @@ const Product = ({ product }) => {
     };
 
     return (
-        <section id="product" className="px-4 2xl:px-28 pt-4 pb-4">
+        <section id="product" className="px-4 2xl:px-28 pt-4 pb-16">
             <div className="container mx-auto">
                 <div className="block lg:flex lg:flex-wrap">
                     <div className="xl:w-3/5 pr-4 pl-4 lg:w-1/2 pr-4 pl-4">

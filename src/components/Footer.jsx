@@ -2,6 +2,7 @@
 
 import React from 'react';
 import dynamic from 'next/dynamic';
+import newsletterBgImage from '@/assets/bg/newsletter.jpg';
 import footerBgImage from '@/assets/bg/footer.jpg';
 import logoLite from '@/assets/media/logo-lite.png';
 import paymentMethodsImage from '@/assets/media/payment-methods.png';
@@ -18,7 +19,12 @@ const Footer = () => {
                 <div className="container mx-auto">
                     <div className="flex flex-wrap">
                         <div className="w-full">
-                            <div className="newsletter-wrap">
+                            <div
+                                className="newsletter-wrap"
+                                style={{
+                                    backgroundImage: `url(${newsletterBgImage.src})`,
+                                }}
+                            >
                                 <div className="flex flex-wrap lg:flex-nowrap justify-center">
                                     <div className="w-full pr-4 pl-4">
                                         <div className="newsletter-content mb-[25px] text-center lg:text-left">

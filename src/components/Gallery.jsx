@@ -2,6 +2,7 @@
 
 import React from 'react';
 import dynamic from 'next/dynamic';
+import galleryBgImage from '@/assets/bg/gallery.jpg';
 import content from '@/content';
 
 export const activeCategoryButtonClassName = 'px-[18px] py-4 md:py-2 mx-0 md:mx-0.5 my-0.5 md:my-0 text-[15px] font-medium rounded-full transition duration-300 bg-limegreen text-white shadow-[0px_0px_24px_0px_rgba(42,203,53,0.48)]';
@@ -72,7 +73,15 @@ const Gallery = () => {
     };
 
     return (
-        <section id="gallery" className="px-4 2xl:px-28 pt-28 pb-24">
+        <section
+            id="gallery"
+            className="px-4 2xl:px-28 pt-28 pb-24"
+            style={{
+                backgroundImage: `url(${galleryBgImage.src})`,
+                backgroundPosition: 'center',
+                backgroundSize: 'cover',
+            }}
+        >
             <div className="container mx-auto">
                 <div className="text-center mb-12">
                     <h2 className="text-blue-950 text-4xl font-bold">{content.gallery.title}</h2>

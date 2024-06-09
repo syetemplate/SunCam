@@ -463,4 +463,30 @@ export default {
         ],
         ctaLabel: 'ADD TO CART',
     },
+    faq: {
+        title: 'Frequently Asked Questions',
+        description: 'There are many variations of passages of Lorem Ipsum that available, but the majority have fered alteration in some form, by injected humour.',
+        list: [
+            {
+                question: 'What is MiniDrone?',
+                answer: 'MiniDrone is the best drone with camera for kids. Our drone is easy to use and safe for kids. Order now and get a discount.',
+            },
+            {
+                question: 'What is the flight time of MiniDrone?',
+                answer: 'MiniDrone offers up to 29 minutes of flight per battery, minimizing the need for frequent charging.',
+            },
+            {
+                question: 'Is MiniDrone easy to use?',
+                answer: 'MiniDrone is designed for beginners, with easy remote control and safety features like GPS return home.',
+            },
+            {
+                question: 'Does MiniDrone have a high-quality camera?',
+                answer: 'MiniDrone records 4K/30fps video, enabling young photographers to capture sharp aerial shots.',
+            },
+            {
+                question: 'Is MiniDrone safe for kids?',
+                answer: 'MiniDrone is safe for kids, with features like GPS return home and lightweight design.',
+            },
+        ],
+    },
 };

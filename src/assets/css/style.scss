@@ -713,7 +713,6 @@ label {
 
 /* 4. Features */
 .features-bg {
-	background-image: url(../bg/features.jpg);
 	box-shadow: 0px 2px 12.09px 6.91px rgba(82, 33, 162, 0.05);
 	background-position: center;
 	background-size: cover;
@@ -1051,13 +1050,6 @@ label {
 	}
 }
 
-/* 7. Gallery */
-.gallery-bg {
-	background-image: url(../bg/gallery.jpg);
-	background-position: center;
-	background-size: cover;
-}
-
 .product-menu {
 	background: #fff;
 	border-radius: 12px;
@@ -1210,12 +1202,6 @@ label {
 }
 
 /* 9. Faq */
-.faq-bg {
-	background-image: url(../bg/faq.jpg);
-	background-position: center;
-	background-size: cover;
-}
-
 .faq-img img {
 	width: 100%;
 }
@@ -2326,7 +2312,6 @@ blockquote::before {
 .newsletter-wrap {
 	box-shadow: 0px 2px 12.09px 0.91px rgba(68, 68, 68, 0.24);
 	background: #fff;
-	background-image: url(../bg/newsletter.jpg);
 	border: 8px solid #2acb35;
 	padding: 40px 40px 20px 40px;
 	background-position: center;
