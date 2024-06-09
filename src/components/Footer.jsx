@@ -133,7 +133,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className="copyright-wrap">
+            <div className="copyright-wrap 2xl:px-28">
                 <div className="container mx-auto">
                     <div className="flex flex-wrap items-center justify-center">
                         <div className="sm:w-1/2 px-4">
