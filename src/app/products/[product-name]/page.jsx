@@ -3,7 +3,6 @@
 import { useParams } from 'next/navigation';
 import Product from '@/components/Product';
 import Benefits from '@/components/Benefits';
-import Newsletter from '@/components/Newsletter';
 import content from '@/content';
 
 const ProductPage = () => {
@@ -18,7 +17,6 @@ const ProductPage = () => {
     <>
       <Product product={product}/>
       <Benefits />
-      <Newsletter />
     </>
   );
 };

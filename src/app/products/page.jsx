@@ -2,7 +2,6 @@
 
 import React from 'react';
 import dynamic from 'next/dynamic';
-import Newsletter from '@/components/Newsletter';
 import content from '@/content';
 
 const images = content.products.categories.flatMap(category =>
@@ -38,7 +37,6 @@ const ProductsPage = () => {
                         ))}
                     </div>
                 </div>
-                <Newsletter />
             </section>
         </>
     );
