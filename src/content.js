@@ -338,6 +338,7 @@ export default {
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
         categories: [
             {
+                href: '/products/mini-drone-basic',
                 name: 'MiniDrone Basic',
                 price: '€120.00',
                 customerReviewsLabel: 'Customer Reviews',
@@ -362,10 +363,10 @@ export default {
                 reviews: {
                     title: 'Reviews',
                     list: [
-                        { name: 'John Doe', date: '27 May, 2024', rating: 5, text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', avatarImageName: 'rewview-1-avatar.jpg' },
-                        { name: 'Michael Elliott', date: '27 May, 2024', rating: 4, text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', avatarImageName: 'rewview-2-avatar.jpg' },
-                        { name: 'Linda Smith', date: '27 May, 2024', rating: 5, text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', avatarImageName: 'rewview-3-avatar.jpg' },
-                        { name: 'Nancy Thompson', date: '27 May, 2024', rating: 4, text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', avatarImageName: 'rewview-4-avatar.jpg' },
+                        { name: 'John Doe', date: '27 May, 2024', rating: 5, text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', avatarImageName: 'review-1-avatar.jpg' },
+                        { name: 'Michael Elliott', date: '27 May, 2024', rating: 4, text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', avatarImageName: 'review-2-avatar.jpg' },
+                        { name: 'Linda Smith', date: '27 May, 2024', rating: 5, text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', avatarImageName: 'review-3-avatar.jpg' },
+                        { name: 'Nancy Thompson', date: '27 May, 2024', rating: 4, text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', avatarImageName: 'review-4-avatar.jpg' },
                     ],
                 },
                 images: [
@@ -375,6 +376,7 @@ export default {
                 ],
             },
             {
+                href: '/products/mini-drone-pro',
                 name: 'MiniDrone Pro',
                 price: '€150.00',
                 customerReviewsLabel: 'Customer Reviews',
@@ -399,10 +401,10 @@ export default {
                 reviews: {
                     title: 'Reviews',
                     list: [
-                        { name: 'John Doe', date: '27 May, 2024', rating: 5, text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', avatarImageName: 'rewview-1-avatar.jpg' },
-                        { name: 'Michael Elliott', date: '27 May, 2024', rating: 4, text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', avatarImageName: 'rewview-2-avatar.jpg' },
-                        { name: 'Linda Smith', date: '27 May, 2024', rating: 5, text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', avatarImageName: 'rewview-3-avatar.jpg' },
-                        { name: 'Nancy Thompson', date: '27 May, 2024', rating: 4, text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', avatarImageName: 'rewview-4-avatar.jpg' },
+                        { name: 'John Doe', date: '27 May, 2024', rating: 5, text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', avatarImageName: 'review-1-avatar.jpg' },
+                        { name: 'Michael Elliott', date: '27 May, 2024', rating: 4, text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', avatarImageName: 'review-2-avatar.jpg' },
+                        { name: 'Linda Smith', date: '27 May, 2024', rating: 5, text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', avatarImageName: 'review-3-avatar.jpg' },
+                        { name: 'Nancy Thompson', date: '27 May, 2024', rating: 4, text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', avatarImageName: 'review-4-avatar.jpg' },
                     ],
                 },
                 images: [
@@ -415,6 +417,7 @@ export default {
                 ],
             },
             {
+                href: '/products/mini-drone-pro-plus',
                 name: 'MiniDrone Pro Plus',
                 price: '€200.00',
                 customerReviewsLabel: 'Customer Reviews',
@@ -439,10 +442,10 @@ export default {
                 reviews: {
                     title: 'Reviews',
                     list: [
-                        { name: 'John Doe', date: '27 May, 2024', rating: 5, text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', avatarImageName: 'rewview-1-avatar.jpg' },
-                        { name: 'Michael Elliott', date: '27 May, 2024', rating: 4, text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', avatarImageName: 'rewview-2-avatar.jpg' },
-                        { name: 'Linda Smith', date: '27 May, 2024', rating: 5, text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', avatarImageName: 'rewview-3-avatar.jpg' },
-                        { name: 'Nancy Thompson', date: '27 May, 2024', rating: 4, text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', avatarImageName: 'rewview-4-avatar.jpg' },
+                        { name: 'John Doe', date: '27 May, 2024', rating: 5, text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', avatarImageName: 'review-1-avatar.jpg' },
+                        { name: 'Michael Elliott', date: '27 May, 2024', rating: 4, text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', avatarImageName: 'review-2-avatar.jpg' },
+                        { name: 'Linda Smith', date: '27 May, 2024', rating: 5, text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', avatarImageName: 'review-3-avatar.jpg' },
+                        { name: 'Nancy Thompson', date: '27 May, 2024', rating: 4, text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', avatarImageName: 'review-4-avatar.jpg' },
                     ],
                 },
                 images: [
