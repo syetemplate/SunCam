@@ -109,14 +109,14 @@ const Footer = () => {
             </div>
             <div className="copyright-wrap">
                 <div className="container mx-auto">
-                    <div className="flex flex-wrap items-center">
-                        <div className="lg:w-1/2 pr-4 pl-4 md:w-3/5 pr-4 pl-4">
-                            <div className="copyright-text">
+                    <div className="flex flex-wrap items-center justify-center">
+                        <div className="sm:w-1/2 px-4">
+                            <div className="copyright-text mb-4 sm:mb-0">
                                 <p>{content.footer.copyright}</p>
                             </div>
                         </div>
-                        <div className="lg:w-1/2 pr-4 pl-4 md:w-2/5 pr-4 pl-4">
-                            <div className="f-payment-method text-center md:text-right">
+                        <div className="sm:w-1/2 px-4">
+                            <div className="f-payment-method text-center md:text-right float-right">
                                 <img src={paymentMethodsImage.src} alt="payment methods" />
                             </div>
                         </div>
