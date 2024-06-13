@@ -9,7 +9,7 @@ const Main = ({ children }) => {
 
     return (
         <main
-            className={clsx('h-full', {
+            className={clsx('h-full', 'min-h-[calc(100vh-769px)]', {
                 'overflow-hidden': (didAnimationStart && !didAnimationEnd),
             })}
             onAnimationStart={() => setDidAnimationStart(true)}

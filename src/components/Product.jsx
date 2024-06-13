@@ -134,133 +134,131 @@ const Product = ({ product }) => {
     };
 
     return (
-        <section id="product" className="px-4 2xl:px-28 pt-4 pb-16">
-            <div className="container mx-auto">
-                <div className="block lg:flex lg:flex-wrap">
-                    <div className="xl:w-3/5 pr-4 pl-4 lg:w-1/2 pr-4 pl-4">
-                        <div className="product-wrap">
-                            <div className="product-active" onClick={onActiveProductImageClick}>
-                                {currentSlideImage && <currentSlideImage.component />}
-                            </div>
-                            <div className="product-nav-active" ref={sliderContainerRef}>
-                                <Slider {...smallImagesSettings}>
-                                    {categorySmallImages.map((image, index) => (
-                                        <div
-                                            key={image.imageName}
-                                            onClick={e => onSlideClick(index, e.clientX)}
-                                        >
-                                            <image.component />
-                                        </div>
-                                    ))}
-                                </Slider>
-                            </div>
+        <section id="product" className="px-4 lg:px-28 pt-4 pb-16">
+            <div className="block lg:flex lg:flex-wrap">
+                <div className="xl:w-3/5 pr-4 pl-4 lg:w-1/2 pr-4 pl-4">
+                    <div className="product-wrap">
+                        <div className="product-active" onClick={onActiveProductImageClick}>
+                            {currentSlideImage && <currentSlideImage.component />}
+                        </div>
+                        <div className="product-nav-active" ref={sliderContainerRef}>
+                            <Slider {...smallImagesSettings}>
+                                {categorySmallImages.map((image, index) => (
+                                    <div
+                                        key={image.imageName}
+                                        onClick={e => onSlideClick(index, e.clientX)}
+                                    >
+                                        <image.component />
+                                    </div>
+                                ))}
+                            </Slider>
                         </div>
                     </div>
-                    <div className="xl:w-2/5 pr-4 pl-4 lg:w-1/2 pr-4 pl-4">
-                        <div className="product-details-content">
-                            <h3>{product.name}</h3>
-                            <h6>{product.price}</h6>
-                            <div className="product-rating mb-35">
-                                <ul>
-                                    {[...Array(5)].map((_, index) => (
-                                        <li key={index}>
-                                            <i className={`fas fa-star${index < averageRating ? ' text-limegreen' : ''}`} />
-                                        </li>
-                                    ))}
-                                </ul>
-                                <span>({product.reviews.list.length} {product.customerReviewsLabel})</span>
-                            </div>
-                            <p>{product.text}</p>
-                            <div className="perched-info">
-                                <div className="cart-plus">
-                                    <form action="#">
-                                        <div className="cart-plus-minus">
-                                            <input type="text" value={quantity} readOnly />
-                                            <div className="dec qtybutton" onClick={() => onQuantityChange('decrement')}>-</div>
-                                            <div className="inc qtybutton" onClick={() => onQuantityChange('increment')}>+</div>
-                                        </div>
-                                    </form>
-                                </div>
-                                <button>{content.products.ctaLabel}</button>
-                            </div>
-                            <div className="product-info mb-50">
-                                <h5>{product.productInfo.title}</h5>
-                                <ul>
-                                    {product.productInfo.list.map((item, index) => (
-                                        <li key={index}><span>{item.title}:</span> {item.description}</li>
-                                    ))}
-                                </ul>
-                            </div>
-                            <div className="product-desc-wrap">
-                                <ul className="flex flex-wrap list-none pl-0 mb-0 border border-t-0 border-r-0 border-l-0 border-b-1 border-gray-200 mb-25" id="myTab" role="tablist">
-                                    <li>
-                                        <a
-                                            className={`inline-block py-2 px-4 no-underline${activeTab === 'description' ? ' text-limegreen' : ''} hover:text-limegreen cursor-pointer`}
-                                            onClick={() => setActiveTab('description')}
-                                        >
-                                            {product.description.title}
-                                        </a>
+                </div>
+                <div className="xl:w-2/5 pr-4 pl-4 lg:w-1/2 pr-4 pl-4">
+                    <div className="product-details-content">
+                        <h3>{product.name}</h3>
+                        <h6>{product.price}</h6>
+                        <div className="product-rating mb-35">
+                            <ul>
+                                {[...Array(5)].map((_, index) => (
+                                    <li key={index}>
+                                        <i className={`fas fa-star${index < averageRating ? ' text-limegreen' : ''}`} />
                                     </li>
-                                    <li>
-                                        <a
-                                            className={`inline-block py-2 px-4 no-underline${activeTab === 'additionalInfo' ? ' text-limegreen' : ''} hover:text-limegreen cursor-pointer`}
-                                            onClick={() => setActiveTab('additionalInfo')}
-                                        >
-                                            {product.additionalInfo.title}
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            className={`inline-block py-2 px-4 no-underline${activeTab === 'reviews' ? ' text-limegreen' : ''} hover:text-limegreen cursor-pointer`}
-                                            onClick={() => setActiveTab('reviews')}
-                                        >
-                                            {product.reviews.title} ({product.reviews.list.length})
-                                        </a>
-                                    </li>
-                                </ul>
-                                <div className="tab-content" id="myTabContent">
-                                    {activeTab === 'description' && (
-                                        <div className="tab-pane opacity-100 block active">
-                                            <p className="desc-content">{product.description.text}</p>
-                                        </div>
-                                    )}
-                                    {activeTab === 'additionalInfo' && (
-                                        <div className="tab-pane opacity-100 block active">
-                                            <p className="desc-content">{product.additionalInfo.text}</p>
-                                        </div>
-                                    )}
-                                    {activeTab === 'reviews' && (
-                                        <div className="tab-pane opacity-100 block active">
-                                            <div className="product-review-wrap">
-                                                {product.reviews.list.map((review, index) => {
-                                                    const ReviewerAvatarImage = reviewerAvatarImages.find(({ imageName }) => imageName === review.avatarImageName).component;
-                                                    return (
-                                                        <div key={index} className="single-review">
-                                                            <div className="review-avatar">
-                                                               <ReviewerAvatarImage/>
-                                                            </div>
-                                                            <div className="review-content">
-                                                                <div className="review-rating">
-                                                                    <ul>
-                                                                        {[...Array(5)].map((_, index) => (
-                                                                            <li key={index}>
-                                                                                <i className={`fas fa-star${index < review.rating ? ' text-limegreen' : ''}`} />
-                                                                            </li>
-                                                                        ))}
-                                                                    </ul>
-                                                                </div>
-                                                                <div className="review-meta">
-                                                                    <h6>{review.name} - <span>{review.date}</span></h6>
-                                                                </div>
-                                                                <p>{review.text}</p>
-                                                            </div>
+                                ))}
+                            </ul>
+                            <span>({product.reviews.list.length} {product.customerReviewsLabel})</span>
+                        </div>
+                        <p>{product.text}</p>
+                        <div className="perched-info">
+                            <div className="cart-plus">
+                                <form action="#">
+                                    <div className="cart-plus-minus">
+                                        <input type="text" value={quantity} readOnly />
+                                        <div className="dec qtybutton" onClick={() => onQuantityChange('decrement')}>-</div>
+                                        <div className="inc qtybutton" onClick={() => onQuantityChange('increment')}>+</div>
+                                    </div>
+                                </form>
+                            </div>
+                            <button>{content.products.ctaLabel}</button>
+                        </div>
+                        <div className="product-info mb-50">
+                            <h5>{product.productInfo.title}</h5>
+                            <ul>
+                                {product.productInfo.list.map((item, index) => (
+                                    <li key={index}><span>{item.title}:</span> {item.description}</li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div className="product-desc-wrap">
+                            <ul className="flex flex-wrap list-none pl-0 mb-0 border border-t-0 border-r-0 border-l-0 border-b-1 border-gray-200 mb-25" id="myTab" role="tablist">
+                                <li>
+                                    <a
+                                        className={`inline-block py-2 px-4 no-underline${activeTab === 'description' ? ' text-limegreen' : ''} hover:text-limegreen cursor-pointer`}
+                                        onClick={() => setActiveTab('description')}
+                                    >
+                                        {product.description.title}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        className={`inline-block py-2 px-4 no-underline${activeTab === 'additionalInfo' ? ' text-limegreen' : ''} hover:text-limegreen cursor-pointer`}
+                                        onClick={() => setActiveTab('additionalInfo')}
+                                    >
+                                        {product.additionalInfo.title}
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        className={`inline-block py-2 px-4 no-underline${activeTab === 'reviews' ? ' text-limegreen' : ''} hover:text-limegreen cursor-pointer`}
+                                        onClick={() => setActiveTab('reviews')}
+                                    >
+                                        {product.reviews.title} ({product.reviews.list.length})
+                                    </a>
+                                </li>
+                            </ul>
+                            <div className="tab-content" id="myTabContent">
+                                {activeTab === 'description' && (
+                                    <div className="tab-pane opacity-100 block active">
+                                        <p className="desc-content">{product.description.text}</p>
+                                    </div>
+                                )}
+                                {activeTab === 'additionalInfo' && (
+                                    <div className="tab-pane opacity-100 block active">
+                                        <p className="desc-content">{product.additionalInfo.text}</p>
+                                    </div>
+                                )}
+                                {activeTab === 'reviews' && (
+                                    <div className="tab-pane opacity-100 block active">
+                                        <div className="product-review-wrap">
+                                            {product.reviews.list.map((review, index) => {
+                                                const ReviewerAvatarImage = reviewerAvatarImages.find(({ imageName }) => imageName === review.avatarImageName).component;
+                                                return (
+                                                    <div key={index} className="single-review">
+                                                        <div className="review-avatar">
+                                                            <ReviewerAvatarImage />
                                                         </div>
-                                                    );
-                                                })}
-                                            </div>
+                                                        <div className="review-content">
+                                                            <div className="review-rating">
+                                                                <ul>
+                                                                    {[...Array(5)].map((_, index) => (
+                                                                        <li key={index}>
+                                                                            <i className={`fas fa-star${index < review.rating ? ' text-limegreen' : ''}`} />
+                                                                        </li>
+                                                                    ))}
+                                                                </ul>
+                                                            </div>
+                                                            <div className="review-meta">
+                                                                <h6>{review.name} - <span>{review.date}</span></h6>
+                                                            </div>
+                                                            <p>{review.text}</p>
+                                                        </div>
+                                                    </div>
+                                                );
+                                            })}
                                         </div>
-                                    )}
-                                </div>
+                                    </div>
+                                )}
                             </div>
                         </div>
                     </div>

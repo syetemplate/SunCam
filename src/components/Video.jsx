@@ -18,10 +18,10 @@ const Video = () => {
     return (
         <section
             id="video"
-            className="px-4 2xl:px-28 py-32 bg-cover bg-center video-bg"
+            className="px-4 lg:px-28 py-32 bg-cover bg-center video-bg"
             style={{ backgroundImage: `url(${videoBgImage.src})` }}
         >
-            <div className="container mx-auto sm:w-10/12 lg:w-7/12">
+            <div className="sm:w-10/12 lg:w-7/12">
                 <div className="flex flex-col items-center justify-center">
                     <div className="relative mb-12">
                         <div className="absolute inset-0 flex items-center justify-center">

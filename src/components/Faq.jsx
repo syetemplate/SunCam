@@ -15,7 +15,7 @@ const Faq = () => {
     return (
         <section
             id="faq"
-            className="px-4 2xl:px-28 py-28"
+            className="flex flex-col items-center min-w-full px-4 lg:px-28 py-28 pb-[344px] lg:pb-[190px]"
             style={{
                 backgroundImage: `url(${faqBgImage.src})`,
                 backgroundPosition: 'center',
@@ -54,9 +54,8 @@ const Faq = () => {
                                             </span>
                                         </div>
                                         <div
-                                            className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                                                activeIndex === index ? 'max-h-40' : 'max-h-0'
-                                            }`}
+                                            className={`overflow-hidden transition-all duration-500 ease-in-out ${activeIndex === index ? 'max-h-40' : 'max-h-0'
+                                                }`}
                                         >
                                             <div className="mt-4 text-gray-600">
                                                 <div className="border-b border-gray-300 my-4"></div>

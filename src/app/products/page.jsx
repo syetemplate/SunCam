@@ -21,10 +21,10 @@ const ProductsPage = () => {
     return (
         <>
             <section id="products" className="text-gray-600 body-font">
-                <div className="container px-4 2xl:px-28 py-16 mx-auto">
+                <div className="px-4 lg:px-28 pt-16 pb-[320px] md:pb-48 lg:pb-36">
                     <div className="flex flex-wrap -m-4">
                         {content.products.categories.map((category, index) => (
-                            <div key={index} className="lg:w-1/4 md:w-1/2 p-4 w-full flex flex-col md:block items-center md:items-left text-center md:text-left">
+                            <div key={index} className="xl:w-1/4 md:w-1/2 p-4 w-full flex flex-col md:block items-center md:items-left text-center md:text-left">
                                 <a className="block relative rounded overflow-hidden" href={category.href}>
                                     {images.find(img => img.imageName === category.images[0].imageName)?.component()}
                                 </a>

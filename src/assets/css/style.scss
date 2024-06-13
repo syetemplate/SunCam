@@ -26,6 +26,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+	section {
+		@apply container mx-auto;
+	}
+}
+
 body {
 	font-family: 'Poppins', sans-serif;
 	font-weight: 500;
@@ -2559,21 +2565,21 @@ blockquote::before {
 }
 
 button {
-    @apply rounded-full border-2 px-8 py-3 text-sm font-bold;
-    @apply bg-limegreen text-white border-limegreen;
-    transition: all 0.4s ease-in-out;
+	@apply rounded-full border-2 px-8 py-3 text-sm font-bold;
+	@apply bg-limegreen text-white border-limegreen;
+	transition: all 0.4s ease-in-out;
 
-    &:hover {
-        @apply bg-white text-limegreen;
-    }
+	&:hover {
+		@apply bg-white text-limegreen;
+	}
 }
 
 button[variant="secondary"] {
-    @apply bg-white text-limegreen border-limegreen;
+	@apply bg-white text-limegreen border-limegreen;
 
-    &:hover {
-        @apply bg-limegreen text-white;
-    }
+	&:hover {
+		@apply bg-limegreen text-white;
+	}
 }
 
 @-webkit-keyframes object_one {

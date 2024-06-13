@@ -5,8 +5,8 @@ const Hero = () => {
     const [titlePart1, titlePart2, titlePart3, ...titleRest] = content.hero.title.split(' ');
 
     return (
-        <section id="hero" className="2xl:px-28 py-20">
-            <div className="container mx-auto flex flex-col-reverse lg:flex-row items-center justify-between px-4">
+        <section id="hero" className="lg:px-28 py-20">
+            <div className="flex flex-col-reverse lg:flex-row items-center justify-between px-4">
                 <div className="lg:w-1/2 lg:pr-8">
                     <div className="slider-content text-center lg:text-left">
                         <h2 className="text-blue-950 text-4xl lg:text-5xl xl:text-6xl leading-tight font-bold capitalize mb-4 mt-16 lg:mt-0 wow fadeInUp animated" data-wow-delay="0.2s" style={{ visibility: 'visible', animationDelay: '0.2s', animationName: 'fadeInUp' }}>

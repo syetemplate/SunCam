@@ -33,7 +33,7 @@ const dynamicImages = content.products.categories.map(({ images }) => images).fl
     }),
 }));
 
-export const ImageViewer = ({ image, onClose = () => {} }) => {
+export const ImageViewer = ({ image, onClose = () => { } }) => {
     if (!image) {
         return null;
     }
@@ -75,71 +75,69 @@ const Gallery = () => {
     return (
         <section
             id="gallery"
-            className="px-4 2xl:px-28 pt-28 pb-24"
+            className="px-4 lg:px-28 pt-28 pb-24"
             style={{
                 backgroundImage: `url(${galleryBgImage.src})`,
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',
             }}
         >
-            <div className="container mx-auto">
-                <div className="text-center mb-12">
-                    <h2 className="text-blue-950 text-4xl font-bold">{content.gallery.title}</h2>
-                    <div className="relative h-0.5 w-44 bg-gray-300 mx-auto mt-6 mb-8 rounded-[50%]">
-                        <div className="absolute -top-[3px] h-2 w-2 bg-limegreen rounded-full animated duration-4000 infinite moveLeftRight"></div>
-                    </div>
+            <div className="text-center mb-12">
+                <h2 className="text-blue-950 text-4xl font-bold">{content.gallery.title}</h2>
+                <div className="relative h-0.5 w-44 bg-gray-300 mx-auto mt-6 mb-8 rounded-[50%]">
+                    <div className="absolute -top-[3px] h-2 w-2 bg-limegreen rounded-full animated duration-4000 infinite moveLeftRight"></div>
                 </div>
-                <div className="text-center mb-12">
-                    <div className="flex flex-col md:flex-row md:inline-flex md:flex-wrap justify-center bg-white rounded-xl shadow-[0px_0px_27px_0px_rgba(149,149,149,0.22)] py-6 px-10 md:px-20">
-                        {content.products.categories.map(category => {
-                            const [categoryNamePart1, ...categoryNameRest] = category.name.split(' ');
-                            return (
-                                <button
-                                    key={category.name}
-                                    className={selectedCategory === category ? activeCategoryButtonClassName : inactiveCategoryButtonClassName}
-                                    onClick={() => setSelectedCategory(category)}
-                                >
-                                    {categoryNamePart1}{categoryNameRest?.length && <strong>{` ${categoryNameRest.join(' ')}`}</strong>}
-                                </button>
-                            );
-                        })}
-                    </div>
+            </div>
+            <div className="text-center mb-12">
+                <div className="flex flex-col md:flex-row md:inline-flex md:flex-wrap justify-center bg-white rounded-xl shadow-[0px_0px_27px_0px_rgba(149,149,149,0.22)] py-6 px-10 md:px-20">
+                    {content.products.categories.map(category => {
+                        const [categoryNamePart1, ...categoryNameRest] = category.name.split(' ');
+                        return (
+                            <button
+                                key={category.name}
+                                className={selectedCategory === category ? activeCategoryButtonClassName : inactiveCategoryButtonClassName}
+                                onClick={() => setSelectedCategory(category)}
+                            >
+                                {categoryNamePart1}{categoryNameRest?.length && <strong>{` ${categoryNameRest.join(' ')}`}</strong>}
+                            </button>
+                        );
+                    })}
                 </div>
-                <div className="flex flex-col md:flex-row gap-7.5">
-                    {content.products.categories.map((category, colIndex) => (
-                        <div key={category.name} className="md:w-1/3">
-                            <div className="flex flex-col gap-7.5">
-                                {selectedCategory.images.map((image, i) => {
-                                    if (i % 3 !== colIndex) {
-                                        return null;
-                                    }
-                                    const Image = dynamicImages.find(({ imageName }) => (imageName === image.imageName)).component;
-                                    return (
-                                        <div key={i} className={content.products.categories.map(({ name }) => name).join(' ')}>
-                                            <div
-                                                className="mb-7.5 relative group cursor-pointer"
-                                                onMouseEnter={addFadeInLeftAnimation}
-                                                onMouseLeave={removeFadeInLeftAnimation}
-                                                onClick={onImageContainerClick}
-                                            >
-                                                <div className="relative">
-                                                    <Image />
-                                                    <div className="absolute inset-0 bg-limegreen opacity-0 transition-opacity duration-500 group-hover:opacity-75 m-1"></div>
-                                                </div>
-                                                <div className="absolute left-7 top-10 z-10 opacity-0 group-hover:opacity-100">
-                                                    <h5 className="text-2xl font-extrabold text-white relative duration-500 animated">
-                                                        {image.title}
-                                                    </h5>
-                                                    <span className="inline-block text-sm font-medium text-white duration-500 delay-100 animated">{image.description}</span>
-                                                </div>
+            </div>
+            <div className="flex flex-col md:flex-row gap-7.5">
+                {content.products.categories.map((category, colIndex) => (
+                    <div key={category.name} className="md:w-1/3">
+                        <div className="flex flex-col gap-7.5">
+                            {selectedCategory.images.map((image, i) => {
+                                if (i % 3 !== colIndex) {
+                                    return null;
+                                }
+                                const Image = dynamicImages.find(({ imageName }) => (imageName === image.imageName)).component;
+                                return (
+                                    <div key={i} className={content.products.categories.map(({ name }) => name).join(' ')}>
+                                        <div
+                                            className="mb-7.5 relative group cursor-pointer"
+                                            onMouseEnter={addFadeInLeftAnimation}
+                                            onMouseLeave={removeFadeInLeftAnimation}
+                                            onClick={onImageContainerClick}
+                                        >
+                                            <div className="relative">
+                                                <Image />
+                                                <div className="absolute inset-0 bg-limegreen opacity-0 transition-opacity duration-500 group-hover:opacity-75 m-1"></div>
+                                            </div>
+                                            <div className="absolute left-7 top-10 z-10 opacity-0 group-hover:opacity-100">
+                                                <h5 className="text-2xl font-extrabold text-white relative duration-500 animated">
+                                                    {image.title}
+                                                </h5>
+                                                <span className="inline-block text-sm font-medium text-white duration-500 delay-100 animated">{image.description}</span>
                                             </div>
                                         </div>
-                                    );
-                                })}
-                            </div>
+                                    </div>
+                                );
+                            })}
                         </div>
-                    ))}
-                </div>
+                    </div>
+                ))}
             </div>
             <ImageViewer image={selectedImage} onClose={() => setSelectedImage(null)} />
         </section>
