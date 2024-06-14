@@ -8,7 +8,7 @@ const BlogPage = () => {
     <>
       <Blog />
       <Facts />
-      <Faq />
+      <Faq className='pt-110 pb-90'/>
       <Testimonials />
     </>
   );
