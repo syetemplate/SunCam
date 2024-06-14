@@ -498,25 +498,25 @@ export default {
         items: [
             {
                 icon: 'local_shipping', // Material Icon (see https://material.io/resources/icons/)
-                value: '3,560',
+                value: 3560,
                 unit: 'km',
                 text: 'Package Delivered',
             },
             {
                 icon: 'public', // Material Icon (see https://material.io/resources/icons/)
-                value: '195',
+                value: 195,
                 unit: '',
                 text: 'Countries Covered',
             },
             {
                 icon: 'sentiment_satisfied', // Material Icon (see https://material.io/resources/icons/)
-                value: '455',
+                value: 455,
                 unit: 'k',
                 text: 'Happy Customer',
             },
             {
                 icon: 'workspace_premium', // Material Icon (see https://material.io/resources/icons/)
-                value: '99',
+                value: 99,
                 unit: 'Yr',
                 text: 'Year Experience',
             },

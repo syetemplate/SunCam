@@ -1,8 +1,18 @@
+'use client';
+
+import React from 'react';
+import { useInView } from 'react-intersection-observer';
+import CountUp from 'react-countup';
 import clsx from 'clsx';
 import factsBgImage from '@/assets/bg/facts.jpg';
 import content from '@/content';
 
 const Facts = ({ className }) => {
+    const [ref, inView] = useInView({
+        triggerOnce: true,
+        threshold: 0.5,
+    });
+
     return (
         <section
             id="facts"
@@ -12,6 +22,7 @@ const Facts = ({ className }) => {
                 backgroundPosition: 'center',
                 backgroundSize: 'cover',
             }}
+            ref={ref}
         >
             <div className="container mx-auto z-10 px-4 lg:px-28">
                 <div className="flex flex-wrap justify-center">
@@ -31,7 +42,15 @@ const Facts = ({ className }) => {
                                 </div>
                                 <div className="fact-content">
                                     <h5>
-                                        <span className="count">{fact.value}</span> {fact.unit}
+                                        <CountUp
+                                            start={0}
+                                            end={inView ? fact.value : 0}
+                                            duration={2}
+                                            separator=","
+                                            decimal="."
+                                            prefix=""
+                                            suffix={` ${fact.unit}`}
+                                        />
                                     </h5>
                                     <p>{fact.text}</p>
                                 </div>
