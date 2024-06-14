@@ -1,5 +1,6 @@
 'use client';
 
+import clsx from 'clsx';
 import featuresBgImage from '@/assets/bg/features.jpg';
 import feature1Icon from '@/assets/media/feature-1.png';
 import feature2Icon from '@/assets/media/feature-2.png';
@@ -10,11 +11,11 @@ import content from '@/content';
 const addFlipAnimation = e => e.currentTarget.querySelector('img').classList.add('flip');
 const removeFlipAnimation = e => e.currentTarget.querySelector('img').classList.remove('flip');
 
-const Features = () => {
+const Features = ({ className }) => {
     return (
         <section
             id="features"
-            className="bg-cover bg-center px-4 lg:px-28 py-20 min-w-full shadow-[0px_2px_12px_7px_rgba(82,33,162,0.05)]"
+            className={clsx('bg-cover bg-center px-4 lg:px-28 py-20 min-w-full shadow-[0px_2px_12px_7px_rgba(82,33,162,0.05)]', [className])}
             style={{
                 backgroundImage: `url(${featuresBgImage.src})`,
                 backgroundPosition: "center",

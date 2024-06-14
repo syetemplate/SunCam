@@ -1,5 +1,6 @@
 'use client';
 
+import clsx from 'clsx';
 import dynamic from 'next/dynamic';
 import content from '@/content';
 
@@ -14,9 +15,12 @@ const dynamicImages = content.blog.posts.map(post => ({
     }),
 }));
 
-const Blog = () => {
+const Blog = ({ className }) => {
     return (
-        <section id="blog" className="px-4 lg:px-28 sm:px-4 gray-bg pt-110 pb-90">
+        <section
+            id="blog"
+            className={clsx('px-4 lg:px-28 sm:px-4 gray-bg pt-110 pb-90', [className])}
+        >
             <div className="flex flex-wrap justify-center">
                 <div className="xl:w-3/5 pr-4 pl-4 lg:w-2/3 pr-4 pl-4 md:w-4/5 pr-4 pl-4">
                     <div className="section-title text-center mb-55">

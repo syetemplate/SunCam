@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import dynamic from 'next/dynamic';
 import testimonialsBgImage from '@/assets/bg/testimonials.jpg';
 import content from '@/content';
@@ -13,11 +14,11 @@ const testimonialAvatarImages = content.testimonials.list.map(({ avatarImageName
     }),
 }));
 
-const Testimonials = () => {
+const Testimonials = ({ className }) => {
     return (
         <section
             id="testimonials"
-            className="testimonials-bg flex flex-col items-center min-w-full py-28 pb-[344px] lg:pb-[190px]"
+            className={clsx('testimonials-bg flex flex-col items-center min-w-full py-28 pb-[344px] lg:pb-[190px]', [className])}
             style={{
                 backgroundImage: `url(${testimonialsBgImage.src})`,
                 backgroundPosition: 'center',

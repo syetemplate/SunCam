@@ -1,11 +1,12 @@
 'use client';
 
 import React from 'react';
+import clsx from 'clsx';
 import faqBgImage from '@/assets/bg/faq.jpg';
 import faqImage from '@/assets/media/faq.jpg';
 import content from '@/content';
 
-const Faq = () => {
+const Faq = ({ className }) => {
     const [activeIndex, setActiveIndex] = React.useState();
 
     const handleAccordionClick = index => {
@@ -15,7 +16,7 @@ const Faq = () => {
     return (
         <section
             id="faq"
-            className="flex flex-col items-center min-w-full px-4 lg:px-28 py-28 pb-[344px] lg:pb-[190px]"
+            className={clsx('flex flex-col items-center min-w-full px-4 lg:px-28 py-28 pb-[344px] lg:pb-[190px]', [className])}
             style={{
                 backgroundImage: `url(${faqBgImage.src})`,
                 backgroundPosition: 'center',

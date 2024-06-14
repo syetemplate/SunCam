@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import clsx from 'clsx';
 import dynamic from 'next/dynamic';
 import galleryBgImage from '@/assets/bg/gallery.jpg';
 import content from '@/content';
@@ -57,7 +58,7 @@ export const ImageViewer = ({ image, onClose = () => { } }) => {
     );
 };
 
-const Gallery = () => {
+const Gallery = ({ className }) => {
     const [selectedCategory, setSelectedCategory] = React.useState(content.products.categories[Math.floor(content.products.categories.length / 2)]);
     const [selectedImage, setSelectedImage] = React.useState(null);
 
@@ -75,7 +76,7 @@ const Gallery = () => {
     return (
         <section
             id="gallery"
-            className="px-4 lg:px-28 pt-28 pb-24"
+            className={clsx('px-4 lg:px-28 pt-28 pb-24', [className])}
             style={{
                 backgroundImage: `url(${galleryBgImage.src})`,
                 backgroundPosition: 'center',

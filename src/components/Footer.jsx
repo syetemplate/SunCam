@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import clsx from 'clsx';
 import dynamic from 'next/dynamic';
 import newsletterBgImage from '@/assets/bg/newsletter.jpg';
 import footerBgImage from '@/assets/bg/footer.jpg';
@@ -10,11 +11,11 @@ import content from '@/content';
 
 const numOfRecentPosts = 3;
 
-const Footer = () => {
+const Footer = ({ className }) => {
     const recentPosts = content.blog.posts.slice(-numOfRecentPosts);
 
     return (
-        <footer className="flex flex-col items-center relative">
+        <footer className={clsx('flex flex-col items-center relative', [className])}>
             <section id="newsletter" className="flex flex-wrap px-4 lg:px-28 w-full absolute z-10 top-[-232px] md:top-[-128px] lg:top-[-64px]">
                 <div className="w-full">
                     <div

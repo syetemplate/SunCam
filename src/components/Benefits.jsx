@@ -1,4 +1,6 @@
 'use client';
+
+import clsx from 'clsx';
 import benefitsImage from '@/assets/media/benefits.png';
 import benefit1Icon from '@/assets/media/benefit-1.png';
 import benefit2Icon from '@/assets/media/benefit-2.png';
@@ -22,9 +24,12 @@ const removeHoverAnimation = e => {
     e.currentTarget.querySelector('img').classList.remove('border-limegreen', 'duration-300');
 };
 
-const Benefits = () => {
+const Benefits = ({ className }) => {
     return (
-        <section id="benefits" className="px-4 lg:px-28 py-28 pb-[280px] lg:pb-[240px]">
+        <section
+            id="benefits"
+            className={clsx('px-4 lg:px-28 py-28 pb-[280px] lg:pb-[240px]', [className])}
+        >
             <div className="w-full md:w-10/12 lg:w-8/12 xl:w-6/12 mx-auto">
                 <div className="text-center mb-14">
                     <h2 className="text-blue-950 text-4xl font-bold">{content.benefits.title}</h2>

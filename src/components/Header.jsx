@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import clsx from 'clsx';
 import { usePathname } from 'next/navigation';
 import { throttle } from 'lodash';
 import logoDark from '@/assets/media/logo-dark.png';
@@ -8,7 +9,7 @@ import content from '@/content';
 
 const stickyHeaderClassName = 'animated fadeInDown sticky top-0 left-0 w-full z-50 bg-white shadow-[0px_10px_15px_rgba(25,25,25,0.075)] rounded-none p-0 border-b-0';
 
-const Header = () => {
+const Header = ({ className }) => {
     const [isCollapsed, setIsCollapsed] = React.useState(true);
     const headerRef = React.useRef(null);
     const pathname = usePathname();
@@ -48,7 +49,7 @@ const Header = () => {
     React.useEffect(initStickyAnimation, []);
 
     return (
-        <header className="bg-white text-gray-600 body-font lg:px-28 lg:py-4 border-b border-green-200 border-opacity-50" ref={headerRef}>
+        <header className={clsx('bg-white text-gray-600 body-font lg:px-28 lg:py-4 border-b border-green-200 border-opacity-50', [className])} ref={headerRef}>
             <div className="flex flex-wrap px-4 pt-[24px] pb-[8px] xl:p-5 flex-row items-center justify-between">
                 <a href="/" className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
                     <img src={logoDark.src} alt="logo" />

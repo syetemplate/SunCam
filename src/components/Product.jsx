@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import clsx from 'clsx';
 import dynamic from 'next/dynamic';
 import { throttle } from 'lodash';
 import Slider from 'react-slick';
@@ -49,7 +50,7 @@ const reviewerAvatarImages = content.products.categories.flatMap(category =>
     }))
 );
 
-const Product = ({ product }) => {
+const Product = ({ className, product }) => {
     const sliderContainerRef = React.useRef(null);
     const [selectedImage, setSelectedImage] = React.useState(null);
     const [slidesToShow, setSlidesToShow] = React.useState(1);
@@ -134,7 +135,10 @@ const Product = ({ product }) => {
     };
 
     return (
-        <section id="product" className="px-4 lg:px-28 pt-4 pb-16">
+        <section
+            id="product"
+            className={clsx('px-4 lg:px-28 pt-4 pb-16', [className])}
+        >
             <div className="block lg:flex lg:flex-wrap">
                 <div className="xl:w-3/5 pr-4 pl-4 lg:w-1/2 pr-4 pl-4">
                     <div className="product-wrap">

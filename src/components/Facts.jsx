@@ -1,11 +1,12 @@
+import clsx from 'clsx';
 import factsBgImage from '@/assets/bg/facts.jpg';
 import content from '@/content';
 
-const Facts = () => {
+const Facts = ({ className }) => {
     return (
         <section
             id="facts"
-            className="fact-bg flex flex-col items-center min-w-full pt-110 pb-90"
+            className={clsx('fact-bg flex flex-col items-center min-w-full pt-110 pb-90', [className])}
             style={{
                 backgroundImage: `url(${factsBgImage.src})`,
                 backgroundPosition: 'center',

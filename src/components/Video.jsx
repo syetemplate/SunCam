@@ -1,10 +1,11 @@
 'use client';
 
 import React from 'react';
+import clsx from 'clsx';
 import videoBgImage from '@/assets/bg/video.jpg';
 import content from '@/content';
 
-const Video = () => {
+const Video = ({ className }) => {
     const [isVideoOpen, setVideoOpen] = React.useState(false);
 
     const handleVideoClick = () => {
@@ -18,7 +19,7 @@ const Video = () => {
     return (
         <section
             id="video"
-            className="px-4 lg:px-28 py-32 bg-cover bg-center video-bg"
+            className={clsx('px-4 lg:px-28 py-32 bg-cover bg-center video-bg', [className])}
             style={{ backgroundImage: `url(${videoBgImage.src})` }}
         >
             <div className="sm:w-10/12 lg:w-7/12">

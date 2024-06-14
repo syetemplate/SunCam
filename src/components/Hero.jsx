@@ -1,9 +1,13 @@
+import clsx from 'clsx';
 import heroImage from '@/assets/media/hero.png';
 import content from '@/content';
 
-const Hero = () => {
+const Hero = ({ className }) => {
     return (
-        <section id="hero" className="lg:px-28 py-20">
+        <section
+            id="hero"
+            className={clsx('lg:px-28 py-20', [className])}
+        >
             <div className="flex flex-col-reverse lg:flex-row items-center justify-between px-4">
                 <div className="lg:w-1/2 lg:pr-8">
                     <div className="slider-content text-center lg:text-left">
