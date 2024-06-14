@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import dynamic from 'next/dynamic';
 import { useParams, usePathname } from 'next/navigation';
 import blogBgImage from '@/assets/bg/blog.jpg';
@@ -19,6 +20,7 @@ const dynamicImages = content.blog.posts.map(post => ({
 }));
 
 const BlogPostPage = () => {
+  const [shareUrl, setShareUrl] = React.useState('');
   const { 'post-name': postName } = useParams();
   const pathname = usePathname();
 
@@ -40,6 +42,12 @@ const BlogPostPage = () => {
     .filter(Boolean);
 
   const recentPosts = content.blog.posts.filter(post => post.href !== currentPost.href).slice(-numOfRecentPosts);
+
+  const initShareUrl = React.useCallback(() => {
+    setShareUrl(window.location.href);
+  }, []);
+
+  React.useLayoutEffect(initShareUrl, [initShareUrl]);
 
   return (
     <>
@@ -71,7 +79,7 @@ const BlogPostPage = () => {
       {/* breadcrumb-area-end */}
 
       {/* blog-area */}
-      <section className="pt-60 pb-60">
+      <section className="pt-60 pb-[344px] lg:pb-[190px]">
         <div className="flex flex-wrap">
           <div className="lg:w-2/3 pr-4 pl-4">
             <div className="single-blog-list">
@@ -116,21 +124,21 @@ const BlogPostPage = () => {
                     </li>
                     <li className="blog-post-share">
                       <a
-                        href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`}
+                        href={`https://www.facebook.com/sharer/sharer.php?u=${shareUrl}`}
                         target="_blank"
                         className="bg-blue-700"
                       >
                         <i className="fab fa-facebook-f" />
                       </a>
                       <a
-                        href={`https://www.x.com/sharer/sharer.php?u=${encodeURIComponent(window.location.href)}`}
+                        href={`https://www.x.com/sharer/sharer.php?u=${shareUrl}`}
                         target="_blank"
                         className="bg-black"
                       >
                         <i className="fa-solid fa-x" />
                       </a>
                       <a
-                        href={`https://www.pinterest.com/pin/create/button/?url=${encodeURIComponent(window.location.href)}`}
+                        href={`https://www.pinterest.com/pin/create/button/?url=${shareUrl}`}
                         target="_blank"
                         className="bg-red-600"
                       >
