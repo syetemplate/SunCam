@@ -38,7 +38,9 @@ const Blog = ({ className }) => {
                         <div key={index} className="lg:w-1/3 pr-4 pl-4 md:w-1/2 pr-4 pl-4">
                             <div className="single-blog-post mb-30">
                                 <div className="b-post-thumb">
-                                    <Image />
+                                    <a href={post.href}>
+                                        <Image />
+                                    </a>
                                 </div>
                                 <div className="blog-content">
                                     <span>{post.date}</span>
