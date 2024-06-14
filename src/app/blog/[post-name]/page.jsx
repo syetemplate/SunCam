@@ -45,28 +45,25 @@ const BlogPostPage = () => {
     <>
       {/* breadcrumb-area */}
       <section
-        className="breadcrumb-bg flex items-center sm:px-4"
+        className="breadcrumb-bg flex flex-col items-center justify-center min-w-full"
         style={{ backgroundImage: `url(${blogBgImage.src})` }}
       >
-        <div style={{ position: 'absolute', width: '100%', height: '100%', backgroundColor: 'rgba(0, 0, 0, 0.5)', zIndex: 1 }} />
-        <div style={{ position: 'relative', zIndex: 2 }}>
-          <div className="flex flex-wrap justify-center">
-            <div className="md:w-4/5 pr-4 pl-4">
-              <div className="breadcrumb-content text-center">
-                <h2 className="text-white" style={{ color: 'white', fontSize: '3rem', fontWeight: 'bold' }}>{currentPost.title}</h2>
-                <nav aria-label="breadcrumb">
-                  <ol className="flex flex-wrap list-reset pt-3 pb-3 py-4 px-6 mb-4 bg-gray-200 rounded" style={{ backgroundColor: 'rgba(255, 255, 255, 0.8)', zIndex: 3 }}>
-                    {breadcrumbLinks.map((link, index) => (
-                      <li key={index} className="inline-block pr-2 py-2 text-gray-700">
-                        <a href={link.href}>{link.label}<span className="pl-2">{`>`}</span></a>
-                      </li>
-                    ))}
-                    <li className="inline-block pr-2 py-2 text-gray-700" aria-current="page">
-                      <a href="#" className="active"><strong>{currentPost.title}</strong></a>
+        <div className="container mx-auto z-10 px-4 lg:px-28 flex flex-wrap justify-center z-10">
+          <div className="md:w-4/5 pr-4 pl-4">
+            <div className="breadcrumb-content text-center">
+              <h2 className="text-white" style={{ color: 'white', fontSize: '3rem', fontWeight: 'bold' }}>{currentPost.title}</h2>
+              <nav aria-label="breadcrumb">
+                <ol className="flex flex-wrap list-reset pt-3 pb-3 py-4 px-6 mb-4 bg-gray-200 rounded" style={{ backgroundColor: 'rgba(255, 255, 255, 0.8)', zIndex: 3 }}>
+                  {breadcrumbLinks.map((link, index) => (
+                    <li key={index} className="inline-block pr-2 py-2 text-gray-700">
+                      <a href={link.href}>{link.label}<span className="pl-2">{`>`}</span></a>
                     </li>
-                  </ol>
-                </nav>
-              </div>
+                  ))}
+                  <li className="inline-block pr-2 py-2 text-gray-700" aria-current="page">
+                    <a href="#" className="active"><strong>{currentPost.title}</strong></a>
+                  </li>
+                </ol>
+              </nav>
             </div>
           </div>
         </div>
