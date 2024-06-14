@@ -2,7 +2,7 @@
 
 import React from 'react';
 import dynamic from 'next/dynamic';
-import { useParams, usePathname } from 'next/navigation';
+import { useParams, usePathname, useRouter } from 'next/navigation';
 import blogBgImage from '@/assets/bg/blog.jpg';
 import content from '@/content';
 
@@ -21,33 +21,39 @@ const dynamicImages = content.blog.posts.map(post => ({
 
 const BlogPostPage = () => {
   const [shareUrl, setShareUrl] = React.useState('');
+  const { push } = useRouter();
   const { 'post-name': postName } = useParams();
   const pathname = usePathname();
 
   const currentPost = content.blog.posts.find(post => post.href === `/blog/${postName}`);
-  if (!currentPost) {
-    return null;
-  }
 
-  const FeatureImage = dynamic(() => import(`@/assets/media/${currentPost.imageName}`).then(module => {
+  const FeatureImage = currentPost ? dynamic(() => import(`@/assets/media/${currentPost.imageName}`).then(module => {
     const Component = () => <img src={module.default.src} alt={currentPost.title} className="object-contain w-full p-1" />;
     Component.displayName = `Image-${currentPost.imageName}`;
     return Component;
   }), {
     loading: () => <img className="w-full p-1" />,
-  });
+  }) : () => null;
 
   const breadcrumbLinks = pathname.split('/')
     .map(part => content.header.menu.find(({ href }) => href === `/${part}`))
     .filter(Boolean);
 
-  const recentPosts = content.blog.posts.filter(post => post.href !== currentPost.href).slice(-numOfRecentPosts);
+  const recentPosts = content.blog.posts.filter(post => post.href !== currentPost?.href).slice(-numOfRecentPosts);
 
   const initShareUrl = React.useCallback(() => {
     setShareUrl(window.location.href);
   }, []);
 
-  React.useLayoutEffect(initShareUrl, [initShareUrl]);
+  const init = React.useCallback(() => {
+    if (!currentPost) {
+      push('/');
+      return;
+    }
+    initShareUrl();
+  }, [currentPost, initShareUrl, push]);
+
+  React.useLayoutEffect(init, [init]);
 
   return (
     <>
@@ -59,7 +65,7 @@ const BlogPostPage = () => {
         <div className="container mx-auto z-10 px-4 lg:px-28 flex flex-wrap justify-center z-10">
           <div className="md:w-4/5 pr-4 pl-4">
             <div className="breadcrumb-content text-center">
-              <h2 className="text-white" style={{ color: 'white', fontSize: '3rem', fontWeight: 'bold' }}>{currentPost.title}</h2>
+              <h2 className="text-white" style={{ color: 'white', fontSize: '3rem', fontWeight: 'bold' }}>{currentPost?.title}</h2>
               <nav aria-label="breadcrumb">
                 <ol className="flex flex-wrap list-reset pt-3 pb-3 py-4 px-6 mb-4 bg-gray-200 rounded" style={{ backgroundColor: 'rgba(255, 255, 255, 0.8)', zIndex: 3 }}>
                   {breadcrumbLinks.map((link, index) => (
@@ -68,7 +74,7 @@ const BlogPostPage = () => {
                     </li>
                   ))}
                   <li className="inline-block pr-2 py-2 text-gray-700" aria-current="page">
-                    <a href="#" className="active"><strong>{currentPost.title}</strong></a>
+                    <a href="#" className="active"><strong>{currentPost?.title}</strong></a>
                   </li>
                 </ol>
               </nav>
@@ -89,11 +95,11 @@ const BlogPostPage = () => {
               <div className="blog-list-content blog-details-content">
                 <div className="blog-details-date mb-10">
                   <ul>
-                    <li><i className="far fa-clock"></i> {currentPost.date}</li>
+                    <li><i className="far fa-clock"></i> {currentPost?.date}</li>
                   </ul>
                 </div>
-                <h2>{currentPost.title}</h2>
-                {currentPost.content.map((item, index) => {
+                <h2>{currentPost?.title}</h2>
+                {currentPost?.content.map((item, index) => {
                   if (item.type === 'paragraph') {
                     return <p key={index}>{item.text}</p>
                   }
@@ -117,7 +123,7 @@ const BlogPostPage = () => {
                     <li className="blog-post-date">
                       <div className="blog-details-tag">
                         <i className="fas fa-tags"></i>
-                        {currentPost.tags.map((tag, index) => (
+                        {currentPost?.tags.map((tag, index) => (
                           <a href="#" key={index}>{tag}</a>
                         ))}
                       </div>
@@ -185,7 +191,7 @@ const BlogPostPage = () => {
                   </div>
                   <div className="tag-list">
                     <ul>
-                      {currentPost.tags.map((tag, index) => (
+                      {currentPost?.tags.map((tag, index) => (
                         <li key={index}><a href="#">{tag}</a></li>
                       ))}
                     </ul>
