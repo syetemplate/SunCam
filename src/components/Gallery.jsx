@@ -90,18 +90,14 @@ const Gallery = () => {
             </div>
             <div className="text-center mb-12">
                 <div className="flex flex-col md:flex-row md:inline-flex md:flex-wrap justify-center bg-white rounded-xl shadow-[0px_0px_27px_0px_rgba(149,149,149,0.22)] py-6 px-10 md:px-20">
-                    {content.products.categories.map(category => {
-                        const [categoryNamePart1, ...categoryNameRest] = category.name.split(' ');
-                        return (
-                            <button
-                                key={category.name}
-                                className={selectedCategory === category ? activeCategoryButtonClassName : inactiveCategoryButtonClassName}
-                                onClick={() => setSelectedCategory(category)}
-                            >
-                                {categoryNamePart1}{categoryNameRest?.length && <strong>{` ${categoryNameRest.join(' ')}`}</strong>}
-                            </button>
-                        );
-                    })}
+                    {content.products.categories.map(category => (
+                        <button
+                            key={category.name}
+                            className={selectedCategory === category ? activeCategoryButtonClassName : inactiveCategoryButtonClassName}
+                            onClick={() => setSelectedCategory(category)}
+                            dangerouslySetInnerHTML={{ __html: category.title }}
+                        />
+                    ))}
                 </div>
             </div>
             <div className="flex flex-col md:flex-row gap-7.5">

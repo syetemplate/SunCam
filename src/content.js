@@ -13,7 +13,7 @@ export default {
         cta: 'ORDER NOW',
     },
     hero: {
-        title: 'Drone with camera for kids',
+        title: 'Drone with <span className="lg:text-limegreen">camera</span> for kids',
         description: 'We provide the best drone with camera for kids. Our drone is easy to use and safe for kids. Order now and get a discount!',
         cta: {
             text: 'PURCHASE',
@@ -346,6 +346,7 @@ export default {
             {
                 href: '/products/mini-drone-basic',
                 name: 'MiniDrone Basic',
+                title: 'MiniDrone <strong>Basic</strong>',
                 price: '€120.00',
                 customerReviewsLabel: 'Customer Reviews',
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
@@ -384,6 +385,7 @@ export default {
             {
                 href: '/products/mini-drone-pro',
                 name: 'MiniDrone Pro',
+                title: 'MiniDrone <strong>Pro</strong>',
                 price: '€150.00',
                 customerReviewsLabel: 'Customer Reviews',
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
@@ -425,6 +427,7 @@ export default {
             {
                 href: '/products/mini-drone-pro-plus',
                 name: 'MiniDrone Pro Plus',
+                title: 'MiniDrone <strong>Pro Plus</strong>',
                 price: '€200.00',
                 customerReviewsLabel: 'Customer Reviews',
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
@@ -487,6 +490,46 @@ export default {
                 question: 'Is MiniDrone safe for kids?',
                 answer: 'MiniDrone is safe for kids, with features like GPS return home and lightweight design.',
             },
+        ],
+    },
+    facts: {
+        title: 'Awesome supplement for your body we have <span className="color-limegreen">15 years of experience</span>',
+        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quasi ut minus labore voluptate natus fuga voluptatum, id architecto velit eum magni nostrum sit mollitia, autem dignissimos, optio officiis? Nesciunt. consectetur adipisicing elit. Sint quasi ut minus labore voluptate natus fuga',
+        items: [
+            {
+                icon: 'local_shipping', // Material Icon (see https://material.io/resources/icons/)
+                value: '3,560',
+                unit: 'km',
+                text: 'Package Delivered',
+            },
+            {
+                icon: 'public', // Material Icon (see https://material.io/resources/icons/)
+                value: '195',
+                unit: '',
+                text: 'Countries Covered',
+            },
+            {
+                icon: 'sentiment_satisfied', // Material Icon (see https://material.io/resources/icons/)
+                value: '455',
+                unit: 'k',
+                text: 'Happy Customer',
+            },
+            {
+                icon: 'workspace_premium', // Material Icon (see https://material.io/resources/icons/)
+                value: '99',
+                unit: 'Yr',
+                text: 'Year Experience',
+            },
+        ],
+    },
+    testimonials: {
+        title: 'Testimonials',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+        list: [
+            { name: 'Alexander Graham', text: 'Dorem Ipsum availablut the majoriy have sufferd alterat some form huour the and ransed words which don\'t look even slightly belieblegg to passage majoriy have sufferd alterat some form huour and ransed.', avatarImageName: 'testimonial-1-avatar.jpg' },
+            { name: 'Dorehe Angle', text: 'Dorem Ipsum availablut the majoriy have sufferd alterat some form huour the and ransed words which don\'t look even slightly belieblegg to passage majoriy have sufferd alterat some form huour and ransed.', avatarImageName: 'testimonial-2-avatar.jpg' },
+            { name: 'Tomas Alexander', text: 'Dorem Ipsum availablut the majoriy have sufferd alterat some form huour the and ransed words which don\'t look even slightly belieblegg to passage majoriy have sufferd alterat some form huour and ransed.', avatarImageName: 'testimonial-3-avatar.jpg' },
+            { name: 'Jonny Bravo', text: 'Dorem Ipsum availablut the majoriy have sufferd alterat some form huour the and ransed words which don\'t look even slightly belieblegg to passage majoriy have sufferd alterat some form huour and ransed.', avatarImageName: 'testimonial-4-avatar.jpg' },
         ],
     },
 };

@@ -1,8 +1,16 @@
+import Blog from '@/components/Blog';
+import Facts from '@/components/Facts';
+import Faq from '@/components/Faq';
+import Testimonials from '@/components/Testimonials';
+
 const BlogPage = () => {
   return (
-    <div style={{ minHeight: 'calc(100vh - 769px)' }}>
-      Blog
-    </div>
+    <>
+      <Blog />
+      <Facts />
+      <Faq />
+      <Testimonials />
+    </>
   );
 };
 

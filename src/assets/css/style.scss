@@ -10,7 +10,7 @@
 8. Fact
 9. Faq
 10. Pricing
-11. Doctors
+11. Testimonials
 12. Product
 13. Blog
 14. Pagination
@@ -371,7 +371,7 @@ label {
 .slider-content h2 span,
 .single-delivery-benefits:hover .ds-content h5,
 .fact-bg .section-title h2 span,
-.doctor-info h6,
+.testimonials-info h6,
 .single-delivery-benefits:hover .ds-icon i,
 .fact-content h5,
 .faq-wrapper .card-header h5 a,
@@ -414,7 +414,7 @@ label {
 .home-yellow .slider-content h2 span,
 .home-yellow .single-delivery-benefits:hover .ds-content h5,
 .home-yellow .fact-bg .section-title h2 span,
-.home-yellow .doctor-info h6,
+.home-yellow .testimonials-info h6,
 .home-yellow .single-delivery-benefits:hover .ds-icon i,
 .home-yellow .fact-content h5,
 .home-yellow .faq-wrapper .card-header h5 a,
@@ -1165,7 +1165,6 @@ label {
 
 /* 8. Fact */
 .fact-bg {
-	background-image: url(../bg/fact.jpg);
 	padding-top: 110px;
 	background-position: center;
 	background-size: cover;
@@ -1398,15 +1397,14 @@ label {
 	color: #fff;
 }
 
-/* 11. Doctors */
-.doctor-bg {
-	background-image: url(../bg/doctors.jpg);
+/* 11. Testimonials */
+.testimonials-bg {
 	background-position: center;
 	background-size: cover;
 	position: relative;
 }
 
-.doctor-bg::before {
+.testimonials-bg::before {
 	content: "";
 	position: absolute;
 	left: 0;
@@ -1429,39 +1427,39 @@ label {
 	color: #dbdbdb;
 }
 
-.doctor-thumb {
+.testimonials-thumb {
 	float: left;
 	margin-right: 23px;
 	margin-top: 35px;
 }
 
-.doctor-thumb img {
+.testimonials-thumb img {
 	border-radius: 50%;
 	border: 3px solid #fff;
 }
 
-.doctor-content {
+.testimonials-content {
 	overflow: hidden;
 }
 
-.doctor-icon {
+.testimonials-icon {
 	margin-bottom: 10px;
 }
 
-.doctor-content p {
+.testimonials-content p {
 	font-size: 14px;
 	line-height: 30px;
 	color: #dbdbdb;
 	margin-bottom: 20px;
 }
 
-.doctor-info h6 {
+.testimonials-info h6 {
 	margin-bottom: 0;
 	font-size: 14px;
 	font-weight: 500;
 }
 
-.doctor-info span {
+.testimonials-info span {
 	font-style: italic;
 	color: #dbdbdb;
 	margin-left: 5px;
@@ -2632,6 +2630,7 @@ button[variant="secondary"] {
 
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 @import url('https://fonts.googleapis.com/css?family=Poppins:300,400,400i,500,500i,600,600i,700,800,900&display=swap');
 @import './animate.min.scss';
 @import './fontawesome-all.min.scss';

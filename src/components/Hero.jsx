@@ -2,16 +2,17 @@ import heroImage from '@/assets/media/hero.png';
 import content from '@/content';
 
 const Hero = () => {
-    const [titlePart1, titlePart2, titlePart3, ...titleRest] = content.hero.title.split(' ');
-
     return (
         <section id="hero" className="lg:px-28 py-20">
             <div className="flex flex-col-reverse lg:flex-row items-center justify-between px-4">
                 <div className="lg:w-1/2 lg:pr-8">
                     <div className="slider-content text-center lg:text-left">
-                        <h2 className="text-blue-950 text-4xl lg:text-5xl xl:text-6xl leading-tight font-bold capitalize mb-4 mt-16 lg:mt-0 wow fadeInUp animated" data-wow-delay="0.2s" style={{ visibility: 'visible', animationDelay: '0.2s', animationName: 'fadeInUp' }}>
-                            {titlePart1}{titlePart2 && ` ${titlePart2}`}{titlePart3 && <span className="lg:text-limegreen">{` ${titlePart3}`}</span>}{` ${titleRest.join(' ') || ''}`}
-                        </h2>
+                        <h2
+                            className="text-blue-950 text-4xl lg:text-5xl xl:text-6xl leading-tight font-bold capitalize mb-4 mt-16 lg:mt-0 wow fadeInUp animated"
+                            data-wow-delay="0.2s"
+                            style={{ visibility: 'visible', animationDelay: '0.2s', animationName: 'fadeInUp' }}
+                            dangerouslySetInnerHTML={{ __html: content.hero.title }}
+                        />
                         <p className="text-zinc-500 font-medium mb-8 wow fadeInUp animated" data-wow-delay="0.4s" style={{ visibility: 'visible', animationDelay: '0.4s', animationName: 'fadeInUp' }}>
                             {content.hero.description}
                         </p>
