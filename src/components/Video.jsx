@@ -38,8 +38,8 @@ const Video = ({ className }) => {
                     <div className="text-center">
                         <h2 className="text-4xl font-bold text-white">{content.video.title}</h2>
                         <p className="text-sm font-medium text-gray-300 leading-6 mt-6 mb-8">{content.video.description}</p>
-                        <a href="/products">
-                            <button className="hover:bg-transparent">{content.video.cta}</button>
+                        <a href={content.video.cta.href}>
+                            <button className="hover:bg-transparent">{content.video.cta.text}</button>
                         </a>
                     </div>
                 </div>

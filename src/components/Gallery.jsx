@@ -6,8 +6,8 @@ import dynamic from 'next/dynamic';
 import galleryBgImage from '@/assets/bg/gallery.jpg';
 import content from '@/content';
 
-export const activeCategoryButtonClassName = 'px-[18px] py-4 md:py-2 mx-0 md:mx-0.5 my-0.5 md:my-0 text-[15px] font-medium rounded-full transition duration-300 bg-limegreen text-white shadow-[0px_0px_24px_0px_rgba(42,203,53,0.48)]';
-export const inactiveCategoryButtonClassName = 'px-[18px] py-4 md:py-2 mx-0 md:mx-0.5 my-0.5 md:my-0 text-[15px] font-medium rounded-full transition duration-300 bg-white text-zinc-500 hover:bg-limegreen hover:text-white border-transparent';
+export const activeProductItemButtonClassName = 'px-[18px] py-4 md:py-2 mx-0 md:mx-0.5 my-0.5 md:my-0 text-[15px] font-medium rounded-full transition duration-300 bg-limegreen text-white shadow-[0px_0px_24px_0px_rgba(42,203,53,0.48)]';
+export const inactiveProductItemButtonClassName = 'px-[18px] py-4 md:py-2 mx-0 md:mx-0.5 my-0.5 md:my-0 text-[15px] font-medium rounded-full transition duration-300 bg-white text-zinc-500 hover:bg-limegreen hover:text-white border-transparent';
 
 const addFadeInLeftAnimation = e => {
     e.currentTarget.querySelectorAll('[class*="animated"]').forEach(el => {
@@ -23,7 +23,7 @@ const removeFadeInLeftAnimation = e => {
     });
 };
 
-const dynamicImages = content.products.categories.map(({ images }) => images).flat().map(image => ({
+const dynamicImages = content.products.items.map(({ images }) => images).flat().map(image => ({
     imageName: image.imageName,
     component: dynamic(() => import(`@/assets/media/${image.imageName}`).then(module => {
         const Component = () => <img src={module.default.src} alt={image.alt} width={image.width} height={image.height} className="object-contain w-full p-1" />;
@@ -40,13 +40,13 @@ export const ImageViewer = ({ image, onClose = () => { } }) => {
     }
 
     return (
-        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
+        <div className="fixed inset-0 bg-black bg-opacity-75 flex productItems-center justify-center z-50 p-4">
             <div className="relative max-w-4xl">
                 <button
                     onClick={onClose}
-                    className="absolute p-4 -top-[52px] -right-[16px] bg-transparent hover:bg-transparent border-transparent text-white text-2xl flex items-center justify-center animated fadeIn"
+                    className="absolute p-4 -top-[52px] -right-[16px] bg-transparent hover:bg-transparent border-transparent text-white text-2xl flex productItems-center justify-center animated fadeIn"
                 >
-                    <i className="fas fa-times"></i>
+                    <i className="fas fa-times"/>
                 </button>
                 <img
                     src={image.src}
@@ -59,7 +59,7 @@ export const ImageViewer = ({ image, onClose = () => { } }) => {
 };
 
 const Gallery = ({ className }) => {
-    const [selectedCategory, setSelectedCategory] = React.useState(content.products.categories[Math.floor(content.products.categories.length / 2)]);
+    const [selectedProductItem, setSelectedProductItem] = React.useState(content.products.items[Math.floor(content.products.items.length / 2)]);
     const [selectedImage, setSelectedImage] = React.useState(null);
 
     const onImageContainerClick = e => {
@@ -91,27 +91,27 @@ const Gallery = ({ className }) => {
             </div>
             <div className="text-center mb-12">
                 <div className="flex flex-col md:flex-row md:inline-flex md:flex-wrap justify-center bg-white rounded-xl shadow-[0px_0px_27px_0px_rgba(149,149,149,0.22)] py-6 px-10 md:px-20">
-                    {content.products.categories.map(category => (
+                    {content.products.items.map(productItem => (
                         <button
-                            key={category.name}
-                            className={selectedCategory === category ? activeCategoryButtonClassName : inactiveCategoryButtonClassName}
-                            onClick={() => setSelectedCategory(category)}
-                            dangerouslySetInnerHTML={{ __html: category.title }}
+                            key={productItem.name}
+                            className={selectedProductItem === productItem ? activeProductItemButtonClassName : inactiveProductItemButtonClassName}
+                            onClick={() => setSelectedProductItem(productItem)}
+                            dangerouslySetInnerHTML={{ __html: productItem.title }}
                         />
                     ))}
                 </div>
             </div>
             <div className="flex flex-col md:flex-row gap-7.5">
-                {content.products.categories.map((category, colIndex) => (
-                    <div key={category.name} className="md:w-1/3">
+                {content.products.items.map((productItems, colIndex) => (
+                    <div key={productItems.name} className="md:w-1/3">
                         <div className="flex flex-col gap-7.5">
-                            {selectedCategory.images.map((image, i) => {
+                            {selectedProductItem.images.map((image, i) => {
                                 if (i % 3 !== colIndex) {
                                     return null;
                                 }
                                 const Image = dynamicImages.find(({ imageName }) => (imageName === image.imageName)).component;
                                 return (
-                                    <div key={i} className={content.products.categories.map(({ name }) => name).join(' ')}>
+                                    <div key={i} className={content.products.items.map(({ name }) => name).join(' ')}>
                                         <div
                                             className="mb-7.5 relative group cursor-pointer"
                                             onMouseEnter={addFadeInLeftAnimation}

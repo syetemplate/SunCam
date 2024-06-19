@@ -10,7 +10,10 @@ export default {
             { label: 'Products', href: '/products' },
             { label: 'Blog', href: '/blog' },
         ],
-        cta: 'ORDER NOW',
+        cta: {
+            text: 'ORDER NOW',
+            href: '/products',
+        },
     },
     hero: {
         title: 'Drone with <span className="lg:text-limegreen">camera</span> for kids',
@@ -77,7 +80,10 @@ export default {
     video: {
         title: 'Awesome drone for kids with 4K camera and long flight time',
         description: 'Take a look at our drone in action. The video showcases the MiniDrone’s features and capabilities.',
-        cta: 'ORDER NOW',
+        cta: {
+            text: 'ORDER NOW',
+            href: '/products',
+        },
         youtubeVideoId: 'iWKu6WNFf9M',
     },
     gallery: {
@@ -342,12 +348,13 @@ export default {
     products: {
         title: 'Order MiniDrone',
         description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-        categories: [
+        currency: '$',
+        items: [
             {
                 href: '/products/mini-drone-basic',
                 name: 'MiniDrone Basic',
                 title: 'MiniDrone <strong>Basic</strong>',
-                price: '€120.00',
+                price: 120,
                 customerReviewsLabel: 'Customer Reviews',
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
                 productInfo: {
@@ -386,7 +393,7 @@ export default {
                 href: '/products/mini-drone-pro',
                 name: 'MiniDrone Pro',
                 title: 'MiniDrone <strong>Pro</strong>',
-                price: '€150.00',
+                price: 150,
                 customerReviewsLabel: 'Customer Reviews',
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
                 productInfo: {
@@ -428,7 +435,7 @@ export default {
                 href: '/products/mini-drone-pro-plus',
                 name: 'MiniDrone Pro Plus',
                 title: 'MiniDrone <strong>Pro Plus</strong>',
-                price: '€200.00',
+                price: 200,
                 customerReviewsLabel: 'Customer Reviews',
                 text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
                 productInfo: {
@@ -464,7 +471,7 @@ export default {
                 ],
             },
         ],
-        ctaLabel: 'ADD TO CART',
+        addToCartLabel: 'ADD TO CART',
     },
     faq: {
         title: 'Frequently Asked Questions',
@@ -531,5 +538,29 @@ export default {
             { name: 'Tomas Alexander', text: 'Dorem Ipsum availablut the majoriy have sufferd alterat some form huour the and ransed words which don\'t look even slightly belieblegg to passage majoriy have sufferd alterat some form huour and ransed.', avatarImageName: 'testimonial-3-avatar.jpg' },
             { name: 'Jonny Bravo', text: 'Dorem Ipsum availablut the majoriy have sufferd alterat some form huour the and ransed words which don\'t look even slightly belieblegg to passage majoriy have sufferd alterat some form huour and ransed.', avatarImageName: 'testimonial-4-avatar.jpg' },
         ],
+    },
+    cart: {
+        title: 'Order Summary',
+        shippingPrice: 10,
+        labels: {
+            totalItems: 'Total items',
+            shippingCharges: 'Shipping charges',
+            estimatedTotal: 'Estimated total',
+        },
+    },
+    checkout: {
+        title: 'Checkout',
+        labels: {
+            email: 'Email',
+            submit: 'Continue',
+        },
+        emptyCart: {
+            title: 'Your cart is empty',
+            description: 'Looks like you haven\'t added any products to the cart yet.',
+            cta: {
+                text: 'Check out our products catalog',
+                href: '/products',
+            }
+        },
     },
 };

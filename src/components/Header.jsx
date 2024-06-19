@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import { throttle } from 'lodash';
 import logoDark from '@/assets/media/logo-dark.png';
 import content from '@/content';
+import { useCart } from '@/state/cart';
 
 const stickyHeaderClassName = 'animated fadeInDown sticky top-0 left-0 w-full z-50 bg-white shadow-[0px_10px_15px_rgba(25,25,25,0.075)] rounded-none p-0 border-b-0';
 
@@ -13,6 +14,8 @@ const Header = ({ className }) => {
     const [isCollapsed, setIsCollapsed] = React.useState(true);
     const headerRef = React.useRef(null);
     const pathname = usePathname();
+    const cart = useCart();
+    const shouldShowCartBadge = (cart.items.length > 0);
 
     const toggleCollapse = () => {
         setIsCollapsed(!isCollapsed);
@@ -112,11 +115,14 @@ const Header = ({ className }) => {
                     </nav>
                 </div>
                 <div className="hidden md:flex md:ml-auto items-center">
-                    <div className="hidden md:block">
-                        <i className="fas fa-shopping-basket px-4 text-limegreen"></i>
-                    </div>
+                    <a className="relative hidden md:block cursor-pointer" href="/checkout">
+                        <i className="fas fa-shopping-basket px-4 text-limegreen" />
+                        {shouldShowCartBadge && <span className="absolute top-0 right-[14px] h-[8px] w-[8px] bg-red-500 rounded-full z-10" />}
+                    </a>
                     <div className="hidden md:block border-l border-gray-300 ml-4 mr-4 h-6"></div>
-                    <button className="hidden md:block">{content.header.cta}</button>
+                    <a href={content.header.cta.href} className="hidden md:block">
+                        <button>{content.header.cta.text}</button>
+                    </a>
                 </div>
             </div>
         </header>

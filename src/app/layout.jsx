@@ -1,9 +1,10 @@
+import { CartProvider } from '@/state/cart';
 import Header from '@/components/Header';
 import Main from '@/components/Main';
 import Footer from '@/components/Footer';
 import favicon from '@/assets/media/favicon.ico';
-import '@/assets/css/style.scss';
 import content from '@/content';
+import '@/assets/css/style.scss';
 
 export const metadata = {
   title: content.meta.title,
@@ -24,9 +25,11 @@ const RootLayout = ({ children }) => {
   return (
     <html lang="he" suppressHydrationWarning>
       <body className="h-screen inline">
-        <Header />
-        <Main>{children}</Main>
-        <Footer />
+        <CartProvider>
+          <Header />
+          <Main>{children}</Main>
+          <Footer />
+        </CartProvider>
       </body>
     </html>
   );
