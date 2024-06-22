@@ -552,6 +552,8 @@ export default {
         title: 'Checkout',
         labels: {
             email: 'Email',
+            name: 'Full Name',
+            phone: 'Phone Number',
             submit: 'Continue',
         },
         emptyCart: {
