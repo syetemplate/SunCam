@@ -62,7 +62,7 @@ const BlogPostPage = () => {
         className="breadcrumb-bg flex flex-col items-center justify-center min-w-full"
         style={{ backgroundImage: `url(${blogBgImage.src})` }}
       >
-        <div className="container mx-auto z-10 px-4 lg:px-28 flex flex-wrap justify-center z-10">
+        <div className="container mx-auto z-10 p-4 lg:px-28 flex flex-wrap justify-center z-10">
           <div className="md:w-4/5 pr-4 pl-4">
             <div className="breadcrumb-content text-center">
               <h2 className="text-white" style={{ color: 'white', fontSize: '3rem', fontWeight: 'bold' }}>{currentPost?.title}</h2>
