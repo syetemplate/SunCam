@@ -25,13 +25,13 @@ const Footer = ({ className }) => {
                         }}
                     >
                         <div className="flex flex-wrap lg:flex-nowrap justify-center">
-                            <div className="w-full pr-4 pl-4">
-                                <div className="newsletter-content mb-[25px] text-center lg:text-left">
+                            <div className="w-full pr-4 pl-4 rtl:lg:pl-4 rtl:lg:pr-0">
+                                <div className="newsletter-content mb-[25px] text-center lg:text-left rtl:lg:text-right">
                                     <h4>{content.newsletter.title}</h4>
                                     <span>{content.newsletter.description}</span>
                                 </div>
                             </div>
-                            <div className="w-full pr-4 pl-4">
+                            <div className="w-full pr-4 pl-4 rtl:lg:pr-0 rtl:lg:pl-4">
                                 <div className="newsletter-form">
                                     <form action="#" className="flex-col sm:flex-row">
                                         <input type="email" placeholder={content.newsletter.emailPlaceholder} className="w-full" />
@@ -50,11 +50,11 @@ const Footer = ({ className }) => {
                             <div className="footer-logo mb-35">
                                 <a href="index.html"><img src={logoLite.src} alt="logo" /></a>
                             </div>
-                            <div className="footer-text">
+                            <div className="footer-text rtl:text-right">
                                 <p>{content.footer.text}</p>
                             </div>
                             <div className="footer-social">
-                                <ul>
+                                <ul className="rtl:text-right">
                                     {content.footer.social.map((social, index) => (
                                         <li key={index}>
                                             <a href={social.href}>
@@ -69,7 +69,7 @@ const Footer = ({ className }) => {
                     <div className="xl:w-1/4 lg:w-1/3 md:w-1/2 px-4">
                         <div className="footer-widget mb-50">
                             <div className="fw-title mb-30">
-                                <h5>recent posts</h5>
+                                <h5>{content.footer.recentPosts}</h5>
                             </div>
                             <div className="f-rc-post">
                                 <ul>
@@ -99,15 +99,15 @@ const Footer = ({ className }) => {
                     </div>
                     <div className="xl:w-1/4 lg:w-1/3 md:w-1/2 px-4">
                         <div className="footer-widget mb-50">
-                            <div className="fw-title mb-30">
+                            <div className="fw-title mb-30 rtl:text-right">
                                 <h5>{content.footer.usefulLinks.title}</h5>
                             </div>
                             <div className="fw-link">
-                                <ul>
+                                <ul className="rtl:text-right">
                                     {content.footer.usefulLinks.list.map((link, index) => (
                                         <li key={index}>
                                             <a href={link.href} className="whitespace-nowrap">
-                                                <i className="fas fa-caret-right" />
+                                                <i className="fas fa-caret-right rtl:ml-2 rtl:rotate-180" />
                                                 {` ${link.title}`}
                                             </a>
                                         </li>
@@ -118,13 +118,13 @@ const Footer = ({ className }) => {
                     </div>
                     <div className="xl:w-1/4 lg:w-1/3 md:w-1/2 px-4">
                         <div className="footer-widget mb-50">
-                            <div className="fw-title mb-30">
+                            <div className="fw-title mb-30 rtl:text-right">
                                 <h5>{content.footer.contact.title}</h5>
                             </div>
-                            <div className="footer-form" id="contact">
+                            <div className="footer-form rtl:text-right" id="contact">
                                 <form action="#">
-                                    <input type="email" placeholder={content.footer.contact.emailPlaceholder} />
-                                    <textarea name="message" placeholder={content.footer.contact.messagePlaceholder}></textarea>
+                                    <input type="email" placeholder={content.footer.contact.emailPlaceholder} className="rtl:text-right" />
+                                    <textarea name="message" placeholder={content.footer.contact.messagePlaceholder} className="rtl:text-right"></textarea>
                                     <button className="inline-block align-middle text-center select-none border font-bold whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline">
                                         {content.footer.contact.submit}
                                     </button>
@@ -137,12 +137,12 @@ const Footer = ({ className }) => {
             <div className="copyright-wrap w-full px-4 lg:px-28">
                 <div className="flex flex-wrap items-center justify-center">
                     <div className="sm:w-1/2 px-4">
-                        <div className="copyright-text mb-4 sm:mb-0">
+                        <div className="copyright-text mb-4 sm:mb-0 rtl:text-right">
                             <p>{content.footer.copyright}</p>
                         </div>
                     </div>
                     <div className="sm:w-1/2 px-4">
-                        <div className="f-payment-method text-center md:text-right float-right">
+                        <div className="f-payment-method text-center md:text-right float-right rtl:float-left rtl:md:text-left">
                             <img src={paymentMethodsImage.src} alt="payment methods" />
                         </div>
                     </div>

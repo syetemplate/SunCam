@@ -40,11 +40,11 @@ export const ImageViewer = ({ image, onClose = () => { } }) => {
     }
 
     return (
-        <div className="fixed inset-0 bg-black bg-opacity-75 flex productItems-center justify-center z-50 p-4">
+        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
             <div className="relative max-w-4xl">
                 <button
                     onClick={onClose}
-                    className="absolute p-4 -top-[52px] -right-[16px] bg-transparent hover:bg-transparent border-transparent text-white text-2xl flex productItems-center justify-center animated fadeIn"
+                    className="absolute p-4 -top-[52px] -right-[16px] bg-transparent hover:bg-transparent border-transparent text-white text-2xl flex items-center justify-center animated fadeIn"
                 >
                     <i className="fas fa-times"/>
                 </button>
@@ -122,11 +122,11 @@ const Gallery = ({ className }) => {
                                                 <Image />
                                                 <div className="absolute inset-0 bg-limegreen opacity-0 transition-opacity duration-500 group-hover:opacity-75 m-1"></div>
                                             </div>
-                                            <div className="absolute left-7 top-10 z-10 opacity-0 group-hover:opacity-100">
-                                                <h5 className="text-2xl font-extrabold text-white relative duration-500 animated">
+                                            <div className="absolute left-7 right-7 top-10 z-10 opacity-0 group-hover:opacity-100">
+                                                <h5 className="text-2xl font-extrabold text-white relative duration-500 animated rtl:text-right">
                                                     {image.title}
                                                 </h5>
-                                                <span className="inline-block text-sm font-medium text-white duration-500 delay-100 animated">{image.description}</span>
+                                                <span className="inline-block text-sm font-medium text-white duration-500 delay-100 animated rtl:text-right">{image.description}</span>
                                             </div>
                                         </div>
                                     </div>

@@ -23,7 +23,7 @@ export const viewport = {
 
 const RootLayout = ({ children }) => {
   return (
-    <html lang="he" suppressHydrationWarning>
+    <html lang="he" dir="rtl" suppressHydrationWarning>
       <body className="h-screen inline">
         <CartProvider>
           <Header />

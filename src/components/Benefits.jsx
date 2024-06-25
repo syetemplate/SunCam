@@ -42,52 +42,52 @@ const Benefits = ({ className }) => {
             <div className="w-full lg:w-11/12 xl:w-full mx-auto flex flex-wrap items-center justify-center">
                 <div className="w-full xl:w-1/3 md:w-1/2">
                     <div
-                        className="flex flex-col justify-end md:flex-row items-center mb-10 md:pr-2 lg:pr-14"
+                        className="flex flex-col justify-end md:flex-row items-center mb-10 md:pr-2 lg:pr-14 rtl:md:pl-2 rtl:lg:pl-14 rtl:md:pr-0 rtl:lg:pr-0"
                         onMouseEnter={addHoverAnimation}
                         onMouseLeave={removeHoverAnimation}
                     >
-                        <div className="order-0 mb-4 md:mb-0 md:order-2 md:ml-4">
+                        <div className="order-0 mb-4 md:mb-0 md:order-2 md:ml-4 rtl:md:mr-4 rtl:md:ml-0">
                             <img
                                 className="block w-min-20 h-min-20 text-center leading-[80px] text-4xl border-2 border-dashed border-[#062a4d] rounded-full text-[#062a4d] transition-all"
                                 src={benefit1Icon.src}
                                 alt={content.benefits.list[0].title}
                             />
                         </div>
-                        <div className="lg:w-8/12 text-center md:text-left md:text-right">
+                        <div className="lg:w-8/12 text-center md:text-left md:text-right rtl:md:text-left">
                             <h5 className="text-blue-950 text-lg font-semibold transition-all">{content.benefits.list[0].title}</h5>
                             <p className="text-zinc-500 text-sm font-medium leading-loose">{content.benefits.list[0].description}</p>
                         </div>
                     </div>
                     <div
-                        className="flex flex-col justify-end md:flex-row items-center mb-10 md:pr-2 lg:pr-14"
+                        className="flex flex-col justify-end md:flex-row items-center mb-10 md:pr-2 lg:pr-14 rtl:md:pl-2 rtl:lg:pl-14 rtl:md:pr-0 rtl:lg:pr-0"
                         onMouseEnter={addHoverAnimation}
                         onMouseLeave={removeHoverAnimation}
                     >
-                        <div className="order-0 mb-4 md:mb-0 md:order-2 md:ml-4">
+                        <div className="order-0 mb-4 md:mb-0 md:order-2 md:ml-4 rtl:md:mr-4 rtl:md:ml-0">
                             <img
                                 className="block w-min-20 h-min-20 text-center leading-[80px] text-4xl border-2 border-dashed border-[#062a4d] rounded-full text-[#062a4d] transition-all"
                                 src={benefit2Icon.src}
                                 alt={content.benefits.list[1].title}
                             />
                         </div>
-                        <div className="lg:w-8/12 text-center md:text-left md:text-right">
+                        <div className="lg:w-8/12 text-center md:text-left md:text-right rtl:md:text-left">
                             <h5 className="text-blue-950 text-lg font-semibold transition-all">{content.benefits.list[1].title}</h5>
                             <p className="text-zinc-500 text-sm font-medium leading-loose">{content.benefits.list[1].description}</p>
                         </div>
                     </div>
                     <div
-                        className="flex flex-col justify-end md:flex-row items-center mb-10 md:pr-2 lg:pr-14"
+                        className="flex flex-col justify-end md:flex-row items-center mb-10 md:pr-2 lg:pr-14 rtl:md:pl-2 rtl:lg:pl-14 rtl:md:pr-0 rtl:lg:pr-0"
                         onMouseEnter={addHoverAnimation}
                         onMouseLeave={removeHoverAnimation}
                     >
-                        <div className="order-0 mb-4 md:mb-0 md:order-2 md:ml-4">
+                        <div className="order-0 mb-4 md:mb-0 md:order-2 md:ml-4 rtl:md:mr-4 rtl:md:ml-0">
                             <img
                                 className="block w-min-20 h-min-20 text-center leading-[80px] text-4xl border-2 border-dashed border-[#062a4d] rounded-full text-[#062a4d] transition-all"
                                 src={benefit3Icon.src}
                                 alt={content.benefits.list[2].title}
                             />
                         </div>
-                        <div className="lg:w-8/12 text-center md:text-left md:text-right">
+                        <div className="lg:w-8/12 text-center md:text-left md:text-right rtl:md:text-left">
                             <h5 className="text-blue-950 text-lg font-semibold transition-all">{content.benefits.list[2].title}</h5>
                             <p className="text-zinc-500 text-sm font-medium leading-loose">{content.benefits.list[2].description}</p>
                         </div>
@@ -100,52 +100,52 @@ const Benefits = ({ className }) => {
                 </div>
                 <div className="w-full xl:w-1/3 md:w-1/2">
                     <div
-                        className="flex flex-col md:flex-row items-center mb-10 md:pl-2 lg:pl-10"
+                        className="flex flex-col md:flex-row items-center mb-10 md:pl-2 lg:pl-10 rtl:md:pr-2 rtl:lg:pr-10 rtl:md:pl-0 rtl:lg:pl-0"
                         onMouseEnter={addHoverAnimation}
                         onMouseLeave={removeHoverAnimation}
                     >
-                        <div className="mb-4 md:mb-0 mr-0 md:mr-4">
+                        <div className="mb-4 md:mb-0 mr-0 md:mr-4 rtl:md:ml-4 rtl:md:mr-0">
                             <img
                                 className="block w-min-20 h-min-20 text-center leading-[80px] text-4xl border-2 border-dashed border-[#062a4d] rounded-full text-[#062a4d] transition-all"
                                 src={benefit4Icon.src}
                                 alt={content.benefits.list[3].title}
                             />
                         </div>
-                        <div className="lg:w-8/12 text-center md:text-left">
+                        <div className="lg:w-8/12 text-center md:text-left rtl:md:text-right">
                             <h5 className="text-blue-950 text-lg font-semibold transition-all">{content.benefits.list[3].title}</h5>
                             <p className="text-zinc-500 text-sm font-medium leading-loose">{content.benefits.list[3].description}</p>
                         </div>
                     </div>
                     <div
-                        className="flex flex-col md:flex-row items-center mb-10 md:pl-2 lg:pl-10"
+                        className="flex flex-col md:flex-row items-center mb-10 md:pl-2 lg:pl-10 rtl:md:pr-2 rtl:lg:pr-10 rtl:md:pl-0 rtl:lg:pl-0"
                         onMouseEnter={addHoverAnimation}
                         onMouseLeave={removeHoverAnimation}
                     >
-                        <div className="mb-4 md:mb-0 mr-0 md:mr-4">
+                        <div className="mb-4 md:mb-0 mr-0 md:mr-4 rtl:md:ml-4 rtl:md:mr-0">
                             <img
                                 className="block w-min-20 h-min-20 text-center leading-[80px] text-4xl border-2 border-dashed border-[#062a4d] rounded-full text-[#062a4d] transition-all"
                                 src={benefit5Icon.src}
                                 alt={content.benefits.list[4].title}
                             />
                         </div>
-                        <div className="lg:w-8/12 text-center md:text-left">
+                        <div className="lg:w-8/12 text-center md:text-left rtl:md:text-right">
                             <h5 className="text-blue-950 text-lg font-semibold transition-all">{content.benefits.list[4].title}</h5>
                             <p className="text-zinc-500 text-sm font-medium leading-loose">{content.benefits.list[4].description}</p>
                         </div>
                     </div>
                     <div
-                        className="flex flex-col md:flex-row items-center mb-10 md:pl-2 lg:pl-10"
+                        className="flex flex-col md:flex-row items-center mb-10 md:pl-2 lg:pl-10 rtl:md:pr-2 rtl:lg:pr-10 rtl:md:pl-0 rtl:lg:pl-0"
                         onMouseEnter={addHoverAnimation}
                         onMouseLeave={removeHoverAnimation}
                     >
-                        <div className="mb-4 md:mb-0 mr-0 md:mr-4">
+                        <div className="mb-4 md:mb-0 mr-0 md:mr-4 rtl:md:ml-4 rtl:md:mr-0">
                             <img
                                 className="block w-min-20 h-min-20 text-center leading-[80px] text-4xl border-2 border-dashed border-[#062a4d] rounded-full text-[#062a4d] transition-all"
                                 src={benefit6Icon.src}
                                 alt={content.benefits.list[5].title}
                             />
                         </div>
-                        <div className="lg:w-8/12 text-center md:text-left">
+                        <div className="lg:w-8/12 text-center md:text-left rtl:md:text-right">
                             <h5 className="text-blue-950 text-lg font-semibold transition-all">{content.benefits.list[5].title}</h5>
                             <p className="text-zinc-500 text-sm font-medium leading-loose">{content.benefits.list[5].description}</p>
                         </div>

@@ -24,7 +24,7 @@ const ProductsPage = () => {
                 <div className="px-4 lg:px-28 pt-16 pb-[320px] md:pb-48 lg:pb-36">
                     <div className="flex flex-wrap -m-4">
                         {content.products.items.map((productItem, index) => (
-                            <div key={index} className="xl:w-1/4 md:w-1/2 p-4 w-full flex flex-col md:block productItems-center md:productItems-left text-center md:text-left">
+                            <div key={index} className="xl:w-1/4 md:w-1/2 p-4 w-full flex flex-col md:block items-center md:productItems-left text-center md:text-left">
                                 <a className="block relative rounded overflow-hidden" href={productItem.href}>
                                     {images.find(img => img.imageName === productItem.images[0].imageName)?.component()}
                                 </a>
