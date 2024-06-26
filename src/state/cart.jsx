@@ -6,14 +6,14 @@ import content from '@/content';
 
 const compactItems = items => {
     return items.map(item => ({
-        name: item.name,
+        id: item.id,
         quantity: item.quantity,
     }));
 };
 
 const expandItems = items => {
     return items.map(item => {
-        const productDetails = content.products.items.find(product => product.name === item.name);
+        const productDetails = content.products.items.find(product => product.id === item.id);
         return {
             ...productDetails,
             quantity: item.quantity,
@@ -28,7 +28,11 @@ export const CartProvider = ({ children }) => {
     const [isInitialised, setIsInitialised] = React.useState(false);
 
     const loadFromLocalStorage = React.useCallback(() => {
-        const cartItemsFromLocalStorage = JSON.parse(window.localStorage.getItem('cartItems') || '[]');
+        let cartItemsFromLocalStorage = JSON.parse(window.localStorage.getItem('cartItems') || '[]');
+        if (!Array.isArray(cartItemsFromLocalStorage)) {
+            cartItemsFromLocalStorage = [];
+        }
+        cartItemsFromLocalStorage = cartItemsFromLocalStorage.filter(item => item.id && item.quantity);
         const newCartItems = expandItems(cartItemsFromLocalStorage);
         setCartItems(newCartItems);
         setIsInitialised(true);
@@ -59,17 +63,17 @@ export const useCart = () => {
     const toSearchParams = () => {
         const searchParams = new URLSearchParams();
         cartItems.forEach(item => {
-            searchParams.append(item.name, item.quantity);
+            searchParams.append(item.id, item.quantity);
         });
         return searchParams.toString();
     };
 
     const fromSearchParams = (searchParams = searchParamsBase) => {
         return content.products.items
-            .filter(productItem => searchParams.get(productItem.name))
+            .filter(productItem => searchParams.get(productItem.id))
             .map(productItem => ({
                 ...productItem,
-                quantity: parseInt(searchParams.get(productItem.name), 10),
+                quantity: parseInt(searchParams.get(productItem.id), 10),
             }));
     };
 

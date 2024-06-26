@@ -352,6 +352,7 @@ export default {
         currency: '₪',
         items: [
             {
+                id: 'miniDroneBasic',
                 href: '/products/mini-drone-basic',
                 name: 'MiniDrone בסיסי',
                 title: 'MiniDrone <strong>בסיסי</strong>',
@@ -391,6 +392,7 @@ export default {
                 ],
             },
             {
+                id: 'miniDronePro',
                 href: '/products/mini-drone-pro',
                 name: 'MiniDrone פרו',
                 title: 'MiniDrone <strong>פרו</strong>',
@@ -433,6 +435,7 @@ export default {
                 ],
             },
             {
+                id: 'miniDroneProPlus',
                 href: '/products/mini-drone-pro-plus',
                 name: 'MiniDrone פרו פלוס',
                 title: 'MiniDrone <strong>פרו פלוס</strong>',

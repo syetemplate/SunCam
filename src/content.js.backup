@@ -352,6 +352,7 @@ export default {
         currency: '$',
         items: [
             {
+                id: 'miniDroneBasic',
                 href: '/products/mini-drone-basic',
                 name: 'MiniDrone Basic',
                 title: 'MiniDrone <strong>Basic</strong>',
@@ -391,6 +392,7 @@ export default {
                 ],
             },
             {
+                id: 'miniDronePro',
                 href: '/products/mini-drone-pro',
                 name: 'MiniDrone Pro',
                 title: 'MiniDrone <strong>Pro</strong>',
@@ -433,6 +435,7 @@ export default {
                 ],
             },
             {
+                id: 'miniDroneProPlus',
                 href: '/products/mini-drone-pro-plus',
                 name: 'MiniDrone Pro Plus',
                 title: 'MiniDrone <strong>Pro Plus</strong>',
