@@ -1,13 +1,8 @@
 'use client';
 
 import clsx from 'clsx';
+import dynamic from 'next/dynamic';
 import benefitsImage from '@/assets/media/benefits.png';
-import benefit1Icon from '@/assets/media/benefit-1.png';
-import benefit2Icon from '@/assets/media/benefit-2.png';
-import benefit3Icon from '@/assets/media/benefit-3.png';
-import benefit4Icon from '@/assets/media/benefit-4.png';
-import benefit5Icon from '@/assets/media/benefit-5.png';
-import benefit6Icon from '@/assets/media/benefit-6.png';
 import content from '@/content';
 
 const addHoverAnimation = e => {
@@ -23,6 +18,18 @@ const removeHoverAnimation = e => {
     e.currentTarget.querySelector('h5').classList.remove('text-limegreen', 'duration-300');
     e.currentTarget.querySelector('img').classList.remove('border-limegreen', 'duration-300');
 };
+
+const dynamicImages = content.benefits.list.map(({ title, imageName }) => ({
+    imageName: imageName,
+    component: dynamic(() => import(`@/assets/media/${imageName}`).then(module => {
+        const Component = () => <img src={module.default.src} alt={title} className="block min-w-[56px] min-h-[56px] md:min-w-[80px] md:min-h-[80px] text-center leading-[80px] text-4xl border-2 border-dashed border-[#062a4d] rounded-full text-[#062a4d] transition-all" />;
+        Component.displayName = `Image-${imageName}`;
+        return Component;
+    }), {
+        loading: () => <img className="block min-w-[56px] min-h-[56px] md:min-w-[80px] md:min-h-[80px] text-center leading-[80px] text-4xl border-2 border-dashed border-[#062a4d] rounded-full text-[#062a4d] transition-all" />,
+    }),
+}));
+
 
 const Benefits = ({ className }) => {
     return (
@@ -41,57 +48,25 @@ const Benefits = ({ className }) => {
             </div>
             <div className="w-full lg:w-11/12 xl:w-full mx-auto flex flex-wrap items-center justify-center">
                 <div className="w-full xl:w-1/3 md:w-1/2">
-                    <div
-                        className="flex flex-col justify-end md:flex-row items-center mb-10 md:pr-2 lg:pr-14 rtl:md:pl-2 rtl:lg:pl-14 rtl:md:pr-0 rtl:lg:pr-0"
-                        onMouseEnter={addHoverAnimation}
-                        onMouseLeave={removeHoverAnimation}
-                    >
-                        <div className="order-0 mb-4 md:mb-0 md:order-2 md:ml-4 rtl:md:mr-4 rtl:md:ml-0">
-                            <img
-                                className="block w-min-20 h-min-20 text-center leading-[80px] text-4xl border-2 border-dashed border-[#062a4d] rounded-full text-[#062a4d] transition-all"
-                                src={benefit1Icon.src}
-                                alt={content.benefits.list[0].title}
-                            />
-                        </div>
-                        <div className="lg:w-8/12 text-center md:text-left md:text-right rtl:md:text-left">
-                            <h5 className="text-blue-950 text-lg font-semibold transition-all">{content.benefits.list[0].title}</h5>
-                            <p className="text-zinc-500 text-sm font-medium leading-loose">{content.benefits.list[0].description}</p>
-                        </div>
-                    </div>
-                    <div
-                        className="flex flex-col justify-end md:flex-row items-center mb-10 md:pr-2 lg:pr-14 rtl:md:pl-2 rtl:lg:pl-14 rtl:md:pr-0 rtl:lg:pr-0"
-                        onMouseEnter={addHoverAnimation}
-                        onMouseLeave={removeHoverAnimation}
-                    >
-                        <div className="order-0 mb-4 md:mb-0 md:order-2 md:ml-4 rtl:md:mr-4 rtl:md:ml-0">
-                            <img
-                                className="block w-min-20 h-min-20 text-center leading-[80px] text-4xl border-2 border-dashed border-[#062a4d] rounded-full text-[#062a4d] transition-all"
-                                src={benefit2Icon.src}
-                                alt={content.benefits.list[1].title}
-                            />
-                        </div>
-                        <div className="lg:w-8/12 text-center md:text-left md:text-right rtl:md:text-left">
-                            <h5 className="text-blue-950 text-lg font-semibold transition-all">{content.benefits.list[1].title}</h5>
-                            <p className="text-zinc-500 text-sm font-medium leading-loose">{content.benefits.list[1].description}</p>
-                        </div>
-                    </div>
-                    <div
-                        className="flex flex-col justify-end md:flex-row items-center mb-10 md:pr-2 lg:pr-14 rtl:md:pl-2 rtl:lg:pl-14 rtl:md:pr-0 rtl:lg:pr-0"
-                        onMouseEnter={addHoverAnimation}
-                        onMouseLeave={removeHoverAnimation}
-                    >
-                        <div className="order-0 mb-4 md:mb-0 md:order-2 md:ml-4 rtl:md:mr-4 rtl:md:ml-0">
-                            <img
-                                className="block w-min-20 h-min-20 text-center leading-[80px] text-4xl border-2 border-dashed border-[#062a4d] rounded-full text-[#062a4d] transition-all"
-                                src={benefit3Icon.src}
-                                alt={content.benefits.list[2].title}
-                            />
-                        </div>
-                        <div className="lg:w-8/12 text-center md:text-left md:text-right rtl:md:text-left">
-                            <h5 className="text-blue-950 text-lg font-semibold transition-all">{content.benefits.list[2].title}</h5>
-                            <p className="text-zinc-500 text-sm font-medium leading-loose">{content.benefits.list[2].description}</p>
-                        </div>
-                    </div>
+                    {content.benefits.list.slice(0, Math.floor(content.benefits.list.length / 2)).map(image => {
+                        const Image = dynamicImages.find(({ imageName }) => (imageName === image.imageName)).component;
+                        return (
+                            <div
+                                key={image.title}
+                                className="md:h-[120px] lg:h-[148px] flex flex-col justify-end md:flex-row items-center mb-10 md:pr-2 lg:pr-14 rtl:md:pl-2 rtl:lg:pl-14 rtl:md:pr-0 rtl:lg:pr-0"
+                                onMouseEnter={addHoverAnimation}
+                                onMouseLeave={removeHoverAnimation}
+                            >
+                                <div className="order-0 mb-4 md:mb-0 md:order-2 md:ml-4 rtl:md:mr-4 rtl:md:ml-0">
+                                    <Image />
+                                </div>
+                                <div className="lg:w-8/12 text-center md:text-left md:text-right rtl:md:text-left">
+                                    <h5 className="text-blue-950 text-lg font-semibold transition-all">{image.title}</h5>
+                                    <p className="text-zinc-500 text-sm font-medium leading-loose">{image.description}</p>
+                                </div>
+                            </div>
+                        );
+                    })}
                 </div>
                 <div className="hidden lg:w-1/3 xl:block">
                     <div className="relative d-benefits-img">
@@ -99,57 +74,25 @@ const Benefits = ({ className }) => {
                     </div>
                 </div>
                 <div className="w-full xl:w-1/3 md:w-1/2">
-                    <div
-                        className="flex flex-col md:flex-row items-center mb-10 md:pl-2 lg:pl-10 rtl:md:pr-2 rtl:lg:pr-10 rtl:md:pl-0 rtl:lg:pl-0"
-                        onMouseEnter={addHoverAnimation}
-                        onMouseLeave={removeHoverAnimation}
-                    >
-                        <div className="mb-4 md:mb-0 mr-0 md:mr-4 rtl:md:ml-4 rtl:md:mr-0">
-                            <img
-                                className="block w-min-20 h-min-20 text-center leading-[80px] text-4xl border-2 border-dashed border-[#062a4d] rounded-full text-[#062a4d] transition-all"
-                                src={benefit4Icon.src}
-                                alt={content.benefits.list[3].title}
-                            />
-                        </div>
-                        <div className="lg:w-8/12 text-center md:text-left rtl:md:text-right">
-                            <h5 className="text-blue-950 text-lg font-semibold transition-all">{content.benefits.list[3].title}</h5>
-                            <p className="text-zinc-500 text-sm font-medium leading-loose">{content.benefits.list[3].description}</p>
-                        </div>
-                    </div>
-                    <div
-                        className="flex flex-col md:flex-row items-center mb-10 md:pl-2 lg:pl-10 rtl:md:pr-2 rtl:lg:pr-10 rtl:md:pl-0 rtl:lg:pl-0"
-                        onMouseEnter={addHoverAnimation}
-                        onMouseLeave={removeHoverAnimation}
-                    >
-                        <div className="mb-4 md:mb-0 mr-0 md:mr-4 rtl:md:ml-4 rtl:md:mr-0">
-                            <img
-                                className="block w-min-20 h-min-20 text-center leading-[80px] text-4xl border-2 border-dashed border-[#062a4d] rounded-full text-[#062a4d] transition-all"
-                                src={benefit5Icon.src}
-                                alt={content.benefits.list[4].title}
-                            />
-                        </div>
-                        <div className="lg:w-8/12 text-center md:text-left rtl:md:text-right">
-                            <h5 className="text-blue-950 text-lg font-semibold transition-all">{content.benefits.list[4].title}</h5>
-                            <p className="text-zinc-500 text-sm font-medium leading-loose">{content.benefits.list[4].description}</p>
-                        </div>
-                    </div>
-                    <div
-                        className="flex flex-col md:flex-row items-center mb-10 md:pl-2 lg:pl-10 rtl:md:pr-2 rtl:lg:pr-10 rtl:md:pl-0 rtl:lg:pl-0"
-                        onMouseEnter={addHoverAnimation}
-                        onMouseLeave={removeHoverAnimation}
-                    >
-                        <div className="mb-4 md:mb-0 mr-0 md:mr-4 rtl:md:ml-4 rtl:md:mr-0">
-                            <img
-                                className="block w-min-20 h-min-20 text-center leading-[80px] text-4xl border-2 border-dashed border-[#062a4d] rounded-full text-[#062a4d] transition-all"
-                                src={benefit6Icon.src}
-                                alt={content.benefits.list[5].title}
-                            />
-                        </div>
-                        <div className="lg:w-8/12 text-center md:text-left rtl:md:text-right">
-                            <h5 className="text-blue-950 text-lg font-semibold transition-all">{content.benefits.list[5].title}</h5>
-                            <p className="text-zinc-500 text-sm font-medium leading-loose">{content.benefits.list[5].description}</p>
-                        </div>
-                    </div>
+                    {content.benefits.list.slice(Math.floor(content.benefits.list.length / 2)).map(image => {
+                        const Image = dynamicImages.find(({ imageName }) => (imageName === image.imageName)).component;
+                        return (
+                            <div
+                                key={image.title}
+                                className="md:h-[120px] lg:h-[148px] flex flex-col md:flex-row items-center mb-10 md:pl-2 lg:pl-10 rtl:md:pr-2 rtl:lg:pr-10 rtl:md:pl-0 rtl:lg:pl-0"
+                                onMouseEnter={addHoverAnimation}
+                                onMouseLeave={removeHoverAnimation}
+                            >
+                                <div className="mb-4 md:mb-0 mr-0 md:mr-4 rtl:md:ml-4 rtl:md:mr-0">
+                                    <Image />
+                                </div>
+                                <div className="lg:w-8/12 text-center md:text-left rtl:md:text-right">
+                                    <h5 className="text-blue-950 text-lg font-semibold transition-all">{image.title}</h5>
+                                    <p className="text-zinc-500 text-sm font-medium leading-loose">{image.description}</p>
+                                </div>
+                            </div>
+                        );
+                    })}
                 </div>
             </div>
         </section>

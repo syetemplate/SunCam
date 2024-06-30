@@ -32,18 +32,22 @@ export default {
             {
                 title: 'Lightweight and Portable',
                 description: 'Weighing under 249 grams, the Atom SE Mini drone is highly portable and easy for kids to fly.',
+                imageName: 'feature-1.png',
             },
             {
                 title: 'High-Quality Video Recording',
                 description: 'Records 4K/30fps video, enabling young photographers to capture sharp aerial shots.',
+                imageName: 'feature-2.png',
             },
             {
                 title: 'Long Flight Time',
                 description: 'Offers up to 29 minutes of flight per battery, minimizing the need for frequent charging.',
+                imageName: 'feature-3.png',
             },
             {
                 title: 'Easy to Use',
                 description: 'Designed for beginners, with easy remote control and safety features like GPS return home.',
+                imageName: 'feature-4.png',
             },
         ],
     },
@@ -54,26 +58,32 @@ export default {
             {
                 title: 'Easy to Use',
                 description: 'Lorem ipsufm dolor site amet mortllis Suppke regio amet mollis',
+                imageName: 'benefit-1.png',
             },
             {
                 title: 'Safe for Kids',
                 description: 'Lorem ipsufm dolor site amet mortllis Suppke regio amet mollis',
+                imageName: 'benefit-2.png',
             },
             {
                 title: 'High-Quality Camera',
                 description: 'Lorem ipsufm dolor site amet mortllis Suppke regio amet mollis',
+                imageName: 'benefit-3.png',
             },
             {
                 title: 'Long Flight Time',
                 description: 'Lorem ipsufm dolor site amet mortllis Suppke regio amet mollis',
+                imageName: 'benefit-4.png',
             },
             {
                 title: 'Portable',
                 description: 'Lorem ipsufm dolor site amet mortllis Suppke regio amet mollis',
+                imageName: 'benefit-5.png',
             },
             {
                 title: 'Affordable',
                 description: 'Lorem ipsufm dolor site amet mortllis Suppke regio amet mollis',
+                imageName: 'benefit-6.png',
             },
         ],
     },

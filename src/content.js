@@ -32,18 +32,22 @@ export default {
             {
                 title: 'קל משקל ונייד',
                 description: 'במשקל של פחות מ-249 גרם, הרחפן המיני Atom SE נייד מאוד וקל לילדים לטוס בו.',
+                imageName: 'feature-1.png',
             },
             {
                 title: 'הקלטת וידאו באיכות גבוהה',
                 description: 'מקליט וידאו ב-4K/30fps, המאפשר לצלמים צעירים לצלם תמונות אוויריות חדות.',
+                imageName: 'feature-2.png',
             },
             {
                 title: 'זמן טיסה ארוך',
                 description: 'מציע עד 29 דקות של טיסה לכל סוללה, ממזער את הצורך בטעינה תכופה.',
+                imageName: 'feature-3.png',
             },
             {
                 title: 'קל לשימוש',
                 description: 'מיועד למתחילים, עם שלט רחוק קל ותכונות בטיחות כמו GPS לחזרה הביתה.',
+                imageName: 'feature-4.png',
             },
         ],
     },
@@ -54,26 +58,32 @@ export default {
             {
                 title: 'קל לשימוש',
                 description: 'הרחפן המתקדם שלנו תוכנן במיוחד להיות נוח ונגיש לילדים ללא צורך בניסיון קודם.',
+                imageName: 'benefit-1.png',
             },
             {
                 title: 'בטוח לילדים',
                 description: 'תכונות כמו מגני להבים, חומרים קלים ומגבלת גובה הופכים את הרחפן לבטוח עבור ילדים.',
+                imageName: 'benefit-2.png',
             },
             {
                 title: 'מצלמה באיכות גבוהה',
                 description: 'המצלמה המתקדמת מצלמת וידאו ב-4K ותמונות ב-12MP לתוצאות מרהיבות וחדות.',
+                imageName: 'benefit-3.png',
             },
             {
                 title: 'זמן טיסה ארוך',
                 description: 'מצויד בסוללה עוצמתית המספקת עד 30 דקות של זמן טיסה לחוויה ממושכת.',
+                imageName: 'benefit-4.png',
             },
             {
                 title: 'קומפקטי',
                 description: 'העיצוב הקטן והקל הופך את הרחפן לנייד מאוד ונוח לאחסון ונשיאה.',
+                imageName: 'benefit-5.png',
             },
             {
                 title: 'מחיר נגיש',
                 description: 'הרחפן המתקדם שלנו מגיע במחיר תחרותי יחסית לאיכותו ולתכונותיו העשירות.',
+                imageName: 'benefit-6.png',
             },
         ],
     },
