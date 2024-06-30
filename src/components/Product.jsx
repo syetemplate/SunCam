@@ -181,9 +181,9 @@ const Product = ({ className, productItem }) => {
             <>
                 {isCartOpen && (
                     <div name="overlay" className="fixed inset-0 bg-black bg-opacity-50 z-50">
-                        <div className="w-full lg:w-2/5 h-full flex flex-col animated fadeInRight fixed bottom-0 right-0 z-50 bg-white shadow-[0px_10px_15px_rgba(25,25,25,0.075)] rounded-none p-0 border-b-0 px-4 py-8">
+                        <div className="w-full lg:w-2/5 h-full flex flex-col animated fadeInRight fixed bottom-0 right-0 z-50 bg-white shadow-[0px_10px_15px_rgba(25,25,25,0.075)] rounded-none p-0 border-b-0 px-4 py-8 rtl:right-auto rtl:left-0">
                             <div className="flex flex-col items-center border-b border-gray-200 pb-8">
-                                <i className="fas fa-times text-3xl absolute left-[24px] top-[24px] hover:text-limegreen cursor-pointer" onClick={closeCart} />
+                                <i className="fas fa-times text-3xl absolute left-[24px] top-[24px] hover:text-limegreen cursor-pointer rtl:left-auto rtl:right-[24px]" onClick={closeCart} />
                                 <h2 className="text-2xl font-semibold leading-6 text-gray-800">
                                     {content.cart.title}
                                 </h2>
@@ -199,8 +199,8 @@ const Product = ({ className, productItem }) => {
                         </div>
                     </div>
                 )}
-                <div className="block lg:flex lg:flex-wrap">
-                    <div className="xl:w-3/5 pr-4 pl-4 lg:w-1/2 pr-4 pl-4">
+                <div className="block lg:flex lg:flex-wrap rtl:lg:flex-row-reverse">
+                    <div className="xl:w-3/5 pr-4 pl-4 lg:w-1/2 pr-4 pl-4 rtl:xl:pl-4 rtl:xl:pr-0 rtl:lg:pl-4 rtl:lg:pr-0">
                         <div className="product-wrap">
                             <div className="product-active" onClick={onActiveProductImageClick}>
                                 {currentSlideImage && <currentSlideImage.component />}
@@ -219,12 +219,12 @@ const Product = ({ className, productItem }) => {
                             </div>
                         </div>
                     </div>
-                    <div className="xl:w-2/5 pr-4 pl-4 lg:w-1/2 pr-4 pl-4">
+                    <div className="xl:w-2/5 pr-4 pl-4 lg:w-1/2 pr-4 pl-4 rtl:xl:pr-4 rtl:xl:pl-0 rtl:lg:pr-4 rtl:lg:pl-0">
                         <div className="product-details-content">
                             <h3>{productItem.name}</h3>
                             <h6>{content.products.currency}{productItem.price.toFixed(2)}</h6>
                             <div className="product-rating mb-35">
-                                <ul>
+                                <ul className="ml-0 mr-2 rtl:ml-2 rtl:mr-0">
                                     {[...Array(5)].map((_, index) => (
                                         <li key={index}>
                                             <i className={`fas fa-star${index < averageRating ? ' text-limegreen' : ''}`} />
@@ -234,13 +234,13 @@ const Product = ({ className, productItem }) => {
                                 <span>({productItem.reviews.list.length} {productItem.customerReviewsLabel})</span>
                             </div>
                             <p>{productItem.text}</p>
-                            <div className="perched-info">
-                                <div className="cart-plus">
+                            <div className="perched-info rtl:flex rtl:flex-row-reverse rtl:justify-end">
+                                <div className="cart-plus rtl:ml-4">
                                     <form action="#">
                                         <div className="cart-plus-minus">
                                             <input type="text" value={quantity} readOnly />
-                                            <div className="dec qtybutton" onClick={() => onQuantityChange('decrement')}>-</div>
-                                            <div className="inc qtybutton" onClick={() => onQuantityChange('increment')}>+</div>
+                                            <div className="dec qtybutton rtl:left-0 rtl:right-auto" onClick={() => onQuantityChange('decrement')}>-</div>
+                                            <div className="inc qtybutton rtl:right-0 rtl:left-auto" onClick={() => onQuantityChange('increment')}>+</div>
                                         </div>
                                     </form>
                                 </div>
@@ -248,9 +248,9 @@ const Product = ({ className, productItem }) => {
                             </div>
                             <div className="product-info mb-50">
                                 <h5>{productItem.productInfo.title}</h5>
-                                <ul>
+                                <ul className="rtl:pr-0">
                                     {productItem.productInfo.list.map((productItem, index) => (
-                                        <li key={index}><span>{productItem.title}:</span> {productItem.description}</li>
+                                        <li key={index} className="rtl:flex rtl:flex-row-reverse"><span className="rtl:ml-1">{productItem.title}:</span> {productItem.description}</li>
                                     ))}
                                 </ul>
                             </div>
@@ -283,12 +283,12 @@ const Product = ({ className, productItem }) => {
                                 </ul>
                                 <div className="tab-content" id="myTabContent">
                                     {activeTab === 'description' && (
-                                        <div className="tab-pane opacity-100 block active">
+                                        <div className="tab-pane opacity-100 block active rtl:text-right">
                                             <p className="desc-content">{productItem.description.text}</p>
                                         </div>
                                     )}
                                     {activeTab === 'additionalInfo' && (
-                                        <div className="tab-pane opacity-100 block active">
+                                        <div className="tab-pane opacity-100 block active rtl:text-right">
                                             <p className="desc-content">{productItem.additionalInfo.text}</p>
                                         </div>
                                     )}
@@ -298,12 +298,12 @@ const Product = ({ className, productItem }) => {
                                                 {productItem.reviews.list.map((review, index) => {
                                                     const ReviewerAvatarImage = reviewerAvatarImages.find(({ imageName }) => imageName === review.avatarImageName).component;
                                                     return (
-                                                        <div key={index} className="single-review">
-                                                            <div className="review-avatar">
+                                                        <div key={index} className="single-review rtl:flex rtl:flex-row-reverse">
+                                                            <div className="review-avatar rtl:ml-4">
                                                                 <ReviewerAvatarImage />
                                                             </div>
-                                                            <div className="review-content">
-                                                                <div className="review-rating">
+                                                            <div className="review-content rtl:text-right">
+                                                                <div className="review-rating rtl:flex rtl:flex-row-reverse rtl:justify-end">
                                                                     <ul>
                                                                         {[...Array(5)].map((_, index) => (
                                                                             <li key={index}>

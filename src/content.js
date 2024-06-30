@@ -389,10 +389,10 @@ export default {
                 reviews: {
                     title: 'ביקורות',
                     list: [
-                        { name: 'יוחנן כהן', date: '27 מאי, 2024', rating: 5, text: 'מתנה מדהימה לבן שלי! הוא כל כך נהנה לטוס עם הרחפן ולצלם תמונות וסרטונים.', avatarImageName: 'review-1-avatar.jpg' },
-                        { name: 'מיכאל אליוט', date: '27 מאי, 2024', rating: 4, text: 'מוצר מצוין לכסף. קל להתקנה ולשימוש. רק הלוואי שזמן הטיסה היה ארוך יותר.', avatarImageName: 'review-2-avatar.jpg' },
-                        { name: 'לינדה סמית', date: '27 מאי, 2024', rating: 5, text: 'רחפן עמיד וחזק. המצלמה יציבה והתמונות צלולות. שירות הלקוחות היה מצוין גם כן.', avatarImageName: 'review-3-avatar.jpg' },
-                        { name: 'ננסי תומפסון', date: '27 מאי, 2024', rating: 4, text: 'אהבתי את הרחפן הזה! תכונות הבטיחות מאפשרות לי להיות רגוע כשהילדים משחקים איתו.', avatarImageName: 'review-4-avatar.jpg' },
+                        { name: 'יהונתן כהן', date: '27 מאי, 2024', rating: 5, text: 'מתנה מדהימה לבן שלי! הוא כל כך נהנה לטוס עם הרחפן ולצלם תמונות וסרטונים.', avatarImageName: 'review-1-avatar.jpg' },
+                        { name: 'מיכאל לוי', date: '13 אפריל, 2024', rating: 4, text: 'תמורה טובה לכסף. קל להתקנה ולשימוש. זמן טיסה ארוך.', avatarImageName: 'review-2-avatar.jpg' },
+                        { name: 'ליאורה ס.', date: '05 דצמבר, 2023', rating: 5, text: 'רחפן עמיד וחזק. המצלמה יציבה והתמונות צלולות. שירות הלקוחות היה מצוין גם כן.', avatarImageName: 'review-3-avatar.jpg' },
+                        { name: 'נוי תמר', date: '16 נובמבר, 2023', rating: 4, text: 'אהבתי את הרחפן הזה! בטיחותי מאוד ומאפשר לי להיות רגוע כשהילדים משחקים איתו.', avatarImageName: 'review-4-avatar.jpg' },
                     ],
                 },
                 images: [
