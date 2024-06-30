@@ -234,7 +234,7 @@ const Product = ({ className, productItem }) => {
                                 <span>({productItem.reviews.list.length} {productItem.customerReviewsLabel})</span>
                             </div>
                             <p>{productItem.text}</p>
-                            <div className="perched-info rtl:flex rtl:flex-row-reverse rtl:justify-end">
+                            <div className="perched-info">
                                 <div className="cart-plus rtl:ml-4">
                                     <form action="#">
                                         <div className="cart-plus-minus">

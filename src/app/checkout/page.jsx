@@ -86,14 +86,14 @@ const CheckoutPage = () => {
 
     return (
         <section id="checkout" className="flex justify-center px-8 lg:px-28 xl:px-40 pt-16 pb-[320px] lg:pb-[160px]">
-            <div className="flex w-full lg:w-full flex-col lg:flex-row lg:space-x-10 2xl:space-x-36 space-y-12 lg:space-y-0">
-                <div className="flex w-full flex-col">
+            <div className="flex w-full lg:w-full flex-col lg:flex-row">
+                <div className="flex w-full flex-col lg:ml-0 lg:mr-4 rtl:lg:ml-12 rtl:lg:mr-0">
                     <div>
                         <p className="text-2xl font-semibold leading-7 lg:leading-9 text-gray-800">{content.checkout.title}</p>
                     </div>
                     <div className="mt-8">
                         <input
-                            className="focus:ring-2 focus:ring-gray-500 focus:outline-none px-2 border-b border-gray-200 leading-4 text-sm placeholder-gray-600 py-4 w-full"
+                            className="focus:ring-2 focus:ring-gray-500 focus:outline-none px-2 border-b border-gray-200 leading-4 text-sm placeholder-gray-600 py-4 w-full lg:w-[95%] placeholder:text-left rtl:placeholder:text-right"
                             type="text"
                             name="name"
                             placeholder={content.checkout.labels.name}
@@ -103,7 +103,7 @@ const CheckoutPage = () => {
                     </div>
                     <div className="mt-8">
                         <input
-                            className="focus:ring-2 focus:ring-gray-500 focus:outline-none px-2 border-b border-gray-200 leading-4 text-sm placeholder-gray-600 py-4 w-full"
+                            className="focus:ring-2 focus:ring-gray-500 focus:outline-none px-2 border-b border-gray-200 leading-4 text-sm placeholder-gray-600 py-4 w-full lg:w-[95%] placeholder:text-left rtl:placeholder:text-right"
                             type="tel"
                             name="phone"
                             placeholder={content.checkout.labels.phone}
@@ -113,7 +113,7 @@ const CheckoutPage = () => {
                     </div>
                     <div className="mt-8">
                         <input
-                            className="focus:ring-2 focus:ring-gray-500 focus:outline-none px-2 border-b border-gray-200 leading-4 text-sm placeholder-gray-600 py-4 w-full"
+                            className="focus:ring-2 focus:ring-gray-500 focus:outline-none px-2 border-b border-gray-200 leading-4 text-sm placeholder-gray-600 py-4 w-full lg:w-[95%] placeholder:text-left rtl:placeholder:text-right"
                             type="email"
                             name="email"
                             placeholder={content.checkout.labels.email}
@@ -134,7 +134,7 @@ const CheckoutPage = () => {
                     )}
                 </div>
 
-                <Cart />
+                <Cart className="mt-14 lg:mt-0 ml-12 rtl:lg:ml-0 lg:mr-0 rtl:lg:mr-4"/>
             </div>
         </section>
     );

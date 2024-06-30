@@ -429,10 +429,10 @@ export default {
                 reviews: {
                     title: 'ביקורות',
                     list: [
-                        { name: 'יוחנן כהן', date: '27 מאי, 2024', rating: 5, text: 'שדרוג מדהים מהMiniDrone הקודם שלי. המצלמה והיציבות נהדרות ומאפשרות צילומים מקצועיים.', avatarImageName: 'review-1-avatar.jpg' },
-                        { name: 'מיכאל אליוט', date: '27 מאי, 2024', rating: 5, text: 'זמן הטיסה הארוך מאפשר לי ליהנות יותר בכל פעם. רחפן נהדר לכל מטרה!', avatarImageName: 'review-2-avatar.jpg' },
-                        { name: 'לינדה סמית', date: '27 מאי, 2024', rating: 4, text: 'הרחפן הזה פשוט נהדר, אבל קצת יקר יותר. עדיין שווה את הכסף בעיניי.', avatarImageName: 'review-3-avatar.jpg' },
-                        { name: 'ננסי תומפסון', date: '27 מאי, 2024', rating: 5, text: 'הבן שלי מטורף על הרחפן הזה. האיכות והביצועים יוצאי דופן. אחלה קנייה!', avatarImageName: 'review-4-avatar.jpg' },
+                        { name: 'יהונתן כהן', date: '27 מאי, 2024', rating: 5, text: 'מתנה מדהימה לבן שלי! הוא כל כך נהנה לטוס עם הרחפן ולצלם תמונות וסרטונים.', avatarImageName: 'review-1-avatar.jpg' },
+                        { name: 'מיכאל לוי', date: '13 אפריל, 2024', rating: 4, text: 'תמורה טובה לכסף. קל להתקנה ולשימוש. זמן טיסה ארוך.', avatarImageName: 'review-2-avatar.jpg' },
+                        { name: 'ליאורה ס.', date: '05 דצמבר, 2023', rating: 5, text: 'רחפן עמיד וחזק. המצלמה יציבה והתמונות צלולות. שירות הלקוחות היה מצוין גם כן.', avatarImageName: 'review-3-avatar.jpg' },
+                        { name: 'נוי תמר', date: '16 נובמבר, 2023', rating: 4, text: 'אהבתי את הרחפן הזה! בטיחותי מאוד ומאפשר לי להיות רגוע כשהילדים משחקים איתו.', avatarImageName: 'review-4-avatar.jpg' },
                     ],
                 },
                 images: [
@@ -455,11 +455,11 @@ export default {
                 productInfo: {
                     title: 'פרטי המוצר',
                     list: [
-                        { title: 'משקל', description: '299 גרם' },
-                        { title: 'זמן טיסה', description: '36 דקות' },
-                        { title: 'מצלמה', description: 'וידאו 5K/30fps' },
-                        { title: 'בטיחות', description: 'חיישני מכשולים' },
-                    ]
+                        { name: 'יהונתן כהן', date: '27 מאי, 2024', rating: 5, text: 'מתנה מדהימה לבן שלי! הוא כל כך נהנה לטוס עם הרחפן ולצלם תמונות וסרטונים.', avatarImageName: 'review-1-avatar.jpg' },
+                        { name: 'מיכאל לוי', date: '13 אפריל, 2024', rating: 4, text: 'תמורה טובה לכסף. קל להתקנה ולשימוש. זמן טיסה ארוך.', avatarImageName: 'review-2-avatar.jpg' },
+                        { name: 'ליאורה ס.', date: '05 דצמבר, 2023', rating: 5, text: 'רחפן עמיד וחזק. המצלמה יציבה והתמונות צלולות. שירות הלקוחות היה מצוין גם כן.', avatarImageName: 'review-3-avatar.jpg' },
+                        { name: 'נוי תמר', date: '16 נובמבר, 2023', rating: 4, text: 'אהבתי את הרחפן הזה! בטיחותי מאוד ומאפשר לי להיות רגוע כשהילדים משחקים איתו.', avatarImageName: 'review-4-avatar.jpg' },
+                    ],
                 },
                 description: {
                     title: 'תיאור',

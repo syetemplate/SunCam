@@ -1532,7 +1532,7 @@ label {
 .cart-plus {
 	width: 134px;
 	position: relative;
-	margin-right: 30px;
+	margin-inline-end: 30px;
 }
 
 .cart-plus-minus {
@@ -1667,6 +1667,7 @@ label {
 .single-review {
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 	margin-bottom: 24px;
 }
 

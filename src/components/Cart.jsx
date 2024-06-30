@@ -69,19 +69,19 @@ const Cart = ({ className, hideTitle = false }) => {
         <div className={clsx('flex flex-col w-full', [className])}>
             <div className="flex flex-col bg-white overflow-auto overflow-auto max-h-[50vh]">
                 {!hideTitle && (
-                    <h2 className="text-lg font-semibold leading-6 text-gray-800">
+                    <h2 className="text-lg font-semibold leading-6 text-gray-800 rtl:text-right">
                         {content.cart.title}
                     </h2>
                 )}
                 <div className="mt-7 space-y-6">
                     {cartItems.map(item => (
                         <div key={item.name} className="flex justify-between items-center">
-                            <div className="flex items-center space-x-4">
+                            <div className="flex items-center space-x-4 rtl:space-x-reverse rtl:space-x-4">
                                 {images.find(img => img.imageName === item.images[0].imageName)?.component()}
-                                <div>
+                                <div className="rtl:text-right">
                                     <p className="text-sm font-semibold text-gray-800 mb-0">{item.name}</p>
                                     <p className="text-xs text-gray-600">{content.products.currency}{item.price.toFixed(2)}</p>
-                                    <div className="mt-2 flex items-center space-x-2">
+                                    <div className="mt-2 flex items-center space-x-2 rtl:space-x-reverse rtl:space-x-2">
                                         <input
                                             type="number"
                                             min="1"
@@ -91,9 +91,9 @@ const Cart = ({ className, hideTitle = false }) => {
                                                 if (e.target.value === `${item.quantity}`) {
                                                     return;
                                                 }
-                                               e.target.value = item.quantity;
+                                                e.target.value = item.quantity;
                                             }}
-                                            className="w-16 px-2 py-1 text-gray-700 bg-gray-100 rounded"
+                                            className="w-16 px-2 py-1 text-gray-700 bg-gray-100 rounded rtl:text-right"
                                         />
                                         <div
                                             className="text-gray-500 cursor-pointer"
@@ -104,7 +104,7 @@ const Cart = ({ className, hideTitle = false }) => {
                                     </div>
                                 </div>
                             </div>
-                            <p className="text-sm font-semibold text-gray-800">
+                            <p className="text-sm font-semibold text-gray-800 rtl:text-left">
                                 {content.products.currency}{(item.price * item.quantity).toFixed(2)}
                             </p>
                         </div>
@@ -113,7 +113,7 @@ const Cart = ({ className, hideTitle = false }) => {
             </div>
 
             <div className="flex flex-col bg-gray-50 p-2 xl:p-10 mt-8">
-                <div className="flex flex-col items-end w-full space-y-6">
+                <div className="flex flex-col items-end w-full space-y-6 rtl:items-start">
                     <div className="flex justify-between w-full items-center">
                         <p className="text-sm leading-4 text-gray-600">{content.cart.labels.totalItems}</p>
                         <p className="text-sm font-semibold leading-4 text-gray-600">{totalItems}</p>

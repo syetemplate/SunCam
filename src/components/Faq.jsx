@@ -33,7 +33,7 @@ const Faq = ({ className }) => {
                         </div>
                     </div>
                 </div>
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 rtl:grid-flow-col-reverse">
                     <div className="faq-img">
                         <img src={faqImage.src} alt="faq" />
                     </div>
