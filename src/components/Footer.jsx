@@ -75,11 +75,11 @@ const Footer = ({ className }) => {
                                 <ul>
                                     {recentPosts.map((recentPost, index) => {
                                         const Image = dynamic(() => import(`@/assets/media/${recentPost.imageName}`).then(module => {
-                                            const Component = () => <img src={module.default.src} alt={recentPost.title} width="80" height="80" className="object-contain" />;
+                                            const Component = () => <img src={module.default.src} alt={recentPost.title} width="80" height="80" className="min-w-[80px] min-h-[80px] object-contain" />;
                                             Component.displayName = `Image-${recentPost.imageName}`;
                                             return Component;
                                         }), {
-                                            loading: () => <img width="80" height="80" className="w-full p-1" />,
+                                            loading: () => <img width="80" height="80" className="min-w-[80px] min-h-[80px]" />,
                                         });
                                         return (
                                             <li key={index}>

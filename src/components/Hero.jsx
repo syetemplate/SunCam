@@ -17,9 +17,12 @@ const Hero = ({ className }) => {
                             style={{ visibility: 'visible', animationDelay: '0.2s', animationName: 'fadeInUp' }}
                             dangerouslySetInnerHTML={{ __html: content.hero.title }}
                         />
-                        <p className="text-zinc-500 font-medium mb-8 wow fadeInUp animated" data-wow-delay="0.4s" style={{ visibility: 'visible', animationDelay: '0.4s', animationName: 'fadeInUp' }}>
-                            {content.hero.description}
-                        </p>
+                        <p
+                            className="text-zinc-500 font-medium mb-8 wow fadeInUp animated"
+                            data-wow-delay="0.4s"
+                            style={{ visibility: 'visible', animationDelay: '0.4s', animationName: 'fadeInUp' }}
+                            dangerouslySetInnerHTML={{ __html: content.hero.description }}
+                        />
                         <div className="slider-btn lg:flex">
                             <button className="bg-limegreen text-white py-3 px-6 rounded-full lg:mr-4 rtl:lg:ml-4 rtl:lg:mr-0 wow fadeInLeft animated" data-wow-delay="0.6s" style={{ visibility: 'visible', animationDelay: '0.6s', animationName: 'fadeInLeft' }}>
                                 <a href={content.hero.cta.href}>{content.hero.cta.text}</a>
