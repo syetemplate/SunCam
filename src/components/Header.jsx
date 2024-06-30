@@ -17,6 +17,13 @@ const Header = ({ className }) => {
     const cart = useCart();
     const shouldShowCartBadge = (cart.items.length > 0);
 
+    const cartIcon = (
+        <a className="relative cursor-pointer" href="/checkout">
+            <i className="fas fa-shopping-basket px-4 text-limegreen text-xl" />
+            {shouldShowCartBadge && <span className="absolute top-0 right-[14px] h-[8px] w-[8px] bg-red-500 rounded-full z-10" />}
+        </a>
+    );
+
     const toggleCollapse = () => {
         setIsCollapsed(!isCollapsed);
     };
@@ -58,6 +65,7 @@ const Header = ({ className }) => {
                     <img src={logoDark.src} alt="logo" />
                 </a>
                 <div className="md:hidden">
+                    {cartIcon}
                     <button
                         type="button"
                         className="p-2 rounded-lg border border-gray-700 bg-gray-800 text-gray-400 hover:bg-gray-700/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-blue-600 transition-all text-sm"
@@ -115,11 +123,8 @@ const Header = ({ className }) => {
                     </nav>
                 </div>
                 <div className="hidden md:flex md:ml-auto items-center">
-                    <a className="relative hidden md:block cursor-pointer" href="/checkout">
-                        <i className="fas fa-shopping-basket px-4 text-limegreen" />
-                        {shouldShowCartBadge && <span className="absolute top-0 right-[14px] h-[8px] w-[8px] bg-red-500 rounded-full z-10" />}
-                    </a>
-                    <div className="hidden md:block border-l border-gray-300 ml-4 mr-4 h-6"></div>
+                    {cartIcon}
+                    <div className="hidden md:block md:border-l md:border-gray-300 ml-4 mr-4 h-6"></div>
                     <a href={content.header.cta.href} className="hidden md:block">
                         <button>{content.header.cta.text}</button>
                     </a>
