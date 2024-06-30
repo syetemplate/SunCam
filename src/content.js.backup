@@ -569,4 +569,8 @@ export default {
             }
         },
     },
+    whatsApp: {
+        phoneNumber: '972553197109',
+        text: 'Hello! I'm interested in learning more about Minidrone',
+    },
 };

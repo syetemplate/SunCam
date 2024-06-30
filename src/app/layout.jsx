@@ -2,6 +2,7 @@ import { CartProvider } from '@/state/cart';
 import Header from '@/components/Header';
 import Main from '@/components/Main';
 import Footer from '@/components/Footer';
+import WhatsAppFloatingIcon from '@/components/WhatsAppFloatingIcon';
 import favicon from '@/assets/media/favicon.ico';
 import content from '@/content';
 import '@/assets/css/style.scss';
@@ -29,6 +30,7 @@ const RootLayout = ({ children }) => {
           <Header />
           <Main>{children}</Main>
           <Footer />
+          <WhatsAppFloatingIcon />
         </CartProvider>
       </body>
     </html>
