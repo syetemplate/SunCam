@@ -553,6 +553,31 @@ export default {
             { name: 'Jonny Bravo', text: 'Dorem Ipsum availablut the majoriy have sufferd alterat some form huour the and ransed words which don\'t look even slightly belieblegg to passage majoriy have sufferd alterat some form huour and ransed.', avatarImageName: 'testimonial-4-avatar.jpg' },
         ],
     },
+    aboutUs: {
+        title: 'About Us',
+        sections: [
+            {
+                title: 'Our Mission',
+                content: 'At MiniDrone, our mission is to provide high-quality, safe, and easy-to-use drones for children, inspiring the next generation of young pilots and photographers.',
+            },
+            {
+                title: 'Our Vision',
+                content: 'We envision a world where kids can explore, learn, and have fun with the innovative technology of drones, fostering creativity and curiosity.',
+            },
+            {
+                title: 'Our Story',
+                content: 'Founded in 2010, MiniDrone has grown from a small startup into a leading provider of drones for children, known for our commitment to safety, quality, and customer satisfaction.',
+            },
+            {
+                title: 'Our Team',
+                content: 'Our team is composed of passionate engineers, designers, and educators dedicated to making drone technology accessible and enjoyable for kids.',
+            },
+            {
+                title: 'Our Values',
+                content: 'We believe in safety, innovation, and customer satisfaction. These core values drive us to continuously improve our products and services.',
+            },
+        ],
+    },
     cart: {
         title: 'Order Summary',
         shippingPrice: 10,
