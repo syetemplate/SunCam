@@ -59,7 +59,7 @@ export const ImageViewer = ({ image, onClose = () => { } }) => {
 };
 
 const Gallery = ({ className }) => {
-    const [selectedProductItem, setSelectedProductItem] = React.useState(content.products.items[Math.floor(content.products.items.length / 2)]);
+    const [selectedProductItem, setSelectedProductItem] = React.useState(content.products.items[0]); // React.useState(content.products.items[Math.floor(content.products.items.length / 2)]);
     const [selectedImage, setSelectedImage] = React.useState(null);
 
     const onImageContainerClick = e => {
