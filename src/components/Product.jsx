@@ -3,10 +3,11 @@
 import React from 'react';
 import clsx from 'clsx';
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import { throttle } from 'lodash';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick-theme.css';
-import { ImageViewer } from '@/components/Gallery';
+import ImageViewer from '@/components/ImageViewer';
 import Cart from '@/components/Cart';
 import content from '@/content';
 import { useCart } from '@/state/cart';
@@ -15,27 +16,41 @@ const smallImageWidth = 140;
 
 const dynamicSmallImages = content.products.items.flatMap(productItem =>
     productItem.images.map(image => ({
-        imageName: image.imageName,
+        image,
         component: dynamic(() => import(`@/assets/media/${image.imageName}`).then(module => {
-            const Component = () => <img src={module.default.src} alt={image.title} width={smallImageWidth} height={smallImageWidth + 10} className={`object-cover w-[${smallImageWidth}px] h-[${smallImageWidth + 10}px] p-1`} />;
+            const Component = props => (
+                <Image
+                    src={module.default}
+                    alt={image.title}
+                    width={smallImageWidth}
+                    height={smallImageWidth + 10}
+                    className={`object-cover w-[${smallImageWidth}px] h-[${smallImageWidth + 10}px] p-1`}
+                    {...props}
+                />
+            );
             Component.displayName = `Image-${image.imageName}`;
             return Component;
-        }), {
-            loading: () => <img width={smallImageWidth} height={smallImageWidth + 10} className={`object-cover w-[${smallImageWidth}px] h-[${smallImageWidth + 10}px] p-1`} />,
-        }),
+        })),
     }))
 );
 
 const dynamicLargeImages = content.products.items.flatMap(productItem =>
     productItem.images.map(image => ({
-        imageName: image.imageName,
+        image,
         component: dynamic(() => import(`@/assets/media/${image.imageName}`).then(module => {
-            const Component = () => <img src={module.default.src} alt={image.title} width={400} height={400} className="object-cover w-full aspect-[9/8] p-1" />;
+            const Component = props => (
+                <Image
+                    src={module.default}
+                    alt={image.title}
+                    width={400}
+                    height={400}
+                    className="object-cover w-full aspect-[9/8] p-1"
+                    {...props}
+                />
+            );
             Component.displayName = `Image-${image.imageName}`;
             return Component;
-        }), {
-            loading: () => <img width={400} height={400} className="object-cover w-full aspect-[9/8] p-1" />,
-        }),
+        })),
     }))
 );
 
@@ -43,12 +58,19 @@ const reviewerAvatarImages = content.products.items.flatMap(productItem =>
     productItem.reviews.list.map(({ avatarImageName: imageName }) => ({
         imageName,
         component: dynamic(() => import(`@/assets/media/${imageName}`).then(module => {
-            const Component = () => <img src={module.default.src} alt="review" width={130} height={130} className={'object-cover min-w-[130px] min-h-[130px] p-1'} />;
+            const Component = props => (
+                <Image
+                    src={module.default}
+                    alt="review"
+                    width={130}
+                    height={130}
+                    className={'object-cover min-w-[130px] min-h-[130px] p-1'}
+                    {...props}
+                />
+            );
             Component.displayName = `Image-${imageName}`;
             return Component;
-        }), {
-            loading: () => <img width={130} height={130} className={'object-cover min-w-[130px] min-h-[130px] p-1'} />,
-        }),
+        })),
     }))
 );
 
@@ -63,9 +85,10 @@ const Product = ({ className, productItem }) => {
     const cart = useCart();
     const { items: cartItems } = cart;
 
-    const productItemLargeImages = dynamicLargeImages.filter(image => productItem.images.some(productItemImage => productItemImage.imageName === image.imageName));
-    const productItemSmallImages = dynamicSmallImages.filter(image => productItem.images.some(productItemImage => productItemImage.imageName === image.imageName));
+    const productItemLargeImages = dynamicLargeImages.filter(({ image }) => productItem.images.some(productItemImage => productItemImage.imageName === image.imageName));
+    const productItemSmallImages = dynamicSmallImages.filter(({ image }) => productItem.images.some(productItemImage => productItemImage.imageName === image.imageName));
     const currentSlideImage = productItemLargeImages[slideIndex];
+
     const averageRating = Math.round(productItem.reviews.list.reduce((sum, review) => sum + review.rating, 0) / productItem.reviews.list.length);
 
     const smallImagesSettings = {
@@ -95,17 +118,6 @@ const Product = ({ className, productItem }) => {
         }
         closeCart();
     }, [cartItems]);
-
-    const onActiveProductImageClick = e => {
-        const image = e.currentTarget.querySelector('img');
-        setSelectedImage({
-            src: image.src,
-            alt: image.alt,
-            width: image.width,
-            height: image.height,
-            className: image.class,
-        });
-    };
 
     const onSlideClick = (index, clientX) => {
         const prevIndex = slideIndex;
@@ -202,17 +214,17 @@ const Product = ({ className, productItem }) => {
                 <div className="block lg:flex lg:flex-wrap rtl:lg:flex-row-reverse">
                     <div className="xl:w-3/5 pr-4 pl-4 lg:w-1/2 pr-4 pl-4 rtl:xl:pl-4 rtl:xl:pr-0 rtl:lg:pl-4 rtl:lg:pr-0">
                         <div className="product-wrap">
-                            <div className="product-active" onClick={onActiveProductImageClick}>
+                            <div className="product-active" onClick={() => setSelectedImage(productItem.images[slideIndex])}>
                                 {currentSlideImage && <currentSlideImage.component />}
                             </div>
                             <div className="product-nav-active" ref={sliderContainerRef}>
                                 <Slider {...smallImagesSettings}>
-                                    {productItemSmallImages.map((image, index) => (
+                                    {productItemSmallImages.map(({ image, component: Image }, index) => (
                                         <div
                                             key={image.imageName}
                                             onClick={e => onSlideClick(index, e.clientX)}
                                         >
-                                            <image.component />
+                                            <Image />
                                         </div>
                                     ))}
                                 </Slider>

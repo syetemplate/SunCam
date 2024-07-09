@@ -2,12 +2,25 @@
 
 import React from 'react';
 import clsx from 'clsx';
+import Image from 'next/image';
 import dynamic from 'next/dynamic';
+import ImageViewer from '@/components/ImageViewer';
 import galleryBgImage from '@/assets/bg/gallery.jpg';
 import content from '@/content';
 
 export const activeProductItemButtonClassName = 'px-[18px] py-4 md:py-2 mx-0 md:mx-0.5 my-0.5 md:my-0 text-[15px] font-medium rounded-full transition duration-300 bg-limegreen text-white shadow-[0px_0px_24px_0px_rgba(42,203,53,0.48)]';
 export const inactiveProductItemButtonClassName = 'px-[18px] py-4 md:py-2 mx-0 md:mx-0.5 my-0.5 md:my-0 text-[15px] font-medium rounded-full transition duration-300 bg-white text-zinc-500 hover:bg-limegreen hover:text-white border-transparent';
+
+const getThumbnailDimensions = index => {
+    const mod = (index % 3);
+    if (mod === 0) {
+        return { width: 450, height: 500 };
+    }
+    if (mod === 1) {
+        return { width: 450, height: 600 };
+    }
+    return { width: 450, height: 400 };
+};
 
 const addFadeInLeftAnimation = e => {
     e.currentTarget.querySelectorAll('[class*="animated"]').forEach(el => {
@@ -23,55 +36,35 @@ const removeFadeInLeftAnimation = e => {
     });
 };
 
-const dynamicImages = content.products.items.map(({ images }) => images).flat().map(image => ({
-    imageName: image.imageName,
-    component: dynamic(() => import(`@/assets/media/${image.imageName}`).then(module => {
-        const Component = () => <img src={module.default.src} alt={image.alt} width={image.width} height={image.height} className="object-contain w-full p-1" />;
-        Component.displayName = `Image-${image.imageName}`;
-        return Component;
-    }), {
-        loading: () => <img width={image.width} height={image.height} className="w-full p-1" />,
-    }),
-}));
-
-export const ImageViewer = ({ image, onClose = () => { } }) => {
-    if (!image) {
-        return null;
-    }
-
-    return (
-        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4">
-            <div className="relative max-w-4xl">
-                <button
-                    onClick={onClose}
-                    className="absolute p-4 -top-[52px] -right-[16px] bg-transparent hover:bg-transparent border-transparent text-white text-2xl flex items-center justify-center animated fadeIn"
-                >
-                    <i className="fas fa-times"/>
-                </button>
-                <img
-                    src={image.src}
-                    alt={image.alt}
-                    className="w-full h-full object-contain"
-                />
-            </div>
-        </div>
-    );
-};
+const dynamicThumbnailImages = content.products.items
+    .map(({ images }) => images)
+    .flat()
+    .map((image, i) => {
+        const { width, height } = getThumbnailDimensions(i);
+        return {
+            ...image,
+            component: dynamic(() =>
+                import(`@/assets/media/${image.imageName}`).then(module => {
+                    const Component = props => (
+                        <Image
+                            src={module.default}
+                            alt={image.title}
+                            width={width}
+                            height={height}
+                            className="object-contain w-full p-1"
+                            {...props}
+                        />
+                    );
+                    Component.displayName = `DynamicThumbnail-${image.imageName}`;
+                    return Component;
+                })
+            ),
+        };
+    });
 
 const Gallery = ({ className }) => {
-    const [selectedProductItem, setSelectedProductItem] = React.useState(content.products.items[0]); // React.useState(content.products.items[Math.floor(content.products.items.length / 2)]);
+    const [selectedProductItem, setSelectedProductItem] = React.useState(content.products.items[0]);
     const [selectedImage, setSelectedImage] = React.useState(null);
-
-    const onImageContainerClick = e => {
-        const image = e.currentTarget.querySelector('img');
-        setSelectedImage({
-            src: image.src,
-            alt: image.alt,
-            width: image.width,
-            height: image.height,
-            className: image.class,
-        });
-    };
 
     return (
         <section
@@ -109,17 +102,19 @@ const Gallery = ({ className }) => {
                                 if (i % 3 !== colIndex) {
                                     return null;
                                 }
-                                const Image = dynamicImages.find(({ imageName }) => (imageName === image.imageName)).component;
+                                const DynamicThumbnail = dynamicThumbnailImages.find(
+                                    img => img.imageName === image.imageName
+                                ).component;
                                 return (
                                     <div key={i} className={content.products.items.map(({ name }) => name).join(' ')}>
                                         <div
                                             className="mb-7.5 relative group cursor-pointer"
                                             onMouseEnter={addFadeInLeftAnimation}
                                             onMouseLeave={removeFadeInLeftAnimation}
-                                            onClick={onImageContainerClick}
+                                            onClick={() => setSelectedImage(image)}
                                         >
                                             <div className="relative">
-                                                <Image />
+                                                <DynamicThumbnail />
                                                 <div className="absolute inset-0 bg-limegreen opacity-0 transition-opacity duration-500 group-hover:opacity-75 m-1"></div>
                                             </div>
                                             <div className="absolute left-7 right-7 top-10 z-10 opacity-0 group-hover:opacity-100">

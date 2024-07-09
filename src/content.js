@@ -421,7 +421,7 @@ export default {
                     ],
                 },
                 images: [
-                    { imageName: 'gallery-1.png', width: 450, height: 500, title: 'תמונה 1', description: 'MiniDrone בסיסי בפעולה - מראה צד.' },
+                    { imageName: 'gallery-1.webp', width: 2909, height: 2024, title: 'תמונה 1', description: 'MiniDrone בסיסי בפעולה - מראה צד.' },
                     { imageName: 'gallery-2.png', width: 450, height: 600, title: 'תמונה 2', description: 'ילד מעיף את הMiniDrone בסביבת פארק.' },
                     { imageName: 'gallery-3.png', width: 450, height: 400, title: 'תמונה 3', description: 'קלוז אפ של המצלמה האיכותית של הMiniDrone.' },
                 ],
