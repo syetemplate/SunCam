@@ -12,14 +12,23 @@ export const activeProductItemButtonClassName = 'px-[18px] py-4 md:py-2 mx-0 md:
 export const inactiveProductItemButtonClassName = 'px-[18px] py-4 md:py-2 mx-0 md:mx-0.5 my-0.5 md:my-0 text-[15px] font-medium rounded-full transition duration-300 bg-white text-zinc-500 hover:bg-limegreen hover:text-white border-transparent';
 
 const getThumbnailDimensions = index => {
-    const mod = (index % 3);
+    const mod = (index % 6);
     if (mod === 0) {
         return { width: 450, height: 500 };
     }
     if (mod === 1) {
         return { width: 450, height: 600 };
     }
-    return { width: 450, height: 400 };
+    if (mod === 2) {
+        return { width: 450, height: 400 };
+    }
+    if (mod === 3) {
+        return { width: 400, height: 460 };
+    }
+    if (mod === 4) {
+        return { width: 450, height: 420 };
+    }
+    return { width: 400, height: 550 };
 };
 
 const addFadeInLeftAnimation = e => {
@@ -40,25 +49,26 @@ const dynamicThumbnailImages = content.products.items
     .map(({ images }) => images)
     .flat()
     .map((image, i) => {
-        const { width, height } = getThumbnailDimensions(i);
         return {
             ...image,
-            component: dynamic(() =>
-                import(`@/assets/media/${image.imageName}`).then(module => {
-                    const Component = props => (
-                        <Image
-                            src={module.default}
-                            alt={image.title}
-                            width={width}
-                            height={height}
-                            className="object-contain w-full p-1"
-                            {...props}
-                        />
-                    );
-                    Component.displayName = `DynamicThumbnail-${image.imageName}`;
-                    return Component;
-                })
-            ),
+            component: dynamic(() => import(`@/assets/media/${image.imageName}`).then(module => {
+                const { width, height } = getThumbnailDimensions(i);
+                const Component = ({ fill, ...props }) => (
+                    <Image
+                        {...props}
+                        src={module.default}
+                        alt={image.title}
+                        width={width}
+                        height={height}
+                        sizes="20vw"
+                        style={{ objectFit: 'contain', padding: '16px' }}
+                    />
+                );
+                Component.displayName = `DynamicThumbnail-${image.imageName}`;
+                return Component;
+            }), {
+                loading: () => <div style={{ width: '100%', height: '100%', background: '#f0f0f0' }} />,
+            }),
         };
     });
 
@@ -102,21 +112,20 @@ const Gallery = ({ className }) => {
                                 if (i % 3 !== colIndex) {
                                     return null;
                                 }
+                                const { width, height } = getThumbnailDimensions(i);
                                 const DynamicThumbnail = dynamicThumbnailImages.find(
                                     img => img.imageName === image.imageName
                                 ).component;
                                 return (
-                                    <div key={i} className={content.products.items.map(({ name }) => name).join(' ')}>
+                                    <div key={i} className="relative" style={{ aspectRatio: `${width} / ${height}`, maxWidth: `${width}px`, width: '100%' }}>
                                         <div
-                                            className="mb-7.5 relative group cursor-pointer"
+                                            className="relative group cursor-pointer w-full h-full"
                                             onMouseEnter={addFadeInLeftAnimation}
                                             onMouseLeave={removeFadeInLeftAnimation}
                                             onClick={() => setSelectedImage(image)}
                                         >
-                                            <div className="relative">
-                                                <DynamicThumbnail />
-                                                <div className="absolute inset-0 bg-limegreen opacity-0 transition-opacity duration-500 group-hover:opacity-75 m-1"></div>
-                                            </div>
+                                            <DynamicThumbnail />
+                                            <div className="absolute inset-0 bg-limegreen opacity-0 transition-opacity duration-500 group-hover:opacity-75 m-1"></div>
                                             <div className="absolute left-7 right-7 top-10 z-10 opacity-0 group-hover:opacity-100">
                                                 <h5 className="text-2xl font-extrabold text-white relative duration-500 animated rtl:text-right">
                                                     {image.title}

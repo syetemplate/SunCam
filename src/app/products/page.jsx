@@ -2,19 +2,31 @@
 
 import React from 'react';
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import content from '@/content';
 
-const images = content.products.items.flatMap(productItem =>
-    productItem.images.map(image => ({
-        imageName: image.imageName,
-        component: dynamic(() => import(`@/assets/media/${image.imageName}`).then(module => {
-            const Component = () => <img src={module.default.src} alt={image.title} className={`object-cover w-[425px] h-[265px] p-1`} />;
-            Component.displayName = `Image-${image.imageName}`;
-            return Component;
-        }), {
-            loading: () => <img className={`object-cover w-[425px] h-[265px] p-1`} />,
-        }),
-    }))
+const images = content.products.items.flatMap(productItem => ({
+    imageName: productItem.images[0].imageName,
+    component: dynamic(() => import(`@/assets/media/${productItem.images[0].imageName}`).then(module => {
+        const Component = ({ fill, ...props }) => (
+            <Image
+                {...props}
+                src={module.default}
+                alt={productItem.images[0].title}
+                width={425}
+                height={265}
+                sizes="20vw"
+                style={{ objectFit: 'contain' }}
+                className="object-contain w-full h-full p-1"
+                priority
+            />
+        );
+        Component.displayName = `Image-${productItem.images[0].imageName}`;
+        return Component;
+    }), {
+        loading: () => <div style={{ width: '100%', height: '100%', background: '#f0f0f0' }} />,
+    }),
+})
 );
 
 const ProductsPage = () => {
@@ -25,7 +37,7 @@ const ProductsPage = () => {
                     <div className="flex flex-wrap -m-4">
                         {content.products.items.map((productItem, index) => (
                             <div key={index} className="xl:w-1/4 md:w-1/2 p-4 w-full flex flex-col md:block items-center md:items-left text-center md:text-left rtl:md:text-right">
-                                <a className="block relative rounded overflow-hidden" href={productItem.href}>
+                                <a className="block relative rounded overflow-hidden" href={productItem.href} style={{ aspectRatio: '425 / 265', maxWidth: '425px', width: '100%' }}>
                                     {images.find(img => img.imageName === productItem.images[0].imageName)?.component()}
                                 </a>
                                 <div className="mt-4 ml-2 rtl:mr-2 rtl:ml-0">

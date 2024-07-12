@@ -18,19 +18,22 @@ const dynamicSmallImages = content.products.items.flatMap(productItem =>
     productItem.images.map(image => ({
         image,
         component: dynamic(() => import(`@/assets/media/${image.imageName}`).then(module => {
-            const Component = props => (
+            const Component = ({ fill, ...props }) => (
                 <Image
+                    {...props}
                     src={module.default}
                     alt={image.title}
                     width={smallImageWidth}
                     height={smallImageWidth + 10}
-                    className={`object-cover w-[${smallImageWidth}px] h-[${smallImageWidth + 10}px] p-1`}
-                    {...props}
+                    sizes="15vw"
+                    className={`object-contain w-[${smallImageWidth}px] h-[${smallImageWidth + 10}px] p-1`}
                 />
             );
             Component.displayName = `Image-${image.imageName}`;
             return Component;
-        })),
+        }), {
+            loading: () => <img width={smallImageWidth} height={smallImageWidth + 10} className={`object-contain w-[${smallImageWidth}px] h-[${smallImageWidth + 10}px] p-1`} />,
+        }),
     }))
 );
 
@@ -38,19 +41,22 @@ const dynamicLargeImages = content.products.items.flatMap(productItem =>
     productItem.images.map(image => ({
         image,
         component: dynamic(() => import(`@/assets/media/${image.imageName}`).then(module => {
-            const Component = props => (
+            const Component = ({ fill, ...props }) => (
                 <Image
+                    {...props}
                     src={module.default}
                     alt={image.title}
                     width={400}
                     height={400}
-                    className="object-cover w-full aspect-[9/8] p-1"
-                    {...props}
+                    sizes="50vw"
+                    className="object-contain w-full aspect-[9/8] p-1"
                 />
             );
             Component.displayName = `Image-${image.imageName}`;
             return Component;
-        })),
+        }), {
+            loading: () => <img width={400} height={400} className="object-cover w-full aspect-[9/8] p-1" />,
+        }),
     }))
 );
 
@@ -58,19 +64,22 @@ const reviewerAvatarImages = content.products.items.flatMap(productItem =>
     productItem.reviews.list.map(({ avatarImageName: imageName }) => ({
         imageName,
         component: dynamic(() => import(`@/assets/media/${imageName}`).then(module => {
-            const Component = props => (
+            const Component = ({ fill, ...props }) => (
                 <Image
+                    {...props}
                     src={module.default}
                     alt="review"
                     width={130}
                     height={130}
-                    className={'object-cover min-w-[130px] min-h-[130px] p-1'}
-                    {...props}
+                    sizes="10vw"
+                    className={'object-cover w-[130px] h-[130px] min-w-[130px] min-h-[130px] p-1'}
                 />
             );
             Component.displayName = `Image-${imageName}`;
             return Component;
-        })),
+        }), {
+            loading: () => <img width={130} height={130} className={'object-cover w-[130px] h-[130px] min-w-[130px] min-h-[130px] p-1'} />,
+        }),
     }))
 );
 
@@ -219,12 +228,12 @@ const Product = ({ className, productItem }) => {
                             </div>
                             <div className="product-nav-active" ref={sliderContainerRef}>
                                 <Slider {...smallImagesSettings}>
-                                    {productItemSmallImages.map(({ image, component: Image }, index) => (
+                                    {productItemSmallImages.map(({ image, component: SmallImage }, index) => (
                                         <div
                                             key={image.imageName}
                                             onClick={e => onSlideClick(index, e.clientX)}
                                         >
-                                            <Image />
+                                            <SmallImage />
                                         </div>
                                     ))}
                                 </Slider>
@@ -251,8 +260,8 @@ const Product = ({ className, productItem }) => {
                                     <form action="#">
                                         <div className="cart-plus-minus">
                                             <input type="text" value={quantity} readOnly />
-                                            <div className="dec qtybutton rtl:left-0 rtl:right-auto" onClick={() => onQuantityChange('decrement')}>-</div>
-                                            <div className="inc qtybutton rtl:right-0 rtl:left-auto" onClick={() => onQuantityChange('increment')}>+</div>
+                                            <div className="dec qtybutton" onClick={() => onQuantityChange('decrement')}>-</div>
+                                            <div className="inc qtybutton" onClick={() => onQuantityChange('increment')}>+</div>
                                         </div>
                                     </form>
                                 </div>

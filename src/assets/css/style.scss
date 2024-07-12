@@ -475,7 +475,7 @@ label {
 }
 
 .header-action {
-	margin-left: 32px;
+	margin-inline-start: 32px;
 }
 
 .header-action ul li {
@@ -527,8 +527,8 @@ label {
 }
 
 .search-icon {
-	padding-right: 10px;
-	margin-right: 10px;
+	padding-inline-end: 10px;
+	margin-inline-end: 10px;
 }
 
 .transparent-header {
@@ -546,12 +546,12 @@ label {
 }
 
 .main-menu .navbar-nav li.nav-item {
-	margin-left: 32px;
+	margin-inline-start: 32px;
 	display: block;
 }
 
 .main-menu .navbar-nav li.nav-item:first-child {
-	margin-left: 0px;
+	margin-inline-start: 0px;
 }
 
 .main-menu .navbar-nav li.nav-item a.nav-link {
@@ -564,7 +564,7 @@ label {
 }
 
 .header-btn {
-	margin-left: 30px;
+	margin-inline-start: 30px;
 }
 
 .sticky-menu {
@@ -671,7 +671,7 @@ label {
 }
 
 .slider-btn .transparent-btn {
-	margin-left: 20px;
+	margin-inline-start: 20px;
 }
 
 .slider-img {
@@ -824,7 +824,7 @@ label {
 }
 
 .single-delivery-benefits.pr-40 .ds-icon {
-	margin-left: 17px;
+	margin-inline-start: 17px;
 }
 
 .single-delivery-benefits .ds-icon i {
@@ -862,7 +862,7 @@ label {
 }
 
 .single-delivery-benefits.pl-40 .ds-icon {
-	margin-right: 17px;
+	margin-inline-end: 17px;
 }
 
 .d-benefits-img {
@@ -906,11 +906,11 @@ label {
 }
 
 .benefits-style-two .single-delivery-benefits.pr-40 .ds-icon {
-	margin-left: 20px;
+	margin-inline-start: 20px;
 }
 
 .benefits-style-two .single-delivery-benefits.pl-40 .ds-icon {
-	margin-right: 20px;
+	margin-inline-end: 20px;
 }
 
 .single-delivery-benefits:last-child {
@@ -1237,7 +1237,7 @@ label {
 	display: block;
 	text-decoration: none;
 	line-height: 1.4;
-	padding-right: 50px;
+	padding-inline-end: 50px;
 	border-bottom: 1px dashed transparent;
 }
 
@@ -1381,7 +1381,7 @@ label {
 	background: #294f75;
 	border-radius: 50%;
 	font-size: 14px;
-	margin-left: 12px;
+	margin-inline-start: 12px;
 	transition: .3s linear;
 }
 
@@ -1429,7 +1429,7 @@ label {
 
 .testimonials-thumb {
 	float: left;
-	margin-right: 23px;
+	margin-inline-start: 23px;
 	margin-top: 35px;
 }
 
@@ -1462,7 +1462,7 @@ label {
 .testimonials-info span {
 	font-style: italic;
 	color: #dbdbdb;
-	margin-left: 5px;
+	margin-inline-start: 5px;
 }
 
 /* 12. Product */
@@ -1471,7 +1471,7 @@ label {
 }
 
 .product-wrap {
-	margin-right: 15px;
+	margin-inline-end: 15px;
 }
 
 .single-product-nav {
@@ -1513,7 +1513,7 @@ label {
 }
 
 .product-rating ul li:first-child {
-	margin-left: 0px;
+	margin-inline-start: 0px;
 }
 
 .product-rating ul {
@@ -1614,7 +1614,7 @@ label {
 }
 
 .product-info ul li span {
-	margin-right: 5px;
+	margin-inline-end: 5px;
 }
 
 .product-desc-wrap .nav-tabs {
@@ -1623,7 +1623,7 @@ label {
 
 .product-desc-wrap .nav-tabs .nav-item {
 	margin-bottom: 0;
-	margin-right: 50px;
+	margin-inline-end: 50px;
 	display: block;
 }
 
@@ -1645,7 +1645,7 @@ label {
 }
 
 .product-desc-wrap .nav-tabs .nav-item:last-child {
-	margin-right: 0;
+	margin-inline-end: 0;
 }
 
 .product-details-content {
@@ -1672,7 +1672,7 @@ label {
 }
 
 .review-avatar {
-	margin-right: 25px;
+	margin-inline-end: 25px;
 }
 
 .review-content {
@@ -1768,7 +1768,7 @@ label {
 	text-align: center;
 	border-radius: 3px;
 	box-shadow: 0px 4px 12.09px 0.91px rgb(42, 203, 53, .3);
-	margin-left: 8px;
+	margin-inline-start: 8px;
 	color: #fff;
 	transition: .3s;
 }
@@ -1783,7 +1783,7 @@ label {
 
 .blog-list-tag ul li {
 	display: inline-block;
-	margin-right: 3px;
+	margin-inline-end: 3px;
 }
 
 .blog-list-tag ul li,
@@ -1821,7 +1821,7 @@ label {
 }
 
 .blog-list-meta>ul>li.blog-post-date>i {
-	margin-right: 5px;
+	margin-inline-end: 5px;
 }
 
 .blog-list-meta ul li.blog-more-read a {
@@ -1841,7 +1841,7 @@ label {
 	font-size: 12px;
 	border-radius: 50%;
 	color: #fff;
-	margin-left: 5px;
+	margin-inline-start: 5px;
 }
 
 .widget {
@@ -1852,7 +1852,7 @@ label {
 .sidebar-title h3 {
 	font-size: 18px;
 	margin-bottom: 0;
-	padding-left: 20px;
+	padding-inline-start: 20px;
 	position: relative;
 	line-height: 1;
 }
@@ -1876,7 +1876,7 @@ label {
 }
 
 .blog-sidebar {
-	padding-left: 17px;
+	padding-inline-start: 17px;
 }
 
 .sidebar-form form {
@@ -1937,7 +1937,7 @@ label {
 }
 
 .rc-post-thumb {
-	margin-right: 15px;
+	margin-inline-end: 15px;
 }
 
 .rc-post-content h5 {
@@ -2021,7 +2021,7 @@ label {
 }
 
 .blog-details-img img:first-child {
-	margin-right: 20px;
+	margin-inline-end: 20px;
 }
 
 .blog-details-content p {
@@ -2035,9 +2035,9 @@ blockquote {
 	font-weight: 500;
 	font-style: italic;
 	color: #362f3c;
-	padding-left: 90px;
+	padding-inline-start: 90px;
 	position: relative;
-	padding-right: 30px;
+	padding-inline-end: 30px;
 }
 
 blockquote::before {
@@ -2053,13 +2053,13 @@ blockquote::before {
 
 .blog-details-date li {
 	display: inline-block;
-	margin-right: 15px;
+	margin-inline-end: 15px;
 	color: #9a9999;
 	font-size: 13px;
 }
 
 .blog-details-date li:last-child {
-	margin-right: 0;
+	margin-inline-end: 0;
 }
 
 .blog-details-date li a {
@@ -2067,28 +2067,27 @@ blockquote::before {
 }
 
 .blog-details-date li i {
-	margin-right: 5px;
+	margin-inline-end: 5px;
 }
 
 .blog-list-meta .blog-details-tag i {
 	font-size: 12px;
 	color: #a6a5a5;
-	margin-right: 15px;
+	margin-inline-end: 15px;
 }
 
 .blog-details-tag a {
 	font-size: 13px;
 	text-transform: capitalize;
 	color: #a6a5a5;
-	position: relative;
 	display: inline-block;
-	padding-right: 10px;
-	margin-right: 10px;
+	padding-inline-end: 10px;
+	margin-inline-end: 10px;
 }
 
 .blog-details-tag a:last-child {
-	margin-right: 0;
-	padding-right: 0;
+	margin-inline-end: 0;
+	padding-inline-end: 0;
 }
 
 .blog-details-tag a::before {
@@ -2121,7 +2120,7 @@ blockquote::before {
 }
 
 .post-avatar-img {
-	margin-right: 25px;
+	margin-inline-end: 25px;
 }
 
 .post-avatar-img img {
@@ -2143,7 +2142,7 @@ blockquote::before {
 }
 
 .post-avatar-social a:first-child {
-	margin-left: 0;
+	margin-inline-start: 0;
 }
 
 .blog-next-prev ul {
@@ -2159,11 +2158,11 @@ blockquote::before {
 }
 
 .blog-prev img {
-	margin-right: 15px;
+	margin-inline-end: 15px;
 }
 
 .blog-next img {
-	margin-left: 15px;
+	margin-inline-start: 15px;
 }
 
 .b-details-inner-title {
@@ -2185,7 +2184,7 @@ blockquote::before {
 }
 
 .comment-avatar-img {
-	margin-right: 25px;
+	margin-inline-end: 25px;
 }
 
 .comment-avatar-img img {
@@ -2207,7 +2206,7 @@ blockquote::before {
 .comment-avatar-info h5 span {
 	font-size: 13px;
 	color: #a6a5a5;
-	margin-left: 15px;
+	margin-inline-start: 15px;
 	font-weight: 500;
 }
 
@@ -2219,7 +2218,7 @@ blockquote::before {
 }
 
 .blog-comment ul li.comment-reply {
-	margin-left: 50px;
+	margin-inline-start: 50px;
 }
 
 .comment-text p {
@@ -2265,7 +2264,7 @@ blockquote::before {
 	display: block;
 	display: block;
 	display: block;
-	padding-left: 0;
+	padding-inline-start: 0;
 	list-style: none;
 	border-radius: 0;
 }
@@ -2279,7 +2278,7 @@ blockquote::before {
 	position: relative;
 	display: block;
 	padding: 0;
-	margin-left: 0;
+	margin-inline-start: 0;
 	line-height: 48px;
 	color: #747373;
 	font-weight: 600;
@@ -2375,7 +2374,7 @@ blockquote::before {
 
 .footer-social ul li {
 	display: inline-block;
-	margin-right: 5px;
+	margin-inline-end: 5px;
 }
 
 .footer-social ul li a {
@@ -2451,7 +2450,7 @@ blockquote::before {
 }
 
 .fw-link ul li a i {
-	margin-right: 5px;
+	margin-inline-end: 5px;
 }
 
 .footer-form form input {
@@ -2526,7 +2525,7 @@ blockquote::before {
 	height: 150px;
 	width: 150px;
 	margin-top: -75px;
-	margin-left: -75px;
+	margin-inline-start: -75px;
 }
 
 .object {
@@ -2534,7 +2533,7 @@ blockquote::before {
 	height: 20px;
 	background-color: #FFF;
 	float: left;
-	margin-right: 20px;
+	margin-inline-end: 20px;
 	margin-top: 65px;
 	-moz-border-radius: 50% 50% 50% 50%;
 	-webkit-border-radius: 50% 50% 50% 50%;

@@ -3,6 +3,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import newsletterBgImage from '@/assets/bg/newsletter.jpg';
 import footerBgImage from '@/assets/bg/footer.jpg';
 import logoLite from '@/assets/media/logo-lite.png';
@@ -10,10 +11,30 @@ import paymentMethodsImage from '@/assets/media/payment-methods.png';
 import content from '@/content';
 
 const numOfRecentPosts = 3;
+const recentPosts = content.blog.posts.slice(-numOfRecentPosts);
+
+const dynamicImages = recentPosts.map(({ title, imageName }) => ({
+    imageName: imageName,
+    component: dynamic(() => import(`@/assets/media/${imageName}`).then(module => {
+        const Component = ({ fill, ...props }) => (
+            <Image
+                {...props}
+                src={module.default}
+                alt={title}
+                width={80}
+                height={80}
+                sizes="20vw"
+                className="w-[80px] h-[80px] min-w-[80px] min-h-[80px] object-contain"
+            />
+        );
+        Component.displayName = `Image-${imageName}`;
+        return Component;
+    }), {
+        loading: () => <img width="80" height="80" className="w-[80px] h-[80px] min-w-[80px] min-h-[80px]" />,
+    }),
+}));
 
 const Footer = ({ className }) => {
-    const recentPosts = content.blog.posts.slice(-numOfRecentPosts);
-
     return (
         <footer className={clsx('flex flex-col items-center relative', [className])}>
             <section id="newsletter" className="flex flex-wrap px-4 lg:px-28 w-full absolute z-10 top-[-232px] md:top-[-128px] lg:top-[-64px]">
@@ -74,17 +95,11 @@ const Footer = ({ className }) => {
                             <div className="f-rc-post">
                                 <ul>
                                     {recentPosts.map((recentPost, index) => {
-                                        const Image = dynamic(() => import(`@/assets/media/${recentPost.imageName}`).then(module => {
-                                            const Component = () => <img src={module.default.src} alt={recentPost.title} width="80" height="80" className="min-w-[80px] min-h-[80px] object-contain" />;
-                                            Component.displayName = `Image-${recentPost.imageName}`;
-                                            return Component;
-                                        }), {
-                                            loading: () => <img width="80" height="80" className="min-w-[80px] min-h-[80px]" />,
-                                        });
+                                        const RecentPostImage = dynamicImages.find(({ imageName }) => (imageName === recentPost.imageName)).component;
                                         return (
                                             <li key={index}>
                                                 <div className="f-rc-thumb">
-                                                    <a href={recentPost.href}><Image /></a>
+                                                    <a href={recentPost.href}><RecentPostImage /></a>
                                                 </div>
                                                 <div className="f-rc-content">
                                                     <span>{recentPost.date}</span>

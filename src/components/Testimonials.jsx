@@ -1,12 +1,22 @@
 import clsx from 'clsx';
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import testimonialsBgImage from '@/assets/bg/testimonials.jpg';
 import content from '@/content';
 
 const testimonialAvatarImages = content.testimonials.list.map(({ avatarImageName: imageName }) => ({
     imageName,
     component: dynamic(() => import(`@/assets/media/${imageName}`).then(module => {
-        const Component = () => <img src={module.default.src} alt="testimonial" width={90} height={90} className={'object-cover min-w-[90px] min-h-[90px] p-1'} />;
+        const Component = ({ fill, ...props }) => (
+            <Image
+                {...props}
+                src={module.default}
+                alt="testimonial"
+                width={90}
+                height={90}
+                className="object-cover min-w-[90px] min-h-[90px] p-1"
+            />
+        );
         Component.displayName = `Image-${imageName}`;
         return Component;
     }), {

@@ -2,12 +2,22 @@
 
 import clsx from 'clsx';
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import content from '@/content';
 
 const dynamicImages = content.blog.posts.map(post => ({
     imageName: post.imageName,
     component: dynamic(() => import(`@/assets/media/${post.imageName}`).then(module => {
-        const Component = () => <img src={module.default.src} alt={post.title} width={400} height={300} className="object-contain w-full p-1" />;
+        const Component = ({ fill, ...props }) => (
+            <Image
+                {...props}
+                src={module.default}
+                alt={post.title}
+                width={400}
+                height={300}
+                className="object-contain w-full p-1"
+            />
+        );
         Component.displayName = `Image-${post.imageName}`;
         return Component;
     }), {

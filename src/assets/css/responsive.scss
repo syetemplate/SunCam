@@ -5,7 +5,7 @@
 /* Normal desktop :992px. */
 @media (min-width: 992px) and (max-width: 1200px) {
 	.main-menu .navbar-nav li.nav-item {
-		margin-left: 28px;
+		margin-inline-start: 28px;
 	}
 
 	.slider-content {
@@ -34,7 +34,7 @@
 	}
 
 	.faq-wrapper .card-header h5 a {
-		padding-right: 40px;
+		padding-inline-end: 40px;
 	}
 
 	.pricing-wrap.pl-80.pr-80 {
@@ -46,7 +46,7 @@
 	}
 
 	.product-desc-wrap .nav-tabs .nav-item {
-		margin-right: 30px;
+		margin-inline-end: 30px;
 	}
 
 	.blog-content {
@@ -60,7 +60,7 @@
 	}
 
 	.blog-sidebar {
-		padding-left: 0;
+		padding-inline-start: 0;
 	}
 
 	.widget {
@@ -80,7 +80,7 @@
 	}
 
 	.rc-post-thumb {
-		margin-right: 10px;
+		margin-inline-end: 10px;
 	}
 
 	.rc-post-thumb img {
@@ -136,7 +136,7 @@
 	}
 
 	.header-action {
-		margin-left: 0;
+		margin-inline-start: 0;
 		position: absolute;
 		right: 92px;
 		top: 5px;
@@ -166,7 +166,7 @@
 	}
 
 	.main-menu .navbar-nav li.nav-item:first-child {
-		margin-left: 20px;
+		margin-inline-start: 20px;
 	}
 
 	.main-menu .navbar-nav li.nav-item a.nav-link {
@@ -212,16 +212,16 @@
 	}
 
 	.single-delivery-services {
-		padding-right: 0;
-		padding-left: 0;
+		padding-inline-end: 0;
+		padding-inline-start: 0;
 	}
 
 	.single-delivery-services.pr-40 .ds-icon {
-		margin-left: 20px;
+		margin-inline-start: 20px;
 	}
 
 	.single-delivery-services.pl-40 .ds-icon {
-		margin-right: 20px;
+		margin-inline-end: 20px;
 	}
 
 	.video-overlay {
@@ -255,7 +255,7 @@
 	}
 
 	.faq-wrapper .card-body p {
-		padding-right: 50px;
+		padding-inline-end: 50px;
 	}
 
 	.pricing-wrap.pl-80.pr-80 {
@@ -268,7 +268,7 @@
 
 	.testimonials-thumb {
 		float: unset;
-		margin-right: 0;
+		margin-inline-start: 0;
 		margin-top: 0;
 		margin-bottom: 30px;
 	}
@@ -303,11 +303,11 @@
 	}
 
 	.product-wrap {
-		margin-right: 0;
+		margin-inline-end: 0;
 	}
 
 	.blog-sidebar {
-		padding-left: 0;
+		padding-inline-start: 0;
 		padding-top: 120px;
 	}
 
@@ -393,7 +393,7 @@
 	}
 
 	.main-menu .navbar-nav li.nav-item:first-child {
-		margin-left: 0px;
+		margin-inline-start: 0px;
 	}
 
 	.main-menu .navbar-nav li.nav-item a.nav-link {
@@ -461,8 +461,8 @@
 	}
 
 	.single-delivery-services {
-		padding-right: 0;
-		padding-left: 0;
+		padding-inline-end: 0;
+		padding-inline-start: 0;
 	}
 
 	.single-delivery-services .ds-icon {
@@ -514,7 +514,7 @@
 
 	.testimonials-thumb {
 		float: unset;
-		margin-right: 0;
+		margin-inline-start: 0;
 		margin-top: 0;
 		margin-bottom: 20px;
 	}
@@ -524,7 +524,7 @@
 	}
 
 	.product-wrap {
-		margin-right: 0;
+		margin-inline-end: 0;
 	}
 
 	.product-details-content {
@@ -545,7 +545,7 @@
 	}
 
 	.review-avatar {
-		margin-right: 0;
+		margin-inline-end: 0;
 		margin-bottom: 15px;
 	}
 
@@ -617,15 +617,15 @@
 	.blog-list-meta ul li {
 		margin-bottom: 10px;
 		display: inline-block;
-		margin-right: 35px;
+		margin-inline-end: 35px;
 	}
 
 	.blog-list-meta ul li:last-child {
-		margin-right: 0;
+		margin-inline-end: 0;
 	}
 
 	.blog-sidebar {
-		padding-left: 0;
+		padding-inline-start: 0;
 		padding-top: 60px;
 	}
 
@@ -646,7 +646,7 @@
 	}
 
 	.rc-post-thumb {
-		margin-right: 10px;
+		margin-inline-end: 10px;
 	}
 
 	.rc-post-thumb img {
@@ -664,8 +664,8 @@
 	}
 
 	blockquote {
-		padding-left: 60px;
-		padding-right: 0;
+		padding-inline-start: 60px;
+		padding-inline-end: 0;
 	}
 
 	blockquote::before {
@@ -677,7 +677,7 @@
 	}
 
 	.blog-details-img img:first-child {
-		margin-right: 0;
+		margin-inline-end: 0;
 		margin-bottom: 20px;
 	}
 
@@ -695,7 +695,7 @@
 	}
 
 	.post-avatar-img {
-		margin-right: 0;
+		margin-inline-end: 0;
 		margin-bottom: 15px;
 	}
 
@@ -720,13 +720,13 @@
 	}
 
 	.comment-avatar-info h5 span {
-		margin-left: 0;
+		margin-inline-start: 0;
 		display: block;
 		margin-top: 10px;
 	}
 
 	.blog-comment ul li.comment-reply {
-		margin-left: 0;
+		margin-inline-start: 0;
 	}
 
 	.slider-btn .transparent-btn {
@@ -779,7 +779,7 @@
 
 	.single-delivery-services .ds-icon {
 		margin-bottom: 0px !important;
-		margin-right: 20px !important;
+		margin-inline-end: 20px !important;
 	}
 
 	.pricing-wrap {
@@ -802,7 +802,7 @@
 	}
 
 	.review-avatar {
-		margin-right: 25px;
+		margin-inline-end: 25px;
 		margin-bottom: 0;
 	}
 
@@ -837,7 +837,7 @@
 	.blog-list-meta ul li {
 		margin-bottom: 0;
 		display: inline-block;
-		margin-right: 0;
+		margin-inline-end: 0;
 	}
 
 	.widget {
@@ -867,7 +867,7 @@
 	}
 
 	.blog-details-img img:first-child {
-		margin-right: 20px;
+		margin-inline-end: 20px;
 		margin-bottom: 0;
 	}
 
@@ -888,7 +888,7 @@
 	}
 
 	.comment-avatar-info h5 span {
-		margin-left: 15px;
+		margin-inline-start: 15px;
 		display: inline-block;
 		margin-top: 0;
 	}

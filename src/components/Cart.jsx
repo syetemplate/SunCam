@@ -2,6 +2,7 @@
 
 import React from 'react';
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import clsx from 'clsx';
 import { isNaN } from 'lodash';
 import content from '@/content';
@@ -11,11 +12,21 @@ const images = content.products.items.flatMap(item =>
     item.images.map(image => ({
         imageName: image.imageName,
         component: dynamic(() => import(`@/assets/media/${image.imageName}`).then(module => {
-            const Component = () => <img src={module.default.src} alt={image.title} className="w-20 h-20 object-cover rounded" />;
+            const Component = ({ fill, ...props }) => (
+                <Image
+                    {...props}
+                    src={module.default}
+                    alt={image.title}
+                    width={80}
+                    height={80}
+                    sizes="15vw"
+                    className="w-[80px] h-[80px] object-contain rounded"
+                />
+            );
             Component.displayName = `Image-${image.imageName}`;
             return Component;
         }), {
-            loading: () => <img className="w-20 h-20 object-cover rounded" />,
+            loading: () => <img className="w-[80px] h-[80px] object-contain rounded" />,
         }),
     }))
 );

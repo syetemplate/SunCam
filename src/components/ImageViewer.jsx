@@ -18,26 +18,23 @@ export const ImageViewer = ({ image, onClose = () => { } }) => {
     };
 
     const DynamicImage = React.useMemo(() => (
-        dynamic(() =>
-            import(`@/assets/media/${image.imageName}`).then(
-                module => {
-                    const Component = props => (
-                        <Zoom>
-                            <Image
-                                src={module.default}
-                                alt={image.title}
-                                width={image.width}
-                                height={image.height}
-                                className="object-contain p-1"
-                                {...props}
-                            />
-                        </Zoom>
-                    );
-                    Component.displayName = `Image-${image.imageName}`;
-                    return Component;
-                },
-            )
-        )),
+        dynamic(() => import(`@/assets/media/${image.imageName}`).then(
+            module => {
+                const Component = props => (
+                    <Zoom>
+                        <Image
+                            {...props}
+                            src={module.default}
+                            alt={image.title}
+                            size="100vw"
+                            className="object-contain p-1"
+                        />
+                    </Zoom>
+                );
+                Component.displayName = `Image-${image.imageName}`;
+                return Component;
+            },
+        ))),
         [image]
     );
 

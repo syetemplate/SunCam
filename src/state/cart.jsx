@@ -27,21 +27,8 @@ export const CartProvider = ({ children }) => {
     const [cartItems, setCartItems] = React.useState([]);
     const [isInitialised, setIsInitialised] = React.useState(false);
 
-    const loadFromLocalStorage = React.useCallback(() => {
-        let cartItemsFromLocalStorage = JSON.parse(window.localStorage.getItem('cartItems') || '[]');
-        if (!Array.isArray(cartItemsFromLocalStorage)) {
-            cartItemsFromLocalStorage = [];
-        }
-        cartItemsFromLocalStorage = cartItemsFromLocalStorage.filter(item => item.id && item.quantity);
-        const newCartItems = expandItems(cartItemsFromLocalStorage);
-        setCartItems(newCartItems);
-        setIsInitialised(true);
-    }, []);
-
-    React.useEffect(loadFromLocalStorage, [loadFromLocalStorage]);
-
     return (
-        <Context.Provider value={[cartItems, setCartItems, isInitialised]}>
+        <Context.Provider value={[cartItems, setCartItems, isInitialised, setIsInitialised]}>
             <React.Suspense fallback={null}>
                 {children}
             </React.Suspense>
@@ -52,7 +39,7 @@ export const CartProvider = ({ children }) => {
 export const useCart = () => {
     const searchParamsBase = useSearchParams();
     const context = React.useContext(Context);
-    const [cartItems, setCartItems, isInitialised] = context;
+    const [cartItems, setCartItems, isInitialised, setIsInitialised] = context;
 
     const updateItems = newCartItems => {
         setCartItems(newCartItems);
@@ -76,6 +63,19 @@ export const useCart = () => {
                 quantity: parseInt(searchParams.get(productItem.id), 10),
             }));
     };
+
+    const loadFromLocalStorage = React.useCallback(() => {
+        let cartItemsFromLocalStorage = JSON.parse(window.localStorage.getItem('cartItems') || '[]');
+        if (!Array.isArray(cartItemsFromLocalStorage)) {
+            cartItemsFromLocalStorage = [];
+        }
+        cartItemsFromLocalStorage = cartItemsFromLocalStorage.filter(item => item.id && item.quantity);
+        const newCartItems = expandItems(cartItemsFromLocalStorage);
+        setCartItems(newCartItems);
+        setIsInitialised(true);
+    }, []);
+
+    React.useEffect(loadFromLocalStorage, [loadFromLocalStorage]);
 
     if (!context) {
         throw new Error('useCart must be used within a CartProvider');

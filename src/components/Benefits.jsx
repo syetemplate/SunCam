@@ -22,11 +22,11 @@ const removeHoverAnimation = e => {
 const dynamicImages = content.benefits.list.map(({ title, imageName }) => ({
     imageName: imageName,
     component: dynamic(() => import(`@/assets/media/${imageName}`).then(module => {
-        const Component = () => <img src={module.default.src} alt={title} className="block min-w-[56px] min-h-[56px] md:min-w-[80px] md:min-h-[80px] text-center leading-[80px] text-4xl border-2 border-dashed border-[#062a4d] rounded-full text-[#062a4d] transition-all" />;
+        const Component = () => <img src={module.default.src} alt={title} className="block min-w-[56px] min-h-[56px] md:min-w-[80px] md:min-h-[80px] text-center leading-[80px] text-4xl border-2 border-dashed border-[#062a4d] rounded-full text-[#062a4d] p-2 transition-all" />;
         Component.displayName = `Image-${imageName}`;
         return Component;
     }), {
-        loading: () => <img className="block min-w-[56px] min-h-[56px] md:min-w-[80px] md:min-h-[80px] text-center leading-[80px] text-4xl border-2 border-dashed border-[#062a4d] rounded-full text-[#062a4d] transition-all" />,
+        loading: () => <img className="block min-w-[56px] min-h-[56px] md:min-w-[80px] md:min-h-[80px] text-center leading-[80px] text-4xl border-2 border-dashed border-[#062a4d] rounded-full text-[#062a4d] p-2 transition-all" />,
     }),
 }));
 

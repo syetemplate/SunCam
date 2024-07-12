@@ -2,6 +2,7 @@
 
 import React from 'react';
 import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import { useParams, usePathname, useRouter } from 'next/navigation';
 import blogBgImage from '@/assets/bg/blog.jpg';
 import content from '@/content';
@@ -11,7 +12,18 @@ const numOfRecentPosts = 3;
 const dynamicImages = content.blog.posts.map(post => ({
   imageName: post.imageName,
   component: dynamic(() => import(`@/assets/media/${post.imageName}`).then(module => {
-    const Component = () => <img src={module.default.src} alt={post.title} width={400} height={300} className="object-contain w-[70px] min-w-[70px] max-w-[70px] p-1" />;
+    const Component = ({ fill, ...props }) => (
+      <Image
+        {...props}
+        src={module.default}
+        alt={post.title}
+        width={400}
+        height={300}
+        sizes="50vw"
+        style={{ objectFit: 'contain' }}
+        className="object-contain w-[70px] min-w-[70px] max-w-[70px] p-1"
+      />
+    );
     Component.displayName = `Image-${post.imageName}`;
     return Component;
   }), {
