@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useCart } from '@/state/cart';
 import Cart from '@/components/Cart';
 import content from '@/content';
+import emailjs from 'emailjs-com'; // ******************************
 
 const CheckoutPage = () => {
     const router = useRouter();
@@ -39,13 +40,28 @@ const CheckoutPage = () => {
             const result = await response.json();
 
             if (response.ok) {
-                // ******************************
                 setFormData({
                     name: '',
                     phone: '',
                     email: ''
                 });
                 setMessage('Your information has been received. You will get a notification soon.'); // ******************************
+
+                // ******************************
+                // Send email with EmailJS
+                emailjs.send(
+                    process.env.EMAILJS_SERVICE_ID,
+                    process.env.EMAILJS_TEMPLATE_ID,
+                    formData,
+                    process.env.EMAILJS_PUBLIC_KEY
+                )
+                .then((response) => {
+                    console.log('Email sent successfully:', response.status, response.text);
+                })
+                .catch((error) => {
+                    console.error('Error sending email:', error);
+                });
+                // ******************************
             } else {
                 // Handle error
                 setMessage('There was an error submitting your details. Please try again.'); // ******************************

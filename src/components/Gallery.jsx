@@ -32,14 +32,14 @@ const getThumbnailDimensions = index => {
 };
 
 const addFadeInLeftAnimation = e => {
-    e.currentTarget.querySelectorAll('[class*="animated"]').forEach(el => {
+    e.currentTarget.querySelectorAll('[class*="animated2"]').forEach(el => {
         el.classList.remove('fadeOut');
         el.classList.add('fadeInLeft');
     });
 };
 
 const removeFadeInLeftAnimation = e => {
-    e.currentTarget.querySelectorAll('[class*="animated"]').forEach(el => {
+    e.currentTarget.querySelectorAll('[class*="animated2"]').forEach(el => {
         el.classList.remove('fadeInLeft');
         el.classList.add('fadeOut');
     });
@@ -89,7 +89,7 @@ const Gallery = ({ className }) => {
             <div className="text-center mb-12">
                 <h2 className="text-blue-950 text-4xl font-bold">{content.gallery.title}</h2>
                 <div className="relative h-0.5 w-44 bg-gray-300 mx-auto mt-6 mb-8 rounded-[50%]">
-                    <div className="absolute -top-[3px] h-2 w-2 bg-limegreen rounded-full animated duration-4000 infinite moveLeftRight"></div>
+                    <div className="absolute -top-[3px] h-2 w-2 bg-limegreen rounded-full animated2 duration-4000 infinite moveLeftRight"></div>
                 </div>
             </div>
             <div className="text-center mb-12">
@@ -127,10 +127,10 @@ const Gallery = ({ className }) => {
                                             <DynamicThumbnail />
                                             <div className="absolute inset-0 bg-limegreen opacity-0 transition-opacity duration-500 group-hover:opacity-75 m-1"></div>
                                             <div className="absolute left-7 right-7 top-10 z-10 opacity-0 group-hover:opacity-100">
-                                                <h5 className="text-2xl font-extrabold text-white relative duration-500 animated rtl:text-right">
+                                                <h5 className="text-2xl font-extrabold text-white relative duration-500 animated2 rtl:text-right">
                                                     {image.title}
                                                 </h5>
-                                                <span className="inline-block text-sm font-medium text-white duration-500 delay-100 animated rtl:text-right">{image.description}</span>
+                                                <span className="inline-block text-sm font-medium text-white duration-500 delay-100 animated2 rtl:text-right">{image.description}</span>
                                             </div>
                                         </div>
                                     </div>

@@ -26,7 +26,7 @@ const Video = ({ className }) => {
                 <div className="flex flex-col items-center justify-center">
                     <div className="relative mb-12">
                         <div className="absolute inset-0 flex items-center justify-center">
-                            <div className="absolute top-[50%] left-[50%] w-[8rem] h-[8rem] bg-white opacity-20 rounded-full animated hoop infinite duration-4000"></div>
+                            <div className="absolute top-[50%] left-[50%] w-[8rem] h-[8rem] bg-white opacity-20 rounded-full animated2 hoop infinite duration-4000"></div>
                         </div>
                         <button
                             onClick={handleVideoClick}
@@ -47,7 +47,7 @@ const Video = ({ className }) => {
             {isVideoOpen && (
                 <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 px-4">
                     <div className="relative w-full h-4/6 max-w-4xl">
-                        <button onClick={handleCloseVideo} className="absolute p-4 -top-[52px] -right-[16px] bg-transparent hover:bg-transparent border-transparent text-white text-2xl flex items-center justify-center animated fadeIn">
+                        <button onClick={handleCloseVideo} className="absolute p-4 -top-[52px] -right-[16px] bg-transparent hover:bg-transparent border-transparent text-white text-2xl flex items-center justify-center animated2 fadeIn">
                             <i className="fas fa-times"></i>
                         </button>
                         <iframe
