@@ -68,8 +68,8 @@ const Footer = ({ className }) => {
                 <div className="flex flex-wrap">
                     <div className="xl:w-1/4 lg:w-1/3 md:w-1/2 px-4">
                         <div className="footer-widget mb-50">
-                            <div className="footer-logo mb-35">
-                                <a href="index.html"><img src={logoLite.src} alt="logo" /></a>
+                            <div className="footer-logo mb-4">
+                                <a href="index.html"><img src={logoLite.src} alt="logo" className="h-[24px]" /></a>
                             </div>
                             <div className="footer-text rtl:text-right">
                                 <p>{content.footer.text}</p>
