@@ -115,7 +115,7 @@ const Header = ({ className }) => {
                             <a
                                 key={href}
                                 href={href}
-                                className={`${pathname === href ? 'text-limegreen' : 'text-gray-800'} hover:text-limegreen font-semibold relative mx-5 py-2 capitalize`}
+                                className={`${pathname === href ? 'text-limegreen' : 'text-gray-800'} hover:text-limegreen font-bold text-xl relative mx-5 py-2 capitalize`}
                             >
                                 {label}
                             </a>
@@ -126,7 +126,9 @@ const Header = ({ className }) => {
                     {cartIcon}
                     <div className="hidden md:block md:border-l md:border-gray-300 ml-4 mr-4 h-6"></div>
                     <a href={content.header.cta.href} className="hidden md:block">
-                        <button>{content.header.cta.text}</button>
+                        <button className="text-lg py-2 px-6">
+                            {content.header.cta.text}
+                        </button>
                     </a>
                 </div>
             </div>
