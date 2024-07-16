@@ -202,7 +202,7 @@ const Product = ({ className, productItem }) => {
             <>
                 {isCartOpen && (
                     <div name="overlay" className="fixed inset-0 bg-black bg-opacity-50 z-50">
-                        <div className="w-full lg:w-2/5 h-full flex flex-col animated fadeInRight fixed bottom-0 right-0 z-50 bg-white shadow-[0px_10px_15px_rgba(25,25,25,0.075)] rounded-none p-0 border-b-0 px-4 py-8 rtl:right-auto rtl:left-0">
+                        <div className="w-full lg:w-2/5 h-full flex flex-col animated2 fadeInRight fixed bottom-0 right-0 z-50 bg-white shadow-[0px_10px_15px_rgba(25,25,25,0.075)] rounded-none p-0 border-b-0 px-4 py-8 rtl:right-auto rtl:left-0">
                             <div className="flex flex-col items-center border-b border-gray-200 pb-8">
                                 <i className="fas fa-times text-3xl absolute left-[24px] top-[24px] hover:text-limegreen cursor-pointer rtl:left-auto rtl:right-[24px]" onClick={closeCart} />
                                 <h2 className="text-2xl font-semibold leading-6 text-gray-800">

@@ -8,7 +8,7 @@ import logoDark from '@/assets/media/logo-dark.png';
 import content from '@/content';
 import { useCart } from '@/state/cart';
 
-const stickyHeaderClassName = 'animated fadeInDown sticky top-0 left-0 w-full z-50 bg-white shadow-[0px_10px_15px_rgba(25,25,25,0.075)] rounded-none p-0 border-b-0';
+const stickyHeaderClassName = 'animated2 fadeInDown sticky top-0 left-0 w-full z-50 bg-white shadow-[0px_10px_15px_rgba(25,25,25,0.075)] rounded-none p-0 border-b-0';
 
 const Header = ({ className }) => {
     const [isCollapsed, setIsCollapsed] = React.useState(true);
