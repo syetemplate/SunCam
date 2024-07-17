@@ -40,11 +40,21 @@ const BlogPostPage = () => {
   const currentPost = content.blog.posts.find(post => post.href === `/blog/${postName}`);
 
   const FeatureImage = currentPost ? dynamic(() => import(`@/assets/media/${currentPost.imageName}`).then(module => {
-    const Component = () => <img src={module.default.src} alt={currentPost.title} className="object-contain w-full p-1" />;
+    const Component = ({ fill, ...props }) => (
+      <Image
+        {...props}
+        src={module.default}
+        alt={currentPost.title}
+        height={300}
+        sizes="50vw"
+        style={{ objectFit: 'contain' }}
+        className="object-contain h-[300px] p-1"
+      />
+    );
     Component.displayName = `Image-${currentPost.imageName}`;
     return Component;
   }), {
-    loading: () => <img className="w-full p-1" />,
+    loading: () => <img className="h-[300px] p-1" />,
   }) : () => null;
 
   const breadcrumbLinks = pathname.split('/')
@@ -97,9 +107,9 @@ const BlogPostPage = () => {
       {/* breadcrumb-area-end */}
 
       {/* blog-area */}
-      <section className="pt-60 pb-[344px] lg:pb-[190px]">
+      <section className="pt-60 pb-[344px] lg:pb-[190px] px-4 xl:px-24">
         <div className="flex flex-wrap">
-          <div className="lg:w-2/3 pr-4 pl-4">
+          <div className="lg:w-2/3 pr-4 pl-4 lg:pl-16">
             <div className="single-blog-list">
               <div className="blog-list-thumb mb-35">
                 <FeatureImage />
@@ -119,14 +129,26 @@ const BlogPostPage = () => {
                     return <blockquote key={index}>{item.text}</blockquote>
                   }
                   if (item.type === 'image') {
-                    const Image = dynamic(() => import(`@/assets/media/${item.imageName}`).then(module => {
-                      const Component = () => <img src={module.default.src} alt={item.alt} className="object-contain w-full p-1" />;
+                    const PostImage = dynamic(() => import(`@/assets/media/${item.imageName}`).then(module => {
+                      // const Component = () => <img src={module.default.src} alt={item.alt} className="object-contain w-full p-1" />;
+                      const Component = ({ fill, ...props }) => (
+                        <Image
+                          {...props}
+                          src={module.default}
+                          alt={item.alt}
+                          width={400}
+                          height={300}
+                          sizes="90vw"
+                          style={{ objectFit: 'contain' }}
+                          className="object-contain w-[400px] p-1 my-8"
+                        />
+                      );
                       Component.displayName = `Image-${item.imageName}`;
                       return Component;
                     }), {
-                      loading: () => <img className="w-full p-1" />,
+                      loading: () => <img className="object-contain w-[400px] p-1 my-8" />,
                     });
-                    return <Image key={index} />;
+                    return <PostImage key={index} />;
                   }
                   return null;
                 })}

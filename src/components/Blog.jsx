@@ -15,13 +15,13 @@ const dynamicImages = content.blog.posts.map(post => ({
                 alt={post.title}
                 width={400}
                 height={300}
-                className="object-contain w-full p-1"
+                className="object-contain w-full p-4"
             />
         );
         Component.displayName = `Image-${post.imageName}`;
         return Component;
     }), {
-        loading: () => <img width={400} height={300} className="w-full p-1" />,
+        loading: () => <img width={400} height={300} className="w-full p-4" />,
     }),
 }));
 

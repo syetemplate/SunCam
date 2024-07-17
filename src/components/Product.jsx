@@ -69,16 +69,16 @@ const reviewerAvatarImages = content.products.items.flatMap(productItem =>
                     {...props}
                     src={module.default}
                     alt="review"
-                    width={130}
-                    height={130}
+                    width={80}
+                    height={80}
                     sizes="10vw"
-                    className={'object-cover w-[130px] h-[130px] min-w-[130px] min-h-[130px] p-1'}
+                    className={'object-cover w-[80px] h-[80px] min-w-[80px] min-h-[80px] p-1'}
                 />
             );
             Component.displayName = `Image-${imageName}`;
             return Component;
         }), {
-            loading: () => <img width={130} height={130} className={'object-cover w-[130px] h-[130px] min-w-[130px] min-h-[130px] p-1'} />,
+            loading: () => <img width={80} height={80} className={'object-cover w-[80px] h-[80px] min-w-[80px] min-h-[80px] p-1'} />,
         }),
     }))
 );
@@ -310,7 +310,7 @@ const Product = ({ className, productItem }) => {
                                     )}
                                     {activeTab === 'additionalInfo' && (
                                         <div className="tab-pane opacity-100 block active rtl:text-right">
-                                            <p className="desc-content">{productItem.additionalInfo.text}</p>
+                                            <p className="desc-content" dangerouslySetInnerHTML={{ __html: productItem.additionalInfo.text }} />
                                         </div>
                                     )}
                                     {activeTab === 'reviews' && (

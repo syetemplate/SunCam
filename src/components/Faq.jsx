@@ -2,9 +2,28 @@
 
 import React from 'react';
 import clsx from 'clsx';
+import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import faqBgImage from '@/assets/bg/faq.jpg';
-import faqImage from '@/assets/media/faq.jpg';
 import content from '@/content';
+
+const FaqImage = dynamic(() => import(`@/assets/media/${content.faq.imageName}`).then(module => {
+    const Component = ({ fill, ...props }) => (
+        <Image
+            {...props}
+            src={module.default}
+            alt="faq"
+            width={880}
+            height={700}
+            sizes="(min-width: 960px) 50vw, 90vw"
+            className="w-[620px] object-contain p1"
+        />
+    );
+    Component.displayName = `Image-${content.hero.imageName}`;
+    return Component;
+}), {
+    loading: () => <img width={880} height={700} className="w-[620px] object-contain p1" />,
+});
 
 const Faq = ({ className }) => {
     const [activeIndex, setActiveIndex] = React.useState();
@@ -35,7 +54,7 @@ const Faq = ({ className }) => {
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 rtl:grid-flow-col-reverse">
                     <div className="faq-img">
-                        <img src={faqImage.src} alt="faq" />
+                        <FaqImage />
                     </div>
                     <div className="faq-wrapper-padding">
                         <div className="faq-wrapper">
