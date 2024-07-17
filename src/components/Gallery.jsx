@@ -60,7 +60,7 @@ const dynamicThumbnailImages = content.products.items
                         alt={image.title}
                         width={width}
                         height={height}
-                        sizes="20vw"
+                        sizes="(min-width: 768px) 20vw, 90vw"
                         style={{ objectFit: 'contain', padding: '24px' }}
                     />
                 );

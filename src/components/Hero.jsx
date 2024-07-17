@@ -10,7 +10,7 @@ const HeroImage = dynamic(() => import(`@/assets/media/${content.hero.imageName}
             src={module.default}
             alt="hero"
             width={880}
-            sizes="(min-width: 960px) 50vw, 30vw"
+            sizes="(min-width: 1024px) 90vw, 30vw"
             className="w-[880px] object-contain p1 fadeInRight animated2"
             data-wow-delay="0.6s"
             style={{ visibility: 'visible', animationDelay: '0.6s', animationName: 'fadeInRight' }}

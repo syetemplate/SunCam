@@ -2044,7 +2044,7 @@ blockquote {
 blockquote::before {
 	content: "";
 	position: absolute;
-	left: 16px;
+	left: 0;
 	top: 8px;
 	background-image: url(../media/quote.png);
 	width: 31px;
