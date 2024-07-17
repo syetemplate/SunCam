@@ -7,6 +7,7 @@ const HeroImage = dynamic(() => import(`@/assets/media/${content.hero.imageName}
     const Component = ({ fill, ...props }) => (
         <Image
             {...props}
+            priority
             src={module.default}
             alt="hero"
             width={880}
