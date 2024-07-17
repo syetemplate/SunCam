@@ -5,7 +5,6 @@ import { useRouter } from 'next/navigation';
 import { useCart } from '@/state/cart';
 import Cart from '@/components/Cart';
 import content from '@/content';
-import sendEmail from '@/utils/email';
 
 const CheckoutPage = () => {
     const router = useRouter();
@@ -37,15 +36,7 @@ const CheckoutPage = () => {
                 body: JSON.stringify(formData),
             });
 
-            const result = await response.json();
-
             if (response.ok) {
-                // Iterate over the notificationEmailList and send email to each address
-                const notificationEmailList = content.checkout.notificationEmailList;
-                for (const to_email of notificationEmailList) {
-                    await sendEmail({ ...formData, to_email });
-                }
-
                 setFormData({
                     name: '',
                     phone: '',
