@@ -604,6 +604,8 @@ export default {
             }
         },
         notificationEmailList: [
+            "sahar014g@gmail.com",
+            "shalevsamina4@gmail.com",
             "yulev5@gmail.com",
             "syetemplate@gmail.com"
         ]
