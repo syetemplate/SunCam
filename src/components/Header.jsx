@@ -13,6 +13,7 @@ const stickyHeaderClassName = 'animated2 fadeInDown sticky top-0 left-0 w-full z
 const Header = ({ className }) => {
     const [isCollapsed, setIsCollapsed] = React.useState(true);
     const headerRef = React.useRef(null);
+    const mobileDrawerButtonRef = React.useRef(null);
     const pathname = usePathname();
     const cart = useCart();
     const shouldShowCartBadge = (cart.items.length > 0);
@@ -47,6 +48,22 @@ const Header = ({ className }) => {
         }
     };
 
+    const collapseMenuOnMobileOutsideClick = React.useCallback(() => {
+        const eventListener = document.addEventListener('click', e => {
+            const isMobile = (mobileDrawerButtonRef.current && mobileDrawerButtonRef.current.getBoundingClientRect().top > 0);
+            if (!isMobile) {
+                return;
+            }
+            if (isCollapsed || !headerRef.current || e.target.closest('header')) {
+                return;
+            }
+            setIsCollapsed(true);
+        });
+        return () => {
+            document.removeEventListener('click', eventListener);
+        }
+    }, [isCollapsed]);
+
     const initStickyAnimation = () => {
         const throttledToggleStickyAnimation = throttle(toggleStickyAnimation, 100);
         window.addEventListener('scroll', throttledToggleStickyAnimation);
@@ -56,6 +73,7 @@ const Header = ({ className }) => {
         };
     };
 
+    React.useEffect(collapseMenuOnMobileOutsideClick, [collapseMenuOnMobileOutsideClick]);
     React.useEffect(initStickyAnimation, []);
 
     return (
@@ -72,6 +90,7 @@ const Header = ({ className }) => {
                         aria-controls="navbar"
                         aria-expanded={!isCollapsed}
                         onClick={toggleCollapse}
+                        ref={mobileDrawerButtonRef}
                     >
                         <svg
                             className={`${isCollapsed ? 'block' : 'hidden'} flex-shrink-0 size-4`}
