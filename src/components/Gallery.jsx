@@ -61,7 +61,7 @@ const dynamicThumbnailImages = content.products.items
                         width={width}
                         height={height}
                         sizes="20vw"
-                        style={{ objectFit: 'contain', padding: '16px' }}
+                        style={{ objectFit: 'contain', padding: '24px' }}
                     />
                 );
                 Component.displayName = `DynamicThumbnail-${image.imageName}`;
@@ -107,7 +107,7 @@ const Gallery = ({ className }) => {
             <div className="flex flex-col md:flex-row gap-7.5">
                 {content.products.items.map((productItems, colIndex) => (
                     <div key={productItems.name} className="md:w-1/3">
-                        <div className="flex flex-col gap-7.5">
+                        <div className="flex flex-col gap-7.5 items-center">
                             {selectedProductItem.images.map((image, i) => {
                                 if (i % 3 !== colIndex) {
                                     return null;
@@ -117,7 +117,7 @@ const Gallery = ({ className }) => {
                                     img => img.imageName === image.imageName
                                 ).component;
                                 return (
-                                    <div key={i} className="relative" style={{ aspectRatio: `${width} / ${height}`, maxWidth: `${width}px`, width: '100%' }}>
+                                    <div key={i} className="relative" style={{ aspectRatio: 1, maxWidth: `${width}px`, width: '100%' }}>
                                         <div
                                             className="relative group cursor-pointer w-full h-full"
                                             onMouseEnter={addFadeInLeftAnimation}
