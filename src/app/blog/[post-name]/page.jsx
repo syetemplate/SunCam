@@ -107,9 +107,9 @@ const BlogPostPage = () => {
       {/* breadcrumb-area-end */}
 
       {/* blog-area */}
-      <section className="pt-60 pb-[344px] lg:pb-[190px]">
+      <section className="pt-60 pb-[344px] lg:pb-[190px] xl:px-24">
         <div className="flex flex-wrap">
-          <div className="lg:w-2/3 pr-4 pl-4">
+          <div className="lg:w-2/3 pr-4 pl-4 lg:pl-16">
             <div className="single-blog-list">
               <div className="blog-list-thumb mb-35">
                 <FeatureImage />
