@@ -1700,7 +1700,8 @@ label {
 }
 
 .review-avatar img {
-	border: 4px solid #ebebeb;
+	border: 1px solid #ebebeb;
+	border-radius: 50%;
 }
 
 .tab-pane.active {
@@ -2043,7 +2044,7 @@ blockquote {
 blockquote::before {
 	content: "";
 	position: absolute;
-	left: 40px;
+	left: 16px;
 	top: 8px;
 	background-image: url(../media/quote.png);
 	width: 31px;

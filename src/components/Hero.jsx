@@ -1,6 +1,27 @@
 import clsx from 'clsx';
-import heroImage from '@/assets/media/hero.png';
+import dynamic from 'next/dynamic';
+import Image from 'next/image';
 import content from '@/content';
+
+const HeroImage = dynamic(() => import(`@/assets/media/${content.hero.imageName}`).then(module => {
+    const Component = ({ fill, ...props }) => (
+        <Image
+            {...props}
+            src={module.default}
+            alt="hero"
+            width={880}
+            height={700}
+            sizes="(min-width: 960px) 50vw, 30vw"
+            className="w-[880px] h-[700px] object-contain p1 fadeInRight animated2"
+            data-wow-delay="0.6s"
+            style={{ visibility: 'visible', animationDelay: '0.6s', animationName: 'fadeInRight' }}
+        />
+    );
+    Component.displayName = `Image-${content.hero.imageName}`;
+    return Component;
+}), {
+    loading: () => <img width={880} height={700} className="w-[880px] h-[700px] object-contain p1" />,
+});
 
 const Hero = ({ className }) => {
     return (
@@ -34,13 +55,7 @@ const Hero = ({ className }) => {
                     </div>
                 </div>
                 <div className="lg:w-1/2 lg:pl-8 rtl:lg:pr-8 rtl:lg:pl-0">
-                    <img
-                        src={heroImage.src}
-                        alt={content.hero.title}
-                        className="w-full wow fadeInRight animated2"
-                        data-wow-delay="0.6s"
-                        style={{ visibility: 'visible', animationDelay: '0.6s', animationName: 'fadeInRight' }}
-                    />
+                    <HeroImage/>
                 </div>
             </div>
         </section>

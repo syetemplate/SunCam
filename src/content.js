@@ -9,6 +9,7 @@ export default {
             { label: 'בית', href: '/' },
             { label: 'מוצרים', href: '/products' },
             { label: 'בלוג', href: '/blog' },
+            { label: 'מי אנחנו', href: '/about-us' },
         ],
         cta: {
             text: 'הזמן עכשיו',
@@ -18,6 +19,7 @@ export default {
     hero: {
         title: 'רחפן <span className="lg:text-limegreen">עם מצלמה</span> לילדים',
         description: 'ילדים לא נועדו לשבת מול מסכים. בעזרת רחפן מצלמה של MiniDrone, הילדים שלכם יוכלו לצאת החוצה, לחקור את העולם מזווית חדשה ולפתח כישורים חשובים תוך כדי משחק מהנה ובטוח',
+        imageName: 'hero.png',
         cta: {
             text: 'רכישה',
             href: '/products',
@@ -354,7 +356,7 @@ export default {
         ],
     },
     aboutUs: {
-        title: 'אודותינו',
+        title: 'מי אנחנו',
         sections: [
             {
                 title: 'המשימה שלנו',
@@ -406,7 +408,7 @@ export default {
                 },
                 additionalInfo: {
                     title: 'מידע נוסף',
-                    text: '<p>MiniDrone בסיסי כולל:<br>1 x רחפן עם מצלמה לילדים של &nbsp;MiniDrone<br>1 x סוללה חכמה&nbsp;<br>1 x שלט רחוק&nbsp;<br>1 x כבל טעינה<br>3 x כבל USB OTG<br>&nbsp;</p>'
+                    text: '<strong>MiniDrone בסיסי כולל</strong>:<br>1 x רחפן עם מצלמה לילדים של &nbsp;MiniDrone<br>1 x סוללה חכמה&nbsp;<br>1 x שלט רחוק&nbsp;<br>1 x כבל טעינה<br>3 x כבל USB OTG'
                 },
                 reviews: {
                     title: 'ביקורות',
@@ -498,9 +500,9 @@ export default {
                     ],
                 },
                 images: [
-                    { imageName: 'gallery-7.png', title: 'תמונה 1', description: 'קלוז אפ של MiniDrone פרו פלוס מראה את החיישנים המתקדמים שלו.' },
-                    { imageName: 'gallery-8.png', title: 'תמונה 2', description: 'איור של MiniDrone פרו פלוס עם מאפייני הדגל הניתנים להחלפה.' },
-                    { imageName: 'gallery-9.png', title: 'תמונה 3', description: 'השוואה של MiniDrone פרו פלוס עם הדגמים האחרים של MiniDrone.' },
+                    { imageName: 'gallery-7.webp', title: 'תמונה 1', description: 'קלוז אפ של MiniDrone פרו פלוס מראה את החיישנים המתקדמים שלו.' },
+                    { imageName: 'gallery-8.webp', title: 'תמונה 2', description: 'איור של MiniDrone פרו פלוס עם מאפייני הדגל הניתנים להחלפה.' },
+                    { imageName: 'gallery-9.webp', title: 'תמונה 3', description: 'השוואה של MiniDrone פרו פלוס עם הדגמים האחרים של MiniDrone.' },
                 ],
             },
         ],
@@ -509,6 +511,7 @@ export default {
     faq: {
         title: 'שאלות נפוצות',
         description: 'MiniDrone מספקת מענה לכל השאלות הנפוצות של לקוחותינו לגבי הרחפנים שלנו ותהליך הרכישה.',
+        imageName: 'faq.jpg',
         list: [
             {
                 question: 'מהו MiniDrone?',
