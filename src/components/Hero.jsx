@@ -10,9 +10,8 @@ const HeroImage = dynamic(() => import(`@/assets/media/${content.hero.imageName}
             src={module.default}
             alt="hero"
             width={880}
-            height={700}
             sizes="(min-width: 960px) 50vw, 30vw"
-            className="w-[880px] h-[700px] object-contain p1 fadeInRight animated2"
+            className="w-[880px] object-contain p1 fadeInRight animated2"
             data-wow-delay="0.6s"
             style={{ visibility: 'visible', animationDelay: '0.6s', animationName: 'fadeInRight' }}
         />
@@ -20,7 +19,7 @@ const HeroImage = dynamic(() => import(`@/assets/media/${content.hero.imageName}
     Component.displayName = `Image-${content.hero.imageName}`;
     return Component;
 }), {
-    loading: () => <img width={880} height={700} className="w-[880px] h-[700px] object-contain p1" />,
+    loading: () => <img width={880} height={700} className="w-[880px] object-contain p1" />,
 });
 
 const Hero = ({ className }) => {
