@@ -13,9 +13,6 @@ export async function POST(req) {
         const lead = new Lead({ name, phone, email });
         await lead.save();
 
-        // Send an email (if needed, uncomment the code and import nodemailer)
-        // await sendEmail({ name, phone, email });
-
         return NextResponse.json({ message: 'Details submitted successfully', lead }, { status: 200 });
     } catch (error) {
         console.error("Error saving lead:", error);

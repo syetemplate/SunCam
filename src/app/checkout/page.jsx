@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useCart } from '@/state/cart';
 import Cart from '@/components/Cart';
 import content from '@/content';
-import emailjs from 'emailjs-com'; // ******************************
+import sendEmail from '@/utils/email';
 
 const CheckoutPage = () => {
     const router = useRouter();
@@ -18,7 +18,7 @@ const CheckoutPage = () => {
         email: ''
     });
 
-    const [message, setMessage] = useState(''); // ******************************
+    const [message, setMessage] = useState('');
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
@@ -40,35 +40,24 @@ const CheckoutPage = () => {
             const result = await response.json();
 
             if (response.ok) {
+                // Iterate over the notificationEmailList and send email to each address
+                const notificationEmailList = content.checkout.notificationEmailList;
+                for (const to_email of notificationEmailList) {
+                    await sendEmail({ ...formData, to_email });
+                }
+
                 setFormData({
                     name: '',
                     phone: '',
                     email: ''
                 });
-                setMessage('Your information has been received. You will get a notification soon.'); // ******************************
-
-                // ******************************
-                // Send email with EmailJS
-                emailjs.send(
-                    process.env.EMAILJS_SERVICE_ID,
-                    process.env.EMAILJS_TEMPLATE_ID,
-                    formData,
-                    process.env.EMAILJS_PUBLIC_KEY
-                )
-                .then((response) => {
-                    console.log('Email sent successfully:', response.status, response.text);
-                })
-                .catch((error) => {
-                    console.error('Error sending email:', error);
-                });
-                // ******************************
+                setMessage('Your information has been received. You will get a notification soon.');
             } else {
-                // Handle error
-                setMessage('There was an error submitting your details. Please try again.'); // ******************************
+                setMessage('There was an error submitting your details. Please try again.');
             }
         } catch (error) {
             console.error('Error submitting details:', error);
-            setMessage('There was an error submitting your details. Please try again.'); // ******************************
+            setMessage('There was an error submitting your details. Please try again.');
         }
     };
 
