@@ -5,7 +5,6 @@ const sendEmail = async ({ name, phone, email, to_email }) => {
     const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
     const userID = process.env.NEXT_PUBLIC_EMAILJS_USER_ID;
 
-    debugger;
     const templateParams = {
         to_name: 'Website Owner',
         from_name: name,
