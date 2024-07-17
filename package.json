@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@emailjs/nodejs": "^4.0.4",
+    "axios": "^1.7.2",
     "bluebird": "^3.7.2",
     "clsx": "^2.1.1",
     "lodash": "^4.17.21",
