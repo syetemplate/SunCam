@@ -140,7 +140,7 @@ export default {
                 title: 'צפי לשוק הרחפנים הצרכנים בשנת 2024',
                 description: 'סקירת מגמות, טכנולוגיות ושחקנים מובילים הצפויים להשפיע על השוק בשנה הקרובה.',
                 href: '/blog/consumer-drone-market-outlook-2024',
-                imageName: 'blog-1.jpg',
+                imageName: 'blog-1.webp',
                 content: [
                     {
                         type: 'paragraph',
@@ -158,12 +158,12 @@ export default {
                     },
                     {
                         type: 'image',
-                        imageName: 'blog-4.jpg',
+                        imageName: 'blog-4.webp',
                         alt: 'רחפן צרכני חדש'
                     },
                     {
                         type: 'image',
-                        imageName: 'blog-5.jpg',
+                        imageName: 'blog-5.webp',
                         alt: 'ילד רץ עם רחפן'
                     },
                     {
@@ -182,7 +182,7 @@ export default {
                 title: 'כיצד בחירת הרחפן הנכון יכולה לשפר את איכות הצילום שלך',
                 description: 'השוואה בין סוגים נפוצים של רחפנים ותכונות מפתח שיכולות לעזור לך לקבל תמונות וסרטונים מדהימים מהאוויר.',
                 href: '/blog/how-the-right-drone-can-enhance-your-photography',
-                imageName: 'blog-2.jpg',
+                imageName: 'blog-2.webp',
                 content: [
                     {
                         type: 'paragraph',
@@ -202,12 +202,12 @@ export default {
                     },
                     {
                         type: 'image',
-                        imageName: 'blog-6.jpg',
+                        imageName: 'blog-6.webp',
                         alt: 'רחפן מצלם נוף הרים'
                     },
                     {
                         type: 'image',
-                        imageName: 'blog-7.jpg',
+                        imageName: 'blog-7.webp',
                         alt: 'תמונה אווירית של עיר'
                     },
                     {
@@ -225,7 +225,7 @@ export default {
                 title: '5 טיפים לטיסת רחפן בטוחה ואחראית',
                 description: 'המדריך הזה ילמד אתכם כיצד להפעיל את הרחפן שלכם בצורה חוקית ומכבדת, תוך הימנעות מצרות.',
                 href: '/blog/5-tips-for-safe-and-responsible-drone-flying',
-                imageName: 'blog-3.jpg',
+                imageName: 'blog-3.webp',
                 content: [
                     {
                         type: 'paragraph',
@@ -245,12 +245,12 @@ export default {
                     },
                     {
                         type: 'image',
-                        imageName: 'blog-8.jpg',
+                        imageName: 'blog-8.webp',
                         alt: 'בדיקה של רחפן לפני טיסה',
                     },
                     {
                         type: 'image',
-                        imageName: 'blog-9.jpg',
+                        imageName: 'blog-9.webp',
                         alt: 'תמונת רחפן עם אזהרת גובה',
                     },
                     {
@@ -419,8 +419,8 @@ export default {
                 },
                 images: [
                     { imageName: 'gallery-1.webp', title: 'תמונה 1', description: 'MiniDrone בסיסי בפעולה - מראה צד.' },
-                    { imageName: 'gallery-2.png', title: 'תמונה 2', description: 'ילד מעיף את הMiniDrone בסביבת פארק.' },
-                    { imageName: 'gallery-3.png', title: 'תמונה 3', description: 'קלוז אפ של המצלמה האיכותית של הMiniDrone.' },
+                    { imageName: 'gallery-2.webp', title: 'תמונה 2', description: 'ילד מעיף את הMiniDrone בסביבת פארק.' },
+                    { imageName: 'gallery-3.webp', title: 'תמונה 3', description: 'קלוז אפ של המצלמה האיכותית של הMiniDrone.' },
                 ],
             },
             {
@@ -458,12 +458,9 @@ export default {
                     ],
                 },
                 images: [
-                    { imageName: 'gallery-4.png', title: 'תמונה 1', description: 'צילום אווירי של חוף ים מדהים שצולם על ידי MiniDrone פרו.' },
-                    { imageName: 'gallery-5.png', title: 'תמונה 2', description: 'ילד מפעיל את הMiniDrone פרו על שלט רחוק.' },
-                    { imageName: 'gallery-6.png', title: 'תמונה 3', description: 'MiniDrone פרו חג מעל אגם עם נוף עוצר נשימה.' },
-                    { imageName: 'gallery-7.png', title: 'תמונה 4', description: 'איור של MiniDrone פרו המציג את המאפיינים המתקדמים שלו.' },
-                    { imageName: 'gallery-8.png', title: 'תמונה 5', description: 'תצלום של ילדה המעיפה את רחפן הMiniDrone פרו.' },
-                    { imageName: 'gallery-9.png', title: 'תמונה 6', description: "תמונה קבוצתית של משפחה נהנית עם רחפן הMiniDrone פרו בחוץ." },
+                    { imageName: 'gallery-4.webp', title: 'תמונה 1', description: 'צילום אווירי של חוף ים מדהים שצולם על ידי MiniDrone פרו.' },
+                    { imageName: 'gallery-5.webp', title: 'תמונה 2', description: 'ילד מפעיל את הMiniDrone פרו על שלט רחוק.' },
+                    { imageName: 'gallery-6.webp', title: 'תמונה 3', description: 'MiniDrone פרו חג מעל אגם עם נוף עוצר נשימה.' },
                 ],
             },
             {
@@ -501,9 +498,9 @@ export default {
                     ],
                 },
                 images: [
-                    { imageName: 'gallery-10.png', title: 'תמונה 1', description: 'קלוז אפ של MiniDrone פרו פלוס מראה את החיישנים המתקדמים שלו.' },
-                    { imageName: 'gallery-11.png', title: 'תמונה 2', description: 'איור של MiniDrone פרו פלוס עם מאפייני הדגל הניתנים להחלפה.' },
-                    { imageName: 'gallery-12.png', title: 'תמונה 3', description: 'השוואה של MiniDrone פרו פלוס עם הדגמים האחרים של MiniDrone.' },
+                    { imageName: 'gallery-7.png', title: 'תמונה 1', description: 'קלוז אפ של MiniDrone פרו פלוס מראה את החיישנים המתקדמים שלו.' },
+                    { imageName: 'gallery-8.png', title: 'תמונה 2', description: 'איור של MiniDrone פרו פלוס עם מאפייני הדגל הניתנים להחלפה.' },
+                    { imageName: 'gallery-9.png', title: 'תמונה 3', description: 'השוואה של MiniDrone פרו פלוס עם הדגמים האחרים של MiniDrone.' },
                 ],
             },
         ],
