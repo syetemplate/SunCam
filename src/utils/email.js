@@ -1,10 +1,11 @@
 import emailjs from 'emailjs-com';
 
 const sendEmail = async ({ name, phone, email, to_email }) => {
-    const serviceID = process.env.EMAILJS_SERVICE_ID;
-    const templateID = process.env.EMAILJS_TEMPLATE_ID;
-    const userID = process.env.EMAILJS_USER_ID;
+    const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    const userID = process.env.NEXT_PUBLIC_EMAILJS_USER_ID;
 
+    debugger;
     const templateParams = {
         to_name: 'Website Owner',
         from_name: name,
