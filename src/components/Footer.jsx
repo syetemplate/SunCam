@@ -78,7 +78,7 @@ const Footer = ({ className }) => {
                                 <ul className="rtl:text-right">
                                     {content.footer.social.map((social, index) => (
                                         <li key={index}>
-                                            <a href={social.href}>
+                                            <a href={social.href} target="_blank">
                                                 <i className={social.icon}></i>
                                             </a>
                                         </li>
