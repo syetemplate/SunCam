@@ -56,6 +56,7 @@ export default {
     benefits: {
         title: 'למה להשתמש ב-MiniDrone',
         subtitle: 'MiniDrone הוא הרחפן הטוב ביותר לילדים. הנה כמה יתרונות של השימוש במוצר שלנו.',
+        imageName: 'benefits.png',
         list: [
             {
                 title: 'קל לשימוש',
