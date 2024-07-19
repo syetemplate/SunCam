@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
     meta: {
-        title: 'רחפן עם מצלמה לילדים | MiniDrone',
+        title: 'MiniDrone | רחפן עם מצלמה לילדים',
         description: 'MiniDrone מתמחה בייצור רחפנים עם מצלמה בטוחים וקלים לשימוש במיוחד לילדים. עם רחפן MiniDrone, הילדים שלכם יוכלו לחוות חוויית טיסה מדהימה תוך צילום וידאו ותמונות ברמה גבוהה, בצורה מהנה ובטוחה',
     },
     header: {
