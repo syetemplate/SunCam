@@ -4,6 +4,9 @@ import React from 'react';
 import clsx from 'clsx';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
+import axios from 'axios';
+import { useFormik, Field, FormikProvider } from 'formik';
+import * as yup from 'yup';
 import newsletterBgImage from '@/assets/bg/newsletter.jpg';
 import footerBgImage from '@/assets/bg/footer.jpg';
 import logoLite from '@/assets/media/logo-lite.webp';
@@ -34,7 +37,33 @@ const dynamicImages = recentPosts.map(({ title, imageName }) => ({
     }),
 }));
 
+const validationSchema = yup.object().shape({
+    email: yup.string().email(content.newsletter.emailError).required(content.newsletter.emailError),
+});
+
 const Footer = ({ className }) => {
+    const [postSubmitMessage, setPostSubmitMessage] = React.useState({ message: '', type: '' });
+    const formik = useFormik({
+        initialValues: {
+            email: '',
+        },
+        validationSchema,
+        onSubmit: async values => {
+            try {
+                debugger;
+                const response = await axios.post('/api/subscribe', values);
+                if (response.status !== 200) {
+                    throw new Error(response.statusText);
+                }
+                formik.resetForm();
+                setPostSubmitMessage({ message: content.newsletter.success, type: 'success' });
+            } catch (error) {
+                console.error('Error subscribing:', error);
+                setPostSubmitMessage({ message: content.newsletter.error, type: 'error' });
+            }
+        },
+    });
+
     return (
         <footer className={clsx('flex flex-col items-center relative', [className])}>
             <section id="newsletter" className="flex flex-wrap px-4 lg:px-28 w-full absolute z-10 top-[-232px] md:top-[-128px] lg:top-[-64px]">
@@ -54,10 +83,41 @@ const Footer = ({ className }) => {
                             </div>
                             <div className="w-full pr-4 pl-4 rtl:lg:pr-0 rtl:lg:pl-4">
                                 <div className="newsletter-form">
-                                    <form action="#" className="flex-col sm:flex-row">
-                                        <input type="email" placeholder={content.newsletter.emailPlaceholder} className="w-full" />
-                                        <button className="inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline">{content.newsletter.submit}</button>
-                                    </form>
+                                    <FormikProvider value={formik}>
+                                        <form onSubmit={formik.handleSubmit} className="flex-col sm:flex-row">
+                                            <Field name="email">
+                                                {({ field, meta }) => (
+                                                    <div className="fled-col">
+                                                        <input
+                                                            {...field}
+                                                            type="email"
+                                                            placeholder={content.newsletter.emailPlaceholder}
+                                                            disabled={formik.isSubmitting || postSubmitMessage?.message}
+                                                            className="w-full disabled:opacity-50 disabled:pointer-events-none disabled:cursor-default"
+                                                        />
+                                                        {meta.touched && meta.error && (
+                                                            <p className="text-red-500 text-start m-1">{meta.error}</p>
+                                                        )}
+                                                        {postSubmitMessage?.message && (
+                                                            <p className={clsx('text-start m-1', {
+                                                                'text-green-500': (postSubmitMessage?.type === 'success'),
+                                                                'text-red-500': (postSubmitMessage?.type === 'error'),
+                                                            })}>
+                                                                {postSubmitMessage?.message}
+                                                            </p>
+                                                        )}
+                                                    </div>
+                                                )}
+                                            </Field>
+                                            <button
+                                                type="submit"
+                                                className="my-2 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline cursor-pointer disabled:opacity-50 disabled:pointer-events-none disabled:cursor-default"
+                                                disabled={formik.isSubmitting || postSubmitMessage?.message}
+                                            >
+                                                {content.newsletter.submit}
+                                            </button>
+                                        </form>
+                                    </FormikProvider>
                                 </div>
                             </div>
                         </div>

@@ -2328,8 +2328,9 @@ blockquote::before {
 
 .newsletter-form form {
 	display: flex;
-	align-items: center;
+	align-items: baseline;
 	justify-content: flex-end;
+	margin-bottom: 8px;
 }
 
 .newsletter-content h4 {
