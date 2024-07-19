@@ -4,7 +4,7 @@ import React from 'react';
 import clsx from 'clsx';
 import { usePathname } from 'next/navigation';
 import { throttle } from 'lodash';
-import logoDark from '@/assets/media/logo-dark.png';
+import logoDark from '@/assets/media/logo-dark.webp';
 import content from '@/content';
 import { useCart } from '@/state/cart';
 
@@ -80,7 +80,7 @@ const Header = ({ className }) => {
         <header className={clsx('bg-white text-gray-600 body-font lg:px-28 lg:py-4 border-b border-green-200 border-opacity-50', [className])} ref={headerRef}>
             <div className="flex flex-wrap px-4 pt-[24px] pb-[8px] xl:p-5 flex-row items-center justify-between">
                 <a href="/" className="flex title-font font-medium items-center text-gray-900 mb-2 md:mb-0">
-                    <img src={logoDark.src} alt="logo" className="h-[24px]"/>
+                    <img src={logoDark.src} alt="logo" className="h-[36px]"/>
                 </a>
                 <div className="md:hidden">
                     {cartIcon}
