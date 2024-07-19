@@ -488,7 +488,7 @@ export default {
                 },
                 additionalInfo: {
                     title: 'מידע נוסף',
-                    text: '<p>MiniDrone בסיסי כולל:<br>1 x רחפן עם מצלמה לילדים של &nbsp;MiniDrone <span class="Y2IQFc" lang="iw" dir="ltr">3 x סוללה חכמה x שלט רחוק1 x תיק נשיאה1 x סט מדחפים1 x כבל טעינה3 x כבל USB OTG</span><br>&nbsp;</p>'
+                    text: '<p>MiniDrone בסיסי כולל:<br>1 x רחפן עם מצלמה לילדים של &nbsp;MiniDrone<br>3 x סוללה חכמה<br>1 x שלט רחוק<br>1 x תיק נשיאה<br>1 x סט מדחפים חילוף<br>3 x כבל טעינה<br>3 x כבל USB OTG<br>&nbsp;</p>'
                 },
                 reviews: {
                     title: 'ביקורות',
