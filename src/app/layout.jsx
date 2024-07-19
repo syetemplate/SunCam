@@ -6,6 +6,7 @@ import WhatsAppFloatingIcon from '@/components/WhatsAppFloatingIcon';
 import favicon from '@/assets/media/favicon.ico';
 import content from '@/content';
 import '@/assets/css/style.scss';
+import { poppins, assistant } from './fonts';
 
 export const metadata = {
   title: content.meta.title,
@@ -24,7 +25,7 @@ export const viewport = {
 
 const RootLayout = ({ children }) => {
   return (
-    <html lang="he" dir="rtl" suppressHydrationWarning>
+    <html lang="he" dir="rtl" suppressHydrationWarning className={`${poppins.variable} ${assistant.variable}`}>
       <body className="h-screen inline">
         <CartProvider>
           <Header />

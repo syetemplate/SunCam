@@ -542,7 +542,7 @@ export default {
         ],
     },
     facts: {
-        title: 'רחפן מדהים לילדים אנחנו כבר <span className="color-limegreen">5 שנים בתחום</span>',
+        title: 'אנחנו כבר <span className="color-limegreen">5 שנים בתחום</span>',
         description: 'MiniDrone מתמחה בייצור רחפנים איכותיים, קלים לשימוש ובטיחותיים במיוחד עבור ילדים. עם ניסיון של 5 שנה, אנו מחויבים לספק חוויית טיסה מהנה ומתגמלת ללקוחותינו.',
         items: [
             {
