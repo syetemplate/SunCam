@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
     meta: {
-        title: 'MiniDrone | רחפן עם מצלמה לילדים',
+        title: 'רחפן עם מצלמה לילדים | MiniDrone',
         description: 'MiniDrone מתמחה בייצור רחפנים עם מצלמה בטוחים וקלים לשימוש במיוחד לילדים. עם רחפן MiniDrone, הילדים שלכם יוכלו לחוות חוויית טיסה מדהימה תוך צילום וידאו ותמונות ברמה גבוהה, בצורה מהנה ובטוחה',
     },
     header: {
@@ -420,9 +420,9 @@ export default {
                     ],
                 },
                 images: [
-                    { imageName: 'gallery-1.webp', title: 'תמונה 1', description: 'MiniDrone בסיסי בפעולה - מראה צד.' },
-                    { imageName: 'gallery-2.webp', title: 'תמונה 2', description: 'ילד מעיף את הMiniDrone בסביבת פארק.' },
-                    { imageName: 'gallery-3.webp', title: 'תמונה 3', description: 'קלוז אפ של המצלמה האיכותית של הMiniDrone.' },
+                    { imageName: 'gallery-1.webp', title: 'תמונה 1', description: 'MiniDrone רחפן עם מצלמה לילדים ושלט רחוק עם מסך טלפון' },
+                    { imageName: 'gallery-2.webp', title: 'תמונה 2', description: 'MiniDrone רחפן עם מצלמה לילדים בעל ארבעה מדחפים' },
+                    { imageName: 'gallery-3.webp', title: 'תמונה 3', description: 'שלט רחוק ל-MiniDrone רחפן עם מצלמה לילדים, כולל מקום לטלפון נייד' },
                 ],
             },
             {
@@ -460,9 +460,9 @@ export default {
                     ],
                 },
                 images: [
-                    { imageName: 'gallery-4.webp', title: 'תמונה 1', description: 'צילום אווירי של חוף ים מדהים שצולם על ידי MiniDrone פרו.' },
-                    { imageName: 'gallery-5.webp', title: 'תמונה 2', description: 'ילד מפעיל את הMiniDrone פרו על שלט רחוק.' },
-                    { imageName: 'gallery-6.webp', title: 'תמונה 3', description: 'MiniDrone פרו חג מעל אגם עם נוף עוצר נשימה.' },
+                    { imageName: 'gallery-4.webp', title: 'תמונה 1', description: 'MiniDrone רחפן עם מצלמה לילדים, שלט רחוק, סוללות נוספות ותיק נשיאה' },
+                    { imageName: 'gallery-5.webp', title: 'תמונה 2', description: 'אביזרים נלווים ל-MiniDrone רחפן עם מצלמה לילדים, כולל כבלים, מדחפים וסוללה' },
+                    { imageName: 'gallery-6.webp', title: 'תמונה 3', description: 'שלט רחוק ומסך של רחפן MiniDrone לילדים' },
                 ],
             },
             {
@@ -500,9 +500,9 @@ export default {
                     ],
                 },
                 images: [
-                    { imageName: 'gallery-7.webp', title: 'תמונה 1', description: 'קלוז אפ של MiniDrone פרו פלוס מראה את החיישנים המתקדמים שלו.' },
-                    { imageName: 'gallery-8.webp', title: 'תמונה 2', description: 'איור של MiniDrone פרו פלוס עם מאפייני הדגל הניתנים להחלפה.' },
-                    { imageName: 'gallery-9.webp', title: 'תמונה 3', description: 'השוואה של MiniDrone פרו פלוס עם הדגמים האחרים של MiniDrone.' },
+                    { imageName: 'gallery-7.webp', title: 'תמונה 1', description: 'רחפן MiniDrone לילדים עם מצלמה, שלט רחוק, סוללות ותיק נשיאה' },
+                    { imageName: 'gallery-8.webp', title: 'תמונה 2', description: 'תיק נשיאה לרחפן MiniDrone לילדים' },
+                    { imageName: 'gallery-9.webp', title: 'תמונה 3', description: 'רחפן MiniDrone מקופל לילדים עם מצלמה ושלט רחוק' },
                 ],
             },
         ],
