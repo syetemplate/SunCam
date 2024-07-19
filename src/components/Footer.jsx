@@ -37,17 +37,15 @@ const dynamicImages = recentPosts.map(({ title, imageName }) => ({
     }),
 }));
 
-const validationSchema = yup.object().shape({
-    email: yup.string().email(content.newsletter.emailError).required(content.newsletter.emailError),
-});
-
 const Footer = ({ className }) => {
-    const [postSubmitMessage, setPostSubmitMessage] = React.useState({ message: '', type: '' });
-    const formik = useFormik({
+    const [postSubscribeMessage, setPostSubscribeMessage] = React.useState({ message: '', type: '' });
+    const subscribeFormik = useFormik({
         initialValues: {
             email: '',
         },
-        validationSchema,
+        validationSchema: yup.object().shape({
+            email: yup.string().email(content.newsletter.emailError).required(content.newsletter.emailError),
+        }),
         onSubmit: async values => {
             try {
                 debugger;
@@ -55,12 +53,29 @@ const Footer = ({ className }) => {
                 if (response.status !== 200) {
                     throw new Error(response.statusText);
                 }
-                formik.resetForm();
-                setPostSubmitMessage({ message: content.newsletter.success, type: 'success' });
+                subscribeFormik.resetForm();
+                setPostSubscribeMessage({ message: content.newsletter.success, type: 'success' });
             } catch (error) {
                 console.error('Error subscribing:', error);
-                setPostSubmitMessage({ message: content.newsletter.error, type: 'error' });
+                setPostSubscribeMessage({ message: content.newsletter.error, type: 'error' });
             }
+        },
+    });
+
+    const [postContactMessage, setPostContactMessage] = React.useState({ message: '', type: '' });
+    const contactFormik = useFormik({
+        initialValues: {
+            email: '',
+            message: '',
+        },
+        validationSchema: yup.object().shape({
+            email: yup.string().email(content.footer.contact.emailError).required(content.footer.contact.emailError),
+            message: yup.string().min(1, content.footer.contact.messageError).required(content.footer.contact.messageError),
+        }),
+        onSubmit: () => {
+            setTimeout(() => {
+                setPostContactMessage({ message: content.footer.contact.success, type: 'success' });
+            }, 200);
         },
     });
 
@@ -83,8 +98,8 @@ const Footer = ({ className }) => {
                             </div>
                             <div className="w-full pr-4 pl-4 rtl:lg:pr-0 rtl:lg:pl-4">
                                 <div className="newsletter-form">
-                                    <FormikProvider value={formik}>
-                                        <form onSubmit={formik.handleSubmit} className="flex-col sm:flex-row">
+                                    <FormikProvider value={subscribeFormik}>
+                                        <form onSubmit={subscribeFormik.handleSubmit} className="flex-col sm:flex-row">
                                             <Field name="email">
                                                 {({ field, meta }) => (
                                                     <div className="fled-col">
@@ -92,18 +107,18 @@ const Footer = ({ className }) => {
                                                             {...field}
                                                             type="email"
                                                             placeholder={content.newsletter.emailPlaceholder}
-                                                            disabled={formik.isSubmitting || postSubmitMessage?.message}
+                                                            disabled={subscribeFormik.isSubmitting || postSubscribeMessage?.message}
                                                             className="w-full disabled:opacity-50 disabled:pointer-events-none disabled:cursor-default"
                                                         />
                                                         {meta.touched && meta.error && (
-                                                            <p className="text-red-500 text-start m-1">{meta.error}</p>
+                                                            <p className="text-red-500 text-start mb-1">{meta.error}</p>
                                                         )}
-                                                        {postSubmitMessage?.message && (
+                                                        {postSubscribeMessage?.message && (
                                                             <p className={clsx('text-start m-1', {
-                                                                'text-green-500': (postSubmitMessage?.type === 'success'),
-                                                                'text-red-500': (postSubmitMessage?.type === 'error'),
+                                                                'text-green-500': (postSubscribeMessage?.type === 'success'),
+                                                                'text-red-500': (postSubscribeMessage?.type === 'error'),
                                                             })}>
-                                                                {postSubmitMessage?.message}
+                                                                {postSubscribeMessage?.message}
                                                             </p>
                                                         )}
                                                     </div>
@@ -112,7 +127,7 @@ const Footer = ({ className }) => {
                                             <button
                                                 type="submit"
                                                 className="my-2 inline-block align-middle text-center select-none border font-normal whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline cursor-pointer disabled:opacity-50 disabled:pointer-events-none disabled:cursor-default"
-                                                disabled={formik.isSubmitting || postSubmitMessage?.message}
+                                                disabled={subscribeFormik.isSubmitting || postSubscribeMessage?.message}
                                             >
                                                 {content.newsletter.submit}
                                             </button>
@@ -197,13 +212,45 @@ const Footer = ({ className }) => {
                                 <h5>{content.footer.contact.title}</h5>
                             </div>
                             <div className="footer-form rtl:text-right" id="contact">
-                                <form action="#">
-                                    <input type="email" placeholder={content.footer.contact.emailPlaceholder} className="rtl:text-right" />
-                                    <textarea name="message" placeholder={content.footer.contact.messagePlaceholder} className="rtl:text-right"></textarea>
-                                    <button className="inline-block align-middle text-center select-none border font-bold whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline">
-                                        {content.footer.contact.submit}
-                                    </button>
-                                </form>
+                                <FormikProvider value={contactFormik}>
+                                    <form onSubmit={contactFormik.handleSubmit}>
+                                        <Field name="email" type="email">
+                                            {({ field }) => (
+                                                <input
+                                                    {...field}
+                                                    placeholder={content.footer.contact.emailPlaceholder}
+                                                    disabled={contactFormik.isSubmitting || postContactMessage?.message}
+                                                    className="rtl:text-right disabled:opacity-50 disabled:pointer-events-none disabled:cursor-default"
+                                                />
+                                            )}
+                                        </Field>
+                                        <Field name="message" type="textarea">
+                                            {({ field }) => (
+                                                <textarea
+                                                    {...field}
+                                                    placeholder={content.footer.contact.messagePlaceholder}
+                                                    disabled={contactFormik.isSubmitting || postContactMessage?.message}
+                                                    className="rtl:text-right disabled:opacity-50 disabled:pointer-events-none disabled:cursor-default"
+                                                />
+                                            )}
+                                        </Field>
+                                        <button
+                                            type="submit"
+                                            disabled={contactFormik.isSubmitting || postContactMessage?.message}
+                                            className="inline-block align-middle text-center select-none border font-bold whitespace-no-wrap rounded py-1 px-3 leading-normal no-underline cursor-pointer disabled:opacity-50 disabled:pointer-events-none disabled:cursor-default"
+                                        >
+                                            {content.footer.contact.submit}
+                                        </button>
+                                        {postContactMessage?.message && (
+                                            <p className={clsx('text-start mt-4', {
+                                                'text-green-500': (postContactMessage?.type === 'success'),
+                                                'text-red-500': (postContactMessage?.type === 'error'),
+                                            })}>
+                                                {postContactMessage?.message}
+                                            </p>
+                                        )}
+                                    </form>
+                                </FormikProvider>
                             </div>
                         </div>
                     </div>
