@@ -15,6 +15,7 @@
     "clsx": "^2.1.1",
     "formik": "^2.4.6",
     "lodash": "^4.17.21",
+    "material-symbols": "^0.21.2",
     "mongoose": "^8.4.3",
     "next": "14.2.3",
     "react": "^18",

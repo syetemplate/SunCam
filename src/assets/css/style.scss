@@ -18,8 +18,10 @@
 16. Newsletter
 17. Footer
 18. Preloader
-
 */
+
+// First priority imports:
+@import 'material-symbols';
 
 /* 1. Theme default css */
 @tailwind base;
@@ -2635,7 +2637,7 @@ button[variant="secondary"] {
 
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+// Next priority imports:
 @import './animate.min.scss';
 @import './fontawesome-all.min.scss';
 @import './magnific-popup.scss';
