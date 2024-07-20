@@ -153,8 +153,14 @@ const Footer = ({ className }) => {
                                 <ul className="rtl:text-right">
                                     {content.footer.social.map((social, index) => (
                                         <li key={index}>
-                                            <a href={social.href} target="_blank">
-                                                <i className={social.icon}></i>
+                                            <a
+                                                href={social.href}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                aria-label={social.name}
+                                                className="inline-flex items-center"
+                                            >
+                                                <i className={social.icon} aria-hidden="true"/>
                                             </a>
                                         </li>
                                     ))}
@@ -187,7 +193,7 @@ const Footer = ({ className }) => {
                             </div>
                         </div>
                     </div>
-                    <div className="xl:w-1/4 lg:w-1/3 md:w-1/2 px-4">
+                    <div className="xl:w-1/4 lg:w-1/3 md:w-1/2 w-full px-4">
                         <div className="footer-widget mb-50">
                             <div className="fw-title mb-30 rtl:text-right">
                                 <h5>{content.footer.usefulLinks.title}</h5>

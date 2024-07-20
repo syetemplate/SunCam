@@ -16,7 +16,7 @@ export default {
         },
     },
     hero: {
-        title: 'רחפן <span className="lg:text-limegreen">עם מצלמה</span> לילדים',
+        title: 'רחפן <span className="lg:text-primary">עם מצלמה</span> לילדים',
         description: 'ילדים לא נועדו לשבת מול מסכים. בעזרת רחפן מצלמה של MiniDrone, הילדים שלכם יוכלו לצאת החוצה, לחקור את העולם מזווית חדשה ולפתח כישורים חשובים תוך כדי משחק מהנה ובטוח',
         cta: {
             text: 'רכישה',
@@ -539,7 +539,7 @@ export default {
         ],
     },
     facts: {
-        title: 'רחפן מדהים לילדים שלך אנחנו כבר <span className="color-limegreen">15 שנים בתחום</span>',
+        title: 'רחפן מדהים לילדים שלך אנחנו כבר <span className="color-primary">15 שנים בתחום</span>',
         description: 'MiniDrone מתמחה בייצור רחפנים איכותיים, קלים לשימוש ובטיחותיים במיוחד עבור ילדים. עם ניסיון של 15 שנה, אנו מחויבים לספק חוויית טיסה מהנה ומתגמלת ללקוחותינו.',
         items: [
             {

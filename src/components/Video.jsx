@@ -30,7 +30,7 @@ const Video = ({ className }) => {
                         </div>
                         <button
                             onClick={handleVideoClick}
-                            className="relative z-10 flex items-center justify-center text-white text-xl w-24 h-24 rounded-full bg-limegreen"
+                            className="relative z-10 flex items-center justify-center text-white text-xl w-24 h-24 rounded-full bg-primary"
                         >
                             <i className="fas fa-play"></i>
                         </button>

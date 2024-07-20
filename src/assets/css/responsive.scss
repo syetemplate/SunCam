@@ -109,7 +109,7 @@
 	.navbar-toggler {
 		padding: 8px;
 		border-radius: 2px;
-		border: 2px solid #2acb35;
+		border: 2px solid var(--color-primary);
 		width: 45px;
 		height: inherit;
 		position: relative;
@@ -117,7 +117,7 @@
 	}
 
 	.navbar-icon {
-		background: #2acb35;
+		background: var(--color-primary);
 		height: 3px;
 		width: 20px;
 		margin: auto;
@@ -150,11 +150,11 @@
 	}
 
 	.main-menu .navbar-nav li.nav-item.active a.nav-link {
-		color: #2acb35;
+		color: var(--color-primary);
 	}
 
 	.sticky-menu .main-menu .navbar-nav li.nav-item.active a.nav-link {
-		color: #2acb35;
+		color: var(--color-primary);
 	}
 
 	.home-yellow .sticky-menu .main-menu .navbar-nav li.nav-item.active a.nav-link {
@@ -339,7 +339,7 @@
 	.navbar-toggler {
 		padding: 8px;
 		border-radius: 2px;
-		border: 2px solid #2acb35;
+		border: 2px solid var(--color-primary);
 		width: 45px;
 		height: inherit;
 		position: relative;
@@ -347,7 +347,7 @@
 	}
 
 	.navbar-icon {
-		background: #2acb35;
+		background: var(--color-primary);
 		height: 3px;
 		width: 20px;
 		margin: auto;
@@ -377,11 +377,11 @@
 	}
 
 	.main-menu .navbar-nav li.nav-item.active a.nav-link {
-		color: #2acb35;
+		color: var(--color-primary);
 	}
 
 	.sticky-menu .main-menu .navbar-nav li.nav-item.active a.nav-link {
-		color: #2acb35;
+		color: var(--color-primary);
 	}
 
 	.home-yellow .sticky-menu .main-menu .navbar-nav li.nav-item.active a.nav-link {

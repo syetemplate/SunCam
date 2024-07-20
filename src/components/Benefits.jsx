@@ -8,15 +8,15 @@ import content from '@/content';
 const addHoverAnimation = e => {
     e.currentTarget.querySelector('h5').classList.remove('duration-500');
     e.currentTarget.querySelector('img').classList.remove('duration-500');
-    e.currentTarget.querySelector('h5').classList.add('text-limegreen', 'duration-300');
-    e.currentTarget.querySelector('img').classList.add('border-limegreen', 'duration-300');
+    e.currentTarget.querySelector('h5').classList.add('text-primary', 'duration-300');
+    e.currentTarget.querySelector('img').classList.add('border-primary', 'duration-300');
 };
 
 const removeHoverAnimation = e => {
     e.currentTarget.querySelector('h5').classList.add('duration-500');
     e.currentTarget.querySelector('img').classList.add('duration-500');
-    e.currentTarget.querySelector('h5').classList.remove('text-limegreen', 'duration-300');
-    e.currentTarget.querySelector('img').classList.remove('border-limegreen', 'duration-300');
+    e.currentTarget.querySelector('h5').classList.remove('text-primary', 'duration-300');
+    e.currentTarget.querySelector('img').classList.remove('border-primary', 'duration-300');
 };
 
 const BenefitsImage = dynamic(() => import(`@/assets/media/${content.benefits.imageName}`).then(module => {
@@ -58,7 +58,7 @@ const Benefits = ({ className }) => {
                 <div className="text-center mb-14">
                     <h2 className="text-blue-950 text-4xl font-bold">{content.benefits.title}</h2>
                     <div className="relative h-0.5 w-44 bg-gray-300 mx-auto mt-6 mb-8 rounded-[50%]">
-                        <div className="absolute -top-[3px] h-2 w-2 bg-limegreen rounded-full animated2 duration-4000 infinite moveLeftRight"></div>
+                        <div className="absolute -top-[3px] h-2 w-2 bg-primary rounded-full animated duration-4000 infinite moveLeftRight"/>
                     </div>
                     <p className="text-zinc-500 text-sm font-medium leading-loose">{content.benefits.subtitle}</p>
                 </div>

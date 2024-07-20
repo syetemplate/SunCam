@@ -6,7 +6,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'limegreen': '#2acb35',
+        limegreen: '#2acb35',
+        primary: '#0060ac',
       }
     },
   },

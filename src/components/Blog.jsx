@@ -36,7 +36,7 @@ const Blog = ({ className }) => {
                     <div className="xl:w-3/5 pr-4 pl-4 lg:w-2/3 pr-4 pl-4 md:w-4/5 pr-4 pl-4">
                         <div className="section-title text-center mb-55">
                             <h2>{content.blog.title}</h2>
-                            <div className="bar"></div>
+                            <div className="bar"/>
                             <p>{content.blog.description}</p>
                         </div>
                     </div>

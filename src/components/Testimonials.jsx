@@ -57,7 +57,7 @@ const Testimonials = ({ className }) => {
                                         </div>
                                         <div className="testimonials-content">
                                             <div className="testimonials-icon">
-                                                <span className="material-symbols-outlined text-3xl text-limegreen">verified</span>
+                                                <span className="material-symbols-outlined text-3xl text-primary">verified</span>
                                             </div>
                                             <p>{testimonial.text}</p>
                                             <div className="testimonials-info">

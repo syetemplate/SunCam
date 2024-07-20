@@ -19,9 +19,21 @@ const Header = ({ className }) => {
     const shouldShowCartBadge = (cart.items.length > 0);
 
     const cartIcon = (
-        <a className="relative cursor-pointer" href="/checkout">
-            <i className="fas fa-shopping-basket px-4 text-limegreen text-xl" />
-            {shouldShowCartBadge && <span className="absolute top-0 right-[14px] h-[8px] w-[8px] bg-red-500 rounded-full z-10" />}
+        <a
+            className="relative cursor-pointer inline-flex items-center"
+            href="/checkout"
+            aria-label="Cart"
+        >
+            <i
+                className="fas fa-shopping-basket px-4 text-primary text-xl"
+                aria-hidden="true"
+            />
+            {shouldShowCartBadge && (
+                <span
+                    className="absolute top-0 right-[14px] h-[8px] w-[8px] bg-red-500 rounded-full z-10"
+                    aria-hidden="true"
+                />
+            )}
         </a>
     );
 
@@ -80,13 +92,14 @@ const Header = ({ className }) => {
         <header className={clsx('bg-white text-gray-600 body-font lg:px-28 lg:py-4 border-b border-green-200 border-opacity-50', [className])} ref={headerRef}>
             <div className="flex flex-wrap px-4 pt-[24px] pb-[8px] xl:p-5 flex-row items-center justify-between">
                 <a href="/" className="flex title-font font-medium items-center text-gray-900 mb-2 md:mb-0">
-                    <img src={logoDark.src} alt="logo" className="h-[36px]"/>
+                    <img src={logoDark.src} alt="logo" className="h-[36px]" />
                 </a>
                 <div className="md:hidden">
                     {cartIcon}
                     <button
                         type="button"
                         className="p-2 rounded-lg border border-gray-700 bg-gray-800 text-gray-400 hover:bg-gray-700/20 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-blue-600 transition-all text-sm"
+                        aria-label={isCollapsed ? "Open navigation menu" : "Close navigation menu"}
                         aria-controls="navbar"
                         aria-expanded={!isCollapsed}
                         onClick={toggleCollapse}
@@ -134,7 +147,7 @@ const Header = ({ className }) => {
                             <a
                                 key={href}
                                 href={href}
-                                className={`${pathname === href ? 'text-limegreen' : 'text-gray-800'} hover:text-limegreen font-bold text-xl relative mx-5 py-2 capitalize`}
+                                className={`${pathname === href ? 'text-primary' : 'text-gray-800'} hover:text-primary font-bold text-xl relative mx-5 py-2 capitalize`}
                             >
                                 {label}
                             </a>

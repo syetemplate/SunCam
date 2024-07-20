@@ -204,7 +204,7 @@ const Product = ({ className, productItem }) => {
                     <div name="overlay" className="fixed inset-0 bg-black bg-opacity-50 z-50">
                         <div className="w-full lg:w-2/5 h-full flex flex-col animated2 fadeInRight fixed bottom-0 right-0 z-50 bg-white shadow-[0px_10px_15px_rgba(25,25,25,0.075)] rounded-none p-0 border-b-0 px-4 py-8 rtl:right-auto rtl:left-0">
                             <div className="flex flex-col items-center border-b border-gray-200 pb-8">
-                                <i className="fas fa-times text-3xl absolute left-[24px] top-[24px] hover:text-limegreen cursor-pointer rtl:left-auto rtl:right-[24px]" onClick={closeCart} />
+                                <i className="fas fa-times text-3xl absolute left-[24px] top-[24px] hover:text-primary cursor-pointer rtl:left-auto rtl:right-[24px]" onClick={closeCart} />
                                 <h2 className="text-2xl font-semibold leading-6 text-gray-800">
                                     {content.cart.title}
                                 </h2>
@@ -248,7 +248,7 @@ const Product = ({ className, productItem }) => {
                                 <ul className="ml-0 mr-2 rtl:ml-2 rtl:mr-0">
                                     {[...Array(5)].map((_, index) => (
                                         <li key={index}>
-                                            <i className={`fas fa-star${index < averageRating ? ' text-limegreen' : ''}`} />
+                                            <i className={`fas fa-star${index < averageRating ? ' text-primary' : ''}`} />
                                         </li>
                                     ))}
                                 </ul>
@@ -279,7 +279,7 @@ const Product = ({ className, productItem }) => {
                                 <ul className="flex flex-wrap list-none pl-0 mb-0 border border-t-0 border-r-0 border-l-0 border-b-1 border-gray-200 mb-25" id="myTab" role="tablist">
                                     <li>
                                         <a
-                                            className={`inline-block py-2 px-4 no-underline${activeTab === 'description' ? ' text-limegreen' : ''} hover:text-limegreen cursor-pointer`}
+                                            className={`inline-block py-2 px-4 no-underline${activeTab === 'description' ? ' text-primary' : ''} hover:text-primary cursor-pointer`}
                                             onClick={() => setActiveTab('description')}
                                         >
                                             {productItem.description.title}
@@ -287,7 +287,7 @@ const Product = ({ className, productItem }) => {
                                     </li>
                                     <li>
                                         <a
-                                            className={`inline-block py-2 px-4 no-underline${activeTab === 'additionalInfo' ? ' text-limegreen' : ''} hover:text-limegreen cursor-pointer`}
+                                            className={`inline-block py-2 px-4 no-underline${activeTab === 'additionalInfo' ? ' text-primary' : ''} hover:text-primary cursor-pointer`}
                                             onClick={() => setActiveTab('additionalInfo')}
                                         >
                                             {productItem.additionalInfo.title}
@@ -295,7 +295,7 @@ const Product = ({ className, productItem }) => {
                                     </li>
                                     <li>
                                         <a
-                                            className={`inline-block py-2 px-4 no-underline${activeTab === 'reviews' ? ' text-limegreen' : ''} hover:text-limegreen cursor-pointer`}
+                                            className={`inline-block py-2 px-4 no-underline${activeTab === 'reviews' ? ' text-primary' : ''} hover:text-primary cursor-pointer`}
                                             onClick={() => setActiveTab('reviews')}
                                         >
                                             {productItem.reviews.title} ({productItem.reviews.list.length})
@@ -328,7 +328,7 @@ const Product = ({ className, productItem }) => {
                                                                     <ul>
                                                                         {[...Array(5)].map((_, index) => (
                                                                             <li key={index}>
-                                                                                <i className={`fas fa-star${index < review.rating ? ' text-limegreen' : ''}`} />
+                                                                                <i className={`fas fa-star${index < review.rating ? ' text-primary' : ''}`} />
                                                                             </li>
                                                                         ))}
                                                                     </ul>

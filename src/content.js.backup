@@ -16,7 +16,7 @@ export default {
         },
     },
     hero: {
-        title: 'Drone with <span className="lg:text-limegreen">camera</span> for kids',
+        title: 'Drone with <span className="lg:text-primary">camera</span> for kids',
         description: 'We provide the best drone with camera for kids. Our drone is easy to use and safe for kids. Order now and get a discount!',
         cta: {
             text: 'PURCHASE',
@@ -514,7 +514,7 @@ export default {
         ],
     },
     facts: {
-        title: 'Awesome supplement for your body we have <span className="color-limegreen">15 years of experience</span>',
+        title: 'Awesome supplement for your body we have <span className="color-primary">15 years of experience</span>',
         description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint quasi ut minus labore voluptate natus fuga voluptatum, id architecto velit eum magni nostrum sit mollitia, autem dignissimos, optio officiis? Nesciunt. consectetur adipisicing elit. Sint quasi ut minus labore voluptate natus fuga',
         items: [
             {

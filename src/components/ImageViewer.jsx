@@ -52,7 +52,7 @@ export const ImageViewer = ({ image, onClose = () => { } }) => {
                     onClick={onClose}
                     className="absolute p-4 -top-[52px] -right-[16px] bg-transparent hover:bg-transparent border-transparent text-white text-2xl flex items-center justify-center animated2 fadeIn"
                 >
-                    <i className={`fas fa-times ${isHoveringOutside ? 'text-limegreen' : 'text-white'}`} />
+                    <i className={`fas fa-times ${isHoveringOutside ? 'text-primary' : 'text-white'}`} />
                 </button>
                 <DynamicImage
                     onMouseEnter={() => setIsHoveringOutside(false)}

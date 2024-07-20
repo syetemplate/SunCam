@@ -35,9 +35,10 @@
 }
 
 :root {
-	--font-inter: var(--font-inter);
 	--font-poppins: var(--font-poppins);
 	--font-assistant: var(--font-assistant);
+	// --color-primary: #2acb35;
+	--color-primary: #0060ac;
 }
 
 body {
@@ -311,7 +312,7 @@ label {
 .transparent-btn,
 .faq-wrapper .card-header h5 a::after,
 .cart-plus-minus input {
-	border: 2px solid #2acb35;
+	border: 2px solid var(--color-primary);
 }
 
 .home-yellow .btn,
@@ -339,7 +340,7 @@ label {
 .pagination li.active a,
 .pagination li a:hover,
 #scrollUp {
-	background: #2acb35 none repeat scroll 0 0;
+	background: var(--color-primary) none repeat scroll 0 0;
 }
 
 .home-yellow .btn,
@@ -411,7 +412,7 @@ label {
 .f-rc-content h5 a:hover,
 .fw-link ul li a:hover,
 .copyright-text p span {
-	color: #2acb35;
+	color: var(--color-primary);
 }
 
 .home-yellow .btn:hover,
@@ -461,7 +462,7 @@ label {
 .single-pricing.active,
 .pagination li.active a,
 .pagination li a:hover {
-	border-color: #2acb35;
+	border-color: var(--color-primary);
 }
 
 .home-yellow .single-pricing:hover,
@@ -474,7 +475,7 @@ label {
 /* 2. Header */
 .main-header {
 	padding: 15px 0;
-	border-bottom: 1px solid #2acb352b;
+	border-bottom: 1px solid var(--color-primary)2b;
 }
 
 .home-yellow .main-header {
@@ -848,7 +849,7 @@ label {
 }
 
 .single-delivery-benefits:hover .ds-icon i {
-	border: 2px dashed #2acb35;
+	border: 2px dashed var(--color-primary);
 }
 
 .home-yellow .single-delivery-benefits:hover .ds-icon i {
@@ -2015,11 +2016,11 @@ label {
 }
 
 .tag-list ul li a:hover::after {
-	border-color: transparent transparent transparent #2acb35;
+	border-color: transparent transparent transparent var(--color-primary);
 }
 
 .tag-list ul li a:hover::before {
-	border-color: transparent transparent #2acb35 transparent;
+	border-color: transparent transparent var(--color-primary) transparent;
 }
 
 .blog-details-img {
@@ -2322,7 +2323,7 @@ blockquote::before {
 .newsletter-wrap {
 	box-shadow: 0px 2px 12.09px 0.91px rgba(68, 68, 68, 0.24);
 	background: #fff;
-	border: 8px solid #2acb35;
+	border: 8px solid var(--color-primary);
 	padding: 40px 40px 20px 40px;
 	background-position: center;
 	background-size: cover;
@@ -2569,21 +2570,21 @@ blockquote::before {
 
 }
 
-button {
+a[role="button"], button {
 	@apply rounded-full border-2 px-8 py-3 text-sm font-bold;
-	@apply bg-limegreen text-white border-limegreen;
+	@apply bg-primary text-white border-primary;
 	transition: all 0.4s ease-in-out;
 
 	&:hover {
-		@apply bg-white text-limegreen;
+		@apply bg-white text-primary;
 	}
 }
 
-button[variant="secondary"] {
-	@apply bg-white text-limegreen border-limegreen;
+a[role="button"][variant="secondary"], button[variant="secondary"] {
+	@apply bg-white text-primary border-primary;
 
 	&:hover {
-		@apply bg-limegreen text-white;
+		@apply bg-primary text-white;
 	}
 }
 

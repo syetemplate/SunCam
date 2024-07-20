@@ -8,8 +8,8 @@ import ImageViewer from '@/components/ImageViewer';
 import galleryBgImage from '@/assets/bg/gallery.jpg';
 import content from '@/content';
 
-export const activeProductItemButtonClassName = 'px-[18px] py-4 md:py-2 mx-0 md:mx-0.5 my-0.5 md:my-0 text-[15px] font-medium rounded-full transition duration-300 bg-limegreen text-white shadow-[0px_0px_24px_0px_rgba(42,203,53,0.48)]';
-export const inactiveProductItemButtonClassName = 'px-[18px] py-4 md:py-2 mx-0 md:mx-0.5 my-0.5 md:my-0 text-[15px] font-medium rounded-full transition duration-300 bg-white text-zinc-500 hover:bg-limegreen hover:text-white border-transparent';
+export const activeProductItemButtonClassName = 'px-[18px] py-4 md:py-2 mx-0 md:mx-0.5 my-0.5 md:my-0 text-[15px] font-medium rounded-full transition duration-300 bg-primary text-white shadow-md shadow-primary/50';
+export const inactiveProductItemButtonClassName = 'px-[18px] py-4 md:py-2 mx-0 md:mx-0.5 my-0.5 md:my-0 text-[15px] font-medium rounded-full transition duration-300 bg-white text-zinc-500 hover:bg-primary hover:text-white border-transparent';
 
 const getThumbnailDimensions = index => {
     const mod = (index % 6);
@@ -89,7 +89,7 @@ const Gallery = ({ className }) => {
             <div className="text-center mb-12">
                 <h2 className="text-blue-950 text-4xl font-bold">{content.gallery.title}</h2>
                 <div className="relative h-0.5 w-44 bg-gray-300 mx-auto mt-6 mb-8 rounded-[50%]">
-                    <div className="absolute -top-[3px] h-2 w-2 bg-limegreen rounded-full animated2 duration-4000 infinite moveLeftRight"></div>
+                    <div className="absolute -top-[3px] h-2 w-2 bg-primary rounded-full animated duration-4000 infinite moveLeftRight"/>
                 </div>
             </div>
             <div className="text-center mb-12">
@@ -125,7 +125,7 @@ const Gallery = ({ className }) => {
                                             onClick={() => setSelectedImage(image)}
                                         >
                                             <DynamicThumbnail />
-                                            <div className="absolute inset-0 bg-limegreen opacity-0 transition-opacity duration-500 group-hover:opacity-75 m-1"></div>
+                                            <div className="absolute inset-0 bg-primary opacity-0 transition-opacity duration-500 group-hover:opacity-75 m-1"></div>
                                             <div className="absolute left-7 right-7 top-10 z-10 opacity-0 group-hover:opacity-100">
                                                 <h5 className="text-2xl font-extrabold text-white relative duration-500 animated2 rtl:text-right">
                                                     {image.title}

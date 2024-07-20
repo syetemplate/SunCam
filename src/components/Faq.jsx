@@ -47,7 +47,7 @@ const Faq = ({ className }) => {
                     <div className="w-full md:w-4/5 lg:w-7/12">
                         <div className="section-title text-center mb-55">
                             <h2>{content.faq.title}</h2>
-                            <div className="bar"></div>
+                            <div className="bar"/>
                             <p>{content.faq.description}</p>
                         </div>
                     </div>
@@ -66,9 +66,12 @@ const Faq = ({ className }) => {
                                         onClick={() => handleAccordionClick(index)}
                                     >
                                         <div className="flex justify-between items-center">
-                                            <h3 className={`text-base font-semibold transition-colors duration-500 ${activeIndex === index ? 'text-limegreen' : ''}`}>{faq.question}</h3>
-                                            <span className={`text-xl flex items-center transition-colors duration-500 ${activeIndex === index ? 'text-limegreen' : ''}`}>
-                                                <span className="w-6 h-6 rounded-full border-2 border-current flex items-center justify-center mr-2">
+                                            <h3 className={`text-base font-semibold transition-colors duration-500 ${activeIndex === index ? 'text-primary' : ''}`}>{faq.question}</h3>
+                                            <span className={`text-xl flex items-center transition-colors duration-500 ${activeIndex === index ? 'text-primary' : ''}`}>
+                                                <span className={clsx('w-6 h-6 rounded-full border-2 border-current flex items-center justify-center mr-2', {
+                                                    'pb-1': (activeIndex === index),
+                                                    'pb-[2px]': (activeIndex !== index),
+                                                })}>
                                                     {activeIndex === index ? '-' : '+'}
                                                 </span>
                                             </span>

@@ -7,7 +7,7 @@ const AboutUsPage = () => {
                 <div className="px-4 w-full lg:w-9/12">
                     <div className="section-title text-center mb-55">
                         <h2>{content.aboutUs.title}</h2>
-                        <div className="bar"></div>
+                        <div className="bar"/>
                     </div>
                 </div>
             </div>

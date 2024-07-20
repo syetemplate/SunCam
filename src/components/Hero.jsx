@@ -44,18 +44,31 @@ const Hero = ({ className }) => {
                             style={{ visibility: 'visible', animationDelay: '0.4s', animationName: 'fadeInUp' }}
                             dangerouslySetInnerHTML={{ __html: content.hero.description }}
                         />
-                        <div className="slider-btn lg:flex">
-                            <button className="bg-limegreen text-white py-3 px-6 rounded-full lg:mr-4 rtl:lg:ml-4 rtl:lg:mr-0 wow fadeInLeft animated2" data-wow-delay="0.6s" style={{ visibility: 'visible', animationDelay: '0.6s', animationName: 'fadeInLeft' }}>
-                                <a href={content.hero.cta.href}>{content.hero.cta.text}</a>
-                            </button>
-                            <button variant="secondary" className="bg-white text-gray-700 py-3 px-6 rounded-full hidden lg:block wow fadeInRight animated2" data-wow-delay="0.6s" style={{ visibility: 'visible', animationDelay: '0.6s', animationName: 'fadeInRight' }}>
-                                <a href={content.hero.cta2.href}>{content.hero.cta2.text}</a>
-                            </button>
+                        <div className="slider-btn flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:space-x-4 rtl:lg:space-x-reverse">
+                            <a
+                                href={content.hero.cta.href}
+                                role="button"
+                                className="inline-block bg-primary text-white py-4 px-8 rounded-full text-lg font-medium transition-colors hover:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary wow fadeInLeft"
+                                data-wow-delay="0.6s"
+                                style={{ visibility: 'visible', animationDelay: '0.6s', animationName: 'fadeInLeft' }}
+                            >
+                                {content.hero.cta.text}
+                            </a>
+                            <a
+                                href={content.hero.cta2.href}
+                                role="button"
+                                variant="secondary"
+                                className="inline-block bg-white text-gray-700 py-4 px-8 rounded-full text-lg font-medium transition-colors hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 hidden lg:inline-block wow fadeInRight"
+                                data-wow-delay="0.6s"
+                                style={{ visibility: 'visible', animationDelay: '0.6s', animationName: 'fadeInRight' }}
+                            >
+                                {content.hero.cta2.text}
+                            </a>
                         </div>
                     </div>
                 </div>
                 <div className="lg:w-1/2 lg:pl-8 rtl:lg:pr-8 rtl:lg:pl-0">
-                    <HeroImage/>
+                    <HeroImage />
                 </div>
             </div>
         </section>
