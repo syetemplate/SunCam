@@ -11,6 +11,7 @@ const HeroImage = dynamic(() => import(`@/assets/media/${content.hero.imageName}
             src={module.default}
             alt="hero"
             width={880}
+            height={700}
             sizes="(min-width: 1024px) 30vw, 90vw"
             className="w-[880px] object-contain p1 fadeInRight animated2"
             data-wow-delay="0.6s"
@@ -20,7 +21,7 @@ const HeroImage = dynamic(() => import(`@/assets/media/${content.hero.imageName}
     Component.displayName = `Image-${content.hero.imageName}`;
     return Component;
 }), {
-    loading: () => <img width={880} height={700} className="w-[880px] object-contain p1" />,
+    loading: () => <div className="w-[880px] h-[700px] bg-gray-200 animate-pulse" />,
 });
 
 const Hero = ({ className }) => {
