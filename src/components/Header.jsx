@@ -92,7 +92,7 @@ const Header = ({ className }) => {
         <header className={clsx('bg-white text-gray-600 body-font lg:px-28 lg:py-4 border-b border-green-200 border-opacity-50', [className])} ref={headerRef}>
             <div className="flex flex-wrap px-4 pt-[24px] pb-[8px] xl:p-5 flex-row items-center justify-between">
                 <a href="/" className="flex title-font font-medium items-center text-gray-900 mb-2 md:mb-0">
-                    <img src={logoDark.src} alt="logo" className="h-[36px]" />
+                    <img src={logoDark.src} alt="logo" width={164.25} height={36} className="h-[36px]" />
                 </a>
                 <div className="md:hidden">
                     {cartIcon}

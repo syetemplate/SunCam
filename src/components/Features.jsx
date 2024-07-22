@@ -11,11 +11,11 @@ const removeFlipAnimation = e => e.currentTarget.querySelector('img').classList.
 const dynamicImages = content.features.list.map(({ title, imageName }) => ({
     imageName: imageName,
     component: dynamic(() => import(`@/assets/media/${imageName}`).then(module => {
-        const Component = () => <img src={module.default.src} alt={title} className="w-[60px] h-[60px] object-contain mx-auto mb-5 animated2" />;
+        const Component = () => <img src={module.default.src} alt={title} width={60} height={60} className="w-[60px] h-[60px] object-contain mx-auto mb-5 animated2" />;
         Component.displayName = `Image-${imageName}`;
         return Component;
     }), {
-        loading: () => <img className="w-[60px] h-[60px] mx-auto mb-5 " />,
+        loading: () => <div className="w-[60px] h-[60px] mx-auto mb-5 bg-gray-200 animate-pulse" />,
     }),
 }));
 

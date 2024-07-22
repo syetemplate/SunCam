@@ -26,7 +26,7 @@ const images = content.products.items.flatMap(item =>
             Component.displayName = `Image-${image.imageName}`;
             return Component;
         }), {
-            loading: () => <img className="w-[80px] h-[80px] object-contain rounded" />,
+            loading: () => <div className="w-[80px] h-[80px] object-contain rounded bg-gray-200 animate-pulse" />,
         }),
     }))
 );

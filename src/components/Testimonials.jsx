@@ -20,7 +20,7 @@ const testimonialAvatarImages = content.testimonials.list.map(({ avatarImageName
         Component.displayName = `Image-${imageName}`;
         return Component;
     }), {
-        loading: () => <img width={90} height={90} className={'object-cover min-w-[90px] min-h-[90px] p-1'} />,
+        loading: () => <div className="object-cover min-w-[90px] min-h-[90px] p-1 bg-gray-200 animate-pulse" />,
     }),
 }));
 

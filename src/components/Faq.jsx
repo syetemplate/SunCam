@@ -22,7 +22,7 @@ const FaqImage = dynamic(() => import(`@/assets/media/${content.faq.imageName}`)
     Component.displayName = `Image-${content.hero.imageName}`;
     return Component;
 }), {
-    loading: () => <img width={880} height={700} className="w-[620px] object-contain p1" />,
+    loading: () => <div className="w-[620px] object-contain p1 bg-gray-200 animate-pulse" />,
 });
 
 const Faq = ({ className }) => {

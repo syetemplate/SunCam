@@ -32,7 +32,7 @@ const dynamicSmallImages = content.products.items.flatMap(productItem =>
             Component.displayName = `Image-${image.imageName}`;
             return Component;
         }), {
-            loading: () => <img width={smallImageWidth} height={smallImageWidth + 10} className={`object-contain w-[${smallImageWidth}px] h-[${smallImageWidth + 10}px] p-1`} />,
+            loading: () => <div className={`object-contain w-[${smallImageWidth}px] h-[${smallImageWidth + 10}px] p-1 bg-gray-200 animate-pulse`} />,
         }),
     }))
 );
@@ -55,7 +55,7 @@ const dynamicLargeImages = content.products.items.flatMap(productItem =>
             Component.displayName = `Image-${image.imageName}`;
             return Component;
         }), {
-            loading: () => <img width={400} height={400} className="object-cover w-full aspect-[9/8] p-1" />,
+            loading: () => <div className="object-cover w-full aspect-[9/8] p-1 bg-gray-200 animate-pulse" />,
         }),
     }))
 );
@@ -78,7 +78,7 @@ const reviewerAvatarImages = content.products.items.flatMap(productItem =>
             Component.displayName = `Image-${imageName}`;
             return Component;
         }), {
-            loading: () => <img width={80} height={80} className={'object-cover w-[80px] h-[80px] min-w-[80px] min-h-[80px] p-1'} />,
+            loading: () => <div className="object-cover w-[80px] h-[80px] min-w-[80px] min-h-[80px] p-1 bg-gray-200 animate-pulse" />,
         }),
     }))
 );

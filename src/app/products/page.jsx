@@ -24,7 +24,7 @@ const images = content.products.items.flatMap(productItem => ({
         Component.displayName = `Image-${productItem.images[0].imageName}`;
         return Component;
     }), {
-        loading: () => <div style={{ width: '100%', height: '100%', background: '#f0f0f0' }} />,
+        loading: () => <div style={{ width: '100%', height: '100%', background: '#f0f0f0' }} className="bg-gray-200 animate-pulse" />,
     }),
 })
 );

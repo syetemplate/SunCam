@@ -67,7 +67,7 @@ const dynamicThumbnailImages = content.products.items
                 Component.displayName = `DynamicThumbnail-${image.imageName}`;
                 return Component;
             }), {
-                loading: () => <div style={{ width: '100%', height: '100%', background: '#f0f0f0' }} />,
+                loading: () => <div style={{ width: '100%', height: '100%', background: '#f0f0f0' }} className="bg-gray-200 animate-pulse" />,
             }),
         };
     });

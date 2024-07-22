@@ -34,17 +34,17 @@ const BenefitsImage = dynamic(() => import(`@/assets/media/${content.benefits.im
     Component.displayName = `Image-${content.benefits.imageName}`;
     return Component;
 }), {
-    loading: () => <img width={400} className="w-[880px] w-[400px] object-contain mx-auto" />,
+    loading: () => <div className="w-[400px] object-contain mx-auto bg-gray-200 animate-pulse" />,
 });
 
 const dynamicImages = content.benefits.list.map(({ title, imageName }) => ({
     imageName: imageName,
     component: dynamic(() => import(`@/assets/media/${imageName}`).then(module => {
-        const Component = () => <img src={module.default.src} alt={title} className="block min-w-[56px] min-h-[56px] md:min-w-[80px] md:min-h-[80px] text-center leading-[80px] text-4xl border-2 border-dashed border-[#062a4d] rounded-full text-[#062a4d] p-2 transition-all" />;
+        const Component = () => <img src={module.default.src} alt={title} width={80} height={80} className="block min-w-[56px] min-h-[56px] md:min-w-[80px] md:min-h-[80px] text-center leading-[80px] text-4xl border-2 border-dashed border-[#062a4d] rounded-full text-[#062a4d] p-2 transition-all" />;
         Component.displayName = `Image-${imageName}`;
         return Component;
     }), {
-        loading: () => <img className="block min-w-[56px] min-h-[56px] md:min-w-[80px] md:min-h-[80px] text-center leading-[80px] text-4xl border-2 border-dashed border-[#062a4d] rounded-full text-[#062a4d] p-2 transition-all" />,
+        loading: () => <div className="block min-w-[56px] min-h-[56px] md:min-w-[80px] md:min-h-[80px] text-center leading-[80px] text-4xl border-2 border-dashed border-[#062a4d] rounded-full text-[#062a4d] p-2 transition-all bg-gray-200 animate-pulse" />,
     }),
 }));
 

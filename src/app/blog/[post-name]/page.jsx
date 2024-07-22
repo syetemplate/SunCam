@@ -27,7 +27,7 @@ const dynamicImages = content.blog.posts.map(post => ({
     Component.displayName = `Image-${post.imageName}`;
     return Component;
   }), {
-    loading: () => <img width={400} height={300} className="w-[70px] min-w-[70px] max-w-[70px] p-1" />,
+    loading: () => <div className="w-[70px] min-w-[70px] max-w-[70px] p-1 bg-gray-200 animate-pulse" />,
   }),
 }));
 
@@ -54,7 +54,7 @@ const BlogPostPage = () => {
     Component.displayName = `Image-${currentPost.imageName}`;
     return Component;
   }), {
-    loading: () => <img className="h-[300px] p-1" />,
+    loading: () => <div className="h-[300px] p-1 bg-gray-200 animate-pulse" />,
   }) : () => null;
 
   const breadcrumbLinks = pathname.split('/')
@@ -146,7 +146,7 @@ const BlogPostPage = () => {
                       Component.displayName = `Image-${item.imageName}`;
                       return Component;
                     }), {
-                      loading: () => <img className="object-contain w-[400px] p-1 my-8" />,
+                      loading: () => <div className="object-contain w-[400px] p-1 my-8 bg-gray-200 animate-pulse" />,
                     });
                     return <PostImage key={index} />;
                   }

@@ -21,7 +21,7 @@ const dynamicImages = content.blog.posts.map(post => ({
         Component.displayName = `Image-${post.imageName}`;
         return Component;
     }), {
-        loading: () => <img width={400} height={300} className="w-full p-4" />,
+        loading: () => <div className="w-full p-4 bg-gray-200 animate-pulse" />,
     }),
 }));
 

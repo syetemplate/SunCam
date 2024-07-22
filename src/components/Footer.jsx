@@ -33,7 +33,7 @@ const dynamicImages = recentPosts.map(({ title, imageName }) => ({
         Component.displayName = `Image-${imageName}`;
         return Component;
     }), {
-        loading: () => <img width="80" height="80" className="w-[80px] h-[80px] min-w-[80px] min-h-[80px]" />,
+        loading: () => <div className="w-[80px] h-[80px] min-w-[80px] min-h-[80px] bg-gray-200 animate-pulse" />,
     }),
 }));
 
@@ -144,7 +144,7 @@ const Footer = ({ className }) => {
                     <div className="xl:w-1/4 lg:w-1/3 md:w-1/2 px-4">
                         <div className="footer-widget mb-50">
                             <div className="footer-logo mb-4">
-                                <a href="index.html"><img src={logoLite.src} alt="logo" className="h-[36px]" /></a>
+                                <a href="index.html"><img src={logoLite.src} alt="logo" width={164.25} height={36} className="h-[36px]" /></a>
                             </div>
                             <div className="footer-text rtl:text-right">
                                 <p>{content.footer.text}</p>
