@@ -271,7 +271,7 @@ const Footer = ({ className }) => {
                     </div>
                     <div className="sm:w-1/2 px-4">
                         <div className="f-payment-method text-center md:text-right float-right rtl:float-left rtl:md:text-left">
-                            <img src={paymentMethodsImage.src} alt="payment methods" />
+                            <img src={paymentMethodsImage.src} alt="payment methods" width={340} height={21} />
                         </div>
                     </div>
                 </div>
