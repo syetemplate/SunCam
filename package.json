@@ -10,9 +10,11 @@
   },
   "dependencies": {
     "@emailjs/nodejs": "^4.0.4",
+    "@next/bundle-analyzer": "^14.2.5",
     "axios": "^1.7.2",
     "bluebird": "^3.7.2",
     "clsx": "^2.1.1",
+    "critters": "^0.0.24",
     "formik": "^2.4.6",
     "lodash": "^4.17.21",
     "material-symbols": "^0.21.2",
