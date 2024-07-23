@@ -52,7 +52,7 @@ const Benefits = ({ className }) => {
     return (
         <section
             id="benefits"
-            className={clsx('px-4 lg:px-28 py-28 pb-[280px] lg:pb-[240px]', [className])}
+            className={clsx('px-4 sm:px-8 lg:px-28 py-28 pb-[280px] lg:pb-[240px]', [className])}
         >
             <div className="w-full md:w-10/12 lg:w-8/12 xl:w-6/12 mx-auto">
                 <div className="text-center mb-14">

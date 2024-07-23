@@ -33,7 +33,7 @@ const ProductsPage = () => {
     return (
         <>
             <section id="products" className="text-gray-600 body-font">
-                <div className="px-4 lg:px-28 pt-16 pb-[320px] md:pb-48 lg:pb-36">
+                <div className="px-4 sm:px-8 lg:px-28 pt-16 pb-[320px] md:pb-48 lg:pb-36">
                     <div className="flex flex-wrap -m-4">
                         {content.products.items.map((productItem, index) => (
                             <div key={index} className="xl:w-1/4 md:w-1/2 p-4 w-full flex flex-col md:block items-center md:items-left text-center md:text-left rtl:md:text-right">

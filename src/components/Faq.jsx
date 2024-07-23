@@ -35,7 +35,7 @@ const Faq = ({ className }) => {
     return (
         <section
             id="faq"
-            className={clsx('flex flex-col items-center min-w-full px-4 lg:px-28 py-28 pb-[344px] lg:pb-[190px]', [className])}
+            className={clsx('flex flex-col items-center min-w-full px-4 sm:px-8 lg:px-28 py-28 pb-[344px] lg:pb-[190px]', [className])}
             style={{
                 backgroundImage: `url(${faqBgImage.src})`,
                 backgroundPosition: 'center',

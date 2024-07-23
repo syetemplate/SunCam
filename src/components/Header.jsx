@@ -25,12 +25,12 @@ const Header = ({ className }) => {
             aria-label="Cart"
         >
             <i
-                className="fas fa-shopping-basket px-4 text-primary text-xl"
+                className="fas fa-shopping-basket px-4 text-primary text-xl p-4"
                 aria-hidden="true"
             />
             {shouldShowCartBadge && (
                 <span
-                    className="absolute top-0 right-[14px] h-[8px] w-[8px] bg-red-500 rounded-full z-10"
+                    className="absolute top-[16px] right-[14px] h-[8px] w-[8px] bg-red-500 rounded-full z-10"
                     aria-hidden="true"
                 />
             )}
@@ -90,11 +90,11 @@ const Header = ({ className }) => {
 
     return (
         <header className={clsx('bg-white text-gray-600 body-font lg:px-28 lg:py-4 border-b border-green-200 border-opacity-50', [className])} ref={headerRef}>
-            <div className="flex flex-wrap px-4 pt-[24px] pb-[8px] xl:p-5 flex-row items-center justify-between">
-                <a href="/" className="flex title-font font-medium items-center text-gray-900 mb-2 md:mb-0">
+            <div className="flex flex-wrap px-4 sm:px-8 pt-[24px] pb-[8px] xl:p-5 flex-row items-center justify-between">
+                <a href="/" className="flex title-font font-medium items-center text-gray-900 mb-2 xl:mb-0">
                     <img src={logoDark.src} alt="logo" width={164.25} height={36} className="h-[36px]" />
                 </a>
-                <div className="md:hidden">
+                <div className="xl:hidden">
                     {cartIcon}
                     <button
                         type="button"
@@ -140,9 +140,9 @@ const Header = ({ className }) => {
                 </div>
                 <div
                     id="navbar"
-                    className={`${isCollapsed ? 'max-h-0' : 'max-h-screen mt-2 p-2 shadow-[0px_10px_15px_rgba(25,25,25,0.1)] md:mt-0 md:p-0 md:shadow-none'} transition-all duration-300 ease-in-out md:max-h-screen overflow-hidden w-full md:w-auto md:flex-grow`}
+                    className={`${isCollapsed ? 'max-h-0' : 'max-h-screen mt-2 p-2 shadow-[0px_10px_15px_rgba(25,25,25,0.1)] xl:mt-0 xl:p-0 xl:shadow-none'} transition-all duration-300 ease-in-out xl:max-h-screen overflow-hidden w-full xl:w-auto xl:flex-grow`}
                 >
-                    <nav className="flex flex-col md:flex-row text-base justify-end py-4 md:py-0">
+                    <nav className="flex flex-col xl:flex-row text-base justify-end py-4 xl:py-0">
                         {content.header.menu.map(({ label, href }) => (
                             <a
                                 key={href}
@@ -154,11 +154,11 @@ const Header = ({ className }) => {
                         ))}
                     </nav>
                 </div>
-                <div className="hidden md:flex md:ml-auto items-center">
+                <div className="hidden xl:flex xl:ml-auto items-center">
                     {cartIcon}
-                    <div className="hidden md:block md:border-l md:border-gray-300 ml-4 mr-4 h-6"></div>
-                    <a href={content.header.cta.href} className="hidden md:block">
-                        <button className="text-lg py-2 px-6">
+                    <div className="hidden xl:block xl:border-l xl:border-gray-300 ml-4 mr-4 h-6"></div>
+                    <a href={content.header.cta.href} className="hidden xl:block">
+                        <button className="text-lg py-2 px-6 m-4">
                             {content.header.cta.text}
                         </button>
                     </a>

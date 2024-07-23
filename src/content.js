@@ -114,9 +114,9 @@ export default {
     footer: {
         text: 'MiniDrone מציעה רחפנים מתקדמים, קלים לשימוש ובטוחים במיוחד עבור ילדים ומתחילים. אנו מחויבים לספק חוויית טיסה מהנה ואיכותית.',
         social: [
-            { icon: 'fab fa-facebook-f', href: 'https://facebook.com' },
-            { icon: 'fab fa-instagram', href: 'https://instagram.com' },
-            { icon: 'fab fa-youtube', href: 'https://youtube.com' },
+            { icon: 'fab fa-facebook-f', href: 'https://facebook.com', label: 'Facebook' },
+            { icon: 'fab fa-instagram', href: 'https://instagram.com', label: 'Instagram' },
+            { icon: 'fab fa-youtube', href: 'https://youtube.com', label: 'YouTube' },
         ],
         recentPosts: 'פוסטים אחרונים',
         usefulLinks: {

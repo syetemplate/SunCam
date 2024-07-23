@@ -29,7 +29,7 @@ const Blog = ({ className }) => {
     return (
         <section
             id="blog"
-            className={clsx('flex flex-col items-center min-w-full px-4 lg:px-28 sm:px-4 gray-bg pt-110 pb-90', [className])}
+            className={clsx('flex flex-col items-center min-w-full px-4 sm:px-8 lg:px-28 sm:px-4 gray-bg pt-110 pb-90', [className])}
         >
             <div className="container mx-auto">
                 <div className="flex flex-wrap justify-center">

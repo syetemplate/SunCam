@@ -19,7 +19,7 @@ const Video = ({ className }) => {
     return (
         <section
             id="video"
-            className={clsx('px-4 lg:px-28 py-32 bg-cover bg-center video-bg', [className])}
+            className={clsx('px-4 sm:px-8 lg:px-28 py-32 bg-cover bg-center video-bg', [className])}
             style={{ backgroundImage: `url(${videoBgImage.src})` }}
         >
             <div className="sm:w-10/12 lg:w-7/12">

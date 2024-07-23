@@ -197,7 +197,7 @@ const Product = ({ className, productItem }) => {
     return (
         <section
             id="product"
-            className={clsx('px-4 lg:px-28 pt-4 pb-16', [className])}
+            className={clsx('px-4 sm:px-8 lg:px-28 pt-4 pb-16', [className])}
         >
             <>
                 {isCartOpen && (

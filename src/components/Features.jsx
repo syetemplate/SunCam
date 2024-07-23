@@ -23,7 +23,7 @@ const Features = ({ className }) => {
     return (
         <section
             id="features"
-            className={clsx('bg-cover bg-center px-4 lg:px-28 py-20 min-w-full shadow-[0px_2px_12px_7px_rgba(82,33,162,0.05)]', [className])}
+            className={clsx('bg-cover bg-center px-4 sm:px-8 lg:px-28 py-20 min-w-full shadow-[0px_2px_12px_7px_rgba(82,33,162,0.05)]', [className])}
             style={{
                 backgroundImage: `url(${featuresBgImage.src})`,
                 backgroundPosition: "center",
@@ -41,7 +41,7 @@ const Features = ({ className }) => {
                             onAnimationEnd={removeFlipAnimation}
                         >
                             <Image />
-                            <h5 className="text-blue-950 text-lg font-semibold mb-3">{image.title}</h5>
+                            <h1 className="text-blue-950 text-lg font-semibold mb-3">{image.title}</h1>
                             <p className="text-sm leading-relaxed text-zinc-500 font-medium">
                                 {image.description}
                             </p>

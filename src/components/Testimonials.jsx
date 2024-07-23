@@ -35,7 +35,7 @@ const Testimonials = ({ className }) => {
                 backgroundSize: 'cover',
             }}
         >
-            <div className="container mx-auto z-10 px-4 lg:px-28">
+            <div className="container mx-auto z-10 px-4 sm:px-8 lg:px-28">
                 <div className="flex flex-wrap justify-center">
                     <div className="xl:w-3/5 pr-4 pl-4 lg:w-2/3 pr-4 pl-4 md:w-4/5 pr-4 pl-4">
                         <div className="section-title white-title text-center mb-55">

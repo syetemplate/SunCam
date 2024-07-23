@@ -2,7 +2,7 @@ import content from '@/content';
 
 const TermsAndConditionsPage = () => {
     return (
-        <section id="terms-and-conditions" className="px-4 lg:px-28 pt-16 pb-[256px] md:pb-[160px]">
+        <section id="terms-and-conditions" className="px-4 sm:px-8 lg:px-28 pt-16 pb-[256px] md:pb-[160px]">
             <div className="flex flex-wrap justify-center">
                 <div className="px-4 w-full lg:w-9/12">
                     <div className="section-title text-center mb-55">

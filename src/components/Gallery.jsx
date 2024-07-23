@@ -79,7 +79,7 @@ const Gallery = ({ className }) => {
     return (
         <section
             id="gallery"
-            className={clsx('px-4 lg:px-28 pt-28 pb-24', [className])}
+            className={clsx('px-4 sm:px-8 lg:px-28 pt-28 pb-24', [className])}
             style={{
                 backgroundImage: `url(${galleryBgImage.src})`,
                 backgroundPosition: 'center',
@@ -127,9 +127,9 @@ const Gallery = ({ className }) => {
                                             <DynamicThumbnail />
                                             <div className="absolute inset-0 bg-primary opacity-0 transition-opacity duration-500 group-hover:opacity-75 m-1"></div>
                                             <div className="absolute left-7 right-7 top-10 z-10 opacity-0 group-hover:opacity-100">
-                                                <h5 className="text-2xl font-extrabold text-white relative duration-500 animated2 rtl:text-right">
+                                                <h1 className="text-2xl font-extrabold text-white relative duration-500 animated2 rtl:text-right">
                                                     {image.title}
-                                                </h5>
+                                                </h1>
                                                 <span className="inline-block text-sm font-medium text-white duration-500 delay-100 animated2 rtl:text-right">{image.description}</span>
                                             </div>
                                         </div>

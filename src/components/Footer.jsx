@@ -81,7 +81,7 @@ const Footer = ({ className }) => {
 
     return (
         <footer className={clsx('flex flex-col items-center relative', [className])}>
-            <section id="newsletter" className="flex flex-wrap px-4 lg:px-28 w-full absolute z-10 top-[-232px] md:top-[-128px] lg:top-[-64px]">
+            <section id="newsletter" className="flex flex-wrap px-4 sm:px-8 lg:px-28 w-full absolute z-10 top-[-232px] md:top-[-128px] lg:top-[-64px]">
                 <div className="w-full">
                     <div
                         className="newsletter-wrap"
@@ -139,7 +139,7 @@ const Footer = ({ className }) => {
                     </div>
                 </div>
             </section>
-            <div className="footer-wrap pt-190 pb-40 px-4 lg:px-28 w-full background-cover background-center" style={{ backgroundImage: `url(${footerBgImage.src})` }}>
+            <div className="footer-wrap pt-190 pb-40 px-4 sm:px-8 lg:px-28 w-full background-cover background-center" style={{ backgroundImage: `url(${footerBgImage.src})` }}>
                 <div className="flex flex-wrap">
                     <div className="xl:w-1/4 lg:w-1/3 md:w-1/2 px-4">
                         <div className="footer-widget mb-50">
@@ -157,7 +157,7 @@ const Footer = ({ className }) => {
                                                 href={social.href}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                aria-label={social.name}
+                                                aria-label={social.label}
                                                 className="inline-flex items-center"
                                             >
                                                 <i className={social.icon} aria-hidden="true"/>
@@ -262,7 +262,7 @@ const Footer = ({ className }) => {
                     </div>
                 </div>
             </div>
-            <div className="copyright-wrap w-full px-4 lg:px-28">
+            <div className="copyright-wrap w-full px-4 sm:px-8 lg:px-28">
                 <div className="flex flex-wrap items-center justify-center">
                     <div className="sm:w-1/2 px-4">
                         <div className="copyright-text mb-4 sm:mb-0 rtl:text-right">
