@@ -57,7 +57,7 @@ const dynamicThumbnailImages = content.products.items
                     <Image
                         {...props}
                         src={module.default}
-                        alt={image.title}
+                        alt={image.description}
                         width={width}
                         height={height}
                         sizes="(min-width: 768px) 20vw, 90vw"
@@ -112,7 +112,7 @@ const Gallery = ({ className }) => {
                                 if (i % 3 !== colIndex) {
                                     return null;
                                 }
-                                const { width, height } = getThumbnailDimensions(i);
+                                const { width } = getThumbnailDimensions(i);
                                 const DynamicThumbnail = dynamicThumbnailImages.find(
                                     img => img.imageName === image.imageName
                                 ).component;
@@ -128,7 +128,7 @@ const Gallery = ({ className }) => {
                                             <div className="absolute inset-0 bg-primary opacity-0 transition-opacity duration-500 group-hover:opacity-75 m-1"></div>
                                             <div className="absolute left-7 right-7 top-10 z-10 opacity-0 group-hover:opacity-100">
                                                 <h1 className="text-2xl font-extrabold text-white relative duration-500 animated2 rtl:text-right">
-                                                    {image.title}
+                                                    {selectedProductItem.name}
                                                 </h1>
                                                 <span className="inline-block text-sm font-medium text-white duration-500 delay-100 animated2 rtl:text-right">{image.description}</span>
                                             </div>

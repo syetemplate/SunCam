@@ -16,7 +16,7 @@ const images = content.products.items.flatMap(item =>
                 <Image
                     {...props}
                     src={module.default}
-                    alt={image.title}
+                    alt={image.description}
                     width={80}
                     height={80}
                     sizes="15vw"

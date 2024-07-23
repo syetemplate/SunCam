@@ -426,9 +426,9 @@ export default {
                     ],
                 },
                 images: [
-                    { imageName: 'gallery-1.webp', title: 'תמונה 1', description: 'MiniDrone רחפן עם מצלמה לילדים ושלט רחוק עם מסך טלפון' },
-                    { imageName: 'gallery-2.webp', title: 'תמונה 2', description: 'MiniDrone רחפן עם מצלמה לילדים בעל ארבעה מדחפים' },
-                    { imageName: 'gallery-3.webp', title: 'תמונה 3', description: 'שלט רחוק ל-MiniDrone רחפן עם מצלמה לילדים, כולל מקום לטלפון נייד' },
+                    { imageName: 'gallery-1.webp', description: 'MiniDrone רחפן עם מצלמה לילדים ושלט רחוק עם מסך טלפון' },
+                    { imageName: 'gallery-2.webp', description: 'MiniDrone רחפן עם מצלמה לילדים בעל ארבעה מדחפים' },
+                    { imageName: 'gallery-3.webp', description: 'שלט רחוק ל-MiniDrone רחפן עם מצלמה לילדים, כולל מקום לטלפון נייד' },
                 ],
             },
             {
@@ -466,9 +466,9 @@ export default {
                     ],
                 },
                 images: [
-                    { imageName: 'gallery-4.webp', title: 'תמונה 1', description: 'MiniDrone רחפן עם מצלמה לילדים, שלט רחוק, סוללות נוספות ותיק נשיאה' },
-                    { imageName: 'gallery-5.webp', title: 'תמונה 2', description: 'אביזרים נלווים ל-MiniDrone רחפן עם מצלמה לילדים, כולל כבלים, מדחפים וסוללה' },
-                    { imageName: 'gallery-6.webp', title: 'תמונה 3', description: 'שלט רחוק ומסך של רחפן MiniDrone לילדים' },
+                    { imageName: 'gallery-4.webp', description: 'MiniDrone רחפן עם מצלמה לילדים, שלט רחוק, סוללות נוספות ותיק נשיאה' },
+                    { imageName: 'gallery-5.webp', description: 'אביזרים נלווים ל-MiniDrone רחפן עם מצלמה לילדים, כולל כבלים, מדחפים וסוללה' },
+                    { imageName: 'gallery-6.webp', description: 'שלט רחוק ומסך של רחפן MiniDrone לילדים' },
                 ],
             },
             {
@@ -506,9 +506,9 @@ export default {
                     ],
                 },
                 images: [
-                    { imageName: 'gallery-7.webp', title: 'תמונה 1', description: 'רחפן MiniDrone לילדים עם מצלמה, שלט רחוק, סוללות ותיק נשיאה' },
-                    { imageName: 'gallery-8.webp', title: 'תמונה 2', description: 'תיק נשיאה לרחפן MiniDrone לילדים' },
-                    { imageName: 'gallery-9.webp', title: 'תמונה 3', description: 'רחפן MiniDrone מקופל לילדים עם מצלמה ושלט רחוק' },
+                    { imageName: 'gallery-7.webp', description: 'רחפן MiniDrone לילדים עם מצלמה, שלט רחוק, סוללות ותיק נשיאה' },
+                    { imageName: 'gallery-8.webp', description: 'תיק נשיאה לרחפן MiniDrone לילדים' },
+                    { imageName: 'gallery-9.webp', description: 'רחפן MiniDrone מקופל לילדים עם מצלמה ושלט רחוק' },
                 ],
             },
         ],

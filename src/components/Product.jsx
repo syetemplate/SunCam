@@ -22,7 +22,7 @@ const dynamicSmallImages = content.products.items.flatMap(productItem =>
                 <Image
                     {...props}
                     src={module.default}
-                    alt={image.title}
+                    alt={image.description}
                     width={smallImageWidth}
                     height={smallImageWidth + 10}
                     sizes="15vw"
@@ -45,7 +45,7 @@ const dynamicLargeImages = content.products.items.flatMap(productItem =>
                 <Image
                     {...props}
                     src={module.default}
-                    alt={image.title}
+                    alt={image.description}
                     width={400}
                     height={400}
                     sizes="50vw"
