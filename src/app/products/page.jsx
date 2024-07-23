@@ -15,7 +15,7 @@ const images = content.products.items.flatMap(productItem => ({
                 alt={productItem.images[0].title}
                 width={425}
                 height={265}
-                sizes="20vw"
+                sizes="(min-width: 768px) 20vw, 90vw"
                 style={{ objectFit: 'contain' }}
                 className="object-contain w-full h-full p-1"
                 priority
