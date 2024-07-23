@@ -37,7 +37,6 @@
 :root {
 	--font-poppins: var(--font-poppins);
 	--font-assistant: var(--font-assistant);
-	// --color-primary: #2acb35;
 	--color-primary: #0060ac;
 }
 
@@ -1776,7 +1775,7 @@ label {
 	line-height: 40px;
 	text-align: center;
 	border-radius: 3px;
-	box-shadow: 0px 4px 12.09px 0.91px rgb(42, 203, 53, .3);
+	@apply shadow-md shadow-primary/50;
 	margin-inline-start: 8px;
 	color: #fff;
 	transition: .3s;
