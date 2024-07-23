@@ -6,8 +6,6 @@ import WhatsAppFloatingIcon from '@/components/WhatsAppFloatingIcon';
 import favicon from '@/assets/media/favicon.ico';
 import content from '@/content';
 import { poppins, assistant } from './fonts';
-
-// Import CSS in a way that allows Next.js to optimize it
 import '@/assets/css/style.scss';
 
 export const metadata = {
@@ -26,15 +24,6 @@ export const viewport = {
 const RootLayout = ({ children }) => {
   return (
     <html lang="he" dir="rtl" suppressHydrationWarning className={`${poppins.variable} ${assistant.variable}`}>
-      <head>
-        {/* Preload critical assets */}
-        <link
-          rel="preload"
-          href={favicon.src}
-          as="image"
-          type="image/x-icon"
-        />
-      </head>
       <body className="h-screen inline">
         <CartProvider>
           <Header />
