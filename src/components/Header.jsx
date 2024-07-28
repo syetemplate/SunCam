@@ -24,10 +24,12 @@ const Header = ({ className }) => {
             href="/checkout"
             aria-label="Cart"
         >
-            <i
-                className="fas fa-shopping-basket px-4 text-primary text-xl p-4"
+            <span
+                className="material-symbols-outlined text-primary text-3xl p-4"
                 aria-hidden="true"
-            />
+            >
+                shopping_cart
+            </span>
             {shouldShowCartBadge && (
                 <span
                     className="absolute top-[16px] right-[14px] h-[8px] w-[8px] bg-red-500 rounded-full z-10"
@@ -94,7 +96,7 @@ const Header = ({ className }) => {
                 <a href="/" className="flex title-font font-medium items-center text-gray-900 mb-2 xl:mb-0">
                     <img src={logoDark.src} alt="logo" width={164.25} height={36} className="h-[36px]" />
                 </a>
-                <div className="xl:hidden">
+                <div className="xl:hidden flex items-center">
                     {cartIcon}
                     <button
                         type="button"
@@ -156,7 +158,7 @@ const Header = ({ className }) => {
                 </div>
                 <div className="hidden xl:flex xl:ml-auto items-center">
                     {cartIcon}
-                    <div className="hidden xl:block xl:border-l xl:border-gray-300 ml-4 mr-4 h-6"></div>
+                    <div className="hidden xl:block xl:border-l xl:border-gray-300 mx-2 h-6"></div>
                     <a href={content.header.cta.href} className="hidden xl:block">
                         <button className="text-lg py-2 px-6 m-4">
                             {content.header.cta.text}

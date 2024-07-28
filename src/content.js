@@ -8,8 +8,7 @@ export default {
         menu: [
             { label: 'בית', href: '/' },
             { label: 'מוצרים', href: '/products' },
-            { label: 'בלוג', href: '/blog' },
-            { label: 'מי אנחנו', href: '/about-us' },
+            { label: 'הדרכת רחפנים', href: '/blog' },
         ],
         cta: {
             text: 'הזמן עכשיו',
@@ -123,8 +122,8 @@ export default {
             title: 'קישורים שימושיים',
             list: [
                 { title: 'מוצרים', href: '/products' },
-                { title: 'בלוג', href: '/blog' },
-                { title: 'עלינו', href: '/about-us' },
+                { title: 'הדרכות רחפנים', href: '/blog' },
+                { title: 'מי אנחנו', href: '/about-us' },
                 { title: 'מדיניות פרטיות', href: '/privacy-policy' },
                 { title: 'תנאים והגבלות', href: '/terms-and-conditions' },
             ],
@@ -141,7 +140,7 @@ export default {
         copyright: '© 2024 MiniDrone | כל הזכויות שמורות',
     },
     blog: {
-        title: 'בלוג וטיפים',
+        title: 'הדרכות רחפנים',
         description: 'MiniDrone מביאה לכם מידע שימושי, טיפים וסקירות מוצרים כדי לעזור לכם להפיק את המרב מהרחפן שלכם ולהישאר מעודכנים.',
         posts: [
             {
