@@ -1,22 +1,29 @@
-'use client';
-
-import { useParams } from 'next/navigation';
 import Product from '@/components/Product';
 import Benefits from '@/components/Benefits';
 import Faq from '@/components/Faq';
 import content from '@/content';
 
-const ProductPage = () => {
-  const { 'product-name': productName } = useParams();
-  const productItem = content.products.items.find(({ href }) => href === `/products/${productName}`);
+export const generateMetadata = ({ params }) => {
+  const { 'product-name': productName } = params;
+  const productItem = content.products.items.find(({ href }) => href === `/products/${productName}`) || content.products.items[0];
 
-  if (!productItem) {
-    return null;
+  return {
+    title: productItem.name,
+    description: productItem.description,
+    canonical: `https://minidrone.co.il${productItem.href}`,
+    'og:title': productItem.name,
+    'og:description': productItem.description,
+    'og:url': `https://minidrone.co.il${productItem.href}`,
+    'twitter:card': 'summary_large_image',
+    'twitter:title': productItem.name,
+    'twitter:description': productItem.description,
   }
+};
 
+const ProductPage = () => {
   return (
     <>
-      <Product productItem={productItem}/>
+      <Product />
       <Benefits />
       <Faq />
     </>

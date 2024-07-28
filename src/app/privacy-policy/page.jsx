@@ -1,5 +1,17 @@
 import content from '@/content';
 
+export const metadata = {
+  title: content.meta.pages.privacyPolicy.title,
+  description: content.meta.pages.privacyPolicy.description,
+  canonical: 'https://minidrone.co.il/privacy-policy',
+  'og:title': content.meta.pages.privacyPolicy.title,
+  'og:description': content.meta.pages.privacyPolicy.description,
+  'og:url': 'https://minidrone.co.il/privacy-policy',
+  'twitter:card': 'summary_large_image',
+  'twitter:title': content.meta.pages.privacyPolicy.title,
+  'twitter:description': content.meta.pages.privacyPolicy.description,
+};
+
 const PrivacyPolicyPage = () => {
     return (
         <section id="privacy-policy" className="px-4 sm:px-8 lg:px-28 pt-16 pb-[256px] md:pb-[160px]">

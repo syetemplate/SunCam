@@ -1,9 +1,21 @@
-'use client';
+// 'use client';
 
 import React from 'react';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import content from '@/content';
+
+export const metadata = {
+  title: content.meta.pages.products.title,
+  description: content.meta.pages.products.description,
+  canonical: 'https://minidrone.co.il/products',
+  'og:title': content.meta.pages.products.title,
+  'og:description': content.meta.pages.products.description,
+  'og:url': 'https://minidrone.co.il/products',
+  'twitter:card': 'summary_large_image',
+  'twitter:title': content.meta.pages.products.title,
+  'twitter:description': content.meta.pages.products.description,
+};
 
 const images = content.products.items.flatMap(productItem => ({
     imageName: productItem.images[0].imageName,

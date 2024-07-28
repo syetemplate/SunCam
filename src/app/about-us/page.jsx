@@ -1,5 +1,17 @@
 import content from '@/content';
 
+export const metadata = {
+  title: content.meta.pages.aboutUs.title,
+  description: content.meta.pages.aboutUs.description,
+  canonical: 'https://minidrone.co.il/about-us',
+  'og:title': content.meta.pages.aboutUs.title,
+  'og:description': content.meta.pages.aboutUs.description,
+  'og:url': 'https://minidrone.co.il/about-us',
+  'twitter:card': 'summary_large_image',
+  'twitter:title': content.meta.pages.aboutUs.title,
+  'twitter:description': content.meta.pages.aboutUs.description,
+};
+
 const AboutUsPage = () => {
     return (
         <section id="about-us" className="px-4 sm:px-8 lg:px-28 pt-16 pb-[256px] md:pb-[160px]">

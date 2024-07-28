@@ -2,6 +2,7 @@
 
 import React from 'react';
 import clsx from 'clsx';
+import { useParams } from 'next/navigation';
 import dynamic from 'next/dynamic';
 import Image from 'next/image';
 import { throttle } from 'lodash';
@@ -83,7 +84,10 @@ const reviewerAvatarImages = content.products.items.flatMap(productItem =>
     }))
 );
 
-const Product = ({ className, productItem }) => {
+const Product = ({ className }) => {
+    const { 'product-name': productName } = useParams();
+    const productItem = content.products.items.find(({ href }) => href === `/products/${productName}`) || content.products.items[0];
+
     const sliderContainerRef = React.useRef(null);
     const [selectedImage, setSelectedImage] = React.useState(null);
     const [slidesToShow, setSlidesToShow] = React.useState(1);
