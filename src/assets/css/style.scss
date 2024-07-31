@@ -1214,6 +1214,12 @@ label {
 }
 
 /* 9. Faq */
+.faq-img {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 .faq-img img {
 	width: 100%;
 }

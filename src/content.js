@@ -545,7 +545,7 @@ export default {
     faq: {
         title: 'שאלות נפוצות',
         description: 'MiniDrone מספקת מענה לכל השאלות הנפוצות של לקוחותינו לגבי הרחפנים שלנו ותהליך הרכישה.',
-        imageName: 'faq.jpg',
+        imageName: 'faq.webp',
         list: [
             {
                 question: 'מהו MiniDrone?',

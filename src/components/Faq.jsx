@@ -16,7 +16,7 @@ const FaqImage = dynamic(() => import(`@/assets/media/${content.faq.imageName}`)
             width={880}
             height={700}
             sizes="(min-width: 960px) 50vw, 90vw"
-            className="w-[620px] object-contain p1"
+            className="w-[620px] object-contain p-8"
         />
     );
     Component.displayName = `Image-${content.hero.imageName}`;
