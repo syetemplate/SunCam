@@ -47,7 +47,7 @@ export default {
     hero: {
         title: 'רחפן <span className="lg:text-primary">עם מצלמה</span> לילדים',
         description: 'ילדים לא נועדו לשבת מול מסכים. בעזרת רחפן מצלמה של MiniDrone, הילדים שלכם יוכלו לצאת החוצה, לחקור את העולם מזווית חדשה ולפתח כישורים חשובים תוך כדי משחק מהנה ובטוח',
-        imageName: 'hero.webp',
+        imageName: 'hero.png',
         cta: {
             text: 'רכישה',
             href: '/products',
