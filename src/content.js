@@ -447,10 +447,10 @@ export default {
                 reviews: {
                     title: 'ביקורות',
                     list: [
-                        { name: 'יהונתן כהן', date: '27 מאי, 2024', rating: 5, text: 'מתנה מדהימה לבן שלי! הוא כל כך נהנה לטוס עם הרחפן ולצלם תמונות וסרטונים.', avatarImageName: 'review-1-avatar.jpg' },
-                        { name: 'מיכאל לוי', date: '13 אפריל, 2024', rating: 4, text: 'תמורה טובה לכסף. קל להתקנה ולשימוש. זמן טיסה ארוך.', avatarImageName: 'review-2-avatar.jpg' },
-                        { name: 'ליאורה ס.', date: '05 דצמבר, 2023', rating: 5, text: 'רחפן עמיד וחזק. המצלמה יציבה והתמונות צלולות. שירות הלקוחות היו אכפתים וסבלניים לכל שאלה.', avatarImageName: 'review-3-avatar.jpg' },
-                        { name: 'נוי תמר', date: '16 נובמבר, 2023', rating: 4, text: 'אהבתי את הרחפן הזה! בטיחותי מאוד ואני יכול להיות רגוע ממש כשהילדים משחקים איתו.', avatarImageName: 'review-4-avatar.jpg' },
+                        { name: 'דוד כהן', date: '22 במאי 2024', rating: 5, text: 'הרחפן הכי מתקדם ששיחקתי איתו אי פעם. התכונות והאיכות פשוט יוצאות דופן!', avatarImageName: 'review-1-avatar.webp' },
+                        { name: 'אורלי כהן', date: '13 ביוני 2024', rating: 5, text: 'קניתי את זה לעצמי והילדים פשוט מתים עליו. השקעה נהדרת עבור כל המשפחה.', avatarImageName: 'review-2-avatar.webp' },
+                        { name: 'יוני לוי', date: '14 באפריל 2024', rating: 5, text: 'הטכנולוגיה בדבר הזה היא פשוט מדהימה. זה כיף גדול וקל לשימוש גם עבור מתחילים.', avatarImageName: 'review-3-avatar.webp' },
+                        { name: 'בן חביב', date: '20 באפריל 2024', rating: 4, text: ' מוצר נהדר. מחיר טוב מאוד ונוח .', avatarImageName: 'review-4-avatar.webp' },
                     ],
                 },
                 images: [
@@ -487,10 +487,10 @@ export default {
                 reviews: {
                     title: 'ביקורות',
                     list: [
-                        { name: 'אורנה לוי', date: '27 מאי, 2024', rating: 5, text: ' קניתי את הרחפן הזה לנכד שלי והוא לא מפסיק לשחק איתו. קל מאוד לתפעול אפילו לילדים קטנים, והמצלמה נותנת תמונות וסרטונים מדהימים', avatarImageName: 'review-1-avatar.jpg' },
-                        { name: 'נועם מילר', date: '13 אפריל, 2024', rating: 4, text: 'הילדה שלי  לא מפסיקה לשחק עם הרחפן הזה, התמונות והסירטונים יוצאים באיכות גבוה מאוד', avatarImageName: 'review-2-avatar.jpg' },
-                        { name: 'אריאל ארגמני', date: '05 דצמבר, 2023', rating: 5, text: ' קניתי לילד שלי את הרחפן הזה ליום ההולדת שלו, והוא לא מפסיק לשחק איתו. איכות התמונה מצוינת, והאפשרות לשלוט בו מרחוק דרך הטלפון ממש נוחה', avatarImageName: 'review-3-avatar.jpg' },
-                        { name: 'תומר מתן', date: '16 נובמבר, 2023', rating: 4, text: 'המחיר הפתיע אותי ביחס לאיכות, קניתי בעבר רחפן יקר פי 2 והאיכות שלו לא משתווה לאיכות של הרחפן הזה', avatarImageName: 'review-4-avatar.jpg' },
+                        { name: 'דוד כהן', date: '22 במאי 2024', rating: 5, text: 'הרחפן הכי מתקדם ששיחקתי איתו אי פעם. התכונות והאיכות פשוט יוצאות דופן!', avatarImageName: 'review-1-avatar.webp' },
+                        { name: 'אורלי כהן', date: '13 ביוני 2024', rating: 5, text: 'קניתי את זה לעצמי והילדים פשוט מתים עליו. השקעה נהדרת עבור כל המשפחה.', avatarImageName: 'review-2-avatar.webp' },
+                        { name: 'יוני לוי', date: '14 באפריל 2024', rating: 5, text: 'הטכנולוגיה בדבר הזה היא פשוט מדהימה. זה כיף גדול וקל לשימוש גם עבור מתחילים.', avatarImageName: 'review-3-avatar.webp' },
+                        { name: 'בן חביב', date: '20 באפריל 2024', rating: 4, text: ' מוצר נהדר. מחיר טוב מאוד ונוח .', avatarImageName: 'review-4-avatar.webp' },
                     ],
                 },
                 images: [
@@ -527,10 +527,10 @@ export default {
                 reviews: {
                     title: 'ביקורות',
                     list: [
-                        { name: 'יוחנן כהן', date: '27 במאי 2024', rating: 5, text: 'הרחפן הכי מתקדם ששיחקתי איתו אי פעם. התכונות והאיכות פשוט יוצאות דופן!', avatarImageName: 'review-1-avatar.jpg' },
-                        { name: 'מיכאל אברהם', date: '27 במאי 2024', rating: 5, text: 'קניתי את זה לעצמי והילדים פשוט מתים עליו. השקעה נהדרת עבור כל המשפחה.', avatarImageName: 'review-2-avatar.jpg' },
-                        { name: 'לינדה סמית', date: '27 במאי 2024', rating: 5, text: 'הטכנולוגיה בדבר הזה היא פשוט מדהימה. זה כיף גדול וקל לשימוש גם עבור מתחילים.', avatarImageName: 'review-3-avatar.jpg' },
-                        { name: 'ירון שמואלי', date: '27 במאי 2024', rating: 4, text: ' מוצר נהדר עם מפרטים מרשימים. מחיר טוב מאוד ונוח .', avatarImageName: 'review-4-avatar.jpg' },
+                        { name: 'דוד כהן', date: '22 במאי 2024', rating: 5, text: 'הרחפן הכי מתקדם ששיחקתי איתו אי פעם. התכונות והאיכות פשוט יוצאות דופן!', avatarImageName: 'review-1-avatar.webp' },
+                        { name: 'אורלי כהן', date: '13 ביוני 2024', rating: 5, text: 'קניתי את זה לעצמי והילדים פשוט מתים עליו. השקעה נהדרת עבור כל המשפחה.', avatarImageName: 'review-2-avatar.webp' },
+                        { name: 'יוני לוי', date: '14 באפריל 2024', rating: 5, text: 'הטכנולוגיה בדבר הזה היא פשוט מדהימה. זה כיף גדול וקל לשימוש גם עבור מתחילים.', avatarImageName: 'review-3-avatar.webp' },
+                        { name: 'בן חביב', date: '20 באפריל 2024', rating: 4, text: ' מוצר נהדר. מחיר טוב מאוד ונוח .', avatarImageName: 'review-4-avatar.webp' },
                     ],
                 },
                 images: [
