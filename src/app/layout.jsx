@@ -4,6 +4,7 @@ import Main from '@/components/Main';
 import Footer from '@/components/Footer';
 import WhatsAppFloatingIcon from '@/components/WhatsAppFloatingIcon';
 import favicon from '@/assets/media/favicon.ico';
+import appleIcon from '@/assets/media/apple-icon.png';
 import content from '@/content';
 import { poppins, assistant } from './fonts';
 import '@/assets/css/style.scss';
@@ -13,6 +14,7 @@ export const metadata = {
   description: content.meta.description,
   icons: {
     icon: favicon.src,
+    apple: appleIcon.src,
   },
 };
 
