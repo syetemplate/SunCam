@@ -10,12 +10,13 @@ import { poppins, assistant } from './fonts';
 import '@/assets/css/style.scss';
 
 export const metadata = {
-  title: content.meta.title,
-  description: content.meta.description,
+  title: content.meta.pages.homePage,
+  description: content.meta.pages.homePage.description,
   icons: {
     icon: favicon.src,
     apple: appleIcon.src,
   },
+  'og:site_name': content.meta.pages.homePage,
 };
 
 export const viewport = {
