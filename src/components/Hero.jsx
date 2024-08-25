@@ -5,17 +5,19 @@ import content from '@/content';
 
 const HeroImage = dynamic(() => import(`@/assets/media/${content.hero.imageName}`).then(module => {
     const Component = ({ fill, ...props }) => (
-        <Image
-            {...props}
-            priority
-            src={module.default}
-            alt="hero"
-            width={500}
-            height={500}
-            sizes="(min-width: 1024px) 30vw, 90vw"
-            className="w-[500px] object-contain p1"
-            style={{ visibility: 'visible' }}
-        />
+        <picture>
+            <Image
+                {...props}
+                src={module.default}
+                priority
+                alt="hero"
+                width={500}
+                height={500}
+                // sizes="(min-width: 1024px) 30vw, 90vw"
+                className="w-[500px] object-contain p1"
+                style={{ visibility: 'visible' }}
+            />
+        </picture>
     );
     Component.displayName = `Image-${content.hero.imageName}`;
     return Component;
