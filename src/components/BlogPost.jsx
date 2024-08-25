@@ -45,10 +45,10 @@ const BlogPost = () => {
         {...props}
         src={module.default}
         alt={currentPost.title}
-        height={300}
+        height={600}
         sizes="50vw"
         style={{ objectFit: 'contain' }}
-        className="object-contain h-[300px] p-1"
+        className="object-contain h-[600px] p-1"
       />
     );
     Component.displayName = `Image-${currentPost.imageName}`;
