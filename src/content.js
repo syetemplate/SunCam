@@ -423,7 +423,7 @@ export default {
                 href: '/products/sun-cam-32gb',
                 name: 'SunCam 32GB | מצלמת אבטחה סולארית',
                 title: 'SunCam <strong>32GB</strong>',
-                price: 899,
+                price: 2000,
                 customerReviewsLabel: 'ביקורות לקוחות',
                 text: 'מצלמת האבטחה הסולארית הבסיסית שלנו מספקת אבטחה אמינה עם התקנה פשוטה וביצועים יעילים.',
                 productInfo: {
@@ -432,7 +432,7 @@ export default {
                         { title: 'רזולוציה', description: '1080p Full HD' },
                         { title: 'זמן עבודה', description: 'עד 7 ימים ללא שמש' },
                         { title: 'זווית צפייה', description: '130°' },
-                        { title: 'אחסון', description: 'כרטיס SD עד 128GB' },
+                        { title: 'אחסון', description: 'כרטיס SD 32GB' },
                     ]
                 },
                 description: {
@@ -464,7 +464,7 @@ export default {
                 href: '/products/sun-cam-64gb',
                 name: 'SunCam 64GB | מצלמת אבטחה סולארית',
                 title: 'SunCam <strong>64GB</strong>',
-                price: 1299,
+                price: 2199,
                 customerReviewsLabel: 'ביקורות לקוחות',
                 text: 'מצלמת אבטחה סולארית מתקדמת עם רזולוציה גבוהה, זיהוי תנועה חכם וראיית לילה משופרת.',
                 productInfo: {
@@ -473,7 +473,7 @@ export default {
                         { title: 'רזולוציה', description: '2K Ultra HD' },
                         { title: 'זמן עבודה', description: 'עד 14 ימים ללא שמש' },
                         { title: 'זווית צפייה', description: '160°' },
-                        { title: 'אחסון', description: 'כרטיס SD עד 256GB + אחסון בענן' },
+                        { title: 'אחסון', description: 'כרטיס SD 64GB' },
                     ]
                 },
                 description: {
@@ -505,17 +505,17 @@ export default {
                 href: '/products/sun-cam-128gb',
                 name: 'SunCam 128GB | מצלמת אבטחה סולארית',
                 title: 'SunCam <strong>128GB</strong>',
-                price: 1699,
+                price: 2299,
                 customerReviewsLabel: 'ביקורות לקוחות',
                 text: 'המצלמה המתקדמת ביותר שלנו עם רזולוציית 4K, זום אופטי, ומערכת AI מתקדמת לזיהוי ומעקב.',
                 productInfo: {
                     title: 'פרטי המוצר',
                     list: [
-                        { name: 'אבי כהן', date: '13 ביוני 2024', rating: 4, text: 'איכות תמונה טובה מאוד ואני אוהב שזה ידידותי לסביבה. הייתי שמח לראות זווית רחבה יותר.', avatarImageName: 'review-1-avatar.webp' },
-                        { name: 'יעל לוי', date: '22 במאי 2024', rating: 5, text: 'מצלמה מעולה! קלה להתקנה ועובדת בצורה מושלמת. ממליצה בחום.', avatarImageName: 'review-2-avatar.webp' },
-                        { name: 'יואב אבידן', date: '14 באפריל 2024', rating: 5, text: 'מצוין... האפליקציה נוחה לשימוש והסוללה מחזיקה מעמד מלא זמן!', avatarImageName: 'review-3-avatar.webp' },
-                        { name: 'אריאל חן', date: '20 באפריל 2024', rating: 4, text: 'מוצר טוב מאוד. התקנה קלה ואיכות תמונה טובה', avatarImageName: 'review-4-avatar.webp' },
-                    ],
+                        { title: 'רזולוציה', description: '4K Ultra HD' },
+                        { title: 'זמן עבודה', description: 'עד 21 ימים ללא שמש' },
+                        { title: 'זווית צפייה', description: '180°' },
+                        { title: 'אחסון', description: 'כרטיס SD 128GB' },
+                    ]
                 },
                 description: {
                     title: 'תיאור',
