@@ -421,7 +421,7 @@ export default {
             {
                 id: 'sunCam32GB',
                 href: '/products/sun-cam-32gb',
-                name: 'SunCam 32GB',
+                name: 'SunCam 32GB | מצלמת אבטחה סולארית',
                 title: 'SunCam <strong>32GB</strong>',
                 price: 899,
                 customerReviewsLabel: 'ביקורות לקוחות',
@@ -462,7 +462,7 @@ export default {
             {
                 id: 'sunCam64GB',
                 href: '/products/sun-cam-64gb',
-                name: 'SunCam 64GB',
+                name: 'SunCam 64GB | מצלמת אבטחה סולארית',
                 title: 'SunCam <strong>64GB</strong>',
                 price: 1299,
                 customerReviewsLabel: 'ביקורות לקוחות',
@@ -503,7 +503,7 @@ export default {
             {
                 id: 'sunCam128GB',
                 href: '/products/sun-cam-128gb',
-                name: 'SunCam 128GB',
+                name: 'SunCam 128GB | מצלמת אבטחה סולארית',
                 title: 'SunCam <strong>128GB</strong>',
                 price: 1699,
                 customerReviewsLabel: 'ביקורות לקוחות',

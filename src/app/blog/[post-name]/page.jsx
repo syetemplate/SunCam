@@ -7,14 +7,14 @@ export const generateMetadata = ({ params }) => {
   const currentPost = content.blog.posts.find(post => post.href === `/blog/${postName}`);
 
   return {
-    title: `${content.meta.titlePrefix}${currentPost.title}`,
+    title: `${currentPost.title}${content.meta.titlePrefix}`,
     description: currentPost.description,
     canonical: `https://minidrone.co.il${currentPost.href}`,
-    'og:title': `${content.meta.titlePrefix}${currentPost.title}`,
+    'og:title': `${currentPost.title}${content.meta.titlePrefix}`,
     'og:description': currentPost.description,
     'og:url': `https://minidrone.co.il${currentPost.href}`,
     'twitter:card': 'summary_large_image',
-    'twitter:title': `${content.meta.titlePrefix}${currentPost.title}`,
+    'twitter:title': `${currentPost.title}${content.meta.titlePrefix}`,
     'twitter:description': currentPost.description,
   }
 };
