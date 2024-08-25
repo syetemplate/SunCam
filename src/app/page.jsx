@@ -7,10 +7,10 @@ import content from '@/content';
 export const metadata = {
   title: content.meta.pages.homePage.title,
   description: content.meta.pages.homePage.description,
-  canonical: 'https://minidrone.co.il',
+  canonical: 'https://suncam.co.il',
   'og:title': content.meta.pages.homePage.title,
   'og:description': content.meta.pages.homePage.description,
-  'og:url': 'https://minidrone.co.il',
+  'og:url': 'https://suncam.co.il',
   'twitter:card': 'summary_large_image',
   'twitter:title': content.meta.pages.homePage.title,
   'twitter:description': content.meta.pages.homePage.description,

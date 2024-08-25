@@ -3,10 +3,10 @@ import content from '@/content';
 export const metadata = {
   title: content.meta.pages.privacyPolicy.title,
   description: content.meta.pages.privacyPolicy.description,
-  canonical: 'https://minidrone.co.il/privacy-policy',
+  canonical: 'https://suncam.co.il/privacy-policy',
   'og:title': content.meta.pages.privacyPolicy.title,
   'og:description': content.meta.pages.privacyPolicy.description,
-  'og:url': 'https://minidrone.co.il/privacy-policy',
+  'og:url': 'https://suncam.co.il/privacy-policy',
   'twitter:card': 'summary_large_image',
   'twitter:title': content.meta.pages.privacyPolicy.title,
   'twitter:description': content.meta.pages.privacyPolicy.description,

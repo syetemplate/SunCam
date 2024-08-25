@@ -9,10 +9,10 @@ export const generateMetadata = ({ params }) => {
   return {
     title: `${currentPost.title}${content.meta.titlePrefix}`,
     description: currentPost.description,
-    canonical: `https://minidrone.co.il${currentPost.href}`,
+    canonical: `https://suncam.co.il${currentPost.href}`,
     'og:title': `${currentPost.title}${content.meta.titlePrefix}`,
     'og:description': currentPost.description,
-    'og:url': `https://minidrone.co.il${currentPost.href}`,
+    'og:url': `https://suncam.co.il${currentPost.href}`,
     'twitter:card': 'summary_large_image',
     'twitter:title': `${currentPost.title}${content.meta.titlePrefix}`,
     'twitter:description': currentPost.description,
