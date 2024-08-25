@@ -129,7 +129,7 @@ const Checkout = () => {
                             </Field>
                             <button
                                 type="submit"
-                                className="mt-8 text-sm font-medium focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 hover:bg-black leading-4 py-4 w-full md:w-4/12 lg:w-full text-white bg-gray-800 flex items-center justify-center disabled:opacity-50 disabled:pointer-events-none disabled:py-4 disabled:px-4 transition-all duration-1000"
+                                className="rounded-lg mt-8 text-sm font-medium focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 hover:bg-black leading-4 py-4 w-full md:w-4/12 lg:w-full text-white bg-gray-800 flex items-center justify-center disabled:opacity-50 disabled:pointer-events-none disabled:py-4 disabled:px-4 transition-all duration-1000"
                                 disabled={!formik.dirty || !formik.isValid || formik.isSubmitting}
                             >
                                 {!formik.isSubmitting && content.checkout.labels.submit}
