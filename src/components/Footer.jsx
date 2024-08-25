@@ -139,7 +139,7 @@ const Footer = ({ className }) => {
                     </div>
                 </div>
             </section>
-            <div className="footer-wrap pt-190 pb-40 px-4 sm:px-8 lg:px-28 w-full background-cover background-center" style={{ backgroundImage: `url(${footerBgImage.src})` }}>
+            <div className="footer-wrap pt-200 pb-40 px-4 sm:px-8 lg:px-28 w-full background-cover background-center" style={{ backgroundImage: `url(${footerBgImage.src})` }}>
                 <div className="flex flex-wrap">
                     <div className="xl:w-1/4 lg:w-1/3 md:w-1/2 px-4">
                         <div className="footer-widget mb-50">
