@@ -18,13 +18,13 @@ export const metadata = {
 };
 
 const images = content.products.items.flatMap(productItem => ({
-    imageName: productItem.images[0].imageName,
-    component: dynamic(() => import(`@/assets/media/${productItem.images[0].imageName}`).then(module => {
+    imageName: productItem.previewImage.imageName,
+    component: dynamic(() => import(`@/assets/media/${productItem.previewImage.imageName}`).then(module => {
         const Component = ({ fill, ...props }) => (
             <Image
                 {...props}
                 src={module.default}
-                alt={productItem.images[0].description}
+                alt={productItem.previewImage.description}
                 width={425}
                 height={265}
                 sizes="(min-width: 768px) 20vw, 50vw"
@@ -33,7 +33,7 @@ const images = content.products.items.flatMap(productItem => ({
                 priority
             />
         );
-        Component.displayName = `Image-${productItem.images[0].imageName}`;
+        Component.displayName = `Image-${productItem.previewImage.imageName}`;
         return Component;
     }), {
         loading: () => <div style={{ width: '100%', height: '100%', background: '#f0f0f0' }} className="bg-gray-200 animate-pulse" />,
@@ -50,7 +50,7 @@ const ProductsPage = () => {
                         {content.products.items.map((productItem, index) => (
                             <div key={index} className="xl:w-1/4 md:w-1/2 p-4 w-full flex flex-col md:block items-center md:items-left text-center md:text-left rtl:md:text-right">
                                 <a className="block relative rounded overflow-hidden" href={productItem.href} style={{ aspectRatio: '425 / 265', maxWidth: '425px', width: '100%' }}>
-                                    {images.find(img => img.imageName === productItem.images[0].imageName)?.component()}
+                                    {images.find(img => img.imageName === productItem.previewImage.imageName)?.component()}
                                 </a>
                                 <div className="mt-4 ml-2 rtl:mr-2 rtl:ml-0">
                                     <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1 uppercase">{productItem.description.title}</h3>

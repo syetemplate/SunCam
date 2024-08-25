@@ -462,6 +462,7 @@ export default {
                     { imageName: 'gallery-2.webp', description: 'תצוגת אפליקציה של SunCam בסיסי על טלפון חכם' },
                     { imageName: 'gallery-3.webp', description: 'פאנל סולארי של SunCam בסיסי' },
                 ],
+                previewImage: { imageName: 'product-1-preview.webp', description: 'SunCam 32GB מצלמת אבטחה סולארית בסיסית' },
             },
             {
                 id: 'sunCam64GB',
@@ -502,6 +503,7 @@ export default {
                     { imageName: 'gallery-5.webp', description: 'השוואת איכות תמונה בין SunCam בסיסי ל-SunCam פרו' },
                     { imageName: 'gallery-6.webp', description: 'ממשק משתמש של אפליקציית SunCam פרו' },
                 ],
+                previewImage: { imageName: 'product-2-preview.webp', description: 'SunCam 64GB מצלמת אבטחה סולארית מתקדמת' },
             },
             {
                 id: 'sunCam128GB',
@@ -542,6 +544,7 @@ export default {
                     { imageName: 'gallery-8.webp', description: 'השוואת איכות תמונה בין כל דגמי SunCam' },
                     { imageName: 'gallery-9.webp', description: 'ממשק ניהול מתקדם של SunCam אולטרה' },
                 ],
+                previewImage: { imageName: 'product-3-preview.webp', description: 'SunCam 128GB מצלמת אבטחה סולארית מתקדמת' },
             },
         ],
         addToCartLabel: 'הוסף לעגלה',
