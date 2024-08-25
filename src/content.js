@@ -451,10 +451,10 @@ export default {
                 reviews: {
                     title: 'ביקורות',
                     list: [
-                        { name: 'יעל לוי', date: '22 במאי 2024', rating: 5, text: 'מצלמה מעולה! קלה להתקנה ועובדת בצורה מושלמת. ממליצה בחום.', avatarImageName: 'review-1-avatar.webp' },
-                        { name: 'אבי כהן', date: '13 ביוני 2024', rating: 4, text: 'איכות תמונה טובה מאוד ואני אוהב שזה ידידותי לסביבה. הייתי שמח לראות זווית רחבה יותר.', avatarImageName: 'review-2-avatar.webp' },
-                        { name: 'מיכל גולן', date: '14 באפריל 2024', rating: 5, text: 'פתרון מצוין לאבטחת הבית. האפליקציה נוחה לשימוש והסוללה מחזיקה מעמד זמן רב.', avatarImageName: 'review-3-avatar.webp' },
-                        { name: 'דני שמעוני', date: '20 באפריל 2024', rating: 4, text: 'מוצר טוב מאוד. התקנה קלה ואיכות תמונה טובה. הייתי רוצה לראות יותר אפשרויות התראה.', avatarImageName: 'review-4-avatar.webp' },
+                        { name: 'אבי כהן', date: '13 ביוני 2024', rating: 4, text: 'איכות תמונה טובה מאוד ואני אוהב שזה ידידותי לסביבה. הייתי שמח לראות זווית רחבה יותר.', avatarImageName: 'review-1-avatar.webp' },
+                        { name: 'יעל לוי', date: '22 במאי 2024', rating: 5, text: 'מצלמה מעולה! קלה להתקנה ועובדת בצורה מושלמת. ממליצה בחום.', avatarImageName: 'review-2-avatar.webp' },
+                        { name: 'יואב אבידן', date: '14 באפריל 2024', rating: 5, text: 'מצוין... האפליקציה נוחה לשימוש והסוללה מחזיקה מעמד מלא זמן!', avatarImageName: 'review-3-avatar.webp' },
+                        { name: 'אריאל חן', date: '20 באפריל 2024', rating: 4, text: 'מוצר טוב מאוד. התקנה קלה ואיכות תמונה טובה', avatarImageName: 'review-4-avatar.webp' },
                     ],
                 },
                 images: [
@@ -492,10 +492,10 @@ export default {
                 reviews: {
                     title: 'ביקורות',
                     list: [
-                        { name: 'רונית ברק', date: '5 ביולי 2024', rating: 5, text: 'איכות תמונה מדהימה! זיהוי התנועה החכם עובד מצוין ומונע התראות שווא.', avatarImageName: 'review-5-avatar.webp' },
-                        { name: 'עידו לוי', date: '18 יוני 2024', rating: 5, text: 'שדרגתי מהדגם הבסיסי וההבדל מורגש. ראיית הלילה הצבעונית מרשימה במיוחד.', avatarImageName: 'review-6-avatar.webp' },
-                        { name: 'ליאת כהן', date: '2 מאי 2024', rating: 4, text: 'מוצר מצוין עם תכונות מתקדמות. הייתי רוצה לראות אפשרויות נוספות לאינטגרציה עם מערכות בית חכם.', avatarImageName: 'review-7-avatar.webp' },
-                        { name: 'אורי גל', date: '10 אפריל 2024', rating: 5, text: 'ההתקנה הייתה פשוטה והתמיכה הטכנית מצוינת. מרוצה מאוד מהרכישה.', avatarImageName: 'review-8-avatar.webp' },
+                        { name: 'אבי כהן', date: '13 ביוני 2024', rating: 4, text: 'איכות תמונה טובה מאוד ואני אוהב שזה ידידותי לסביבה. הייתי שמח לראות זווית רחבה יותר.', avatarImageName: 'review-1-avatar.webp' },
+                        { name: 'יעל לוי', date: '22 במאי 2024', rating: 5, text: 'מצלמה מעולה! קלה להתקנה ועובדת בצורה מושלמת. ממליצה בחום.', avatarImageName: 'review-2-avatar.webp' },
+                        { name: 'יואב אבידן', date: '14 באפריל 2024', rating: 5, text: 'מצוין... האפליקציה נוחה לשימוש והסוללה מחזיקה מעמד מלא זמן!', avatarImageName: 'review-3-avatar.webp' },
+                        { name: 'אריאל חן', date: '20 באפריל 2024', rating: 4, text: 'מוצר טוב מאוד. התקנה קלה ואיכות תמונה טובה', avatarImageName: 'review-4-avatar.webp' },
                     ],
                 },
                 images: [
@@ -516,11 +516,11 @@ export default {
                 productInfo: {
                     title: 'פרטי המוצר',
                     list: [
-                        { title: 'רזולוציה', description: '4K Ultra HD' },
-                        { title: 'זמן עבודה', description: 'עד 30 ימים ללא שמש' },
-                        { title: 'זווית צפייה', description: '180° עם זום אופטי x4' },
-                        { title: 'אחסון', description: 'כרטיס SD עד 512GB + אחסון בענן ללא הגבלה' },
-                    ]
+                        { name: 'אבי כהן', date: '13 ביוני 2024', rating: 4, text: 'איכות תמונה טובה מאוד ואני אוהב שזה ידידותי לסביבה. הייתי שמח לראות זווית רחבה יותר.', avatarImageName: 'review-1-avatar.webp' },
+                        { name: 'יעל לוי', date: '22 במאי 2024', rating: 5, text: 'מצלמה מעולה! קלה להתקנה ועובדת בצורה מושלמת. ממליצה בחום.', avatarImageName: 'review-2-avatar.webp' },
+                        { name: 'יואב אבידן', date: '14 באפריל 2024', rating: 5, text: 'מצוין... האפליקציה נוחה לשימוש והסוללה מחזיקה מעמד מלא זמן!', avatarImageName: 'review-3-avatar.webp' },
+                        { name: 'אריאל חן', date: '20 באפריל 2024', rating: 4, text: 'מוצר טוב מאוד. התקנה קלה ואיכות תמונה טובה', avatarImageName: 'review-4-avatar.webp' },
+                    ],
                 },
                 description: {
                     title: 'תיאור',
@@ -610,10 +610,10 @@ export default {
         title: 'ביקורות',
         description: 'לקוחות מכל רחבי הארץ נהנים מהאיכות, הביצועים והאמינות של מצלמות האבטחה הסולאריות של SunCam.',
         list: [
-            { name: 'יובל כהן', text: 'התקנתי את SunCam בעסק שלי והתוצאות מדהימות. איכות התמונה מעולה והחיסכון בחשמל מורגש. ממליץ בחום!', avatarImageName: 'testimonial-1-avatar.jpg' },
-            { name: 'רותי לוי', text: 'שירות הלקוחות של SunCam פשוט יוצא מן הכלל. הם עזרו לי לבחור את הדגם המתאים ותמכו בי לאורך כל תהליך ההתקנה.', avatarImageName: 'testimonial-2-avatar.jpg' },
-            { name: 'אמיר גולן', text: 'ה-SunCam אולטרה היא מצלמת האבטחה הטובה ביותר שהשתמשתי בה. הטכנולוגיה מתקדמת, קלה לשימוש ומספקת שקט נפשי אמיתי.', avatarImageName: 'testimonial-3-avatar.jpg' },
-            { name: 'מיכל ברק', text: 'אני מתרשמת מהיעילות האנרגטית של SunCam. זה נפלא לדעת שאני יכולה לאבטח את ביתי באופן ידידותי לסביבה. מוצר מצוין!', avatarImageName: 'testimonial-4-avatar.jpg' },
+            { name: 'אבי כהן', text: 'התקנתי את SunCam בעסק שלי והתוצאות מדהימות. איכות התמונה מעולה והחיסכון בחשמל מורגש. ממליץ בחום!', avatarImageName: 'testimonial-1-avatar.webp' },
+            { name: 'יעל לוי', text: 'שירות הלקוחות של SunCam פשוט יוצא מן הכלל. הם עזרו לי לבחור את הדגם המתאים ותמכו בי לאורך כל תהליך ההתקנה.', avatarImageName: 'testimonial-2-avatar.webp' },
+            { name: 'יואב אבידן', text: 'ה-SunCam אולטרה היא מצלמת האבטחה הטובה ביותר שהשתמשתי בה. טכנולוגיה מתקדמת וקלה לשימוש.', avatarImageName: 'testimonial-3-avatar.webp' },
+            { name: 'אריאל חן', text: 'ממש מרוצה מהמוצר. התקנה קלה ומהירה, איכות תמונה מעולה ושירות לקוחות מצוין.', avatarImageName: 'testimonial-4-avatar.webp' },
         ],
     },
     cart: {
