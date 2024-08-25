@@ -6,12 +6,17 @@ export const metadata = {
     title: content.meta.pages.checkout.title,
     description: content.meta.pages.checkout.description,
     canonical: 'https://suncam.co.il/checkout',
-    'og:title': content.meta.pages.checkout.title,
-    'og:description': content.meta.pages.checkout.description,
-    'og:url': 'https://suncam.co.il/checkout',
-    'twitter:card': 'summary_large_image',
-    'twitter:title': content.meta.pages.checkout.title,
-    'twitter:description': content.meta.pages.checkout.description,
+    openGraph: {
+        siteName: content.meta.pages.checkout.title,
+        title: content.meta.pages.checkout.title,
+        description: content.meta.pages.checkout.description,
+        url: 'https://suncam.co.il/checkout',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: content.meta.pages.checkout.title,
+        description: content.meta.pages.checkout.description,
+    },
 };
 
 const CheckoutPage = () => {

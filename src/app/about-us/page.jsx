@@ -4,12 +4,17 @@ export const metadata = {
   title: content.meta.pages.aboutUs.title,
   description: content.meta.pages.aboutUs.description,
   canonical: 'https://suncam.co.il/about-us',
-  'og:title': content.meta.pages.aboutUs.title,
-  'og:description': content.meta.pages.aboutUs.description,
-  'og:url': 'https://suncam.co.il/about-us',
-  'twitter:card': 'summary_large_image',
-  'twitter:title': content.meta.pages.aboutUs.title,
-  'twitter:description': content.meta.pages.aboutUs.description,
+  openGraph: {
+    siteName: content.meta.pages.aboutUs.title,
+    title: content.meta.pages.aboutUs.title,
+    description: content.meta.pages.aboutUs.description,
+    url: 'https://suncam.co.il/about-us',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: content.meta.pages.aboutUs.title,
+    description: content.meta.pages.aboutUs.description,
+  },
 };
 
 const AboutUsPage = () => {

@@ -4,12 +4,17 @@ export const metadata = {
   title: content.meta.pages.privacyPolicy.title,
   description: content.meta.pages.privacyPolicy.description,
   canonical: 'https://suncam.co.il/privacy-policy',
-  'og:title': content.meta.pages.privacyPolicy.title,
-  'og:description': content.meta.pages.privacyPolicy.description,
-  'og:url': 'https://suncam.co.il/privacy-policy',
-  'twitter:card': 'summary_large_image',
-  'twitter:title': content.meta.pages.privacyPolicy.title,
-  'twitter:description': content.meta.pages.privacyPolicy.description,
+  openGraph: {
+    siteName: content.meta.pages.privacyPolicy.title,
+    title: content.meta.pages.privacyPolicy.title,
+    description: content.meta.pages.privacyPolicy.description,
+    url: 'https://suncam.co.il/privacy-policy',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: content.meta.pages.privacyPolicy.title,
+    description: content.meta.pages.privacyPolicy.description,
+  },
 };
 
 const PrivacyPolicyPage = () => {

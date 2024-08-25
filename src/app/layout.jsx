@@ -16,7 +16,14 @@ export const metadata = {
     icon: favicon.src,
     apple: appleIcon.src,
   },
-  'og:site_name': content.meta.pages.homePage,
+  openGraph: {
+    siteName: content.meta.pages.homePage.title,
+    title: content.meta.pages.homePage.title,
+    description: content.meta.pages.homePage.description,
+    url: 'https://suncam.co.il',
+    type: 'website',
+    locale: 'he_IL',
+  },
 };
 
 export const viewport = {

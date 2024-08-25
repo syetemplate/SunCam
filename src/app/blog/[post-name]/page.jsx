@@ -10,12 +10,17 @@ export const generateMetadata = ({ params }) => {
     title: `${currentPost.title}${content.meta.titlePrefix}`,
     description: currentPost.description,
     canonical: `https://suncam.co.il${currentPost.href}`,
-    'og:title': `${currentPost.title}${content.meta.titlePrefix}`,
-    'og:description': currentPost.description,
-    'og:url': `https://suncam.co.il${currentPost.href}`,
-    'twitter:card': 'summary_large_image',
-    'twitter:title': `${currentPost.title}${content.meta.titlePrefix}`,
-    'twitter:description': currentPost.description,
+    openGraph: {
+      siteName: `${content.meta.titlePrefix}${currentPost.title}`,
+      title: `${content.meta.titlePrefix}${currentPost.title}`,
+      description: currentPost.description,
+      url: `https://suncam.co.il${currentPost.href}`,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${content.meta.titlePrefix}${currentPost.title}`,
+      description: currentPost.description,
+    },
   }
 };
 

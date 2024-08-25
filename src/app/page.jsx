@@ -8,12 +8,17 @@ export const metadata = {
   title: content.meta.pages.homePage.title,
   description: content.meta.pages.homePage.description,
   canonical: 'https://suncam.co.il',
-  'og:title': content.meta.pages.homePage.title,
-  'og:description': content.meta.pages.homePage.description,
-  'og:url': 'https://suncam.co.il',
-  'twitter:card': 'summary_large_image',
-  'twitter:title': content.meta.pages.homePage.title,
-  'twitter:description': content.meta.pages.homePage.description,
+  openGraph: {
+    siteName: content.meta.pages.homePage.title,
+    title: content.meta.pages.homePage.title,
+    description: content.meta.pages.homePage.description,
+    url: 'https://suncam.co.il',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: content.meta.pages.homePage.title,
+    description: content.meta.pages.homePage.description,
+  },
 };
 
 const HomePage = () => {
