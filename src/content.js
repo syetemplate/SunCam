@@ -528,10 +528,10 @@ export default {
                 reviews: {
                     title: 'ביקורות',
                     list: [
-                        { name: 'גיל שרון', date: '15 יולי 2024', rating: 5, text: 'המצלמה הזו היא פשוט מדהימה. איכות התמונה ב-4K מרשימה ומערכת ה-AI עובדת בצורה מושלמת.', avatarImageName: 'review-9-avatar.webp' },
-                        { name: 'דנה לביא', date: '2 יולי 2024', rating: 5, text: 'שווה כל שקל. הזום האופטי והכיסוי הרחב מאפשרים לי לאבטח שטח גדול עם מצלמה אחת.', avatarImageName: 'review-10-avatar.webp' },
-                        { name: 'אלון ברק', date: '20 יוני 2024', rating: 4, text: 'מוצר מעולה עם תכונות מתקדמות. ההתקנה קצת מורכבת, אבל התמיכה הטכנית עזרה מאוד.', avatarImageName: 'review-11-avatar.webp' },
-                        { name: 'נועה גולן', date: '5 יוני 2024', rating: 5, text: 'המצלמה הטובה ביותר שהשתמשתי בה. איכות התמונה מדהימה וחיי הסוללה ארוכים במיוחד.', avatarImageName: 'review-12-avatar.webp' },
+                        { name: 'אבי כהן', date: '13 ביוני 2024', rating: 4, text: 'איכות תמונה טובה מאוד ואני אוהב שזה ידידותי לסביבה. הייתי שמח לראות זווית רחבה יותר.', avatarImageName: 'review-1-avatar.webp' },
+                        { name: 'יעל לוי', date: '22 במאי 2024', rating: 5, text: 'מצלמה מעולה! קלה להתקנה ועובדת בצורה מושלמת. ממליצה בחום.', avatarImageName: 'review-2-avatar.webp' },
+                        { name: 'יואב אבידן', date: '14 באפריל 2024', rating: 5, text: 'מצוין... האפליקציה נוחה לשימוש והסוללה מחזיקה מעמד מלא זמן!', avatarImageName: 'review-3-avatar.webp' },
+                        { name: 'אריאל חן', date: '20 באפריל 2024', rating: 4, text: 'מוצר טוב מאוד. התקנה קלה ואיכות תמונה טובה', avatarImageName: 'review-4-avatar.webp' },
                     ],
                 },
                 images: [
