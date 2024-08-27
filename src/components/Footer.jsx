@@ -48,7 +48,6 @@ const Footer = ({ className }) => {
         }),
         onSubmit: async values => {
             try {
-                debugger;
                 const response = await axios.post('/api/subscribe', values);
                 if (response.status !== 200) {
                     throw new Error(response.statusText);
