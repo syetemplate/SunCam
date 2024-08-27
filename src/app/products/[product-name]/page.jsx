@@ -4,7 +4,8 @@ import Faq from '@/components/Faq';
 import content from '@/content';
 
 export const generateMetadata = ({ params }) => {
-  const { 'product-name': productName } = params;
+  const { 'product-name': productNameEncoded } = params;
+  const productName = decodeURIComponent(productNameEncoded);
   const productItem = content.products.items.find(({ href }) => href === `/products/${productName}`) || content.products.items[0];
 
   return {

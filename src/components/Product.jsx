@@ -85,7 +85,8 @@ const reviewerAvatarImages = content.products.items.flatMap(productItem =>
 );
 
 const Product = ({ className }) => {
-    const { 'product-name': productName } = useParams();
+    const { 'product-name': productNameEncoded } = useParams();
+    const productName = decodeURIComponent(productNameEncoded);
     const productItem = content.products.items.find(({ href }) => href === `/products/${productName}`) || content.products.items[0];
 
     const sliderContainerRef = React.useRef(null);

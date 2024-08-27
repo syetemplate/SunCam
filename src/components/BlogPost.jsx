@@ -34,7 +34,8 @@ const dynamicImages = content.blog.posts.map(post => ({
 const BlogPost = () => {
   const [shareUrl, setShareUrl] = React.useState('');
   const { push } = useRouter();
-  const { 'post-name': postName } = useParams();
+  const { 'post-name': postNameEncoded } = useParams();
+  const postName = decodeURIComponent(postNameEncoded);
   const pathname = usePathname();
 
   const currentPost = content.blog.posts.find(post => post.href === `/blog/${postName}`);

@@ -3,7 +3,8 @@ import BlogPost from '@/components/BlogPost';
 import content from '@/content';
 
 export const generateMetadata = ({ params }) => {
-  const { 'post-name': postName } = params;
+  const { 'post-name': postNameEncoded } = params;
+  const postName = decodeURIComponent(postNameEncoded);
   const currentPost = content.blog.posts.find(post => post.href === `/blog/${postName}`);
 
   return {
