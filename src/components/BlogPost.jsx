@@ -92,7 +92,7 @@ const BlogPost = () => {
                 <ol className="flex flex-wrap list-reset pt-3 pb-3 py-4 px-6 mb-4 bg-gray-200 rounded" style={{ backgroundColor: 'rgba(255, 255, 255, 0.8)', zIndex: 3 }}>
                   {breadcrumbLinks.map((link, index) => (
                     <li key={index} className="inline-block pr-2 py-2 text-gray-700">
-                      <a href={link.href}>{link.label}<span className="pl-2">{`>`}</span></a>
+                      <a href={link.href}>{link.label}<span className="pr-2">{`>`}</span></a>
                     </li>
                   ))}
                   <li className="inline-block pr-2 py-2 text-gray-700" aria-current="page">
